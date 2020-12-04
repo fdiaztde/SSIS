@@ -1,0 +1,12 @@
+CD_TIPO_PERIODO|DESC_TIPO_PERIODO
+PER-NOM-H|Periodo Nomina Horario
+PER-NOM-D|Periodo Nomina Diario
+PER-NOM-S|Periodo Nomina Semanal
+PER-NOM-Q|Periodo Nomina Quincenal
+PER-NOM-M|Periodo Nomina Mensual
+PER-NOM-2M|Periodo Nomina Bimensual
+PER-NOM-3M|Periodo Nomina Trimestral
+PER-NOM-4M|Periodo Nomina Cuadrimestral
+PER-NOM-6M|Periodo Nomina Semestral
+PER-NOM-A|Periodo Nomina Annual
+PER-NOM-ESP|Periodo Nomina Especial

@@ -1,0 +1,129 @@
+CD_PAIS|NM_PAIS
+001|REPUBLICA DOMINICANA
+002|ESTADOS UNIDOS
+003|CANADA                    
+004|MEXICO                      
+005|HAITI                      
+006|CUBA                        
+007|JAMAICA                    
+008|ARGENTINA                     
+009|BOLIVIA                     
+010|BRASIL                     
+011|CHILE                       
+012|COLOMBIA                    
+013|ECUADOR                   
+014|PARAGUAY                     
+015|PERU                       
+016|SALVADOR                   
+017|URUGUAY                      
+018|VENEZUELA                    
+019|COSTA RICA                 
+020|HONDURAS                     
+021|NICARAGUA                  
+022|PANAMA                      
+023|GUATEMALA                  
+024|ALEMANIA                       
+025|AUSTRIA                     
+026|BELGICA                         
+027|BULGARIA                       
+028|DINAMARCA                        
+029|ESPAÑA                      
+030|FINLANDIA                    
+031|FRANCIA                      
+032|GRECIA                        
+033|HOLANDA                     
+034|HUNGRIA                       
+035|GRAN BRETAÑA
+036|IRLANDIA                     
+037|ISLANDIA                     
+038|ITALIA                      
+039|NORUEGA                       
+040|PORTUGAL                    
+041|RUMANIA                        
+042|RUSIA                          
+043|SUECIA                         
+044|SUIZA                         
+045|TURKIA                         
+046|YUGOSLAVIA                     
+047|ARABIA SAUDITA                         
+048|IRAN                         
+049|IRAQ                        
+050|ISRAEL                     
+051|JORDANIA                       
+052|KUWATI                       
+053|LIBANO                      
+054|MONGOLIA                     
+055|SIRIA                         
+056|AFGANISTAN                        
+057|INDIA                          
+058|PAKISTAN                     
+059|AUSTRIA                   
+060|CHINA                         
+061|FILIPINA                      
+062|INDONESIA                      
+063|JAPON                      
+064|COREA                       
+065|MALASIA                        
+066|POLONIA                        
+067|TAILANDIA                    
+068|TAIWAN                     
+069|VIETNAM                    
+070|SUDAFRICA                   
+071|ANGOLA                      
+072|ARGELIA                      
+073|EGIPTO                       
+074|ETIOPIA                        
+075|LIBERIA                     
+076|LIBIA                         
+077|NIGERIA                     
+078|SOMALIA                        
+079|GRAN BRETAÑA                     
+080|SAN VICIENTE Y LAS GRANADINAS
+081|MARROECOS                      
+082|BELICE                      
+083|MAURICIO                    
+084|ESLOVENIA                      
+085|ZAIRE                       
+086|LETONIA                        
+087|CROACIA                        
+088|LUXEMBURGO                 
+089|GUYANA                      
+090|SURINAM                    
+091|SIERRA LEONA                  
+092|TRINIDAD Y TOBAGO                    
+093|SINGAPUR                      
+094|MALTA                        
+095|BIELORARUSIA                      
+096|LIECHTENSTEIN                 
+097|LETONIA                        
+098|NEPAL                      
+099|CHIPRE                     
+100|RUANDA                      
+101|REPUBLICA CHECA
+102|CURAZAO                    
+103|NUEVA ZELANDA                  
+104|SAN CRISTOBAL Y NIEVES           
+105|CABO VERDE                  
+106|GRANADA                     
+107|TUNEZ                      
+108|COSTA DE MARFIL                     
+109|BAHAMAS                      
+110|CAMBOYA                     
+111|CAMERUN                    
+112|UCRANIA                       
+113|ALBANIA                       
+114|DOMINICA                   
+115|KIRIBATI                      
+116|MALI                      
+117|BARBADOS                   
+118|AFRICA                      
+119|TOGO                    
+120|GUINEA                  
+121|MADAGASCAR
+122|UZBEKISTAN           
+123|MACEDONIA DEL NORTE 
+124|BOSNIA                     
+125|PALESTINA           
+126|REPUBLICA DEL CONGO
+127|SINGAPUR
+-1|NO INFORMADO

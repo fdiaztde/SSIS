@@ -1,0 +1,30 @@
+CD_RANGO_ESTADIA|DESC_RANGO_ESTADIA|VALOR_INI_RANGO|VALOR_FIN_RANGO
+1|0 a 1 Mes|0|1
+2|Bimensual|2|2
+3|Trimestral|3|3
+4|Cuatrimestral|4|4
+5|Semestral|5|6
+5|1 a 5 Años|12|60
+6|6 a 10 Años|72|120
+7|11 a 15 Años|180
+8|16 a 20 Años|240
+9|21 a 25 Años|300
+10|26 a 30 Años|360
+11|31 a 35 Años|420
+12|36 a 40 Años|480
+13|41 a 45 Años|540
+14|46 a 50 Años|600
+15|51 a 55 Años|660
+16|56 a 60 Años|720
+17|61 a 65 Años|780
+18|66 a 70 Años|840
+19|71 a 75 Años|900
+20|76 a 80 Años|960
+21|81 a 85 Años|1020
+22|86 a 90 Años|1080
+23|91 a 95 Años|1140
+24|96 a 100 Años|1200
+25|101 a 105 Años|1260
+26|106 a 110 Años|1320
+27|111 a 115 Años|1380
+-1|NO INFORMADO|-1

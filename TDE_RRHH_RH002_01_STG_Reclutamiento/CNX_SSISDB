@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="TDEDATABASE03_SQL2016.EIKON_Prueba.tdeuser"
+  DTS:DTSID="{14651149-76E3-42E3-B1C4-3E4ABBDDE845}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=TDEDATABASE03\SQL2016;User ID=tdeuser;Initial Catalog=EIKON_Prueba;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQHmOE3P6o0+tTBTNv6toHQAAAAACAAAAAAADZgAAwAAAABAAAAAWZoJG0erlNWdJ4mEMVMV3AAAAAASAAACgAAAAEAAAAFBnEBVWgwBeRzneGCP3Q754AAAAZ4qLieeXKATY7BYDKImVSVAvcB77V5SHqUzAG6TUmDtNMjjobVR6Wqfz4YepC/nKUhFdg7vih41aVZm6sBJxxj1fsgE1qS/JEPktLTf6hg5EhX2hiEZST6vHHNm2t3fk8lAzNsJ+fV0YgdCHIQkJkWYQRIqy6YJOFAAAAIQ4QPSBFzs4lCo5sGyYiW8IbTVd</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH00_Control", "TDE_RRHH_Control\TDE_RRHH_RH00_Control.dtproj", "{7AF85981-A8E9-40B5-B347-4BBB81BAFBA6}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH000_01_STG_Comunes", "TDE_RRHH_RH000_01_STG_Comunes\TDE_RRHH_RH000_01_STG_Comunes.dtproj", "{6663D076-9FE5-4606-8E9C-DA64542BE9F8}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH000_02_DWH_Comunes", "TDE_RRHH_RH000_02_DWH_Comunes\TDE_RRHH_RH000_02_DWH_Comunes.dtproj", "{8B4D5836-F58F-4125-B510-801FC15F150B}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH001_01_STG_Perfil Empleado", "TDE_RRHH_RH001_01_STG_Perfil Empleado\TDE_RRHH_RH001_01_STG_Perfil Empleado.dtproj", "{5AFB75D2-DE49-4C4D-88DD-E99B65440221}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH001_02_DWH_Perfil Empleado", "TDE_RRHH_RH001_02_DWH_Perfil Empleado\TDE_RRHH_RH001_02_DWH_Perfil Empleado.dtproj", "{ADAB0CF8-A829-47CB-9873-F87201CB46B2}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH003_01_STG_Nomina", "TDE_RRHH_RH003_01_STG_Nomina\TDE_RRHH_RH003_01_STG_Nomina.dtproj", "{5F381A56-5B6A-4A15-91E8-331F548267BE}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH003_02_DWH_Nomina", "TDE_RRHH_RH003_02_DWH_Nomina\TDE_RRHH_RH003_02_DWH_Nomina.dtproj", "{24D32E3C-1E92-4D5A-84F7-2AC6E7B25BBD}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH002_01_STG_Reclutamiento", "TDE_RRHH_RH002_01_STG_Reclutamiento\TDE_RRHH_RH002_01_STG_Reclutamiento.dtproj", "{91A03490-4C47-473E-9245-7E780AD6470D}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH002_02_DWH_Reclutamiento", "TDE_RRHH_RH002_02_DWH_Reclutamiento\TDE_RRHH_RH002_02_DWH_Reclutamiento.dtproj", "{BFBC90B0-CB34-474A-90F4-32E0C1B43EAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AF85981-A8E9-40B5-B347-4BBB81BAFBA6}.Development|Default.ActiveCfg = Development
+		{7AF85981-A8E9-40B5-B347-4BBB81BAFBA6}.Development|Default.Build.0 = Development
+		{6663D076-9FE5-4606-8E9C-DA64542BE9F8}.Development|Default.ActiveCfg = Development
+		{6663D076-9FE5-4606-8E9C-DA64542BE9F8}.Development|Default.Build.0 = Development
+		{8B4D5836-F58F-4125-B510-801FC15F150B}.Development|Default.ActiveCfg = Development
+		{8B4D5836-F58F-4125-B510-801FC15F150B}.Development|Default.Build.0 = Development
+		{5AFB75D2-DE49-4C4D-88DD-E99B65440221}.Development|Default.ActiveCfg = Development
+		{5AFB75D2-DE49-4C4D-88DD-E99B65440221}.Development|Default.Build.0 = Development
+		{ADAB0CF8-A829-47CB-9873-F87201CB46B2}.Development|Default.ActiveCfg = Development
+		{ADAB0CF8-A829-47CB-9873-F87201CB46B2}.Development|Default.Build.0 = Development
+		{5F381A56-5B6A-4A15-91E8-331F548267BE}.Development|Default.ActiveCfg = Development
+		{5F381A56-5B6A-4A15-91E8-331F548267BE}.Development|Default.Build.0 = Development
+		{24D32E3C-1E92-4D5A-84F7-2AC6E7B25BBD}.Development|Default.ActiveCfg = Development
+		{24D32E3C-1E92-4D5A-84F7-2AC6E7B25BBD}.Development|Default.Build.0 = Development
+		{91A03490-4C47-473E-9245-7E780AD6470D}.Development|Default.ActiveCfg = Development
+		{91A03490-4C47-473E-9245-7E780AD6470D}.Development|Default.Build.0 = Development
+		{BFBC90B0-CB34-474A-90F4-32E0C1B43EAF}.Development|Default.ActiveCfg = Development
+		{BFBC90B0-CB34-474A-90F4-32E0C1B43EAF}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31A7EE3B-E224-456C-A192-1BEC62CCD2AC}
+	EndGlobalSection
+EndGlobal

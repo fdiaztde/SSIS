@@ -1,0 +1,730 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/19/2020 8:42:45 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="TDE-LAP-OP-04"
+  DTS:CreatorName="TDESOL\fdiaz"
+  DTS:DTSID="{DF08F8C6-2811-4CDB-96ED-726E01E8FB8E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.128"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="1_2_1_TDE_RRHH_BI_STG_DIM"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{EB0863BF-2A8D-4790-ABDA-7581639ED378}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:Disabled="True"
+      DTS:DTSID="{022C528C-CE5D-43DB-842A-22488634A9A5}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="1_1_0_TDE_RRHH_BI_STG_DIM">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CARGO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{1291190D-0BF7-4F8F-8961-0089CF53309D}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_CARGO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_CARGO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CATEGORIA_PUESTO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{7F83A0A6-EBD1-4D84-8ABD-7A70F414B267}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_CATEGORIA_PUESTO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_CATEGORIA_PUESTO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CATEGORIA_SALARIAL"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{83F4BCAD-2015-4B0F-829F-6AFFD374C007}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_CATEGORIA_SALARIAL"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_CATEGORIA_SALARIAL.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CENTRO_COSTO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{D7F3824C-6292-4E5A-982A-68F3769B5647}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_CENTRO_COSTO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_CENTRO_COSTO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CIIU_CLASE"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{2A731818-4906-4A47-B6B8-010B00BFE25B}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_CIIU_CLASE"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_CIIU_CLASE.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CIIU_DIVISION"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{C1D89E5D-BAB2-4566-B29B-BCB1FA8EEA18}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_CIIU_DIVISION"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_CIIU_DIVISION.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CIIU_GRUPO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{2B0D5AD1-1895-4F21-8732-6F615E3A2477}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_CIIU_GRUPO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_CIIU_GRUPO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CIIU_SECCION"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{3B3FFDA8-1E20-4C24-93ED-1F81E5D7FDC6}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_CIIU_SECCION"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_CIIU_SECCION.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CIIU_SUB_CLASE"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{C9B0B598-53BB-4DAE-8A4B-7146315C9977}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_CIIU_SUB_CLASE"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_CIIU_SUB_CLASE.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CLASE_EMPLEADO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{FB5F3F13-BE2D-47C1-BC3E-8CA51C08D141}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_CLASE_EMPLEADO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_CLASE_EMPLEADO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_DEPARTAMENTO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{F63566D4-42D2-4E4B-8E73-D5D5012E23F6}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_DEPARTAMENTO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_DEPARTAMENTO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_DISTRITO_MUNICIPAL"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{CA8348E5-0B0B-41F4-97DF-20EA22ADC0F4}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_DISTRITO_MUNICIPAL"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_DISTRITO_MUNICIPAL.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_EMPLEADO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{8E679E36-50DB-4A2D-B140-F2437A307E87}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_EMPLEADO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_EMPLEADO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_EMPRESA"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{A349FDDD-30D4-4609-BEC4-CF4F09FF999C}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_EMPRESA"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_EMPRESA.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_ESTADO_CIVIL"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{6241E814-936B-4ECF-BCDF-0D359024CADD}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_ESTADO_CIVIL"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_ESTADO_CIVIL.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_ESTATUS_EMPLEADO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{A9B384BD-9724-4CD4-96B9-B85BBF6ABA53}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_ESTATUS_EMPLEADO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_ESTATUS_EMPLEADO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_FAMILIA_PUESTO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{D05C9E95-885F-42AB-98C8-7A2C09DD1DE5}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_FAMILIA_PUESTO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_FAMILIA_PUESTO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_GENERO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{80C101C3-D849-45B2-985E-F75E64293D2F}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_GENERO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_GENERO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_GRUPO_EMPLEADO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{D0FD5C99-3BDA-46E6-B09B-9B16AB1A97D3}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_GRUPO_EMPLEADO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_GRUPO_EMPLEADO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_IDIOMA"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{9457E48D-8E22-4195-869B-766B2FFA7E73}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_IDIOMA"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_IDIOMA.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_NIVEL_EDUCATIVO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{F4ADB31C-0226-4B84-81CE-FAEDDE9ED3A9}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_NIVEL_EDUCATIVO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_NIVEL_EDUCATIVO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_OCUPACION"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{9F3E1A5D-08CE-4339-85A8-309B0FD91AA1}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_OCUPACION"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_OCUPACION.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_OFICINA"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{C522110F-2FB2-4A42-A385-124BD218E196}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_OFICINA"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_OFICINA.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_PERSONA"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{CCA617CC-29C0-4874-A153-BCF4CAEB9A20}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_PERSONA"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_PERSONA.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_PUESTO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{ED9FA62A-8502-4CF1-8EE8-928AE39D1A3B}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_PUESTO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_PUESTO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_RANGO_EDAD"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{6D3E589E-88CB-4520-AFBA-16DCD8A473B8}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_RANGO_EDAD"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_RANGO_EDAD.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_SECCION"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{F32C4463-7BC0-4C72-BDFB-6BFEEBB834BE}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_SECCION"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_SECCION.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_TIPO_CONTRATO_TRABAJO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{8B6F7EE6-E32C-4D12-B3B5-BA80A7EC2646}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_TIPO_CONTRATO_TRABAJO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_TIPO_CONTRATO_TRABAJO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_TIPO_IDENTIFICACION"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{241D58A7-690A-41E1-8FBF-6BBD30E26EEF}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_TIPO_IDENTIFICACION"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_TIPO_IDENTIFICACION.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_TIPO_RELIGION"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{6128D9B6-897A-4BE6-99AA-462A3DA144D3}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_TIPO_RELIGION"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_TIPO_RELIGION.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_TIPO_RESIDENCIA"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{72C41F0A-1301-4A0F-8315-B4C45ADDDC80}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_TIPO_RESIDENCIA"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_TIPO_RESIDENCIA.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_TURNO_LABORAL"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{7DDED49A-AEE4-4FE5-A1F1-04CB03E475A9}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_TURNO_LABORAL"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_TURNO_LABORAL.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CARGO"
+          TopLeft="59,14" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CATEGORIA_PUESTO"
+          TopLeft="239,17" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CATEGORIA_SALARIAL"
+          TopLeft="426,17" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CENTRO_COSTO"
+          TopLeft="240,82" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CIIU_CLASE"
+          TopLeft="437,79" />
+        <NodeLayout
+          Size="169,43"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CIIU_DIVISION"
+          TopLeft="55,149" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CIIU_GRUPO"
+          TopLeft="247,145" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CIIU_SECCION"
+          TopLeft="425,150" />
+        <NodeLayout
+          Size="176,43"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CIIU_SUB_CLASE"
+          TopLeft="50,221" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_CLASE_EMPLEADO"
+          TopLeft="253,220" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_DEPARTAMENTO"
+          TopLeft="451,222" />
+        <NodeLayout
+          Size="176,43"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_DISTRITO_MUNICIPAL"
+          TopLeft="45,294" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_EMPLEADO"
+          TopLeft="248,293" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_EMPRESA"
+          TopLeft="446,295" />
+        <NodeLayout
+          Size="176,43"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_ESTADO_CIVIL"
+          TopLeft="53,359" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_ESTATUS_EMPLEADO"
+          TopLeft="256,358" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_FAMILIA_PUESTO"
+          TopLeft="454,360" />
+        <NodeLayout
+          Size="176,43"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_GENERO"
+          TopLeft="58,427" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_GRUPO_EMPLEADO"
+          TopLeft="261,426" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_IDIOMA"
+          TopLeft="459,428" />
+        <NodeLayout
+          Size="176,43"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_NIVEL_EDUCATIVO"
+          TopLeft="66,505" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_OCUPACION"
+          TopLeft="269,504" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_OFICINA"
+          TopLeft="467,506" />
+        <NodeLayout
+          Size="176,43"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_PERSONA"
+          TopLeft="70,569" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_PUESTO"
+          TopLeft="273,568" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_RANGO_EDAD"
+          TopLeft="471,570" />
+        <NodeLayout
+          Size="176,43"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_SECCION"
+          TopLeft="76,646" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_TIPO_CONTRATO_TRABAJO"
+          TopLeft="477,647" />
+        <NodeLayout
+          Size="176,43"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_TIPO_IDENTIFICACION"
+          TopLeft="73,707" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_TIPO_RELIGION"
+          TopLeft="276,706" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_TIPO_RESIDENCIA"
+          TopLeft="474,708" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_TURNO_LABORAL"
+          TopLeft="52,83" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="1298,866"
+          Size="1298,909"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM"
+          TopLeft="184,37" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

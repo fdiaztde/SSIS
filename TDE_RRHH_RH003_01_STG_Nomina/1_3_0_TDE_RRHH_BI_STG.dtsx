@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/18/2020 3:09:31 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="TDE-LAP-OP-04"
+  DTS:CreatorName="TDESOL\fdiaz"
+  DTS:DTSID="{5E0F7650-E807-4031-98E0-18F8C81D542B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.123"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="1_3_0_TDE_RRHH_BI_STG_NE03"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{FE23EA39-1B4B-4102-8D8B-4C1D3F74B94F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\1_3_0_TDE_RRHH_BI_STG_NE03"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{E97098E3-8A9C-4372-BC3C-6D6BA169610C}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="1_3_0_TDE_RRHH_BI_STG_NE03">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\1_3_0_TDE_RRHH_BI_STG_NE03\1_3_1_TDE_RRHH_BI_STG_DIM"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{B78AFBA3-31F9-4B46-BFA1-B88AEAF03F5D}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="1_3_1_TDE_RRHH_BI_STG_DIM"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>1_3_1_TDE_RRHH_BI_STG_DIM.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_3_0_TDE_RRHH_BI_STG_NE03\1_3_2_TDE_RRHH_BI_STG_REL"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{8A7D3AC8-F0D7-4F20-9FFB-210503F39454}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="1_3_2_TDE_RRHH_BI_STG_REL"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>1_3_2_TDE_RRHH_BI_STG_REL.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_3_0_TDE_RRHH_BI_STG_NE03\1_3_3_TDE_RRHH_BI_STG_FAC"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{D531767D-E246-4BB3-9558-E41F52A8F4D7}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="1_3_3_TDE_RRHH_BI_STG_FAC"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>1_3_3_TDE_RRHH_BI_STG_FAC.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\1_3_0_TDE_RRHH_BI_STG_NE03.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{71799C7E-0663-48F3-84DA-ED9E7B3F1F4C}"
+          DTS:From="Package\1_3_0_TDE_RRHH_BI_STG_NE03\1_3_1_TDE_RRHH_BI_STG_DIM"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\1_3_0_TDE_RRHH_BI_STG_NE03\1_3_2_TDE_RRHH_BI_STG_REL" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\1_3_0_TDE_RRHH_BI_STG_NE03.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{0FFA9782-6DE1-44ED-B9B5-58EF78479C16}"
+          DTS:From="Package\1_3_0_TDE_RRHH_BI_STG_NE03\1_3_2_TDE_RRHH_BI_STG_REL"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\1_3_0_TDE_RRHH_BI_STG_NE03\1_3_3_TDE_RRHH_BI_STG_FAC" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="292,42"
+          Id="Package\1_3_0_TDE_RRHH_BI_STG_NE03\1_3_1_TDE_RRHH_BI_STG_DIM"
+          TopLeft="234,252" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\1_3_0_TDE_RRHH_BI_STG_NE03\1_3_2_TDE_RRHH_BI_STG_REL"
+          TopLeft="292,373" />
+        <NodeLayout
+          Size="237,42"
+          Id="Package\1_3_0_TDE_RRHH_BI_STG_NE03\1_3_3_TDE_RRHH_BI_STG_FAC"
+          TopLeft="235,469" />
+        <EdgeLayout
+          Id="Package\1_3_0_TDE_RRHH_BI_STG_NE03.PrecedenceConstraints[Constraint]"
+          TopLeft="377.75,294">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,79"
+              Start="0,0"
+              End="0,71.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\1_3_0_TDE_RRHH_BI_STG_NE03.PrecedenceConstraints[Constraint 1]"
+          TopLeft="375.5,415">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-22,54"
+              Start="0,0"
+              End="-22,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23"
+                    Point2="0,27"
+                    Point3="-4,27" />
+                  <mssgle:LineSegment
+                    End="-18,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18,27"
+                    Point2="-22,27"
+                    Point3="-22,31" />
+                  <mssgle:LineSegment
+                    End="-22,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="765,566"
+          Size="765,609"
+          Id="Package\1_3_0_TDE_RRHH_BI_STG_NE03"
+          TopLeft="176,31" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

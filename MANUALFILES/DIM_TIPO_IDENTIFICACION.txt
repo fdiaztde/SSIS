@@ -1,0 +1,5 @@
+CD_TIPO_IDENTIFICACION|DESC_TIPO_IDENTIFICACION
+Cedula|Cedula de Identidad y Electoral
+Pasaporte| Pasaporte
+RNC|Registro Nacional del Contribuyente
+-1|NO INFORMADO

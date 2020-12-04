@@ -1,0 +1,2171 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/19/2020 8:42:45 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="TDE-LAP-OP-04"
+  DTS:CreatorName="TDESOL\fdiaz"
+  DTS:DTSID="{E8EB194F-343F-49FC-8D6C-CA7C118AD441}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.128"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="2_1_1_TDE_RRHH_BI_DWH_DIM"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="35"
+  DTS:VersionGUID="{2C317712-754D-425C-A2FF-BDE132ECB644}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{761522DC-8000-4795-9AF5-1E155BC802BE}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="2_1_1_TDE_RRHH_BI_DWH_DIM">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CARGO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{BE9B89B0-8548-4207-8026-A498CA48BCAD}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_CARGO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_CARGO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CATEGORIA_PUESTO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{B9A7B2F0-9ED3-404B-859D-287A56070E10}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_CATEGORIA_PUESTO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_CATEGORIA_PUESTO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CATEGORIA_SALARIAL"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{A3C6F87C-3BA8-4169-AB0D-FED93718A2F5}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_CATEGORIA_SALARIAL"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_CATEGORIA_SALARIAL.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CENTRO_COSTO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{756AE931-68CA-4186-A821-AC50447D1951}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_CENTRO_COSTO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_CENTRO_COSTO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_CLASE"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{2B8893F0-CA9E-48D4-9C63-EF262B7E5433}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_CIIU_CLASE"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_CIIU_CLASE.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_DIVISION"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{CE737DBF-ADAF-4A7F-AF54-E94AF55E2094}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_CIIU_DIVISION"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_CIIU_DIVISION.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_GRUPO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{7DCD0E8B-D97F-4327-B3FC-4490F4281A56}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_CIIU_GRUPO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_CIIU_GRUPO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_SECCION"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{11030777-8C25-49F0-90AA-7542EE7552F4}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_CIIU_SECCION"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_CIIU_SECCION.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_SUB_CLASE"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{EFDF298A-848F-4786-9A63-458EFB4AA3D3}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_CIIU_SUB_CLASE"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_CIIU_SUB_CLASE.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CLASE_EMPLEADO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{66DD1C8C-31B4-49B1-8DDB-F19670F36B9A}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_CLASE_EMPLEADO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_CLASE_EMPLEADO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_DEPARTAMENTO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{7C49AF00-A21A-46F6-83E4-F8D7ECF5EB0C}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_DEPARTAMENTO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_DEPARTAMENTO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_DISTRITO_MUNICIPAL"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{25955673-1AB7-4630-8F82-68A5DB9008C3}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_DISTRITO_MUNICIPAL"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_DISTRITO_MUNICIPAL.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_EMPLEADO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{BD8A7AF9-FC28-4A17-A9CD-CC62DA060A78}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_EMPLEADO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_EMPLEADO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_EMPRESA"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{1D6A92A7-67FE-49D9-ABD1-3B237B15CBFA}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_EMPRESA"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_EMPRESA.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_ESTADO_CIVIL"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{4C699564-32AF-47AE-B569-8CCCF3545D30}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_ESTADO_CIVIL"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_ESTADO_CIVIL.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_ESTATUS_EMPLEADO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{B6A36FB6-E724-4BBF-B77A-DD5C49A31B4C}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_ESTATUS_EMPLEADO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_ESTATUS_EMPLEADO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_FAMILIA_PUESTO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{D049BEFD-83C9-49F2-981D-6DAEA1176CBC}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_FAMILIA_PUESTO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_FAMILIA_PUESTO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_GENERO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{722265E7-75AC-45CD-AA69-15ECAFA376CC}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_GENERO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_GENERO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_GRUPO_EMPLEADO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{D53C0F8F-0412-4E4D-B1E3-2840133D829D}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_GRUPO_EMPLEADO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_GRUPO_EMPLEADO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_IDIOMA"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{56B6A3F2-73A5-4E49-B7F1-AD142D00B248}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_IDIOMA"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_IDIOMA.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_NIVEL_EDUCATIVO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{DCAF926F-0A51-4CBB-8523-DA3E8CF6170B}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_NIVEL_EDUCATIVO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_NIVEL_EDUCATIVO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_OCUPACION"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{ADFEAE1F-56C8-46CE-BAA6-8236480850A9}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_OCUPACION"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_OCUPACION.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_OFICINA"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{5FE58B80-D6DF-4EAF-8DEB-16DDC9B50AC5}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_OFICINA"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_OFICINA.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PARENTESCO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{98AD6D8B-E6C6-4E4B-A1BE-69518CE0CD3F}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_PARENTESCO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_PARENTESCO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PERSONA"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{0A398348-355B-4715-9B12-529485EB23C3}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_PERSONA"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_PERSONA.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PROFESION"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{86F23B38-8CED-4373-BE65-28786C0407ED}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_PROFESION"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_PROFESION.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PUESTO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{7443BF94-20DF-45C6-BA18-E31DF5905EC8}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_PUESTO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_PUESTO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_RANGO_EDAD"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{628EEB71-EE49-4865-B00C-465C025FBE56}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_RANGO_EDAD"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_RANGO_EDAD.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_RANGO_ESTADIA"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{E430DC4B-66B0-471A-A312-A26CBF8BC4A9}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_RANGO_ESTADIA"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_RANGO_ESTADIA.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_SECCION"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{AF6943EF-2E09-461C-9E9D-416D7A4AB50D}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_SECCION"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_SECCION.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_CONTRATO_TRABAJO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{52AFD872-04A1-4D42-B815-77C6C009B583}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_TIPO_CONTRATO_TRABAJO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_TIPO_CONTRATO_TRABAJO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_EMPLEADO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{606E7BA0-E9CD-49FB-8798-22391F775B75}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_TIPO_EMPLEADO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_TIPO_EMPLEADO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_IDENTIFICACION"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{F4113C67-94EB-4326-8234-0ABC00D469B1}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_TIPO_IDENTIFICACION"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_TIPO_IDENTIFICACION.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_RELIGION"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{4BC9A024-4E1C-4226-9C6B-8D514970C809}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_TIPO_RELIGION"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_TIPO_RELIGION.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_RESIDENCIA"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{D9C85166-39B5-4A4C-9A39-6CB869467F9D}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_TIPO_RESIDENCIA"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_TIPO_RESIDENCIA.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TURNO_LABORAL"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{C319DB5E-8638-47A2-A93F-BF90E5D78936}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_TURNO_LABORAL"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_TURNO_LABORAL.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{B7E95688-C0C1-4CED-A2AA-B040E8AAE95E}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CARGO"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_ESTATUS_EMPLEADO" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{63450262-CAD4-4F8E-819C-345421798D4A}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PERSONA"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CARGO" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 10]"
+          DTS:CreationName=""
+          DTS:DTSID="{C52A3C39-0E90-4F00-B486-129473E89AEA}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TURNO_LABORAL"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 10"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CLASE_EMPLEADO" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 11]"
+          DTS:CreationName=""
+          DTS:DTSID="{68637940-45A9-4396-B0E5-549D98CE5E7D}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CLASE_EMPLEADO"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 11"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_GRUPO_EMPLEADO" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 12]"
+          DTS:CreationName=""
+          DTS:DTSID="{691270A9-0B34-4316-9DC0-FB6C39EAB717}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_GRUPO_EMPLEADO"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 12"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_OFICINA" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 13]"
+          DTS:CreationName=""
+          DTS:DTSID="{B1AAC33E-C14C-4F9A-949D-605AF7928B98}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_EMPRESA"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 13"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_IDENTIFICACION" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 14]"
+          DTS:CreationName=""
+          DTS:DTSID="{E3B55B76-2246-4DFD-9781-06E03910F8DF}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_IDENTIFICACION"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 14"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_RANGO_EDAD" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 15]"
+          DTS:CreationName=""
+          DTS:DTSID="{49499C69-1917-4C62-8803-07B0F66A59D4}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_RANGO_EDAD"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 15"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PROFESION" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 16]"
+          DTS:CreationName=""
+          DTS:DTSID="{E73A332E-AA20-45EC-A71F-184745AF47AC}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PROFESION"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 16"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_OCUPACION" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 17]"
+          DTS:CreationName=""
+          DTS:DTSID="{C90BC6F5-E6FD-4A53-8BE5-68281742F2C9}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_OCUPACION"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 17"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_NIVEL_EDUCATIVO" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 18]"
+          DTS:CreationName=""
+          DTS:DTSID="{1FC21894-623E-49A5-8C25-B773E636B7EA}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_NIVEL_EDUCATIVO"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 18"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_RELIGION" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 19]"
+          DTS:CreationName=""
+          DTS:DTSID="{DF978222-AC5B-4CAC-AC8B-2423CB13DFB4}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_RELIGION"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 19"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_RESIDENCIA" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{FBC58581-CBCF-4E65-807B-2208E926FC81}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_ESTATUS_EMPLEADO"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CATEGORIA_SALARIAL" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 20]"
+          DTS:CreationName=""
+          DTS:DTSID="{89FCE077-0C3B-453F-AEE5-9F1AC948AED4}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_RESIDENCIA"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 20"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_ESTADO_CIVIL" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 21]"
+          DTS:CreationName=""
+          DTS:DTSID="{17D30057-483C-4E80-A8D8-C48302E20E27}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_ESTADO_CIVIL"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 21"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_GENERO" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 22]"
+          DTS:CreationName=""
+          DTS:DTSID="{12500D0D-E1E6-446D-8A95-3FA6846FF2F0}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_GENERO"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 22"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PERSONA" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 23]"
+          DTS:CreationName=""
+          DTS:DTSID="{167656D6-5EAE-4C07-A489-38E982FB8EE8}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_OFICINA"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 23"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PARENTESCO" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 24]"
+          DTS:CreationName=""
+          DTS:DTSID="{2910D56E-BE25-46C3-8A20-248757CAFA47}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_GRUPO"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 24"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_CLASE" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 25]"
+          DTS:CreationName=""
+          DTS:DTSID="{B032BFE4-CCF2-4F6E-A544-8429671E5C87}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_DIVISION"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 25"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_GRUPO" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 26]"
+          DTS:CreationName=""
+          DTS:DTSID="{3DC7CC90-6FF0-4A49-947D-78DC96368D64}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_SECCION"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 26"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_DIVISION" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 27]"
+          DTS:CreationName=""
+          DTS:DTSID="{7A41D87C-C6F6-493C-BD59-144A7647D396}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_CLASE"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 27"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_SUB_CLASE" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 28]"
+          DTS:CreationName=""
+          DTS:DTSID="{16550C09-1E24-4191-86C3-333CAC9FF10F}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_IDIOMA"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 28"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_DISTRITO_MUNICIPAL" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 29]"
+          DTS:CreationName=""
+          DTS:DTSID="{B8193B0C-F802-4027-AFB9-75E6FD903F3D}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_DISTRITO_MUNICIPAL"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 29"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_SECCION" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{3B50676C-E29A-4C75-801C-D6C5F7277BD2}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CATEGORIA_SALARIAL"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CENTRO_COSTO" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 30]"
+          DTS:CreationName=""
+          DTS:DTSID="{CCDD7858-D19C-4278-BFA5-8B96D063C4ED}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_SUB_CLASE"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 30"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_SECCION" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 31]"
+          DTS:CreationName=""
+          DTS:DTSID="{AD981864-BAFA-4AC4-BFAE-B6B694E1B265}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_EMPRESA"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 31"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_SECCION" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 32]"
+          DTS:CreationName=""
+          DTS:DTSID="{2C919F37-91B0-4C24-AA11-876683D42FFD}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_EMPLEADO"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 32"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TURNO_LABORAL" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 33]"
+          DTS:CreationName=""
+          DTS:DTSID="{032A36BE-56D0-4690-87F5-5D0E6ECF6DD8}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PARENTESCO"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 33"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_RANGO_ESTADIA" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 34]"
+          DTS:CreationName=""
+          DTS:DTSID="{15807DD2-9F6C-48D6-8105-D9831DE39576}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_RANGO_ESTADIA"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 34"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_EMPLEADO" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{9359B099-C92D-4E5E-83B2-61BC21E3616E}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CENTRO_COSTO"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_DEPARTAMENTO" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 5]"
+          DTS:CreationName=""
+          DTS:DTSID="{089EDFE2-113A-4234-8AEC-6299CF3EE731}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_DEPARTAMENTO"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 5"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CATEGORIA_PUESTO" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 6]"
+          DTS:CreationName=""
+          DTS:DTSID="{35E716AC-C8EC-469B-B6B9-6F4451316743}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CATEGORIA_PUESTO"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 6"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_FAMILIA_PUESTO" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 7]"
+          DTS:CreationName=""
+          DTS:DTSID="{CBD8C9B4-861D-4E7F-A707-6E6975E8F8BF}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_FAMILIA_PUESTO"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 7"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PUESTO" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 8]"
+          DTS:CreationName=""
+          DTS:DTSID="{0E048C8A-594C-42A0-8B91-AD1E7C79D83D}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PUESTO"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 8"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_CONTRATO_TRABAJO" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 9]"
+          DTS:CreationName=""
+          DTS:DTSID="{6D723BF3-E747-430B-84A1-AF81342B9B68}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_CONTRATO_TRABAJO"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 9"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_EMPLEADO" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="168,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CARGO"
+          TopLeft="835,20" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CATEGORIA_PUESTO"
+          TopLeft="810,424" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CATEGORIA_SALARIAL"
+          TopLeft="814,176" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CENTRO_COSTO"
+          TopLeft="813,266" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_CLASE"
+          TopLeft="235,389" />
+        <NodeLayout
+          Size="169,43"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_DIVISION"
+          TopLeft="234,207" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_GRUPO"
+          TopLeft="248,296" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_SECCION"
+          TopLeft="237,128" />
+        <NodeLayout
+          Size="176,43"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CIIU_SUB_CLASE"
+          TopLeft="258,460" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_CLASE_EMPLEADO"
+          TopLeft="644,880" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_DEPARTAMENTO"
+          TopLeft="737,347" />
+        <NodeLayout
+          Size="176,43"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_DISTRITO_MUNICIPAL"
+          TopLeft="34,300" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_EMPLEADO"
+          TopLeft="88,581" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_EMPRESA"
+          TopLeft="7,11" />
+        <NodeLayout
+          Size="176,43"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_ESTADO_CIVIL"
+          TopLeft="442,523" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_ESTATUS_EMPLEADO"
+          TopLeft="903,109" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_FAMILIA_PUESTO"
+          TopLeft="661,472" />
+        <NodeLayout
+          Size="176,43"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_GENERO"
+          TopLeft="442,604" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_GRUPO_EMPLEADO"
+          TopLeft="421,797" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_IDIOMA"
+          TopLeft="26,199" />
+        <NodeLayout
+          Size="176,43"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_NIVEL_EDUCATIVO"
+          TopLeft="440,289" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_OCUPACION"
+          TopLeft="445,211" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_OFICINA"
+          TopLeft="203,806" />
+        <NodeLayout
+          Size="176,43"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PERSONA"
+          TopLeft="396,690" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PROFESION"
+          TopLeft="416,138" />
+        <NodeLayout
+          Size="222,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PUESTO"
+          TopLeft="780,535" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_RANGO_EDAD"
+          TopLeft="456,41" />
+        <NodeLayout
+          Size="176,43"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_SECCION"
+          TopLeft="28,412" />
+        <NodeLayout
+          Size="236,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_CONTRATO_TRABAJO"
+          TopLeft="680,621" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_EMPLEADO"
+          TopLeft="682,685" />
+        <NodeLayout
+          Size="176,43"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_IDENTIFICACION"
+          TopLeft="225,11" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_RELIGION"
+          TopLeft="461,368" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TIPO_RESIDENCIA"
+          TopLeft="452,452" />
+        <NodeLayout
+          Size="218,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_TURNO_LABORAL"
+          TopLeft="659,753" />
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint]"
+          TopLeft="945.666666666667,62">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.8333333333334,47"
+              Start="0,0"
+              End="40.8333333333334,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.0660377358491" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.0660377358491"
+                    Point2="0,19.0660377358491"
+                    Point3="4,19.0660377358491" />
+                  <mssgle:LineSegment
+                    End="36.8333333333334,19.0660377358491" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.8333333333334,19.0660377358491"
+                    Point2="40.8333333333334,19.0660377358491"
+                    Point3="40.8333333333334,23.0660377358491" />
+                  <mssgle:LineSegment
+                    End="40.8333333333334,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 1]"
+          TopLeft="512,690">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="380.333333333333,-628"
+              Start="0,0"
+              End="380.333333333333,-620.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-309.833950290851" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-309.833950290851"
+                    Point2="0,-313.833950290851"
+                    Point3="4,-313.833950290851" />
+                  <mssgle:LineSegment
+                    End="376.333333333333,-313.833950290851" />
+                  <mssgle:CubicBezierSegment
+                    Point1="376.333333333333,-313.833950290851"
+                    Point2="380.333333333333,-313.833950290851"
+                    Point3="380.333333333333,-317.833950290851" />
+                  <mssgle:LineSegment
+                    End="380.333333333333,-620.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 10]"
+          TopLeft="768,795">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-14,85"
+              Start="0,0"
+              End="-14,77.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5160142348754" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.5160142348754"
+                    Point2="0,50.5160142348754"
+                    Point3="-4,50.5160142348754" />
+                  <mssgle:LineSegment
+                    End="-10,50.5160142348754" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-10,50.5160142348754"
+                    Point2="-14,50.5160142348754"
+                    Point3="-14,54.5160142348754" />
+                  <mssgle:LineSegment
+                    End="-14,77.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 11]"
+          TopLeft="701,880">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-196.5,-41"
+              Start="0,0"
+              End="-196.5,-33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-12.6334519572954" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-12.6334519572954"
+                    Point2="0,-16.6334519572954"
+                    Point3="-4,-16.6334519572954" />
+                  <mssgle:LineSegment
+                    End="-192.5,-16.6334519572954" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-192.5,-16.6334519572954"
+                    Point2="-196.5,-16.6334519572954"
+                    Point3="-196.5,-20.6334519572954" />
+                  <mssgle:LineSegment
+                    End="-196.5,-33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 12]"
+          TopLeft="421,818">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-51,9"
+              Start="0,0"
+              End="-43.5,9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-21.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21.5,0"
+                    Point2="-25.5,0"
+                    Point3="-25.5,4" />
+                  <mssgle:LineSegment
+                    End="-25.5,5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-25.5,5"
+                    Point2="-25.5,9"
+                    Point3="-29.5,9" />
+                  <mssgle:LineSegment
+                    End="-43.5,9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 13]"
+          TopLeft="174,32.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51,0"
+              Start="0,0"
+              End="43.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="43.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 14]"
+          TopLeft="401,32.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="55,29.5"
+              Start="0,0"
+              End="47.5,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="23.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="23.5,0"
+                    Point2="27.5,0"
+                    Point3="27.5,4" />
+                  <mssgle:LineSegment
+                    End="27.5,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.5,25.5"
+                    Point2="27.5,29.5"
+                    Point3="31.5,29.5" />
+                  <mssgle:LineSegment
+                    End="47.5,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 15]"
+          TopLeft="539.5,83">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-28.5,55"
+              Start="0,0"
+              End="-28.5,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.5"
+                    Point2="0,27.5"
+                    Point3="-4,27.5" />
+                  <mssgle:LineSegment
+                    End="-24.5,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-24.5,27.5"
+                    Point2="-28.5,27.5"
+                    Point3="-28.5,31.5" />
+                  <mssgle:LineSegment
+                    End="-28.5,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 16]"
+          TopLeft="511,180">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17.5,31"
+              Start="0,0"
+              End="17.5,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.5"
+                    Point2="0,15.5"
+                    Point3="4,15.5" />
+                  <mssgle:LineSegment
+                    End="13.5,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.5,15.5"
+                    Point2="17.5,15.5"
+                    Point3="17.5,19.5" />
+                  <mssgle:LineSegment
+                    End="17.5,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 17]"
+          TopLeft="528.25,253">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 18]"
+          TopLeft="528,332">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="16.5,36"
+              Start="0,0"
+              End="16.5,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14"
+                    Point2="0,18"
+                    Point3="4,18" />
+                  <mssgle:LineSegment
+                    End="12.5,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.5,18"
+                    Point2="16.5,18"
+                    Point3="16.5,22" />
+                  <mssgle:LineSegment
+                    End="16.5,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 19]"
+          TopLeft="544.5,410">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9,42"
+              Start="0,0"
+              End="-9,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17"
+                    Point2="0,21"
+                    Point3="-4,21" />
+                  <mssgle:LineSegment
+                    End="-5,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5,21"
+                    Point2="-9,21"
+                    Point3="-9,25" />
+                  <mssgle:LineSegment
+                    End="-9,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 2]"
+          TopLeft="986.5,151">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-89,25"
+              Start="0,0"
+              End="-89,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.5"
+                    Point2="0,12.5"
+                    Point3="-4,12.5" />
+                  <mssgle:LineSegment
+                    End="-85,12.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-85,12.5"
+                    Point2="-89,12.5"
+                    Point3="-89,16.5" />
+                  <mssgle:LineSegment
+                    End="-89,17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 20]"
+          TopLeft="532.75,494">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29"
+              Start="0,0"
+              End="0,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 21]"
+          TopLeft="530,566">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 22]"
+          TopLeft="530,647">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-74,43"
+              Start="0,0"
+              End="-74,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5675675675676" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.5675675675676"
+                    Point2="0,25.5675675675676"
+                    Point3="-4,25.5675675675676" />
+                  <mssgle:LineSegment
+                    End="-70,25.5675675675676" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-70,25.5675675675676"
+                    Point2="-74,25.5675675675676"
+                    Point3="-74,29.5675675675676" />
+                  <mssgle:LineSegment
+                    End="-74,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 24]"
+          TopLeft="320,338">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9,51"
+              Start="0,0"
+              End="-9,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.5"
+                    Point2="0,25.5"
+                    Point3="-4,25.5" />
+                  <mssgle:LineSegment
+                    End="-5,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5,25.5"
+                    Point2="-9,25.5"
+                    Point3="-9,29.5" />
+                  <mssgle:LineSegment
+                    End="-9,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 25]"
+          TopLeft="319.25,250">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 26]"
+          TopLeft="319.5,170">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 27]"
+          TopLeft="311,431">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="35,29"
+              Start="0,0"
+              End="35,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.5"
+                    Point2="0,14.5"
+                    Point3="4,14.5" />
+                  <mssgle:LineSegment
+                    End="31,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31,14.5"
+                    Point2="35,14.5"
+                    Point3="35,18.5" />
+                  <mssgle:LineSegment
+                    End="35,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 28]"
+          TopLeft="111.5,241">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.5,59"
+              Start="0,0"
+              End="10.5,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.5"
+                    Point2="0,29.5"
+                    Point3="4,29.5" />
+                  <mssgle:LineSegment
+                    End="6.5,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.5,29.5"
+                    Point2="10.5,29.5"
+                    Point3="10.5,33.5" />
+                  <mssgle:LineSegment
+                    End="10.5,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 29]"
+          TopLeft="119,343">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,69"
+              Start="0,0"
+              End="0,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 3]"
+          TopLeft="896.5,218">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48"
+              Start="0,0"
+              End="0,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 30]"
+          TopLeft="258,481.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-54,-48"
+              Start="0,0"
+              End="-46.5,-48">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-23,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-23,0"
+                    Point2="-27,0"
+                    Point3="-27,-4" />
+                  <mssgle:LineSegment
+                    End="-27,-44" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-27,-44"
+                    Point2="-27,-48"
+                    Point3="-31,-48" />
+                  <mssgle:LineSegment
+                    End="-46.5,-48" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 31]"
+          TopLeft="90.5,53">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="230,75"
+              Start="0,0"
+              End="230,67.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.5"
+                    Point2="0,37.5"
+                    Point3="4,37.5" />
+                  <mssgle:LineSegment
+                    End="226,37.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="226,37.5"
+                    Point2="230,37.5"
+                    Point3="230,41.5" />
+                  <mssgle:LineSegment
+                    End="230,67.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 32]"
+          TopLeft="790,727">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-22,26"
+              Start="0,0"
+              End="-22,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9"
+                    Point2="0,13"
+                    Point3="-4,13" />
+                  <mssgle:LineSegment
+                    End="-18,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18,13"
+                    Point2="-22,13"
+                    Point3="-22,17" />
+                  <mssgle:LineSegment
+                    End="-22,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 4]"
+          TopLeft="895.5,308">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-75,39"
+              Start="0,0"
+              End="-75,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.5"
+                    Point2="0,19.5"
+                    Point3="-4,19.5" />
+                  <mssgle:LineSegment
+                    End="-71,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-71,19.5"
+                    Point2="-75,19.5"
+                    Point3="-75,23.5" />
+                  <mssgle:LineSegment
+                    End="-75,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 5]"
+          TopLeft="820.5,389">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="73,35"
+              Start="0,0"
+              End="73,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="4,17.5" />
+                  <mssgle:LineSegment
+                    End="69,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="69,17.5"
+                    Point2="73,17.5"
+                    Point3="73,21.5" />
+                  <mssgle:LineSegment
+                    End="73,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 6]"
+          TopLeft="810,445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-65.5,27"
+              Start="0,0"
+              End="-65.5,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-61.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-61.5,0"
+                    Point2="-65.5,0"
+                    Point3="-65.5,4" />
+                  <mssgle:LineSegment
+                    End="-65.5,19.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 7]"
+          TopLeft="828,493">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63,42"
+              Start="0,0"
+              End="63,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="59,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="59,0"
+                    Point2="63,0"
+                    Point3="63,4" />
+                  <mssgle:LineSegment
+                    End="63,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 8]"
+          TopLeft="891,577">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-93,44"
+              Start="0,0"
+              End="-93,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18"
+                    Point2="0,22"
+                    Point3="-4,22" />
+                  <mssgle:LineSegment
+                    End="-89,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-89,22"
+                    Point2="-93,22"
+                    Point3="-93,26" />
+                  <mssgle:LineSegment
+                    End="-93,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 9]"
+          TopLeft="916,642">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-18,64"
+              Start="0,0"
+              End="-10.5,64">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,60" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,60"
+                    Point2="22.5,64"
+                    Point3="18.5,64" />
+                  <mssgle:LineSegment
+                    End="-10.5,64" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="167,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PARENTESCO"
+          TopLeft="154,742" />
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 23]"
+          TopLeft="203,827">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="34.5,-43"
+              Start="0,0"
+              End="34.5,-35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="30.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.5,0"
+                    Point2="34.5,0"
+                    Point3="34.5,-4" />
+                  <mssgle:LineSegment
+                    End="34.5,-35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="217,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_RANGO_ESTADIA"
+          TopLeft="169,654" />
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 33]"
+          TopLeft="237.5,742">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40,-46"
+              Start="0,0"
+              End="40,-38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-19"
+                    Point2="0,-23"
+                    Point3="4,-23" />
+                  <mssgle:LineSegment
+                    End="36,-23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36,-23"
+                    Point2="40,-23"
+                    Point3="40,-27" />
+                  <mssgle:LineSegment
+                    End="40,-38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 34]"
+          TopLeft="277.5,654">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-106,-31"
+              Start="0,0"
+              End="-106,-23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-11.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-11.5"
+                    Point2="0,-15.5"
+                    Point3="-4,-15.5" />
+                  <mssgle:LineSegment
+                    End="-102,-15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-102,-15.5"
+                    Point2="-106,-15.5"
+                    Point3="-106,-19.5" />
+                  <mssgle:LineSegment
+                    End="-106,-23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="1298,1079"
+          Size="1298,1122"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM"
+          TopLeft="184,37" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
