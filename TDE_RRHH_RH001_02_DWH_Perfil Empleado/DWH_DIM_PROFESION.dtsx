@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="DWH_DIM_PROFESION"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="379"
-  DTS:VersionGUID="{C66E0648-A29F-448E-9865-25534C22A83A}">
+  DTS:VersionBuild="380"
+  DTS:VersionGUID="{26F5CD03-1181-46CB-8758-6E75AF732155}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -3177,7 +3177,7 @@ WHERE
       ,[FC_FIN_VAL]
       ,[SK_EJECUCION_CREACION]
       ,[SK_EJECUCION_MODIFICACION]
-  FROM [TDE_DWH_EikonBI_DES].[rh01].[DIM_PROFESION]
+  FROM [RH01].[DIM_PROFESION]
    WHERE ? BETWEEN FC_INI_VAL AND FC_FIN_VAL
 	    ORDER BY [CD_PROFESION] ASC</property>
                 <property
@@ -4758,7 +4758,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [CD_PROFESION]
       ,[DESC_PROFESION]
-  FROM [TDE_STG_EikonBI_DES].[RH01].[STG_DIM_PROFESION]
+  FROM [RH01].[STG_DIM_PROFESION]
   ORDER BY [CD_PROFESION] ASC</property>
                 <property
                   dataType="System.String"
@@ -9004,74 +9004,74 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               startId="Package\DF_DWH_DIM_PROFESION_1\RA_AGG_STANDARD_2.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output13]"
-              endId="Package\DF_DWH_DIM_PROFESION_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
+              endId="Package\DF_DWH_DIM_PROFESION_1\PR_DV_FECHAS_GENERICAS_1.Inputs[Derived Column Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PROFESION_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_PROFESION_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output12]"
-              endId="Package\DF_DWH_DIM_PROFESION_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PROFESION_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output11]"
-              endId="Package\DF_DWH_DIM_PROFESION_1\MC_STANDARD_3.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PROFESION_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output10]"
-              endId="Package\DF_DWH_DIM_PROFESION_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PROFESION_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output9]"
-              endId="Package\DF_DWH_DIM_PROFESION_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PROFESION_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output8]"
-              endId="Package\DF_DWH_DIM_PROFESION_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PROFESION_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output7]"
-              endId="Package\DF_DWH_DIM_PROFESION_1\PR_CS_SCD2_1.Inputs[Conditional Split Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PROFESION_1\PR_DV_FECHAS_GENERICAS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output5]"
-              endId="Package\DF_DWH_DIM_PROFESION_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PROFESION_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output4]"
-              endId="Package\DF_DWH_DIM_PROFESION_1\MC_STANDARD_1.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PROFESION_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output3]"
-              endId="Package\DF_DWH_DIM_PROFESION_1\RA_SRT_STANDARD_8.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PROFESION_1\PR_DV_TRATAMIENTO_DE_NULOS_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output2]"
-              endId="Package\DF_DWH_DIM_PROFESION_1\RA_SRT_STANDARD_4.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PROFESION_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output1]"
-              endId="Package\DF_DWH_DIM_PROFESION_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PROFESION_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output]"
               endId="Package\DF_DWH_DIM_PROFESION_1\RA_SRT_STANDARD_2.Inputs[Sort Input]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_PROFESION_1\RA_DV_STANDARD_6.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output6]"
-              endId="Package\DF_DWH_DIM_PROFESION_1\PR_DV_FECHAS_GENERICAS_1.Inputs[Derived Column Input]"
+              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output11]"
+              endId="Package\DF_DWH_DIM_PROFESION_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PROFESION_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_PROFESION_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output10]"
+              endId="Package\DF_DWH_DIM_PROFESION_1\RA_SRT_STANDARD_4.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PROFESION_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output9]"
+              endId="Package\DF_DWH_DIM_PROFESION_1\RA_SRT_STANDARD_8.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PROFESION_1\PR_DV_TRATAMIENTO_DE_NULOS_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output8]"
+              endId="Package\DF_DWH_DIM_PROFESION_1\MC_STANDARD_1.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PROFESION_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output7]"
+              endId="Package\DF_DWH_DIM_PROFESION_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PROFESION_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output5]"
+              endId="Package\DF_DWH_DIM_PROFESION_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PROFESION_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output4]"
+              endId="Package\DF_DWH_DIM_PROFESION_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PROFESION_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output3]"
+              endId="Package\DF_DWH_DIM_PROFESION_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PROFESION_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output2]"
+              endId="Package\DF_DWH_DIM_PROFESION_1\MC_STANDARD_3.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PROFESION_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output1]"
+              endId="Package\DF_DWH_DIM_PROFESION_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PROFESION_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output]"
+              endId="Package\DF_DWH_DIM_PROFESION_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PROFESION_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output6]"
+              endId="Package\DF_DWH_DIM_PROFESION_1\PR_CS_SCD2_1.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PROFESION_1\PR_DV_FECHAS_GENERICAS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_PROFESION_1.Paths[INSERT]"
               endId="Package\DF_DWH_DIM_PROFESION_1\PR_UN_STANDARD_2.Inputs[Union All Input 1]"
@@ -9099,14 +9099,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               startId="Package\DF_DWH_DIM_PROFESION_1\RA_MJ_STANDARD_2.Outputs[Merge Join Output]" />
             <path
               refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Multicast Output 14]"
-              endId="Package\DF_DWH_DIM_PROFESION_1\RA_UN_DESTINO_1.Inputs[Union All Input 6]"
+              endId="Package\DF_DWH_DIM_PROFESION_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
               name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_PROFESION_1\MC_STANDARD_3.Outputs[Multicast Output 1]" />
+              startId="Package\DF_DWH_DIM_PROFESION_1\MC_STANDARD_1.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Multicast Output 13]"
-              endId="Package\DF_DWH_DIM_PROFESION_1\PR_DTN_DIM_PROFESION_UPD.Inputs[OLE DB Command Input]"
+              endId="Package\DF_DWH_DIM_PROFESION_1\PR_DTN_DIM_PROFESION.Inputs[OLE DB Destination Input]"
               name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_PROFESION_1\MC_STANDARD_2.Outputs[Multicast Output 1]" />
+              startId="Package\DF_DWH_DIM_PROFESION_1\MC_STANDARD_7.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Multicast Output 12]"
               endId="Package\DF_DWH_DIM_PROFESION_1\PR_DV_TRATAMIENTO_DE_NULOS_2.Inputs[Derived Column Input]"
@@ -9114,14 +9114,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               startId="Package\DF_DWH_DIM_PROFESION_1\MC_STANDARD_4.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Multicast Output 11]"
-              endId="Package\DF_DWH_DIM_PROFESION_1\PR_DTN_DIM_PROFESION.Inputs[OLE DB Destination Input]"
+              endId="Package\DF_DWH_DIM_PROFESION_1\PR_DTN_DIM_PROFESION_UPD.Inputs[OLE DB Command Input]"
               name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_PROFESION_1\MC_STANDARD_7.Outputs[Multicast Output 1]" />
+              startId="Package\DF_DWH_DIM_PROFESION_1\MC_STANDARD_2.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Multicast Output 1]"
-              endId="Package\DF_DWH_DIM_PROFESION_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
+              endId="Package\DF_DWH_DIM_PROFESION_1\RA_UN_DESTINO_1.Inputs[Union All Input 6]"
               name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_PROFESION_1\MC_STANDARD_1.Outputs[Multicast Output 1]" />
+              startId="Package\DF_DWH_DIM_PROFESION_1\MC_STANDARD_3.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_PROFESION_1.Paths[Multicast Output 2]"
               endId="Package\DF_DWH_DIM_PROFESION_1\RA_AGG_STANDARD_1.Inputs[Aggregate Input 1]"
@@ -11328,7 +11328,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Multicast Output 1]"
+          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Multicast Output 14]"
           TopLeft="1072,797">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11362,7 +11362,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Multicast Output 11]"
+          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Multicast Output 13]"
           TopLeft="1522,669">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11418,7 +11418,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Multicast Output 13]"
+          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Multicast Output 11]"
           TopLeft="1953.25,597.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11452,7 +11452,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Multicast Output 14]"
+          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Multicast Output 1]"
           TopLeft="1845,932">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11648,7 +11648,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output]"
+          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output13]"
+          TopLeft="1604.5,275">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32"
+              Start="0,0"
+              End="0,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output12]"
           TopLeft="1621,832">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11682,7 +11704,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output1]"
+          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output11]"
           TopLeft="518.75,422">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11704,7 +11726,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output2]"
+          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output10]"
           TopLeft="2287,702">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11738,7 +11760,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output3]"
+          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output9]"
           TopLeft="1836.5,120">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11760,7 +11782,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output4]"
+          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output8]"
           TopLeft="1162.5,700">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11794,7 +11816,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output5]"
+          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output7]"
           TopLeft="1421.66666666667,1093">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11829,62 +11851,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output6]"
-          TopLeft="1604.5,275">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32"
-              Start="0,0"
-              End="0,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output13]"
-          TopLeft="1292,251">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-721,488"
-              Start="0,0"
-              End="-721,480.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,286.116838487973" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,286.116838487973"
-                    Point2="0,290.116838487973"
-                    Point3="-4,290.116838487973" />
-                  <mssgle:LineSegment
-                    End="-717,290.116838487973" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-717,290.116838487973"
-                    Point2="-721,290.116838487973"
-                    Point3="-721,294.116838487973" />
-                  <mssgle:LineSegment
-                    End="-721,480.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output7]"
           TopLeft="1603.5,349">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11918,7 +11884,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output8]"
+          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output5]"
           TopLeft="2221,1032">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11952,7 +11918,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output9]"
+          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output4]"
           TopLeft="185,443">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11986,7 +11952,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output10]"
+          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output3]"
           TopLeft="833.5,1162">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12020,7 +11986,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output11]"
+          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output2]"
           TopLeft="1868.5,891">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12042,7 +12008,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output12]"
+          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output1]"
           TopLeft="172.868434388359,229">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12055,6 +12021,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,46.428571428571" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PROFESION_1.Paths[Derived Column Output]"
+          TopLeft="1292,251">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-721,488"
+              Start="0,0"
+              End="-721,480.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,286.116838487973" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,286.116838487973"
+                    Point2="0,290.116838487973"
+                    Point3="-4,290.116838487973" />
+                  <mssgle:LineSegment
+                    End="-717,290.116838487973" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-717,290.116838487973"
+                    Point2="-721,290.116838487973"
+                    Point3="-721,294.116838487973" />
+                  <mssgle:LineSegment
+                    End="-721,480.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

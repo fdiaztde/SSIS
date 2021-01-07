@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="DWH_DIM_TIPO_RELIGION"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="499"
-  DTS:VersionGUID="{FFFAC714-F998-4366-9C75-B055D11513CF}">
+  DTS:VersionBuild="501"
+  DTS:VersionGUID="{27B3A2C5-BE49-4072-B9CB-AE17712F08F2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -3182,7 +3182,7 @@ WHERE
       ,[FC_FIN_VAL]
       ,[SK_EJECUCION_CREACION]
       ,[SK_EJECUCION_MODIFICACION]
-  FROM [TDE_DWH_EikonBI_DES].[RH01].[DIM_TIPO_RELIGION]
+  FROM [RH01].[DIM_TIPO_RELIGION]
 WHERE ? BETWEEN [FC_INI_VAL] AND [FC_FIN_VAL]
 	    ORDER BY [CD_TIPO_RELIGION] ASC</property>
                 <property
@@ -4763,7 +4763,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [CD_TIPO_RELIGION]
       ,[DESC_TIPO_RELIGION]
-  FROM [TDE_STG_EikonBI_DES].[RH01].[STG_DIM_TIPO_RELIGION]
+  FROM [RH01].[STG_DIM_TIPO_RELIGION]
   ORDER BY [CD_TIPO_RELIGION] ASC</property>
                 <property
                   dataType="System.String"
@@ -9009,74 +9009,74 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_AGG_STANDARD_2.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output13]"
-              endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_SRT_STANDARD_2.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_DV_STANDARD_6.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output12]"
-              endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output11]"
-              endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_SRT_STANDARD_4.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output10]"
-              endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output9]"
-              endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output8]"
-              endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\PR_CS_SCD2_1.Inputs[Conditional Split Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\PR_DV_FECHAS_GENERICAS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output7]"
               endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output5]"
-              endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
+              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output12]"
+              endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_SRT_STANDARD_2.Inputs[Sort Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_DV_STANDARD_6.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output4]"
+              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output11]"
+              endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output10]"
+              endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_SRT_STANDARD_4.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output9]"
+              endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output8]"
+              endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output7]"
+              endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\PR_CS_SCD2_1.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\PR_DV_FECHAS_GENERICAS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output5]"
               endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\MC_STANDARD_1.Inputs[Multicast Input 1]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output3]"
+              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output4]"
               endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output2]"
+              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output3]"
               endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\MC_STANDARD_3.Inputs[Multicast Input 1]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output1]"
+              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output2]"
               endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_SRT_STANDARD_8.Inputs[Sort Input]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\PR_DV_TRATAMIENTO_DE_NULOS_2.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output]"
+              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output1]"
               endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output6]"
+              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output]"
               endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\PR_DV_FECHAS_GENERICAS_1.Inputs[Derived Column Input]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output6]"
+              endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_RELIGION_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[INSERT]"
               endId="Package\DF_DWH_DIM_TIPO_RELIGION_1\PR_UN_STANDARD_2.Inputs[Union All Input 1]"
@@ -9279,7 +9279,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_CREATE_MAX_ID_1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9394,7 +9394,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_MAX_ID_1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9430,7 +9430,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_SK_DEFAUT"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9471,7 +9471,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_INI_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9542,7 +9542,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9565,7 +9565,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9634,7 +9634,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9657,7 +9657,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9680,7 +9680,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9709,7 +9709,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -11284,31 +11284,63 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Multicast Output 1]"
-          TopLeft="1832,860">
+          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Multicast Output 14]"
+          TopLeft="1478,637.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-1022,-43"
+              EndConnector="-36,0"
               Start="0,0"
-              End="-1022,-35.5">
+              End="-28.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-15.6798941798942" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-15.6798941798942"
-                    Point2="0,-19.6798941798942"
-                    Point3="-4,-19.6798941798942" />
+                    End="-28.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Multicast Output 13]"
+          TopLeft="1563,497.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-33,0"
+              Start="0,0"
+              End="-25.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-1018,-19.6798941798942" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-1018,-19.6798941798942"
-                    Point2="-1022,-19.6798941798942"
-                    Point3="-1022,-23.6798941798942" />
+                    End="-25.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Multicast Output 12]"
+          TopLeft="1000,793.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-120,0"
+              Start="0,0"
+              End="-112.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-1022,-35.5" />
+                    End="-112.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11352,63 +11384,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Multicast Output 12]"
-          TopLeft="1000,793.5">
+          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Multicast Output 1]"
+          TopLeft="1832,860">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-120,0"
+              EndConnector="-1022,-43"
               Start="0,0"
-              End="-112.5,0">
+              End="-1022,-35.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-112.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Multicast Output 13]"
-          TopLeft="1563,497.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-33,0"
-              Start="0,0"
-              End="-25.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
+                    End="0,-15.6798941798942" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-15.6798941798942"
+                    Point2="0,-19.6798941798942"
+                    Point3="-4,-19.6798941798942" />
                   <mssgle:LineSegment
-                    End="-25.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Multicast Output 14]"
-          TopLeft="1478,637.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-36,0"
-              Start="0,0"
-              End="-28.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
+                    End="-1018,-19.6798941798942" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-1018,-19.6798941798942"
+                    Point2="-1022,-19.6798941798942"
+                    Point3="-1022,-23.6798941798942" />
                   <mssgle:LineSegment
-                    End="-28.5,0" />
+                    End="-1022,-35.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11580,197 +11580,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output]"
-          TopLeft="509.5,204">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-8.26313122328298,26.928571428571"
-              Start="0,0"
-              End="-8.26313122328298,19.428571428571">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9.4642857142855" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9.4642857142855"
-                    Point2="0,13.4642857142855"
-                    Point3="-4,13.4642857142855" />
-                  <mssgle:LineSegment
-                    End="-4.26313122328298,13.4642857142855" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4.26313122328298,13.4642857142855"
-                    Point2="-8.26313122328298,13.4642857142855"
-                    Point3="-8.26313122328298,17.4642857142855" />
-                  <mssgle:LineSegment
-                    End="-8.26313122328298,19.428571428571" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output1]"
-          TopLeft="1834.5,121">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34"
-              Start="0,0"
-              End="0,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output2]"
-          TopLeft="1856,823">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37"
-              Start="0,0"
-              End="0,29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output3]"
-          TopLeft="1328,260">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-507,515"
-              Start="0,0"
-              End="-507,507.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,302.168384879725" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,302.168384879725"
-                    Point2="0,306.168384879725"
-                    Point3="-4,306.168384879725" />
-                  <mssgle:LineSegment
-                    End="-503,306.168384879725" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-503,306.168384879725"
-                    Point2="-507,306.168384879725"
-                    Point3="-507,310.168384879725" />
-                  <mssgle:LineSegment
-                    End="-507,507.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output4]"
-          TopLeft="1080.75,729">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41"
-              Start="0,0"
-              End="0,33.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output5]"
-          TopLeft="1384.66666666667,1093">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-607.666666666667,-276"
-              Start="0,0"
-              End="-607.666666666667,-268.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-121.754256444288" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-121.754256444288"
-                    Point2="0,-125.754256444288"
-                    Point3="-4,-125.754256444288" />
-                  <mssgle:LineSegment
-                    End="-603.666666666667,-125.754256444288" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-603.666666666667,-125.754256444288"
-                    Point2="-607.666666666667,-125.754256444288"
-                    Point3="-607.666666666667,-129.754256444288" />
-                  <mssgle:LineSegment
-                    End="-607.666666666667,-268.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output6]"
-          TopLeft="1569,273">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39"
-              Start="0,0"
-              End="0,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output13]"
+          TopLeft="763.5,1065">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output12]"
           TopLeft="1597,798">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11804,87 +11636,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output7]"
-          TopLeft="763.5,1065">
+          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output11]"
+          TopLeft="768.25,300">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,46"
+              EndConnector="0,475"
               Start="0,0"
-              End="0,38.5">
+              End="0,467.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output8]"
-          TopLeft="1570.5,354">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="17,24"
-              Start="0,0"
-              End="17,16.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,8" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8"
-                    Point2="0,12"
-                    Point3="4,12" />
-                  <mssgle:LineSegment
-                    End="13,12" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13,12"
-                    Point2="17,12"
-                    Point3="17,16" />
-                  <mssgle:LineSegment
-                    End="17,16.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output9]"
-          TopLeft="2191,975">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-1348,-158"
-              Start="0,0"
-              End="-1348,-150.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-92.8855886575736" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-92.8855886575736"
-                    Point2="0,-96.8855886575736"
-                    Point3="-4,-96.8855886575736" />
-                  <mssgle:LineSegment
-                    End="-1344,-96.8855886575736" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-1344,-96.8855886575736"
-                    Point2="-1348,-96.8855886575736"
-                    Point3="-1348,-100.885588657574" />
-                  <mssgle:LineSegment
-                    End="-1348,-150.5" />
+                    End="0,467.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11895,28 +11659,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output10]"
-          TopLeft="504.75,358">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57"
-              Start="0,0"
-              End="0,49.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output11]"
           TopLeft="2250,702">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11950,19 +11692,277 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output12]"
-          TopLeft="768.25,300">
+          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output9]"
+          TopLeft="504.75,358">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,475"
+              EndConnector="0,57"
               Start="0,0"
-              End="0,467.5">
+              End="0,49.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,467.5" />
+                    End="0,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output8]"
+          TopLeft="2191,975">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-1348,-158"
+              Start="0,0"
+              End="-1348,-150.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-92.8855886575736" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-92.8855886575736"
+                    Point2="0,-96.8855886575736"
+                    Point3="-4,-96.8855886575736" />
+                  <mssgle:LineSegment
+                    End="-1344,-96.8855886575736" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-1344,-96.8855886575736"
+                    Point2="-1348,-96.8855886575736"
+                    Point3="-1348,-100.885588657574" />
+                  <mssgle:LineSegment
+                    End="-1348,-150.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output7]"
+          TopLeft="1570.5,354">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17,24"
+              Start="0,0"
+              End="17,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8"
+                    Point2="0,12"
+                    Point3="4,12" />
+                  <mssgle:LineSegment
+                    End="13,12" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13,12"
+                    Point2="17,12"
+                    Point3="17,16" />
+                  <mssgle:LineSegment
+                    End="17,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output6]"
+          TopLeft="1384.66666666667,1093">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-607.666666666667,-276"
+              Start="0,0"
+              End="-607.666666666667,-268.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-121.754256444288" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-121.754256444288"
+                    Point2="0,-125.754256444288"
+                    Point3="-4,-125.754256444288" />
+                  <mssgle:LineSegment
+                    End="-603.666666666667,-125.754256444288" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-603.666666666667,-125.754256444288"
+                    Point2="-607.666666666667,-125.754256444288"
+                    Point3="-607.666666666667,-129.754256444288" />
+                  <mssgle:LineSegment
+                    End="-607.666666666667,-268.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output5]"
+          TopLeft="1080.75,729">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output4]"
+          TopLeft="1328,260">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-507,515"
+              Start="0,0"
+              End="-507,507.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,302.168384879725" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,302.168384879725"
+                    Point2="0,306.168384879725"
+                    Point3="-4,306.168384879725" />
+                  <mssgle:LineSegment
+                    End="-503,306.168384879725" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-503,306.168384879725"
+                    Point2="-507,306.168384879725"
+                    Point3="-507,310.168384879725" />
+                  <mssgle:LineSegment
+                    End="-507,507.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output3]"
+          TopLeft="1856,823">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output2]"
+          TopLeft="1834.5,121">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output1]"
+          TopLeft="509.5,204">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.26313122328298,26.928571428571"
+              Start="0,0"
+              End="-8.26313122328298,19.428571428571">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.4642857142855" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.4642857142855"
+                    Point2="0,13.4642857142855"
+                    Point3="-4,13.4642857142855" />
+                  <mssgle:LineSegment
+                    End="-4.26313122328298,13.4642857142855" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.26313122328298,13.4642857142855"
+                    Point2="-8.26313122328298,13.4642857142855"
+                    Point3="-8.26313122328298,17.4642857142855" />
+                  <mssgle:LineSegment
+                    End="-8.26313122328298,19.428571428571" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_RELIGION_1.Paths[Derived Column Output]"
+          TopLeft="1569,273">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

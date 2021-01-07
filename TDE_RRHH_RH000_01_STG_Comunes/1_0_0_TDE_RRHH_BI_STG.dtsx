@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="8/18/2020 3:09:31 PM"
@@ -7,13 +7,13 @@
   DTS:CreatorName="TDESOL\fdiaz"
   DTS:DTSID="{6A31F151-9FC8-4ECB-986D-A3569D7B91D2}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.123"
+  DTS:LastModifiedProductVersion="15.0.2000.128"
   DTS:LocaleID="1033"
   DTS:ObjectName="1_0_0_TDE_RRHH_BI_STG"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{BB0C3D25-F224-4ECA-B67E-D1CE9547CF89}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{84184802-294C-48E9-BDA2-5DD836B8EF1D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -123,7 +123,7 @@
         <NodeLayout
           Size="233,42"
           Id="Package\1_0_0_TDE_RRHH_BI_STG\1_0_3_TDE_RRHH_BI_STG_FAC"
-          TopLeft="55,154" />
+          TopLeft="120,203" />
         <EdgeLayout
           Id="Package\1_0_0_TDE_RRHH_BI_STG.PrecedenceConstraints[Constraint]"
           TopLeft="155.5,67">
@@ -160,24 +160,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\1_0_0_TDE_RRHH_BI_STG.PrecedenceConstraints[Constraint 1]"
-          TopLeft="167,116">
+          TopLeft="283,137">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="4.5,38"
+              EndConnector="-46.5,66"
               Start="0,0"
-              End="4.5,30.5">
+              End="-46.5,58.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0.5,0" />
+                    End="0,29" />
                   <mssgle:CubicBezierSegment
-                    Point1="0.5,0"
-                    Point2="4.5,0"
-                    Point3="4.5,4" />
+                    Point1="0,29"
+                    Point2="0,33"
+                    Point3="-4,33" />
                   <mssgle:LineSegment
-                    End="4.5,30.5" />
+                    End="-42.5,33" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-42.5,33"
+                    Point2="-46.5,33"
+                    Point3="-46.5,37" />
+                  <mssgle:LineSegment
+                    End="-46.5,58.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -189,8 +195,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="451,251"
-          Size="451,294"
+          PanelSize="451,300"
+          Size="451,343"
           Id="Package\1_0_0_TDE_RRHH_BI_STG"
           TopLeft="193,42" />
       </GraphLayout>

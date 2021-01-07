@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="STG_DIM_DISTRITO_MUNICIPAL"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="349"
-  DTS:VersionGUID="{410920CB-2C60-4F5D-873E-E6CA6662EA02}">
+  DTS:VersionBuild="351"
+  DTS:VersionGUID="{9A97B8E3-B3C5-47CB-964E-299F4308A54D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -4256,8 +4256,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1\PR_SRC_DIM_DISTRITO_MUNICIPAL.Connections[OleDbConnection]"
-                  connectionManagerID="{257F1096-3C1F-4B54-9256-F02D9CFFC700}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[CNX_SSISDB]"
+                  connectionManagerID="{641873F6-0A17-4B7E-9D5C-4F0C3D641DC6}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_SRC_RRHH_02]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4749,14 +4749,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               startId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1\DV_STANDARD_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Derived Column Output3]"
+              endId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1\DV_STANDARD_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Derived Column Output6]"
               endId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1\ER_UN_STANDARD_1.Inputs[Union All Input 2]"
               name="Derived Column Output"
               startId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1\DV_REGISTROS_INVALIDOS_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Derived Column Output6]"
-              endId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1\UN_STANDARD.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1\DV_STANDARD_2.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Derived Column Output1]"
               endId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1\UN_STANDARD.Inputs[Union All Input 4]"
@@ -4769,9 +4769,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               startId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Derived Column Output2]"
-              endId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              endId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1\UN_STANDARD.Inputs[Union All Input 2]"
               name="Derived Column Output"
-              startId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1\DV_STANDARD_3.Outputs[Derived Column Output]" />
+              startId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1\DV_STANDARD_2.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Multicast Output 2]"
               endId="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1\AGG_STANDARD_2.Inputs[Aggregate Input 1]"
@@ -4839,7 +4839,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_CREATE_DATE_1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -4915,7 +4915,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_DATE_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5094,7 +5094,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5118,7 +5118,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5142,7 +5142,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6446,7 +6446,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Derived Column Output3]"
+          Id="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Derived Column Output6]"
           TopLeft="936.666666666667,638">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6480,19 +6480,97 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Derived Column Output]"
-          TopLeft="594.25,319">
+          Id="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Derived Column Output5]"
+          TopLeft="148,466">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,50"
+              EndConnector="0,75"
               Start="0,0"
-              End="0,42.5">
+              End="0,67.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.5" />
+                    End="0,67.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Derived Column Output4]"
+          TopLeft="1316.25,246">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Derived Column Output3]"
+          TopLeft="1313.5,577">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,78"
+              Start="0,0"
+              End="0,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Derived Column Output2]"
+          TopLeft="1027.33333333333,428">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="287.666666666667,-82"
+              Start="0,0"
+              End="287.666666666667,-74.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-29.2782503037667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-29.2782503037667"
+                    Point2="0,-33.2782503037667"
+                    Point3="4,-33.2782503037667" />
+                  <mssgle:LineSegment
+                    End="283.666666666667,-33.2782503037667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="283.666666666667,-33.2782503037667"
+                    Point2="287.666666666667,-33.2782503037667"
+                    Point3="287.666666666667,-37.2782503037667" />
+                  <mssgle:LineSegment
+                    End="287.666666666667,-74.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6536,97 +6614,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Derived Column Output2]"
-          TopLeft="1313.5,577">
+          Id="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Derived Column Output]"
+          TopLeft="594.25,319">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,78"
+              EndConnector="0,50"
               Start="0,0"
-              End="0,70.5">
+              End="0,42.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,70.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Derived Column Output6]"
-          TopLeft="1027.33333333333,428">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="287.666666666667,-82"
-              Start="0,0"
-              End="287.666666666667,-74.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-29.2782503037667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-29.2782503037667"
-                    Point2="0,-33.2782503037667"
-                    Point3="4,-33.2782503037667" />
-                  <mssgle:LineSegment
-                    End="283.666666666667,-33.2782503037667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="283.666666666667,-33.2782503037667"
-                    Point2="287.666666666667,-33.2782503037667"
-                    Point3="287.666666666667,-37.2782503037667" />
-                  <mssgle:LineSegment
-                    End="287.666666666667,-74.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Derived Column Output4]"
-          TopLeft="1316.25,246">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58"
-              Start="0,0"
-              End="0,50.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_DISTRITO_MUNICIPAL_1.Paths[Derived Column Output5]"
-          TopLeft="148,466">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,75"
-              Start="0,0"
-              End="0,67.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,67.5" />
+                    End="0,42.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="STG_DIM_SUB_BARRIO"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="271"
-  DTS:VersionGUID="{7907A0B5-39EF-46AB-B83C-AC8485B4BF0F}">
+  DTS:VersionBuild="272"
+  DTS:VersionGUID="{40DAF726-9D52-4756-AF73-177627463966}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -4313,16 +4313,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">Select distinct
-ba_codigo AS CD_BARRIO,
-ba_descri AS NM_BARRIO,
-sc_codigo AS CD_SECTOR_GEOGRAFICO
-from TRHBA000
-UNION ALL
- Select 
-'-1' AS ba_codigo , 
-'NO INFORMADO' AS ba_descri , 
-'-1' AS coord</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT CD_SUB_BARRIO, NM_SUB_BARRIO, CD_BARRIO
+FROM source00.SUB_BARRIO</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -4339,7 +4331,7 @@ UNION ALL
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">2</property>
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
@@ -4348,8 +4340,8 @@ UNION ALL
               <connections>
                 <connection
                   refId="Package\DF_STG_DIM_SUB_BARRIO_1\PR_SRC_DIM_SUB_BARRIO.Connections[OleDbConnection]"
-                  connectionManagerID="{57FB4340-4941-440B-B875-D839A78DE2E7}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[CNX_SSISDB]"
+                  connectionManagerID="{37F1298F-18F1-47D2-8B78-6F76872E9CC9}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_SRC_RRHH_02]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4885,39 +4877,39 @@ UNION ALL
               startId="Package\DF_STG_DIM_SUB_BARRIO_1\DV_STANDARD_2.Outputs[Derived Column Error Output]" />
             <path
               refId="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output5]"
-              endId="Package\DF_STG_DIM_SUB_BARRIO_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_SUB_BARRIO_1\DV_STANDARD_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output4]"
-              endId="Package\DF_STG_DIM_SUB_BARRIO_1\UN_STANDARD.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_SUB_BARRIO_1\DV_STANDARD_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output3]"
-              endId="Package\DF_STG_DIM_SUB_BARRIO_1\PR_DTN_DIM_SUB_BARRIO.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_SUB_BARRIO_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output6]"
-              endId="Package\DF_STG_DIM_SUB_BARRIO_1\ER_UN_STANDARD_1.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_SUB_BARRIO_1\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output1]"
-              endId="Package\DF_STG_DIM_SUB_BARRIO_1\UN_STANDARD.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_SUB_BARRIO_1\DV_STANDARD_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output]"
               endId="Package\DF_STG_DIM_SUB_BARRIO_1\ER_UN_STANDARD_1.Inputs[Union All Input 1]"
               name="Derived Column Output"
               startId="Package\DF_STG_DIM_SUB_BARRIO_1\DV_REGISTROS_INVALIDOS_3.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output2]"
+              refId="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output4]"
+              endId="Package\DF_STG_DIM_SUB_BARRIO_1\UN_STANDARD.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_SUB_BARRIO_1\DV_STANDARD_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output3]"
+              endId="Package\DF_STG_DIM_SUB_BARRIO_1\ER_UN_STANDARD_1.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_SUB_BARRIO_1\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output6]"
               endId="Package\DF_STG_DIM_SUB_BARRIO_1\UN_STANDARD.Inputs[Union All Input 4]"
               name="Derived Column Output"
               startId="Package\DF_STG_DIM_SUB_BARRIO_1\DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output1]"
+              endId="Package\DF_STG_DIM_SUB_BARRIO_1\UN_STANDARD.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_SUB_BARRIO_1\DV_STANDARD_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output]"
+              endId="Package\DF_STG_DIM_SUB_BARRIO_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_SUB_BARRIO_1\DV_STANDARD_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output2]"
+              endId="Package\DF_STG_DIM_SUB_BARRIO_1\PR_DTN_DIM_SUB_BARRIO.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_SUB_BARRIO_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Multicast Output 2]"
               endId="Package\DF_STG_DIM_SUB_BARRIO_1\RA_AGG_STANDARD_1.Inputs[Aggregate Input 1]"
@@ -4985,7 +4977,7 @@ UNION ALL
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_CREATE_DATE_1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5061,7 +5053,7 @@ UNION ALL
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_DATE_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5240,7 +5232,7 @@ UNION ALL
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5312,7 +5304,7 @@ UNION ALL
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5336,7 +5328,7 @@ UNION ALL
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_2 1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5378,7 +5370,7 @@ UNION ALL
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE_STAGING_AREA_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6347,130 +6339,6 @@ UNION ALL
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output6]"
-          TopLeft="289,483">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-66,113"
-              Start="0,0"
-              End="-66,105.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,52.5"
-                    Point2="0,56.5"
-                    Point3="-4,56.5" />
-                  <mssgle:LineSegment
-                    End="-62,56.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-62,56.5"
-                    Point2="-66,56.5"
-                    Point3="-66,60.5" />
-                  <mssgle:LineSegment
-                    End="-66,105.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output5]"
-          TopLeft="1401,482">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,75"
-              Start="0,0"
-              End="0,67.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,67.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output4]"
-          TopLeft="997.333333333333,439">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="317.666666666667,-93"
-              Start="0,0"
-              End="317.666666666667,-85.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-33.7424058323208" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-33.7424058323208"
-                    Point2="0,-37.7424058323208"
-                    Point3="4,-37.7424058323208" />
-                  <mssgle:LineSegment
-                    End="313.666666666667,-37.7424058323208" />
-                  <mssgle:CubicBezierSegment
-                    Point1="313.666666666667,-37.7424058323208"
-                    Point2="317.666666666667,-37.7424058323208"
-                    Point3="317.666666666667,-41.7424058323208" />
-                  <mssgle:LineSegment
-                    End="317.666666666667,-85.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output3]"
-          TopLeft="608.5,328">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="69,77"
-              Start="0,0"
-              End="69,69.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.5"
-                    Point2="0,38.5"
-                    Point3="4,38.5" />
-                  <mssgle:LineSegment
-                    End="65,38.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="65,38.5"
-                    Point2="69,38.5"
-                    Point3="69,42.5" />
-                  <mssgle:LineSegment
-                    End="69,69.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output2]"
           TopLeft="730.333333333333,601">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6504,29 +6372,7 @@ UNION ALL
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output1]"
-          TopLeft="1316.25,246">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58"
-              Start="0,0"
-              End="0,50.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output]"
+          Id="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output5]"
           TopLeft="886,675">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6551,6 +6397,152 @@ UNION ALL
                     Point3="-290,-58" />
                   <mssgle:LineSegment
                     End="-564.5,-58" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output4]"
+          TopLeft="1316.25,246">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output3]"
+          TopLeft="289,483">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-66,113"
+              Start="0,0"
+              End="-66,105.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,52.5"
+                    Point2="0,56.5"
+                    Point3="-4,56.5" />
+                  <mssgle:LineSegment
+                    End="-62,56.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-62,56.5"
+                    Point2="-66,56.5"
+                    Point3="-66,60.5" />
+                  <mssgle:LineSegment
+                    End="-66,105.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output2]"
+          TopLeft="608.5,328">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69,77"
+              Start="0,0"
+              End="69,69.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.5"
+                    Point2="0,38.5"
+                    Point3="4,38.5" />
+                  <mssgle:LineSegment
+                    End="65,38.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="65,38.5"
+                    Point2="69,38.5"
+                    Point3="69,42.5" />
+                  <mssgle:LineSegment
+                    End="69,69.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output1]"
+          TopLeft="997.333333333333,439">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="317.666666666667,-93"
+              Start="0,0"
+              End="317.666666666667,-85.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-33.7424058323208" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-33.7424058323208"
+                    Point2="0,-37.7424058323208"
+                    Point3="4,-37.7424058323208" />
+                  <mssgle:LineSegment
+                    End="313.666666666667,-37.7424058323208" />
+                  <mssgle:CubicBezierSegment
+                    Point1="313.666666666667,-37.7424058323208"
+                    Point2="317.666666666667,-37.7424058323208"
+                    Point3="317.666666666667,-41.7424058323208" />
+                  <mssgle:LineSegment
+                    End="317.666666666667,-85.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_SUB_BARRIO_1.Paths[Derived Column Output]"
+          TopLeft="1401,482">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,75"
+              Start="0,0"
+              End="0,67.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

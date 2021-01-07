@@ -7,13 +7,13 @@
   DTS:CreatorName="TDESOL\jjimenez"
   DTS:DTSID="{C659FB2B-BA94-4C85-B920-C87814084C25}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.123"
+  DTS:LastModifiedProductVersion="15.0.2000.128"
   DTS:LocaleID="1033"
   DTS:ObjectName="0_0_0_TDE_RRHH_BI"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="345"
-  DTS:VersionGUID="{09648C02-E9D0-43E8-93A2-0E9F35A225D2}">
+  DTS:VersionBuild="346"
+  DTS:VersionGUID="{685E0019-6A34-4407-96FB-C506398B6C71}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -299,14 +299,14 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.9880952380955"
+              EndConnector="0,60.9880952380959"
               Start="0,0"
-              End="0,53.4880952380955">
+              End="0,53.4880952380959">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,53.4880952380955" />
+                    End="0,53.4880952380959" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

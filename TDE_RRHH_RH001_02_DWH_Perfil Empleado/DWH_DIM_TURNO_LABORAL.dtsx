@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="DWH_DIM_TURNO_LABORAL"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="339"
-  DTS:VersionGUID="{6FAC3707-1B53-4464-B4C8-20EB9269B79A}">
+  DTS:VersionBuild="341"
+  DTS:VersionGUID="{9B7E3FFC-9BA7-4DE2-8ECE-8657C9222407}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -749,14 +749,12 @@
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Error Output].Columns[DESC_TURNO_LABORAL]" />
                     <inputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\ER_DV_STANDARD_4.Inputs[Derived Column Input].Columns[HORA_INI_TURNO]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedDataType="dbDate"
                       cachedName="HORA_INI_TURNO"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Error Output].Columns[HORA_INI_TURNO]" />
                     <inputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\ER_DV_STANDARD_4.Inputs[Derived Column Input].Columns[HORA_FIN_TURNO]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedDataType="dbDate"
                       cachedName="HORA_FIN_TURNO"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Error Output].Columns[HORA_FIN_TURNO]" />
                     <inputColumn
@@ -2340,13 +2338,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_DESC_TURNO_LABORAL]" />
                     <inputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_DTN_DIM_TURNO_LABORAL_1.Inputs[OLE DB Destination Input].Columns[SRC_HORA_INI_TURNO]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="SRC_HORA_INI_TURNO"
                       externalMetadataColumnId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_DTN_DIM_TURNO_LABORAL_1.Inputs[OLE DB Destination Input].ExternalColumns[HORARIO_INI_TURNO]"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_INI_TURNO]" />
                     <inputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_DTN_DIM_TURNO_LABORAL_1.Inputs[OLE DB Destination Input].Columns[SRC_HORA_FIN_TURNO]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="SRC_HORA_FIN_TURNO"
                       externalMetadataColumnId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_DTN_DIM_TURNO_LABORAL_1.Inputs[OLE DB Destination Input].ExternalColumns[HORARIO_FIN_TURNO]"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_FIN_TURNO]" />
@@ -2371,7 +2369,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedDataType="numeric"
                       cachedName="SRC_CANTIDAD_HORAS_SEMANALES"
                       cachedPrecision="10"
-                      cachedScale="2"
                       externalMetadataColumnId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_DTN_DIM_TURNO_LABORAL_1.Inputs[OLE DB Destination Input].ExternalColumns[CANTIDAD_HORAS_SEMANALES]"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_CANTIDAD_HORAS_SEMANALES]" />
                   </inputColumns>
@@ -3030,7 +3027,7 @@ WHERE
                     </inputColumn>
                     <inputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Inputs[Derived Column Input].Columns[SRC_HORA_INI_TURNO]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="SRC_HORA_INI_TURNO"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -3053,7 +3050,7 @@ WHERE
                     </inputColumn>
                     <inputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Inputs[Derived Column Input].Columns[SRC_HORA_FIN_TURNO]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="SRC_HORA_FIN_TURNO"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -3129,7 +3126,6 @@ WHERE
                       cachedDataType="numeric"
                       cachedName="SRC_CANTIDAD_HORAS_SEMANALES"
                       cachedPrecision="10"
-                      cachedScale="2"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_CANTIDAD_HORAS_SEMANALES]"
@@ -3249,7 +3245,7 @@ WHERE
       ,[FC_FIN_VAL]
       ,[SK_EJECUCION_CREACION]
       ,[SK_EJECUCION_MODIFICACION]
-  FROM [TDE_DWH_EikonBI_DES].RH01.[DIM_TURNO_LABORAL]
+  FROM RH01.[DIM_TURNO_LABORAL]
    WHERE ? BETWEEN FC_INI_VAL AND FC_FIN_VAL
 	    ORDER BY [CD_TURNO_LABORAL] ASC</property>
                 <property
@@ -3655,12 +3651,12 @@ WHERE
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Output].Columns[DESC_TURNO_LABORAL]" />
                     <inputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Inputs[Merge Join Left Input].Columns[HORA_INI_TURNO]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="HORA_INI_TURNO"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Output].Columns[HORA_INI_TURNO]" />
                     <inputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Inputs[Merge Join Left Input].Columns[HORA_FIN_TURNO]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="HORA_FIN_TURNO"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Output].Columns[HORA_FIN_TURNO]" />
                     <inputColumn
@@ -3682,7 +3678,6 @@ WHERE
                       cachedDataType="numeric"
                       cachedName="CANTIDAD_HORAS_SEMANALES"
                       cachedPrecision="10"
-                      cachedScale="2"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Output].Columns[CANTIDAD_HORAS_SEMANALES]" />
                   </inputColumns>
                   <externalMetadataColumns />
@@ -3798,7 +3793,7 @@ WHERE
                     </outputColumn>
                     <outputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_INI_TURNO]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_INI_TURNO]"
                       name="SRC_HORA_INI_TURNO">
                       <properties>
@@ -3811,7 +3806,7 @@ WHERE
                     </outputColumn>
                     <outputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_FIN_TURNO]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_FIN_TURNO]"
                       name="SRC_HORA_FIN_TURNO">
                       <properties>
@@ -3857,8 +3852,7 @@ WHERE
                       dataType="numeric"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_CANTIDAD_HORAS_SEMANALES]"
                       name="SRC_CANTIDAD_HORAS_SEMANALES"
-                      precision="10"
-                      scale="2">
+                      precision="10">
                       <properties>
                         <property
                           containsID="true"
@@ -5094,7 +5088,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       truncationRowDisposition="RedirectRow" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Output].Columns[HORA_INI_TURNO]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Output].ExternalColumns[HORA_INI_TURNO]"
@@ -5103,7 +5097,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       truncationRowDisposition="RedirectRow" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Output].Columns[HORA_FIN_TURNO]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Output].ExternalColumns[HORA_FIN_TURNO]"
@@ -5141,7 +5135,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Output].Columns[CANTIDAD_HORAS_SEMANALES]"
                       name="CANTIDAD_HORAS_SEMANALES"
                       precision="10"
-                      scale="2"
                       truncationRowDisposition="RedirectRow" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -5160,13 +5153,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       name="DESC_TURNO_LABORAL" />
                     <externalMetadataColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Output].ExternalColumns[HORA_INI_TURNO]"
-                      dataType="wstr"
-                      length="10"
+                      dataType="dbDate"
                       name="HORA_INI_TURNO" />
                     <externalMetadataColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Output].ExternalColumns[HORA_FIN_TURNO]"
-                      dataType="wstr"
-                      length="10"
+                      dataType="dbDate"
                       name="HORA_FIN_TURNO" />
                     <externalMetadataColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Output].ExternalColumns[IND_TRABAJO_SABADO]"
@@ -5208,14 +5199,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       name="DESC_TURNO_LABORAL" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Error Output].Columns[HORA_INI_TURNO]"
-                      dataType="wstr"
-                      length="10"
+                      dataType="dbDate"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Error Output].Columns[HORA_INI_TURNO]"
                       name="HORA_INI_TURNO" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Error Output].Columns[HORA_FIN_TURNO]"
-                      dataType="wstr"
-                      length="10"
+                      dataType="dbDate"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_SRC_DIM_TURNO_LABORAL_1.Outputs[OLE DB Source Error Output].Columns[HORA_FIN_TURNO]"
                       name="HORA_FIN_TURNO" />
                     <outputColumn
@@ -5325,32 +5314,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 1].Columns[DWH_HORARIO_INI_TURNO]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="DWH_HORARIO_INI_TURNO"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_HORARIO_INI_TURNO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_HORARIO_INI_TURNO]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 1].Columns[DWH_HORARIO_FIN_TURNO]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="DWH_HORARIO_FIN_TURNO"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_HORARIO_FIN_TURNO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_HORARIO_FIN_TURNO]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 1].Columns[DWH_INDICADOR_TRABAJO_SABADO]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -5394,32 +5357,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_CD_TURNO_LABORAL]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 1].Columns[SRC_HORA_INI_TURNO]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="SRC_HORA_INI_TURNO"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_INI_TURNO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_HORA_INI_TURNO]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 1].Columns[SRC_HORA_FIN_TURNO]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="SRC_HORA_FIN_TURNO"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_FIN_TURNO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_HORA_FIN_TURNO]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -5521,21 +5458,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 1].Columns[SRC_CANTIDAD_HORAS_SEMANALES]"
-                      cachedDataType="numeric"
-                      cachedName="SRC_CANTIDAD_HORAS_SEMANALES"
-                      cachedPrecision="10"
-                      cachedScale="2"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_CANTIDAD_HORAS_SEMANALES]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_CANTIDAD_HORAS_SEMANALES]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 1].Columns[DWH_DESC_TURNO_LABORAL]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -5548,6 +5470,72 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_DESC_TURNO_LABORAL]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 1].Columns[SRC_HORA_INI_TURNO]"
+                      cachedDataType="dbDate"
+                      cachedName="SRC_HORA_INI_TURNO"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_INI_TURNO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_HORA_INI_TURNO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 1].Columns[SRC_HORA_FIN_TURNO]"
+                      cachedDataType="dbDate"
+                      cachedName="SRC_HORA_FIN_TURNO"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_FIN_TURNO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_HORA_FIN_TURNO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 1].Columns[SRC_CANTIDAD_HORAS_SEMANALES]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_CANTIDAD_HORAS_SEMANALES"
+                      cachedPrecision="10"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_CANTIDAD_HORAS_SEMANALES]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_CANTIDAD_HORAS_SEMANALES]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 1].Columns[DWH_HORARIO_INI_TURNO]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DWH_HORARIO_INI_TURNO"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_HORARIO_INI_TURNO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_HORARIO_INI_TURNO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 1].Columns[DWH_HORARIO_FIN_TURNO]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DWH_HORARIO_FIN_TURNO"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_HORARIO_FIN_TURNO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_HORARIO_FIN_TURNO]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -5630,32 +5618,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 2].Columns[DWH_HORARIO_INI_TURNO]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="DWH_HORARIO_INI_TURNO"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_HORARIO_INI_TURNO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_HORARIO_INI_TURNO]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 2].Columns[DWH_HORARIO_FIN_TURNO]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="DWH_HORARIO_FIN_TURNO"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_HORARIO_FIN_TURNO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_HORARIO_FIN_TURNO]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 2].Columns[DWH_INDICADOR_TRABAJO_SABADO]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -5699,32 +5661,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_CD_TURNO_LABORAL]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 2].Columns[SRC_HORA_INI_TURNO]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="SRC_HORA_INI_TURNO"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_INI_TURNO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_HORA_INI_TURNO]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 2].Columns[SRC_HORA_FIN_TURNO]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="SRC_HORA_FIN_TURNO"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_FIN_TURNO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_HORA_FIN_TURNO]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -5826,21 +5762,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 2].Columns[SRC_CANTIDAD_HORAS_SEMANALES]"
-                      cachedDataType="numeric"
-                      cachedName="SRC_CANTIDAD_HORAS_SEMANALES"
-                      cachedPrecision="10"
-                      cachedScale="2"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_CANTIDAD_HORAS_SEMANALES]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_CANTIDAD_HORAS_SEMANALES]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 2].Columns[DWH_DESC_TURNO_LABORAL]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -5853,6 +5774,72 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_DESC_TURNO_LABORAL]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 2].Columns[SRC_HORA_INI_TURNO]"
+                      cachedDataType="dbDate"
+                      cachedName="SRC_HORA_INI_TURNO"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_INI_TURNO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_HORA_INI_TURNO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 2].Columns[SRC_HORA_FIN_TURNO]"
+                      cachedDataType="dbDate"
+                      cachedName="SRC_HORA_FIN_TURNO"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_FIN_TURNO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_HORA_FIN_TURNO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 2].Columns[SRC_CANTIDAD_HORAS_SEMANALES]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_CANTIDAD_HORAS_SEMANALES"
+                      cachedPrecision="10"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_CANTIDAD_HORAS_SEMANALES]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_CANTIDAD_HORAS_SEMANALES]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 2].Columns[DWH_HORARIO_INI_TURNO]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DWH_HORARIO_INI_TURNO"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_HORARIO_INI_TURNO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_HORARIO_INI_TURNO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 2].Columns[DWH_HORARIO_FIN_TURNO]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DWH_HORARIO_FIN_TURNO"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_HORARIO_FIN_TURNO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_HORARIO_FIN_TURNO]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -5911,16 +5898,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_CD_TURNO_LABORAL]"
                       name="DWH_CD_TURNO_LABORAL" />
                     <outputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_HORARIO_INI_TURNO]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_HORARIO_INI_TURNO]"
-                      name="DWH_HORARIO_INI_TURNO" />
-                    <outputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_HORARIO_FIN_TURNO]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_HORARIO_FIN_TURNO]"
-                      name="DWH_HORARIO_FIN_TURNO" />
-                    <outputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_INDICADOR_TRABAJO_SABADO]"
                       codePage="1252"
                       dataType="str"
@@ -5941,16 +5918,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       length="20"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_CD_TURNO_LABORAL]"
                       name="SRC_CD_TURNO_LABORAL" />
-                    <outputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_HORA_INI_TURNO]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_HORA_INI_TURNO]"
-                      name="SRC_HORA_INI_TURNO" />
-                    <outputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_HORA_FIN_TURNO]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_HORA_FIN_TURNO]"
-                      name="SRC_HORA_FIN_TURNO" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_IND_TRABAJO_SABADO]"
                       codePage="1252"
@@ -5994,19 +5961,38 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_DESC_TURNO_LABORAL]"
                       name="SRC_DESC_TURNO_LABORAL" />
                     <outputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_CANTIDAD_HORAS_SEMANALES]"
-                      dataType="numeric"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_CANTIDAD_HORAS_SEMANALES]"
-                      name="SRC_CANTIDAD_HORAS_SEMANALES"
-                      precision="10"
-                      scale="2" />
-                    <outputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_DESC_TURNO_LABORAL]"
                       codePage="1252"
                       dataType="str"
                       length="150"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_DESC_TURNO_LABORAL]"
                       name="DWH_DESC_TURNO_LABORAL" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_HORA_INI_TURNO]"
+                      dataType="dbDate"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_HORA_INI_TURNO]"
+                      name="SRC_HORA_INI_TURNO" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_HORA_FIN_TURNO]"
+                      dataType="dbDate"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_HORA_FIN_TURNO]"
+                      name="SRC_HORA_FIN_TURNO" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_CANTIDAD_HORAS_SEMANALES]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_CANTIDAD_HORAS_SEMANALES]"
+                      name="SRC_CANTIDAD_HORAS_SEMANALES"
+                      precision="10" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_HORARIO_INI_TURNO]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_HORARIO_INI_TURNO]"
+                      name="DWH_HORARIO_INI_TURNO" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_HORARIO_FIN_TURNO]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_HORARIO_FIN_TURNO]"
+                      name="DWH_HORARIO_FIN_TURNO" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_CANTIDAD_HORAS_SEMANALES]"
                       dataType="numeric"
@@ -6088,32 +6074,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 1].Columns[DWH_HORARIO_INI_TURNO]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="DWH_HORARIO_INI_TURNO"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_HORARIO_INI_TURNO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_HORARIO_INI_TURNO]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 1].Columns[DWH_HORARIO_FIN_TURNO]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="DWH_HORARIO_FIN_TURNO"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_HORARIO_FIN_TURNO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_HORARIO_FIN_TURNO]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 1].Columns[DWH_INDICADOR_TRABAJO_SABADO]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -6157,32 +6117,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_CD_TURNO_LABORAL]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 1].Columns[SRC_HORA_INI_TURNO]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="SRC_HORA_INI_TURNO"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_INI_TURNO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_INI_TURNO]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 1].Columns[SRC_HORA_FIN_TURNO]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="SRC_HORA_FIN_TURNO"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_FIN_TURNO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_FIN_TURNO]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -6299,11 +6233,62 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 1].Columns[SRC_HORA_INI_TURNO]"
+                      cachedDataType="dbDate"
+                      cachedName="SRC_HORA_INI_TURNO"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_INI_TURNO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_INI_TURNO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 1].Columns[SRC_HORA_FIN_TURNO]"
+                      cachedDataType="dbDate"
+                      cachedName="SRC_HORA_FIN_TURNO"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_FIN_TURNO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_FIN_TURNO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 1].Columns[DWH_HORARIO_INI_TURNO]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DWH_HORARIO_INI_TURNO"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_HORARIO_INI_TURNO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_HORARIO_INI_TURNO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 1].Columns[DWH_HORARIO_FIN_TURNO]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DWH_HORARIO_FIN_TURNO"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_HORARIO_FIN_TURNO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_HORARIO_FIN_TURNO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 1].Columns[SRC_CANTIDAD_HORAS_SEMANALES]"
                       cachedDataType="numeric"
                       cachedName="SRC_CANTIDAD_HORAS_SEMANALES"
                       cachedPrecision="10"
-                      cachedScale="2"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_CANTIDAD_HORAS_SEMANALES]">
                       <properties>
                         <property
@@ -6393,32 +6378,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 2].Columns[DWH_HORARIO_INI_TURNO]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="DWH_HORARIO_INI_TURNO"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_HORARIO_INI_TURNO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_HORARIO_INI_TURNO]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 2].Columns[DWH_HORARIO_FIN_TURNO]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="DWH_HORARIO_FIN_TURNO"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_HORARIO_FIN_TURNO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_HORARIO_FIN_TURNO]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 2].Columns[DWH_INDICADOR_TRABAJO_SABADO]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -6462,32 +6421,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_CD_TURNO_LABORAL]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 2].Columns[SRC_HORA_INI_TURNO]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="SRC_HORA_INI_TURNO"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_INI_TURNO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_INI_TURNO]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 2].Columns[SRC_HORA_FIN_TURNO]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="SRC_HORA_FIN_TURNO"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_FIN_TURNO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_FIN_TURNO]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -6604,11 +6537,62 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 2].Columns[SRC_HORA_INI_TURNO]"
+                      cachedDataType="dbDate"
+                      cachedName="SRC_HORA_INI_TURNO"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_INI_TURNO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_INI_TURNO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 2].Columns[SRC_HORA_FIN_TURNO]"
+                      cachedDataType="dbDate"
+                      cachedName="SRC_HORA_FIN_TURNO"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_HORA_FIN_TURNO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_FIN_TURNO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 2].Columns[DWH_HORARIO_INI_TURNO]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DWH_HORARIO_INI_TURNO"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_HORARIO_INI_TURNO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_HORARIO_INI_TURNO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 2].Columns[DWH_HORARIO_FIN_TURNO]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DWH_HORARIO_FIN_TURNO"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_HORARIO_FIN_TURNO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_HORARIO_FIN_TURNO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 2].Columns[SRC_CANTIDAD_HORAS_SEMANALES]"
                       cachedDataType="numeric"
                       cachedName="SRC_CANTIDAD_HORAS_SEMANALES"
                       cachedPrecision="10"
-                      cachedScale="2"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_CANTIDAD_HORAS_SEMANALES]">
                       <properties>
                         <property
@@ -6674,16 +6658,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_CD_TURNO_LABORAL]"
                       name="DWH_CD_TURNO_LABORAL" />
                     <outputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_HORARIO_INI_TURNO]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_HORARIO_INI_TURNO]"
-                      name="DWH_HORARIO_INI_TURNO" />
-                    <outputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_HORARIO_FIN_TURNO]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_HORARIO_FIN_TURNO]"
-                      name="DWH_HORARIO_FIN_TURNO" />
-                    <outputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_INDICADOR_TRABAJO_SABADO]"
                       codePage="1252"
                       dataType="str"
@@ -6704,16 +6678,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       length="20"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_CD_TURNO_LABORAL]"
                       name="SRC_CD_TURNO_LABORAL" />
-                    <outputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_INI_TURNO]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_INI_TURNO]"
-                      name="SRC_HORA_INI_TURNO" />
-                    <outputColumn
-                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_FIN_TURNO]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_FIN_TURNO]"
-                      name="SRC_HORA_FIN_TURNO" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_IND_TRABAJO_SABADO]"
                       codePage="1252"
@@ -6764,12 +6728,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_DESC_TURNO_LABORAL]"
                       name="DWH_DESC_TURNO_LABORAL" />
                     <outputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_INI_TURNO]"
+                      dataType="dbDate"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_INI_TURNO]"
+                      name="SRC_HORA_INI_TURNO" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_FIN_TURNO]"
+                      dataType="dbDate"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_HORA_FIN_TURNO]"
+                      name="SRC_HORA_FIN_TURNO" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_HORARIO_INI_TURNO]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_HORARIO_INI_TURNO]"
+                      name="DWH_HORARIO_INI_TURNO" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_HORARIO_FIN_TURNO]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_HORARIO_FIN_TURNO]"
+                      name="DWH_HORARIO_FIN_TURNO" />
+                    <outputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_CANTIDAD_HORAS_SEMANALES]"
                       dataType="numeric"
                       lineageId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_CANTIDAD_HORAS_SEMANALES]"
                       name="SRC_CANTIDAD_HORAS_SEMANALES"
-                      precision="10"
-                      scale="2" />
+                      precision="10" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_CANTIDAD_HORAS_SEMANALES]"
                       dataType="numeric"
@@ -9692,69 +9675,69 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_AGG_STANDARD_2.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output12]"
-              endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_CS_SCD2_1.Inputs[Conditional Split Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_DV_FECHAS_GENERICAS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output11]"
-              endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output10]"
-              endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_SRT_STANDARD_2.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_DV_STANDARD_6.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output9]"
-              endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output8]"
-              endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output6]"
               endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\MC_STANDARD_1.Inputs[Multicast Input 1]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output7]"
-              endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_SRT_STANDARD_4.Inputs[Sort Input]"
+              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output11]"
+              endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_CS_SCD2_1.Inputs[Conditional Split Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_DV_FECHAS_GENERICAS_1.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output4]"
+              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output10]"
+              endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output9]"
+              endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_SRT_STANDARD_2.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_DV_STANDARD_6.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output8]"
+              endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output6]"
               endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_DV_FECHAS_GENERICAS_1.Inputs[Derived Column Input]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output3]"
+              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output7]"
+              endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output4]"
               endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output2]"
+              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output3]"
               endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output1]"
+              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output2]"
               endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output]"
+              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output1]"
               endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\MC_STANDARD_3.Inputs[Multicast Input 1]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output5]"
+              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output]"
               endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output5]"
+              endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_SRT_STANDARD_4.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[INSERT]"
               endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_2.Inputs[Union All Input 1]"
@@ -9782,14 +9765,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_MJ_STANDARD_2.Outputs[Merge Join Output]" />
             <path
               refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 14]"
-              endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 2]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MC_UPD_SCD2_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 15]"
               endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MJ_STANDARD_1.Inputs[Merge Join Right Input]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\MC_STANDARD_4.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 15]"
+              endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_UN_STANDARD_1.Inputs[Union All Input 2]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_MC_UPD_SCD2_1.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 13]"
               endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_DTN_DIM_TURNO_LABORAL_UPD.Inputs[OLE DB Command Input]"
@@ -9802,14 +9785,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\MC_STANDARD_3.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 11]"
-              endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\MC_STANDARD_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 1]"
               endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\PR_DTN_DIM_TURNO_LABORAL_1.Inputs[OLE DB Destination Input]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\MC_STANDARD_7.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 1]"
+              endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_TURNO_LABORAL_1\MC_STANDARD_1.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 2]"
               endId="Package\DF_DWH_DIM_TURNO_LABORAL_1\RA_SRT_STANDARD_1.Inputs[Sort Input]"
@@ -10103,7 +10086,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_SK_DEFAUT"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10144,7 +10127,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_INI_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10215,7 +10198,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10238,7 +10221,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10284,7 +10267,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10307,7 +10290,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10330,7 +10313,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10353,7 +10336,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10382,7 +10365,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_2"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -11632,31 +11615,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 11]"
-          TopLeft="1080,799">
+          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 15]"
+          TopLeft="1770,504">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-116,58"
+              EndConnector="79,-14"
               Start="0,0"
-              End="-108.5,58">
+              End="71.5,-14">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-54,0" />
+                    End="35.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-54,0"
-                    Point2="-58,0"
-                    Point3="-58,4" />
+                    Point1="35.5,0"
+                    Point2="39.5,0"
+                    Point3="39.5,-4" />
                   <mssgle:LineSegment
-                    End="-58,54" />
+                    End="39.5,-10" />
                   <mssgle:CubicBezierSegment
-                    Point1="-58,54"
-                    Point2="-58,58"
-                    Point3="-62,58" />
+                    Point1="39.5,-10"
+                    Point2="39.5,-14"
+                    Point3="43.5,-14" />
                   <mssgle:LineSegment
-                    End="-108.5,58" />
+                    End="71.5,-14" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11666,65 +11649,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 1]"
-          TopLeft="1541,690">
+          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 14]"
+          TopLeft="1660,119">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-107,42"
+              EndConnector="114.333333333333,43"
               Start="0,0"
-              End="-107,34.5">
+              End="114.333333333333,35.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.0829796575443" />
+                    End="0,21.5739320920044" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.0829796575443"
-                    Point2="0,21.0829796575443"
-                    Point3="-4,21.0829796575443" />
+                    Point1="0,21.5739320920044"
+                    Point2="0,25.5739320920044"
+                    Point3="4,25.5739320920044" />
                   <mssgle:LineSegment
-                    End="-103,21.0829796575443" />
+                    End="110.333333333333,25.5739320920044" />
                   <mssgle:CubicBezierSegment
-                    Point1="-103,21.0829796575443"
-                    Point2="-107,21.0829796575443"
-                    Point3="-107,25.0829796575443" />
+                    Point1="110.333333333333,25.5739320920044"
+                    Point2="114.333333333333,25.5739320920044"
+                    Point3="114.333333333333,29.5739320920044" />
                   <mssgle:LineSegment
-                    End="-107,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 12]"
-          TopLeft="1808,932">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-914,-54"
-              Start="0,0"
-              End="-914,-46.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-20.7142857142857" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-20.7142857142857"
-                    Point2="0,-24.7142857142857"
-                    Point3="-4,-24.7142857142857" />
-                  <mssgle:LineSegment
-                    End="-910,-24.7142857142857" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-910,-24.7142857142857"
-                    Point2="-914,-24.7142857142857"
-                    Point3="-914,-28.7142857142857" />
-                  <mssgle:LineSegment
-                    End="-914,-46.5" />
+                    End="114.333333333333,35.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11768,31 +11717,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 14]"
-          TopLeft="1770,504">
+          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 12]"
+          TopLeft="1808,932">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="79,-14"
+              EndConnector="-914,-54"
               Start="0,0"
-              End="71.5,-14">
+              End="-914,-46.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="35.5,0" />
+                    End="0,-20.7142857142857" />
                   <mssgle:CubicBezierSegment
-                    Point1="35.5,0"
-                    Point2="39.5,0"
-                    Point3="39.5,-4" />
+                    Point1="0,-20.7142857142857"
+                    Point2="0,-24.7142857142857"
+                    Point3="-4,-24.7142857142857" />
                   <mssgle:LineSegment
-                    End="39.5,-10" />
+                    End="-910,-24.7142857142857" />
                   <mssgle:CubicBezierSegment
-                    Point1="39.5,-10"
-                    Point2="39.5,-14"
-                    Point3="43.5,-14" />
+                    Point1="-910,-24.7142857142857"
+                    Point2="-914,-24.7142857142857"
+                    Point3="-914,-28.7142857142857" />
                   <mssgle:LineSegment
-                    End="71.5,-14" />
+                    End="-914,-46.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11802,31 +11751,65 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 15]"
-          TopLeft="1660,119">
+          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 11]"
+          TopLeft="1541,690">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="114.333333333333,43"
+              EndConnector="-107,42"
               Start="0,0"
-              End="114.333333333333,35.5">
+              End="-107,34.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.5739320920044" />
+                    End="0,17.0829796575443" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.5739320920044"
-                    Point2="0,25.5739320920044"
-                    Point3="4,25.5739320920044" />
+                    Point1="0,17.0829796575443"
+                    Point2="0,21.0829796575443"
+                    Point3="-4,21.0829796575443" />
                   <mssgle:LineSegment
-                    End="110.333333333333,25.5739320920044" />
+                    End="-103,21.0829796575443" />
                   <mssgle:CubicBezierSegment
-                    Point1="110.333333333333,25.5739320920044"
-                    Point2="114.333333333333,25.5739320920044"
-                    Point3="114.333333333333,29.5739320920044" />
+                    Point1="-103,21.0829796575443"
+                    Point2="-107,21.0829796575443"
+                    Point3="-107,25.0829796575443" />
                   <mssgle:LineSegment
-                    End="114.333333333333,35.5" />
+                    End="-107,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Multicast Output 1]"
+          TopLeft="1080,799">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-116,58"
+              Start="0,0"
+              End="-108.5,58">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-54,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-54,0"
+                    Point2="-58,0"
+                    Point3="-58,4" />
+                  <mssgle:LineSegment
+                    End="-58,54" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-58,54"
+                    Point2="-58,58"
+                    Point3="-62,58" />
+                  <mssgle:LineSegment
+                    End="-108.5,58" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12010,153 +11993,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output]"
-          TopLeft="1831.5,891">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41"
-              Start="0,0"
-              End="0,33.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output1]"
-          TopLeft="1328,260">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-423,576"
-              Start="0,0"
-              End="-423,568.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,338.432989690722" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,338.432989690722"
-                    Point2="0,342.432989690722"
-                    Point3="-4,342.432989690722" />
-                  <mssgle:LineSegment
-                    End="-419,342.432989690722" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-419,342.432989690722"
-                    Point2="-423,342.432989690722"
-                    Point3="-423,346.432989690722" />
-                  <mssgle:LineSegment
-                    End="-423,568.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output2]"
-          TopLeft="863,405">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="17.5,35"
-              Start="0,0"
-              End="17.5,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.5"
-                    Point2="0,17.5"
-                    Point3="4,17.5" />
-                  <mssgle:LineSegment
-                    End="13.5,17.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13.5,17.5"
-                    Point2="17.5,17.5"
-                    Point3="17.5,21.5" />
-                  <mssgle:LineSegment
-                    End="17.5,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output3]"
-          TopLeft="1079.5,293">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-229.5,543"
-              Start="0,0"
-              End="-229.5,535.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,318.814432989691" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,318.814432989691"
-                    Point2="0,322.814432989691"
-                    Point3="-4,322.814432989691" />
-                  <mssgle:LineSegment
-                    End="-225.5,322.814432989691" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-225.5,322.814432989691"
-                    Point2="-229.5,322.814432989691"
-                    Point3="-229.5,326.814432989691" />
-                  <mssgle:LineSegment
-                    End="-229.5,535.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output4]"
-          TopLeft="1656.5,273">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,43"
-              Start="0,0"
-              End="0,35.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output6]"
+          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output12]"
           TopLeft="1161.75,749">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12178,41 +12015,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output5]"
-          TopLeft="1384.66666666667,1093">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-523.666666666667,-215"
-              Start="0,0"
-              End="-523.666666666667,-207.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-93.9607432446445" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-93.9607432446445"
-                    Point2="0,-97.9607432446445"
-                    Point3="-4,-97.9607432446445" />
-                  <mssgle:LineSegment
-                    End="-519.666666666667,-97.9607432446445" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-519.666666666667,-97.9607432446445"
-                    Point2="-523.666666666667,-97.9607432446445"
-                    Point3="-523.666666666667,-101.960743244644" />
-                  <mssgle:LineSegment
-                    End="-523.666666666667,-207.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output12]"
+          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output11]"
           TopLeft="1659.5,358">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12234,53 +12037,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output7]"
-          TopLeft="2250,702">
+          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output10]"
+          TopLeft="747.5,1045">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="14.5,69"
+              EndConnector="0,44"
               Start="0,0"
-              End="14.5,61.5">
+              End="0,36.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30.5"
-                    Point2="0,34.5"
-                    Point3="4,34.5" />
-                  <mssgle:LineSegment
-                    End="10.5,34.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="10.5,34.5"
-                    Point2="14.5,34.5"
-                    Point3="14.5,38.5" />
-                  <mssgle:LineSegment
-                    End="14.5,61.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output8]"
-          TopLeft="869.333333333333,230">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,29"
-              Start="0,0"
-              End="0,21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.5" />
+                    End="0,36.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12291,40 +12060,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output9]"
-          TopLeft="2170,1125">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-1243,-247"
-              Start="0,0"
-              End="-1243,-239.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-147.460382268485" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-147.460382268485"
-                    Point2="0,-151.460382268485"
-                    Point3="-4,-151.460382268485" />
-                  <mssgle:LineSegment
-                    End="-1239,-151.460382268485" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-1239,-151.460382268485"
-                    Point2="-1243,-151.460382268485"
-                    Point3="-1243,-155.460382268485" />
-                  <mssgle:LineSegment
-                    End="-1243,-239.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output10]"
           TopLeft="1584,832">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12358,19 +12093,267 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output11]"
-          TopLeft="747.5,1045">
+          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output8]"
+          TopLeft="2170,1125">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44"
+              EndConnector="-1243,-247"
               Start="0,0"
-              End="0,36.5">
+              End="-1243,-239.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.5" />
+                    End="0,-147.460382268485" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-147.460382268485"
+                    Point2="0,-151.460382268485"
+                    Point3="-4,-151.460382268485" />
+                  <mssgle:LineSegment
+                    End="-1239,-151.460382268485" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-1239,-151.460382268485"
+                    Point2="-1243,-151.460382268485"
+                    Point3="-1243,-155.460382268485" />
+                  <mssgle:LineSegment
+                    End="-1243,-239.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output7]"
+          TopLeft="869.333333333333,230">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29"
+              Start="0,0"
+              End="0,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output6]"
+          TopLeft="1656.5,273">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43"
+              Start="0,0"
+              End="0,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output5]"
+          TopLeft="2250,702">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14.5,69"
+              Start="0,0"
+              End="14.5,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.5"
+                    Point2="0,34.5"
+                    Point3="4,34.5" />
+                  <mssgle:LineSegment
+                    End="10.5,34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.5,34.5"
+                    Point2="14.5,34.5"
+                    Point3="14.5,38.5" />
+                  <mssgle:LineSegment
+                    End="14.5,61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output4]"
+          TopLeft="1079.5,293">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-229.5,543"
+              Start="0,0"
+              End="-229.5,535.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,318.814432989691" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,318.814432989691"
+                    Point2="0,322.814432989691"
+                    Point3="-4,322.814432989691" />
+                  <mssgle:LineSegment
+                    End="-225.5,322.814432989691" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-225.5,322.814432989691"
+                    Point2="-229.5,322.814432989691"
+                    Point3="-229.5,326.814432989691" />
+                  <mssgle:LineSegment
+                    End="-229.5,535.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output3]"
+          TopLeft="863,405">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17.5,35"
+              Start="0,0"
+              End="17.5,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="4,17.5" />
+                  <mssgle:LineSegment
+                    End="13.5,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.5,17.5"
+                    Point2="17.5,17.5"
+                    Point3="17.5,21.5" />
+                  <mssgle:LineSegment
+                    End="17.5,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output2]"
+          TopLeft="1328,260">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-423,576"
+              Start="0,0"
+              End="-423,568.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,338.432989690722" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,338.432989690722"
+                    Point2="0,342.432989690722"
+                    Point3="-4,342.432989690722" />
+                  <mssgle:LineSegment
+                    End="-419,342.432989690722" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-419,342.432989690722"
+                    Point2="-423,342.432989690722"
+                    Point3="-423,346.432989690722" />
+                  <mssgle:LineSegment
+                    End="-423,568.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output1]"
+          TopLeft="1831.5,891">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TURNO_LABORAL_1.Paths[Derived Column Output]"
+          TopLeft="1384.66666666667,1093">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-523.666666666667,-215"
+              Start="0,0"
+              End="-523.666666666667,-207.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-93.9607432446445" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-93.9607432446445"
+                    Point2="0,-97.9607432446445"
+                    Point3="-4,-97.9607432446445" />
+                  <mssgle:LineSegment
+                    End="-519.666666666667,-97.9607432446445" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-519.666666666667,-97.9607432446445"
+                    Point2="-523.666666666667,-97.9607432446445"
+                    Point3="-523.666666666667,-101.960743244644" />
+                  <mssgle:LineSegment
+                    End="-523.666666666667,-207.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="DWH_DIM_TIPO_RESIDENCIA"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="338"
-  DTS:VersionGUID="{A46E6475-FABF-4A33-83D9-143BBD4565CB}">
+  DTS:VersionBuild="339"
+  DTS:VersionGUID="{25C9976A-ED9F-4F90-9794-2EEA6F459CC3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -24,7 +24,7 @@
       DTS:ObjectName="P_NOMBRE_ESQUEMA">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">rh01</DTS:Property>
+        DTS:Name="ParameterValue">RH01</DTS:Property>
     </DTS:PackageParameter>
     <DTS:PackageParameter
       DTS:CreationName=""
@@ -3181,7 +3181,7 @@ WHERE
       ,[FC_FIN_VAL]
       ,[SK_EJECUCION_CREACION]
       ,[SK_EJECUCION_MODIFICACION]
-  FROM [TDE_DWH_EikonBI_DES].[RH01].[DIM_TIPO_RESIDENCIA]
+  FROM [RH01].[DIM_TIPO_RESIDENCIA]
 WHERE  ? BETWEEN FC_INI_VAL AND FC_FIN_VAL
 ORDER BY [CD_TIPO_RESIDENCIA]</property>
                 <property
@@ -9008,74 +9008,74 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
               startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_AGG_STANDARD_2.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output13]"
-              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_SRT_TABLA_1.Inputs[Sort Input]"
+              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\PR_DV_FECHA_GENERICA_1.Inputs[Derived Column Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_TABLA_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output12]"
-              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\MC_DEL_UP_2.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output11]"
-              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\CS_INS_UPD_DEL_1.Inputs[Conditional Split Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\PR_DV_FECHA_GENERICA_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output10]"
-              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_SRT_TABLA_4.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output9]"
-              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output8]"
-              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\MC_STANDARD_2.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output7]"
-              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output6]"
-              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output5]"
-              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output4]"
-              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output3]"
-              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output2]"
-              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output1]"
               endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_SRT_STANDARD_8.Inputs[Sort Input]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\PR_DV_TRATAMIENTO_DE_NULOS_2.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output]"
-              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\PR_DV_FECHA_GENERICA_1.Inputs[Derived Column Input]"
+              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output11]"
+              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output10]"
+              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output9]"
+              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output8]"
+              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output7]"
+              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output6]"
+              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output5]"
+              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\MC_STANDARD_2.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output4]"
+              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output3]"
+              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_SRT_TABLA_4.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output2]"
+              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\CS_INS_UPD_DEL_1.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\PR_DV_FECHA_GENERICA_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output1]"
+              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\MC_DEL_UP_2.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output]"
+              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_SRT_TABLA_1.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_TABLA_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[INSERT]"
               endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\PR_UN_STANDARD_2.Inputs[Union All Input 1]"
@@ -9103,24 +9103,24 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
               startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_MJ_STANDARD_3.Outputs[Merge Join Output]" />
             <path
               refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Multicast Output 13]"
-              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
+              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_UN_DESTINO_1.Inputs[Union All Input 6]"
               name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\MC_STANDARD_2.Outputs[Multicast Output 1]" />
+              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\MC_DEL_UP_2.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Multicast Output 12]"
-              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\PR_DTN_DIM_TIPO_RESIDENCIA_1.Inputs[OLE DB Destination Input]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\MC_STANDARD_7.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Multicast Output 1]"
               endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\PR_DTN_DIM_RANGO_EDAD_UPD.Inputs[OLE DB Command Input]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\MC_STANDARD_3.Outputs[Multicast Output 1]" />
             <path
-              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Multicast Output 11]"
-              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_UN_DESTINO_1.Inputs[Union All Input 6]"
+              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Multicast Output 1]"
+              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
               name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\MC_DEL_UP_2.Outputs[Multicast Output 1]" />
+              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\MC_STANDARD_2.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Multicast Output 11]"
+              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\PR_DTN_DIM_TIPO_RESIDENCIA_1.Inputs[OLE DB Destination Input]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\MC_STANDARD_7.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Multicast Output 2]"
               endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_AGG_REGISTROS_ACTULIZADOS_1.Inputs[Aggregate Input 1]"
@@ -9233,19 +9233,19 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
               startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_SRT_STANDARD_8.Outputs[Sort Output]" />
             <path
               refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Union All Output 11]"
-              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\PR_SCT_CONTROL_SK_1.Inputs[Input 0]"
-              name="Union All Output 1"
-              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Union All Output 12]"
               endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\MC_STANDARD_3.Inputs[Multicast Input 1]"
               name="Union All Output 1"
               startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1]" />
             <path
-              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Union All Output 1]"
+              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Union All Output 12]"
               endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_DV_STANDARD_3.Inputs[Derived Column Input]"
               name="Union All Output 1"
               startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\RA_UN_DESTINO_1.Outputs[Union All Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Union All Output 1]"
+              endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\PR_SCT_CONTROL_SK_1.Inputs[Input 0]"
+              name="Union All Output 1"
+              startId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[UPDATE SCD2]"
               endId="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1\PR_MC_UPD_SCD2_1.Inputs[Multicast Input 1]"
@@ -9278,7 +9278,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SET_ESTATUS_FAIL_1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9458,7 +9458,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_SK_DEFAUT"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9499,7 +9499,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_INI_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9570,7 +9570,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9593,7 +9593,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9616,7 +9616,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9639,7 +9639,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9662,7 +9662,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9685,7 +9685,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9714,7 +9714,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -11286,7 +11286,41 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Multicast Output 1]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Multicast Output 13]"
+          TopLeft="1452.9696969697,921.444444444445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-839.944444444442,-276.666666666667"
+              Start="0,0"
+              End="-839.944444444442,-269.166666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-176.6073846052" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-176.6073846052"
+                    Point2="0,-180.6073846052"
+                    Point3="-4,-180.6073846052" />
+                  <mssgle:LineSegment
+                    End="-835.944444444442,-180.6073846052" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-835.944444444442,-180.6073846052"
+                    Point2="-839.944444444442,-180.6073846052"
+                    Point3="-839.944444444442,-184.6073846052" />
+                  <mssgle:LineSegment
+                    End="-839.944444444442,-269.166666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Multicast Output 12]"
           TopLeft="1528.13636363637,587.777777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11321,30 +11355,18 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Multicast Output 11]"
-          TopLeft="1452.9696969697,921.444444444445">
+          TopLeft="1091.24747474748,664.83333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-839.944444444442,-276.666666666667"
+              EndConnector="0,24.6111111111151"
               Start="0,0"
-              End="-839.944444444442,-269.166666666667">
+              End="0,17.1111111111151">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-176.6073846052" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-176.6073846052"
-                    Point2="0,-180.6073846052"
-                    Point3="-4,-180.6073846052" />
-                  <mssgle:LineSegment
-                    End="-835.944444444442,-180.6073846052" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-835.944444444442,-180.6073846052"
-                    Point2="-839.944444444442,-180.6073846052"
-                    Point3="-839.944444444442,-184.6073846052" />
-                  <mssgle:LineSegment
-                    End="-839.944444444442,-269.166666666667" />
+                    End="0,17.1111111111151" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11354,7 +11376,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Multicast Output 13]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Multicast Output 1]"
           TopLeft="785.585858585863,748.535353535354">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11379,28 +11401,6 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
                     Point3="-255.060606060608,-55.9109375097808" />
                   <mssgle:LineSegment
                     End="-255.060606060608,-96.257575757576" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Multicast Output 12]"
-          TopLeft="1091.24747474748,664.83333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,24.6111111111151"
-              Start="0,0"
-              End="0,17.1111111111151">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.1111111111151" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11560,7 +11560,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output13]"
           TopLeft="1307.14646464647,282.027777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11582,7 +11582,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output1]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output12]"
           TopLeft="1573.5,122">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11604,7 +11604,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output2]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output11]"
           TopLeft="1023.63636363637,969.83333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11638,7 +11638,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output3]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output10]"
           TopLeft="1022.74747474748,1057.55555555556">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11672,7 +11672,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output4]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output9]"
           TopLeft="552.256734006737,260.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11706,7 +11706,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output5]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output8]"
           TopLeft="562.349747474749,1089.79797979798">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11728,7 +11728,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output6]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output7]"
           TopLeft="283.636363636364,173">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11750,7 +11750,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output7]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output6]"
           TopLeft="292.904292884368,318">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11772,7 +11772,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output8]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output5]"
           TopLeft="811.76262626263,646.431818181819">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11806,7 +11806,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output9]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output4]"
           TopLeft="880.967171717176,251.795454545455">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11840,7 +11840,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output10]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output3]"
           TopLeft="1752.88636363636,741">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11862,7 +11862,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output11]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output2]"
           TopLeft="1307.60858585859,347.222222222223">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11884,7 +11884,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output12]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output1]"
           TopLeft="1479.19191919192,827.000000000001">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11906,7 +11906,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output13]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Derived Column Output]"
           TopLeft="1273.7196969697,852.444444444445">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12132,29 +12132,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Union All Output 11]"
-          TopLeft="1117.02020202021,515.747474747475">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38.502525252526"
-              Start="0,0"
-              End="0,31.002525252526">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.002525252526" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Union All Output 1]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Union All Output 12]"
           TopLeft="503.025252525255,644.777777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12188,7 +12166,7 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Union All Output 12]"
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Union All Output 11]"
           TopLeft="1529.38636363637,513.111111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12201,6 +12179,28 @@ ORDER BY [CD_TIPO_RESIDENCIA]</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,25.1666666666671" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_RESIDENCIA_1.Paths[Union All Output 1]"
+          TopLeft="1117.02020202021,515.747474747475">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.502525252526"
+              Start="0,0"
+              End="0,31.002525252526">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.002525252526" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="8/18/2020 3:09:31 PM"
@@ -7,13 +7,13 @@
   DTS:CreatorName="TDESOL\fdiaz"
   DTS:DTSID="{5E0F7650-E807-4031-98E0-18F8C81D542B}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.123"
+  DTS:LastModifiedProductVersion="15.0.2000.128"
   DTS:LocaleID="1033"
   DTS:ObjectName="1_3_0_TDE_RRHH_BI_STG_NE03"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{FE23EA39-1B4B-4102-8D8B-4C1D3F74B94F}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{0D8B655A-F187-4DA7-8CE8-790026D2FEC8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -115,18 +115,18 @@
         <NodeLayout
           Size="292,42"
           Id="Package\1_3_0_TDE_RRHH_BI_STG_NE03\1_3_1_TDE_RRHH_BI_STG_DIM"
-          TopLeft="234,252" />
+          TopLeft="219,25" />
         <NodeLayout
           Size="167,42"
           Id="Package\1_3_0_TDE_RRHH_BI_STG_NE03\1_3_2_TDE_RRHH_BI_STG_REL"
-          TopLeft="292,373" />
+          TopLeft="277,146" />
         <NodeLayout
           Size="237,42"
           Id="Package\1_3_0_TDE_RRHH_BI_STG_NE03\1_3_3_TDE_RRHH_BI_STG_FAC"
-          TopLeft="235,469" />
+          TopLeft="220,242" />
         <EdgeLayout
           Id="Package\1_3_0_TDE_RRHH_BI_STG_NE03.PrecedenceConstraints[Constraint]"
-          TopLeft="377.75,294">
+          TopLeft="362.75,67">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -148,7 +148,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\1_3_0_TDE_RRHH_BI_STG_NE03.PrecedenceConstraints[Constraint 1]"
-          TopLeft="375.5,415">
+          TopLeft="360.5,188">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -183,10 +183,10 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="765,566"
-          Size="765,609"
+          PanelSize="765,399"
+          Size="765,443"
           Id="Package\1_3_0_TDE_RRHH_BI_STG_NE03"
-          TopLeft="176,31" />
+          TopLeft="176,80.5" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

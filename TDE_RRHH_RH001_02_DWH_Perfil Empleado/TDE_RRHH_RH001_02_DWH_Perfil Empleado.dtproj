@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <DeploymentModel>Project</DeploymentModel>
-  <ProductVersion>15.0.2000.123</ProductVersion>
+  <ProductVersion>15.0.2000.128</ProductVersion>
   <SchemaVersion>9.0.1.0</SchemaVersion>
   <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmRkbDEwMF8xMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDA4L2VuZ2luZS8xMDAvMTAwIiB4bWxuczpkZGwyMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAiIHhtbG5zOmRkbDIwMF8yMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAvMjAwIiB4bWxuczpkZGwzMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAiIHhtbG5zOmRkbDMwMF8zMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAvMzAwIiB4bWxuczpkZGw0MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAiIHhtbG5zOmRkbDQwMF80MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAvNDAwIiB4bWxuczpkZGw1MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAiIHhtbG5zOmRkbDUwMF81MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAvNTAwIiB4bWxuczpkd2Q9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vRGF0YVdhcmVob3VzZS9EZXNpZ25lci8xLjAiPg0KICA8RW5hYmxlZD5mYWxzZTwvRW5hYmxlZD4NCiAgPFByb2plY3ROYW1lPjwvUHJvamVjdE5hbWU+DQogIDxBdXhQYXRoPjwvQXV4UGF0aD4NCiAgPExvY2FsUGF0aD48L0xvY2FsUGF0aD4NCiAgPFByb3ZpZGVyPjwvUHJvdmlkZXI+DQo8L1NvdXJjZUNvbnRyb2xJbmZvPg==</State>
   <Database>
@@ -40,7 +40,6 @@
           <SSIS:Package SSIS:Name="DWH_DIM_CIIU_CLASE.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH_DIM_CIIU_DIVISION.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH_DIM_CIIU_GRUPO.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="DWH_DIM_CIIU_SECCION.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH_DIM_CIIU_SUB_CLASE.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH_DIM_CLASE_EMPLEADO.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH_DIM_DEPARTAMENTO.dtsx" SSIS:EntryPoint="1" />
@@ -62,7 +61,6 @@
           <SSIS:Package SSIS:Name="DWH_DIM_PUESTO.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH_DIM_RANGO_EDAD.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH_DIM_RANGO_ESTADIA.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="DWH_DIM_SECCION.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH_DIM_TIPO_CONTRATO_TRABAJO.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH_DIM_TIPO_EMPLEADO.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH_DIM_TIPO_IDENTIFICACION.dtsx" SSIS:EntryPoint="1" />
@@ -74,6 +72,9 @@
           <SSIS:Package SSIS:Name="DWH_REL_IDIOMA_EMPLEADO.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH_REL_PARENTESCO_EMPLEADO.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH_REL_VIA_CONTACTO_PERSONA.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DWH_DIM_SESION.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DWH_DIM_CIIU_SESION.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DWH_DIM_FECHA_VIEJA.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="CNX_DWH_RRHH.conmgr" />
@@ -123,7 +124,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">TDE_DWH_EikonBI_DES</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">TDE_RRHH_DWH_DES</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -167,7 +168,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">tdedatabase03\sql2016</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">TDE-LAP-OP-12</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -227,7 +228,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">TDE_EikonBI_METADATA</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">TDE_RRHH_MTD_DES</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -271,7 +272,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">tdedatabase03\sql2016</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">TDE-LAP-OP-12</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -331,7 +332,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">TDE_STG_EikonBI_DES</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">TDE_RRHH_STG_DES</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -375,7 +376,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">tdedatabase03\sql2016</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">TDE-LAP-OP-12</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -419,10 +420,10 @@
                 <SSIS:Property SSIS:Name="Name">2_1_1_TDE_RRHH_BI_DWH_DIM</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">35</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">37</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{1C9B5BBE-16D2-4E35-8E39-F65C446C5060}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{B00B4CF9-DFFC-4285-A593-19B663CA46F5}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -518,8 +519,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -533,8 +532,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -548,8 +545,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -563,8 +558,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -624,8 +617,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -639,8 +630,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -700,8 +689,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -715,8 +702,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -776,8 +761,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -791,8 +774,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -852,8 +833,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -867,8 +846,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -928,8 +905,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -943,8 +918,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1004,8 +977,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1019,84 +990,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-              </SSIS:Parameters>
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="DWH_DIM_CIIU_SECCION.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{D0EC33E9-07BD-423C-B279-86CBFB34D5B8}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">DWH_DIM_CIIU_SECCION</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">359</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{912DA57D-E935-4D14-B8C2-FF17409EE285}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters>
-                <SSIS:Parameter SSIS:Name="P_NOMBRE_ESQUEMA">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{04A47835-C98B-4127-AED6-E7E96408B23D}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">bk01</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="P_NOMBRE_TABLA">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{CC59FC60-5696-45B3-AB34-3B164B0E90BB}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">DIM_CIIU_SECCION</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="P_SK_EJECUCION">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{9321389F-166F-4F57-9CB3-92BD4E74A49F}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="P_SK_EJECUCION_PADRE">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{37B06379-2D5B-4CB9-8CED-F61C657E0566}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1156,8 +1049,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1171,8 +1062,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1232,8 +1121,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1247,8 +1134,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1308,8 +1193,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1323,8 +1206,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1384,8 +1265,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1399,8 +1278,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1460,8 +1337,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1475,8 +1350,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1488,10 +1361,10 @@
                 <SSIS:Property SSIS:Name="Name">DWH_DIM_EMPRESA</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">327</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">328</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{3221BFD4-353A-40D9-9937-74E8310C4965}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{40E74D16-6B0A-45B9-8D3F-5C5DE1A3BEBE}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1550,8 +1423,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1625,8 +1496,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1686,8 +1555,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1701,8 +1568,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1762,8 +1627,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1777,8 +1640,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1838,8 +1699,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1853,8 +1712,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1914,8 +1771,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1929,8 +1784,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1942,10 +1795,10 @@
                 <SSIS:Property SSIS:Name="Name">DWH_DIM</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">328</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">330</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{3480CC82-9C7C-4131-A43A-6BC07E9C0A3A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{56ED8A3C-9AF3-49BE-8754-CE493477689D}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1990,8 +1843,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2005,8 +1856,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2018,10 +1867,10 @@
                 <SSIS:Property SSIS:Name="Name">DWH_DIM_NIVEL_EDUCATIVO</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">292</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">293</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{F1E76249-5A62-4753-A79F-0B7CDCEFF0D1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{4C107427-A3BE-42B6-BF25-68DB646A1992}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -2066,8 +1915,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2081,8 +1928,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2094,10 +1939,10 @@
                 <SSIS:Property SSIS:Name="Name">DWH_DIM_OCUPACION</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">355</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">356</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{3BBEFBDB-A25D-475F-942A-BDF73C9B497B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{59B9CC09-6C64-479B-BD76-61ACC8AC2C6F}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -2142,8 +1987,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2157,8 +2000,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2232,8 +2073,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2293,8 +2132,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2308,8 +2145,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2369,8 +2204,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2384,8 +2217,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2397,10 +2228,10 @@
                 <SSIS:Property SSIS:Name="Name">DWH_DIM_PROFESION</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">379</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">380</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{C66E0648-A29F-448E-9865-25534C22A83A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{26F5CD03-1181-46CB-8758-6E75AF732155}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -2445,8 +2276,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2460,8 +2289,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2521,8 +2348,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2536,8 +2361,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2597,8 +2420,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2612,8 +2433,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2673,8 +2492,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2688,84 +2505,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-              </SSIS:Parameters>
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="DWH_DIM_SECCION.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{DBCF64CC-8B63-4431-9687-56C8C341FC0F}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">DWH_DIM_SECCION</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">408</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{4956E324-F88F-43F0-8344-D580D404745D}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters>
-                <SSIS:Parameter SSIS:Name="P_NOMBRE_ESQUEMA">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{D5246AAF-75EB-462B-85C8-4B57B62A054E}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">bk01</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="P_NOMBRE_TABLA">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{09540B5A-8611-49CA-8B40-4533A367515D}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">DIM_SECCION</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="P_SK_EJECUCION">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{1DCEE964-5241-458D-AC37-ED96B2245424}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="P_SK_EJECUCION_PADRE">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{B88AA66C-FF7A-457F-92A6-C8C46B0DAF2A}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2825,8 +2564,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2840,8 +2577,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2901,8 +2636,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2916,8 +2649,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2977,8 +2708,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2992,8 +2721,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -3005,10 +2732,10 @@
                 <SSIS:Property SSIS:Name="Name">DWH_DIM_TIPO_RELIGION</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">499</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">501</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{FFFAC714-F998-4366-9C75-B055D11513CF}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{27B3A2C5-BE49-4072-B9CB-AE17712F08F2}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -3053,8 +2780,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -3068,8 +2793,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -3081,10 +2804,10 @@
                 <SSIS:Property SSIS:Name="Name">DWH_DIM_TIPO_RESIDENCIA</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">338</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">339</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{A46E6475-FABF-4A33-83D9-143BBD4565CB}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{25C9976A-ED9F-4F90-9794-2EEA6F459CC3}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -3101,7 +2824,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">rh01</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">RH01</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -3129,8 +2852,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -3144,8 +2865,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -3205,8 +2924,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -3220,8 +2937,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -3281,8 +2996,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -3296,8 +3009,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -3357,8 +3068,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -3372,8 +3081,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -3433,8 +3140,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -3448,8 +3153,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -3509,8 +3212,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -3524,8 +3225,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -3585,6 +3284,222 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="P_SK_EJECUCION_PADRE">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{DD03B361-BCE9-45C3-B20C-47B05F7F9D84}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+              </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="DWH_DIM_SESION.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{670AABE7-5D47-4795-8085-351313C53222}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">DWH_DIM_SESION</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">418</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{898DC04E-3D4B-4D55-BB6A-EF10F290E75A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters>
+                <SSIS:Parameter SSIS:Name="P_NOMBRE_ESQUEMA">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{D5246AAF-75EB-462B-85C8-4B57B62A054E}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">bk01</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="P_NOMBRE_TABLA">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{09540B5A-8611-49CA-8B40-4533A367515D}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">DIM_SECCION</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="P_SK_EJECUCION">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{1DCEE964-5241-458D-AC37-ED96B2245424}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="P_SK_EJECUCION_PADRE">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{B88AA66C-FF7A-457F-92A6-C8C46B0DAF2A}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+              </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="DWH_DIM_CIIU_SESION.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{697DAA0C-1F24-4C80-A585-35FCD61F74B0}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">DWH_DIM_CIIU_SESION</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">362</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{D4A2D17D-1F18-49CB-B2D3-B614BCF2670E}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters>
+                <SSIS:Parameter SSIS:Name="P_NOMBRE_ESQUEMA">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{04A47835-C98B-4127-AED6-E7E96408B23D}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">RH01</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="P_NOMBRE_TABLA">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{CC59FC60-5696-45B3-AB34-3B164B0E90BB}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">DIM_CIIU_SESION</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="P_SK_EJECUCION">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{9321389F-166F-4F57-9CB3-92BD4E74A49F}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="P_SK_EJECUCION_PADRE">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{37B06379-2D5B-4CB9-8CED-F61C657E0566}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+              </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="DWH_DIM_FECHA_VIEJA.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{E038960B-1438-4E7B-9736-EE976E8E5CD9}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">DWH_DIM_</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">375</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{9BCA79E3-4096-4097-AC4C-0923855A22A9}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters>
+                <SSIS:Parameter SSIS:Name="P_NOMBRE_ESQUEMA">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{0C193FD6-56B9-4554-98A4-FB759C992743}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">RH00</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="P_NOMBRE_TABLA">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{7409A3E2-735C-4765-8BC6-CB4F89E430D5}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">DIM_FECHA</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="P_SK_EJECUCION">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{03CEBCC5-2366-420A-9DD2-286EDCDEA91B}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Value">
                     </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
@@ -3592,7 +3507,7 @@
                 </SSIS:Parameter>
                 <SSIS:Parameter SSIS:Name="P_SK_EJECUCION_PADRE">
                   <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{DD03B361-BCE9-45C3-B20C-47B05F7F9D84}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="ID">{415E51BF-8964-4A70-9460-84AF5234C974}</SSIS:Property>
                     <SSIS:Property SSIS:Name="CreationName">
                     </SSIS:Property>
                     <SSIS:Property SSIS:Name="Description">
@@ -3634,7 +3549,603 @@
           <ConfigurationSetting>
             <Id>LastModifiedTime</Id>
             <Name>LastModifiedTime</Name>
-            <Value xsi:type="xsd:dateTime">2019-06-04T19:41:11.8326737Z</Value>
+            <Value xsi:type="xsd:dateTime">2020-12-09T15:10:10.4620903Z</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{488fbdc0-09c0-4d32-9df5-6dc40d01bc1b}</Id>
+            <Name>Project::Par_Srv_DWH</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{54bae07c-3fa4-45ee-a80b-bbb34bab6571}</Id>
+            <Name>Project::Par_Usr_STG</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{79d73ef0-07ec-4914-8107-6dfd827d0e1e}</Id>
+            <Name>Project::Par_Usr_DWH</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{d512da84-8f5e-408b-9d1a-f7f6ee9e7648}</Id>
+            <Name>Project::Par_Pwd_STG</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{098d5b05-603d-4b79-9310-3b971ea65303}</Id>
+            <Name>Project::Par_Pwd_DWH</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{6f36c53d-2110-4f1f-92cb-8592cf0abc33}</Id>
+            <Name>Project::Par_Srv_SRC_01</Name>
+            <Value xsi:type="xsd:string">26.127.184.232</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{cd157c6b-a81b-4954-aabb-479fe1266dce}</Id>
+            <Name>Project::Par_Srv_SRC_02</Name>
+            <Value xsi:type="xsd:string">26.127.184.232</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{8dc9431e-9fe6-47d5-919f-8413f4291fc4}</Id>
+            <Name>Project::Par_Usr_SRC_01</Name>
+            <Value xsi:type="xsd:string">sa</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{4b441c69-07b8-4802-9b96-13f086033df4}</Id>
+            <Name>Project::Par_Pwd_SRC_01</Name>
+            <Value xsi:type="xsd:string">eikon1234</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{c6327e09-ac84-42eb-9ae5-f0b94ee1507f}</Id>
+            <Name>Project::Par_Usr_SRC_02</Name>
+            <Value xsi:type="xsd:string">sa</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{45d5e1a9-3901-4152-94b4-e4a0109d28d0}</Id>
+            <Name>Project::Par_Pwd_SRC_02</Name>
+            <Value xsi:type="xsd:string">eikon1234</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{3e01f386-d51d-4761-9fd5-ba10252764ac}</Id>
+            <Name>Project::Par_Srv_STG</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{e41d2e43-4a48-45cd-9ef5-139f83845ff3}</Id>
+            <Name>Project::Par_Catalog_DWH</Name>
+            <Value xsi:type="xsd:string">TDE_DWH_EikonBI_DES</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{c2477e37-4562-4cdd-b045-66e537014f4b}</Id>
+            <Name>Project::Par_Catalog_SRC_01</Name>
+            <Value xsi:type="xsd:string">EIKON_TDE</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{8d2050e8-1a4e-431d-8eed-fe8f10a30aeb}</Id>
+            <Name>Project::Par_Catalog_SRC_02</Name>
+            <Value xsi:type="xsd:string">EIKON_TDE</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{067292c2-80b7-47f4-abe5-e8152ec90f9d}</Id>
+            <Name>Project::Par_Catalog_STG</Name>
+            <Value xsi:type="xsd:string">TDE_STG_EikonBI_DES</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{7e711da5-7d91-4458-bb7e-4fc67e4bb08a}</Id>
+            <Name>Project::Par_Catalog_MTD</Name>
+            <Value xsi:type="xsd:string">TDE_EikonBI_METADATA</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{95c609cd-b78f-41b0-9ebb-833c54fa7bd6}</Id>
+            <Name>Project::Par_Pwd_MTD</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{d2594210-f42a-4b23-ace8-ab83a7b2c91b}</Id>
+            <Name>Project::Par_Srv_MTD</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{1609d66d-1c13-410d-b387-b1bc79396653}</Id>
+            <Name>Project::Par_Usr_MTD</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationValues>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>development_eikon</Name>
+      <Options>
+        <OutputPath>bin</OutputPath>
+        <ConnectionMappings />
+        <ConnectionProviderMappings />
+        <ConnectionSecurityMappings />
+        <DatabaseStorageLocations />
+        <TargetServerVersion>SQLServer2016</TargetServerVersion>
+        <AzureMode>false</AzureMode>
+        <LinkedAzureTenantId />
+        <LinkedAzureAccountId />
+        <LinkedAzureSSISIR />
+        <LinkedAzureStorage />
+        <RemoteExecutionFolder />
+        <ParameterConfigurationValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2020-12-09T15:10:10.4631235Z</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{488fbdc0-09c0-4d32-9df5-6dc40d01bc1b}</Id>
+            <Name>Project::Par_Srv_DWH</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{54bae07c-3fa4-45ee-a80b-bbb34bab6571}</Id>
+            <Name>Project::Par_Usr_STG</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{79d73ef0-07ec-4914-8107-6dfd827d0e1e}</Id>
+            <Name>Project::Par_Usr_DWH</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{d512da84-8f5e-408b-9d1a-f7f6ee9e7648}</Id>
+            <Name>Project::Par_Pwd_STG</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{098d5b05-603d-4b79-9310-3b971ea65303}</Id>
+            <Name>Project::Par_Pwd_DWH</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{6f36c53d-2110-4f1f-92cb-8592cf0abc33}</Id>
+            <Name>Project::Par_Srv_SRC_01</Name>
+            <Value xsi:type="xsd:string">26.127.184.232</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{cd157c6b-a81b-4954-aabb-479fe1266dce}</Id>
+            <Name>Project::Par_Srv_SRC_02</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{8dc9431e-9fe6-47d5-919f-8413f4291fc4}</Id>
+            <Name>Project::Par_Usr_SRC_01</Name>
+            <Value xsi:type="xsd:string">sa</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{4b441c69-07b8-4802-9b96-13f086033df4}</Id>
+            <Name>Project::Par_Pwd_SRC_01</Name>
+            <Value xsi:type="xsd:string">eikon1234</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{c6327e09-ac84-42eb-9ae5-f0b94ee1507f}</Id>
+            <Name>Project::Par_Usr_SRC_02</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{45d5e1a9-3901-4152-94b4-e4a0109d28d0}</Id>
+            <Name>Project::Par_Pwd_SRC_02</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{3e01f386-d51d-4761-9fd5-ba10252764ac}</Id>
+            <Name>Project::Par_Srv_STG</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{e41d2e43-4a48-45cd-9ef5-139f83845ff3}</Id>
+            <Name>Project::Par_Catalog_DWH</Name>
+            <Value xsi:type="xsd:string">TDE_RRHH_DWH_DES</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{c2477e37-4562-4cdd-b045-66e537014f4b}</Id>
+            <Name>Project::Par_Catalog_SRC_01</Name>
+            <Value xsi:type="xsd:string">EIKON_TDE</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{8d2050e8-1a4e-431d-8eed-fe8f10a30aeb}</Id>
+            <Name>Project::Par_Catalog_SRC_02</Name>
+            <Value xsi:type="xsd:string">TDE_RRHH_WEB_DES</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{067292c2-80b7-47f4-abe5-e8152ec90f9d}</Id>
+            <Name>Project::Par_Catalog_STG</Name>
+            <Value xsi:type="xsd:string">TDE_RRHH_WEB_DES</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{7e711da5-7d91-4458-bb7e-4fc67e4bb08a}</Id>
+            <Name>Project::Par_Catalog_MTD</Name>
+            <Value xsi:type="xsd:string">TDE_RRHH_MTD_DES</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{95c609cd-b78f-41b0-9ebb-833c54fa7bd6}</Id>
+            <Name>Project::Par_Pwd_MTD</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{d2594210-f42a-4b23-ace8-ab83a7b2c91b}</Id>
+            <Name>Project::Par_Srv_MTD</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{1609d66d-1c13-410d-b387-b1bc79396653}</Id>
+            <Name>Project::Par_Usr_MTD</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationValues>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>demo_eikon</Name>
+      <Options>
+        <OutputPath>bin</OutputPath>
+        <ConnectionMappings />
+        <ConnectionProviderMappings />
+        <ConnectionSecurityMappings />
+        <DatabaseStorageLocations />
+        <TargetServerVersion>SQLServer2016</TargetServerVersion>
+        <AzureMode>false</AzureMode>
+        <LinkedAzureTenantId />
+        <LinkedAzureAccountId />
+        <LinkedAzureSSISIR />
+        <LinkedAzureStorage />
+        <RemoteExecutionFolder />
+        <ParameterConfigurationValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2020-12-09T15:10:10.4651092Z</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{488fbdc0-09c0-4d32-9df5-6dc40d01bc1b}</Id>
+            <Name>Project::Par_Srv_DWH</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{54bae07c-3fa4-45ee-a80b-bbb34bab6571}</Id>
+            <Name>Project::Par_Usr_STG</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{79d73ef0-07ec-4914-8107-6dfd827d0e1e}</Id>
+            <Name>Project::Par_Usr_DWH</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{d512da84-8f5e-408b-9d1a-f7f6ee9e7648}</Id>
+            <Name>Project::Par_Pwd_STG</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{098d5b05-603d-4b79-9310-3b971ea65303}</Id>
+            <Name>Project::Par_Pwd_DWH</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{6f36c53d-2110-4f1f-92cb-8592cf0abc33}</Id>
+            <Name>Project::Par_Srv_SRC_01</Name>
+            <Value xsi:type="xsd:string">26.127.184.232</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{cd157c6b-a81b-4954-aabb-479fe1266dce}</Id>
+            <Name>Project::Par_Srv_SRC_02</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{8dc9431e-9fe6-47d5-919f-8413f4291fc4}</Id>
+            <Name>Project::Par_Usr_SRC_01</Name>
+            <Value xsi:type="xsd:string">sa</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{4b441c69-07b8-4802-9b96-13f086033df4}</Id>
+            <Name>Project::Par_Pwd_SRC_01</Name>
+            <Value xsi:type="xsd:string">eikon1234</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{c6327e09-ac84-42eb-9ae5-f0b94ee1507f}</Id>
+            <Name>Project::Par_Usr_SRC_02</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{45d5e1a9-3901-4152-94b4-e4a0109d28d0}</Id>
+            <Name>Project::Par_Pwd_SRC_02</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{3e01f386-d51d-4761-9fd5-ba10252764ac}</Id>
+            <Name>Project::Par_Srv_STG</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{e41d2e43-4a48-45cd-9ef5-139f83845ff3}</Id>
+            <Name>Project::Par_Catalog_DWH</Name>
+            <Value xsi:type="xsd:string">TDE_RRHH_DWH_DEMO</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{c2477e37-4562-4cdd-b045-66e537014f4b}</Id>
+            <Name>Project::Par_Catalog_SRC_01</Name>
+            <Value xsi:type="xsd:string">EIKON_TDE</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{8d2050e8-1a4e-431d-8eed-fe8f10a30aeb}</Id>
+            <Name>Project::Par_Catalog_SRC_02</Name>
+            <Value xsi:type="xsd:string">TDE_RRHH_WEB_DEMO</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{067292c2-80b7-47f4-abe5-e8152ec90f9d}</Id>
+            <Name>Project::Par_Catalog_STG</Name>
+            <Value xsi:type="xsd:string">TDE_RRHH_WEB_DEMO</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{7e711da5-7d91-4458-bb7e-4fc67e4bb08a}</Id>
+            <Name>Project::Par_Catalog_MTD</Name>
+            <Value xsi:type="xsd:string">TDE_RRHH_MTD_DES</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{95c609cd-b78f-41b0-9ebb-833c54fa7bd6}</Id>
+            <Name>Project::Par_Pwd_MTD</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{d2594210-f42a-4b23-ace8-ab83a7b2c91b}</Id>
+            <Name>Project::Par_Srv_MTD</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{1609d66d-1c13-410d-b387-b1bc79396653}</Id>
+            <Name>Project::Par_Usr_MTD</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationValues>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>demo_tde</Name>
+      <Options>
+        <OutputPath>bin</OutputPath>
+        <ConnectionMappings />
+        <ConnectionProviderMappings />
+        <ConnectionSecurityMappings />
+        <DatabaseStorageLocations />
+        <TargetServerVersion>SQLServer2016</TargetServerVersion>
+        <AzureMode>false</AzureMode>
+        <LinkedAzureTenantId />
+        <LinkedAzureAccountId />
+        <LinkedAzureSSISIR />
+        <LinkedAzureStorage />
+        <RemoteExecutionFolder />
+        <ParameterConfigurationValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2020-12-09T15:10:10.46709Z</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{488fbdc0-09c0-4d32-9df5-6dc40d01bc1b}</Id>
+            <Name>Project::Par_Srv_DWH</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{54bae07c-3fa4-45ee-a80b-bbb34bab6571}</Id>
+            <Name>Project::Par_Usr_STG</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{79d73ef0-07ec-4914-8107-6dfd827d0e1e}</Id>
+            <Name>Project::Par_Usr_DWH</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{d512da84-8f5e-408b-9d1a-f7f6ee9e7648}</Id>
+            <Name>Project::Par_Pwd_STG</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{098d5b05-603d-4b79-9310-3b971ea65303}</Id>
+            <Name>Project::Par_Pwd_DWH</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{6f36c53d-2110-4f1f-92cb-8592cf0abc33}</Id>
+            <Name>Project::Par_Srv_SRC_01</Name>
+            <Value xsi:type="xsd:string">26.127.184.232</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{cd157c6b-a81b-4954-aabb-479fe1266dce}</Id>
+            <Name>Project::Par_Srv_SRC_02</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{8dc9431e-9fe6-47d5-919f-8413f4291fc4}</Id>
+            <Name>Project::Par_Usr_SRC_01</Name>
+            <Value xsi:type="xsd:string">sa</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{4b441c69-07b8-4802-9b96-13f086033df4}</Id>
+            <Name>Project::Par_Pwd_SRC_01</Name>
+            <Value xsi:type="xsd:string">eikon1234</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{c6327e09-ac84-42eb-9ae5-f0b94ee1507f}</Id>
+            <Name>Project::Par_Usr_SRC_02</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{45d5e1a9-3901-4152-94b4-e4a0109d28d0}</Id>
+            <Name>Project::Par_Pwd_SRC_02</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{3e01f386-d51d-4761-9fd5-ba10252764ac}</Id>
+            <Name>Project::Par_Srv_STG</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{e41d2e43-4a48-45cd-9ef5-139f83845ff3}</Id>
+            <Name>Project::Par_Catalog_DWH</Name>
+            <Value xsi:type="xsd:string">TDE_RRHH_DWH_DEMO</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{c2477e37-4562-4cdd-b045-66e537014f4b}</Id>
+            <Name>Project::Par_Catalog_SRC_01</Name>
+            <Value xsi:type="xsd:string">EIKON_TDE</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{8d2050e8-1a4e-431d-8eed-fe8f10a30aeb}</Id>
+            <Name>Project::Par_Catalog_SRC_02</Name>
+            <Value xsi:type="xsd:string">TDE_RRHH_WEB_DEMO</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{067292c2-80b7-47f4-abe5-e8152ec90f9d}</Id>
+            <Name>Project::Par_Catalog_STG</Name>
+            <Value xsi:type="xsd:string">TDE_RRHH_WEB_DEMO</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{7e711da5-7d91-4458-bb7e-4fc67e4bb08a}</Id>
+            <Name>Project::Par_Catalog_MTD</Name>
+            <Value xsi:type="xsd:string">TDE_RRHH_MTD_DES</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{95c609cd-b78f-41b0-9ebb-833c54fa7bd6}</Id>
+            <Name>Project::Par_Pwd_MTD</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{d2594210-f42a-4b23-ace8-ab83a7b2c91b}</Id>
+            <Name>Project::Par_Srv_MTD</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{1609d66d-1c13-410d-b387-b1bc79396653}</Id>
+            <Name>Project::Par_Usr_MTD</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationValues>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>development_tde</Name>
+      <Options>
+        <OutputPath>bin</OutputPath>
+        <ConnectionMappings />
+        <ConnectionProviderMappings />
+        <ConnectionSecurityMappings />
+        <DatabaseStorageLocations />
+        <TargetServerVersion>SQLServer2016</TargetServerVersion>
+        <AzureMode>false</AzureMode>
+        <LinkedAzureTenantId />
+        <LinkedAzureAccountId />
+        <LinkedAzureSSISIR />
+        <LinkedAzureStorage />
+        <RemoteExecutionFolder />
+        <ParameterConfigurationValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2020-12-09T21:28:39.9926967Z</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{488fbdc0-09c0-4d32-9df5-6dc40d01bc1b}</Id>
+            <Name>Project::Par_Srv_DWH</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{54bae07c-3fa4-45ee-a80b-bbb34bab6571}</Id>
+            <Name>Project::Par_Usr_STG</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{79d73ef0-07ec-4914-8107-6dfd827d0e1e}</Id>
+            <Name>Project::Par_Usr_DWH</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{d512da84-8f5e-408b-9d1a-f7f6ee9e7648}</Id>
+            <Name>Project::Par_Pwd_STG</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{098d5b05-603d-4b79-9310-3b971ea65303}</Id>
+            <Name>Project::Par_Pwd_DWH</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{6f36c53d-2110-4f1f-92cb-8592cf0abc33}</Id>
+            <Name>Project::Par_Srv_SRC_01</Name>
+            <Value xsi:type="xsd:string">26.127.184.232</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{cd157c6b-a81b-4954-aabb-479fe1266dce}</Id>
+            <Name>Project::Par_Srv_SRC_02</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{8dc9431e-9fe6-47d5-919f-8413f4291fc4}</Id>
+            <Name>Project::Par_Usr_SRC_01</Name>
+            <Value xsi:type="xsd:string">sa</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{4b441c69-07b8-4802-9b96-13f086033df4}</Id>
+            <Name>Project::Par_Pwd_SRC_01</Name>
+            <Value xsi:type="xsd:string">eikon1234</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{c6327e09-ac84-42eb-9ae5-f0b94ee1507f}</Id>
+            <Name>Project::Par_Usr_SRC_02</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{45d5e1a9-3901-4152-94b4-e4a0109d28d0}</Id>
+            <Name>Project::Par_Pwd_SRC_02</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{3e01f386-d51d-4761-9fd5-ba10252764ac}</Id>
+            <Name>Project::Par_Srv_STG</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{e41d2e43-4a48-45cd-9ef5-139f83845ff3}</Id>
+            <Name>Project::Par_Catalog_DWH</Name>
+            <Value xsi:type="xsd:string">TDE_RRHH_DWH_DES</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{c2477e37-4562-4cdd-b045-66e537014f4b}</Id>
+            <Name>Project::Par_Catalog_SRC_01</Name>
+            <Value xsi:type="xsd:string">EIKON_TDE</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{8d2050e8-1a4e-431d-8eed-fe8f10a30aeb}</Id>
+            <Name>Project::Par_Catalog_SRC_02</Name>
+            <Value xsi:type="xsd:string">TDE_RRHH_WEB_DES</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{067292c2-80b7-47f4-abe5-e8152ec90f9d}</Id>
+            <Name>Project::Par_Catalog_STG</Name>
+            <Value xsi:type="xsd:string">TDE_RRHH_STG_DES</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{7e711da5-7d91-4458-bb7e-4fc67e4bb08a}</Id>
+            <Name>Project::Par_Catalog_MTD</Name>
+            <Value xsi:type="xsd:string">TDE_RRHH_MTD_DES</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{95c609cd-b78f-41b0-9ebb-833c54fa7bd6}</Id>
+            <Name>Project::Par_Pwd_MTD</Name>
+            <Value xsi:type="xsd:string">tdepassword</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{d2594210-f42a-4b23-ace8-ab83a7b2c91b}</Id>
+            <Name>Project::Par_Srv_MTD</Name>
+            <Value xsi:type="xsd:string">TDE-LAP-OP-12</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>{1609d66d-1c13-410d-b387-b1bc79396653}</Id>
+            <Name>Project::Par_Usr_MTD</Name>
+            <Value xsi:type="xsd:string">tdeuser</Value>
           </ConfigurationSetting>
         </ParameterConfigurationValues>
       </Options>

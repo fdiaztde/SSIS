@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="DWH_REL_IDIOMA_EMPLEADO"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="419"
-  DTS:VersionGUID="{BA7B03EA-B0C9-42B5-8175-AB550A4548AC}">
+  DTS:VersionBuild="420"
+  DTS:VersionGUID="{F1F38123-079A-4902-8096-69F860C49A58}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -3823,7 +3823,7 @@ WHERE
       ,[FC_FIN_VAL]
       ,[SK_EJECUCION_CREACION]
       ,[SK_EJECUCION_MODIFICACION]
-  FROM [TDE_DWH_EikonBI_DES].[rh01].[REL_IDIOMA_EMPLEADO]
+  FROM [rh01].[REL_IDIOMA_EMPLEADO]
    WHERE ? BETWEEN FC_INI_VAL AND FC_FIN_VAL
 	    ORDER BY  [CD_IDIOMA],[CD_EMPRESA],[CD_EMPLEADO] asc</property>
                 <property
@@ -11983,39 +11983,39 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_AGG_STANDARD_2.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output14]"
-              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\MC_STANDARD_3.Inputs[Multicast Input 1]"
+              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output13]"
-              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_MJ_STANDARD_1.Inputs[Merge Join Right Input]"
+              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_DV_FECHAS_GENERICAS_1.Inputs[Derived Column Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_DV_TRATAMIENTO_DE_NULOS_2.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output12]"
-              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_CS_SCD2_1.Inputs[Conditional Split Input]"
+              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_LKP_SK_EMPLEADO_1.Inputs[Lookup Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_DV_FECHAS_GENERICAS_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_DV_STANDARD_9.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output11]"
-              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
+              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_SRT_STANDARD_2.Inputs[Sort Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_STANDARD_6.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output10]"
-              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
+              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output9]"
-              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\MC_STANDARD_1.Inputs[Multicast Input 1]"
+              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output8]"
-              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
+              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output7]"
               endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_SRT_STANDARD_4.Inputs[Sort Input]"
@@ -12023,39 +12023,39 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output6]"
-              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
+              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output5]"
-              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
+              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\MC_STANDARD_1.Inputs[Multicast Input 1]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output4]"
-              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output3]"
-              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_SRT_STANDARD_2.Inputs[Sort Input]"
+              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_STANDARD_6.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output2]"
-              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_LKP_SK_EMPLEADO_1.Inputs[Lookup Input]"
+              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_CS_SCD2_1.Inputs[Conditional Split Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_DV_STANDARD_9.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_DV_FECHAS_GENERICAS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output1]"
-              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_DV_FECHAS_GENERICAS_1.Inputs[Derived Column Input]"
+              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_MJ_STANDARD_1.Inputs[Merge Join Right Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_DV_TRATAMIENTO_DE_NULOS_2.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output]"
-              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
+              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\MC_STANDARD_3.Inputs[Multicast Input 1]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[INSERT]"
               endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_UN_STANDARD_2.Inputs[Union All Input 1]"
@@ -12083,19 +12083,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_LKP_SK_EMPLEADO_1.Outputs[Lookup Match Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Merge Join Output1]"
-              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_REGISTROS_CORRECTOS_1.Inputs[Derived Column Input]"
-              name="Merge Join Output"
-              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_MJ_STANDARD_2.Outputs[Merge Join Output]" />
-            <path
-              refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Merge Join Output2]"
               endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Inputs[Derived Column Input]"
               name="Merge Join Output"
               startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output]" />
             <path
-              refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Merge Join Output]"
+              refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Merge Join Output2]"
               endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_UPDATE_CORRECTOS_1.Inputs[Derived Column Input]"
               name="Merge Join Output"
               startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_MJ_STANDARD_3.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Merge Join Output]"
+              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_REGISTROS_CORRECTOS_1.Inputs[Derived Column Input]"
+              name="Merge Join Output"
+              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_MJ_STANDARD_2.Outputs[Merge Join Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Multicast Output 1]"
               endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
@@ -12158,14 +12158,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\MC_STANDARD_7.Outputs[Multicast Output 2]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Multicast Output 31]"
-              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_DV_STANDARD_9.Inputs[Derived Column Input]"
-              name="Multicast Output 3"
-              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\MC_STANDARD _1.Outputs[Multicast Output 3]" />
-            <path
-              refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Multicast Output 3]"
               endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_DTN_REL_IDIOMA_EMPLEADO.Inputs[OLE DB Destination Input]"
               name="Multicast Output 3"
               startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\MC_STANDARD_7.Outputs[Multicast Output 3]" />
+            <path
+              refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Multicast Output 3]"
+              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_DV_STANDARD_9.Inputs[Derived Column Input]"
+              name="Multicast Output 3"
+              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\MC_STANDARD _1.Outputs[Multicast Output 3]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[OLE DB Command Error Output]"
               endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_AGG_STANDARD_5.Inputs[Aggregate Input 1]"
@@ -12223,19 +12223,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_SRT_STANDARD_3.Outputs[Sort Output]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Union All Output 11]"
-              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_SCT_CONTROL_SK_1.Inputs[Input 0]"
-              name="Union All Output 1"
-              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_UN_STANDARD_2.Outputs[Union All Output 1]" />
-            <path
-              refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Union All Output 12]"
               endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\MC_STANDARD_2.Inputs[Multicast Input 1]"
               name="Union All Output 1"
               startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_UN_STANDARD_1.Outputs[Union All Output 1]" />
             <path
-              refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Union All Output 1]"
+              refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Union All Output 12]"
               endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_DV_STANDARD_3.Inputs[Derived Column Input]"
               name="Union All Output 1"
               startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\RA_UN_DESTINO_1.Outputs[Union All Output 1]" />
+            <path
+              refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Union All Output 1]"
+              endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_SCT_CONTROL_SK_1.Inputs[Input 0]"
+              name="Union All Output 1"
+              startId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_UN_STANDARD_2.Outputs[Union All Output 1]" />
             <path
               refId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[UPDATE SCD2]"
               endId="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1\PR_MC_UPD_SCD2_1.Inputs[Multicast Input 1]"
@@ -12268,7 +12268,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_CREATE_MAX_ID_1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -12385,7 +12385,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_MAX_ID_1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -12556,7 +12556,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -12579,7 +12579,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -12602,7 +12602,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_2"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -12625,7 +12625,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -12648,7 +12648,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_2"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -12700,7 +12700,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_2"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13770,41 +13770,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Union All Output 11]"
-          TopLeft="1455,544">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="24,41"
-              Start="0,0"
-              End="24,33.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.5"
-                    Point2="0,20.5"
-                    Point3="4,20.5" />
-                  <mssgle:LineSegment
-                    End="20,20.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="20,20.5"
-                    Point2="24,20.5"
-                    Point3="24,24.5" />
-                  <mssgle:LineSegment
-                    End="24,33.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Union All Output 1]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Union All Output 12]"
           TopLeft="555.5,755">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13838,7 +13804,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Union All Output 12]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Union All Output 11]"
           TopLeft="1951,528">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13863,6 +13829,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     Point3="-34.75,24.375" />
                   <mssgle:LineSegment
                     End="-34.75,33.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Union All Output 1]"
+          TopLeft="1455,544">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="24,41"
+              Start="0,0"
+              End="24,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5"
+                    Point2="0,20.5"
+                    Point3="4,20.5" />
+                  <mssgle:LineSegment
+                    End="20,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20,20.5"
+                    Point2="24,20.5"
+                    Point3="24,24.5" />
+                  <mssgle:LineSegment
+                    End="24,33.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14252,7 +14252,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Multicast Output 3]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Multicast Output 31]"
           TopLeft="1541,703">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14286,7 +14286,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Multicast Output 31]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Multicast Output 3]"
           TopLeft="570,213.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14680,41 +14680,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Merge Join Output1]"
-          TopLeft="1534.5,1051">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-52.1666666666667,113"
-              Start="0,0"
-              End="-52.1666666666667,105.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,63.3688394276629" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,63.3688394276629"
-                    Point2="0,67.3688394276629"
-                    Point3="-4,67.3688394276629" />
-                  <mssgle:LineSegment
-                    End="-48.1666666666667,67.3688394276629" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-48.1666666666667,67.3688394276629"
-                    Point2="-52.1666666666667,67.3688394276629"
-                    Point3="-52.1666666666667,71.3688394276629" />
-                  <mssgle:LineSegment
-                    End="-52.1666666666667,105.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Merge Join Output]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Merge Join Output2]"
           TopLeft="2209.5,984">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14748,7 +14714,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Merge Join Output2]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Merge Join Output1]"
           TopLeft="1570.5,232">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14761,6 +14727,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Merge Join Output]"
+          TopLeft="1534.5,1051">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-52.1666666666667,113"
+              Start="0,0"
+              End="-52.1666666666667,105.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,63.3688394276629" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,63.3688394276629"
+                    Point2="0,67.3688394276629"
+                    Point3="-4,67.3688394276629" />
+                  <mssgle:LineSegment
+                    End="-48.1666666666667,67.3688394276629" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-48.1666666666667,67.3688394276629"
+                    Point2="-52.1666666666667,67.3688394276629"
+                    Point3="-52.1666666666667,71.3688394276629" />
+                  <mssgle:LineSegment
+                    End="-52.1666666666667,105.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14938,7 +14938,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output14]"
           TopLeft="255,403">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14960,7 +14960,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output1]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output13]"
           TopLeft="1573,303">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14982,7 +14982,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output2]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output12]"
           TopLeft="775,211.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15004,7 +15004,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output3]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output11]"
           TopLeft="1584,845">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15038,7 +15038,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output4]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output10]"
           TopLeft="810.5,1075">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15072,7 +15072,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output5]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output9]"
           TopLeft="586.25,454">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15094,7 +15094,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output6]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output8]"
           TopLeft="1401.66666666667,1164">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15162,7 +15162,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output8]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output6]"
           TopLeft="2184,1218">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15196,7 +15196,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output9]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output5]"
           TopLeft="1137.5,795">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15230,7 +15230,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output10]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output4]"
           TopLeft="219.118434388359,224">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15252,7 +15252,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output11]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output3]"
           TopLeft="1323,298">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15286,7 +15286,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output12]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output2]"
           TopLeft="1575.5,369">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15308,7 +15308,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output13]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output1]"
           TopLeft="1797.5,135">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15342,7 +15342,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output14]"
+          Id="Package\DF_DWH_REL_IDIOMA_EMPLEADO_1.Paths[Derived Column Output]"
           TopLeft="1831.5,904">
           <EdgeLayout.Curve>
             <mssgle:Curve

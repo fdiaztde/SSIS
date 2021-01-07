@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="DWH_DIM_ESTADO_CIVIL"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="332"
-  DTS:VersionGUID="{8BE173C7-BF66-4162-AB77-29417B1284A1}">
+  DTS:VersionBuild="333"
+  DTS:VersionGUID="{718D3C83-750A-4140-8BDF-B08F29FAB7F8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -3123,7 +3123,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       ,[FC_FIN_VAL]
       ,[SK_EJECUCION_CREACION]
       ,[SK_EJECUCION_MODIFICACION]
-FROM [TDE_DWH_EikonBI_DES].[RH01].[DIM_ESTADO_CIVIL]
+FROM [RH01].[DIM_ESTADO_CIVIL]
 WHERE  ? BETWEEN FC_INI_VAL AND FC_FIN_VAL
 ORDER BY [CD_ESTADO_CIVIL] ASC</property>
                 <property
@@ -9250,39 +9250,39 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
               startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_AGG_STANDARD_2.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output14]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_DV_V_FC_ACTUAL_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output13]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_SRT_TABLA_1.Inputs[Sort Input]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_SRT_STANDARD_5.Inputs[Sort Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_TABLA_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output12]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output11]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_DV_FECHA_GENERICA_1.Inputs[Derived Column Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_DV_TRATA_NULOS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output10]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\MC_VAL_CORRECTO_1.Inputs[Multicast Input 1]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output9]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_SRT_TABLA_4.Inputs[Sort Input]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output8]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\CS_INS_UPD_DEL_1.Inputs[Conditional Split Input]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\MC_DEL_UP_2.Inputs[Multicast Input 1]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_DV_FECHA_GENERICA_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output7]"
               endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
@@ -9290,39 +9290,39 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
               startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output6]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\MC_DEL_UP_2.Inputs[Multicast Input 1]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\CS_INS_UPD_DEL_1.Inputs[Conditional Split Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_DV_FECHA_GENERICA_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output5]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_SRT_TABLA_4.Inputs[Sort Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output4]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\MC_VAL_CORRECTO_1.Inputs[Multicast Input 1]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output3]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_DV_FECHA_GENERICA_1.Inputs[Derived Column Input]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_DV_TRATA_NULOS_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output2]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output1]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_SRT_STANDARD_5.Inputs[Sort Input]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_SRT_TABLA_1.Inputs[Sort Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_TABLA_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_DV_V_FC_ACTUAL_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[INSERT]"
               endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_UN_IN_UP_1.Inputs[Union All Input 1]"
@@ -9350,29 +9350,29 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
               startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_MJ_DEL_ERR_1.Outputs[Merge Join Output]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Multicast Output 14]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_UN_DESTINO_1.Inputs[Union All Input 6]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_DV_V_FC_ACTUAL_1.Inputs[Derived Column Input]"
               name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\MC_DEL_UP_2.Outputs[Multicast Output 1]" />
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\MC_STANDARD_1.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Multicast Output 13]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_DTN_DIM_ESTADO_CIVIL_1.Inputs[OLE DB Destination Input]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\MC_INS_ERROR_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Multicast Output 11]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\MC_VAL_CORRECTO_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Multicast Output 1]"
               endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_SCT_UPDATE_DIM_ESTADO_CIVIL_1.Inputs[OLE DB Command Input]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\MC_DEL_UP_1.Outputs[Multicast Output 1]" />
             <path
-              refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Multicast Output 12]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_DV_V_FC_ACTUAL_1.Inputs[Derived Column Input]"
+              refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Multicast Output 11]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_DTN_DIM_ESTADO_CIVIL_1.Inputs[OLE DB Destination Input]"
               name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\MC_STANDARD_1.Outputs[Multicast Output 1]" />
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\MC_INS_ERROR_1.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Multicast Output 1]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_UN_DESTINO_1.Inputs[Union All Input 6]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\MC_DEL_UP_2.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Multicast Output 12]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\MC_VAL_CORRECTO_1.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Multicast Output 2]"
               endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_SRT_TABLA_3.Inputs[Sort Input]"
@@ -9480,19 +9480,19 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
               startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_SRT_STANDARD_5.Outputs[Sort Output]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Union All Output 11]"
-              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\MC_DEL_UP_1.Inputs[Multicast Input 1]"
-              name="Union All Output 1"
-              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Union All Output 12]"
               endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_SCT_SECUENCIAL_1.Inputs[Input 0]"
               name="Union All Output 1"
               startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_UN_IN_UP_1.Outputs[Union All Output 1]" />
             <path
-              refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Union All Output 1]"
+              refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Union All Output 12]"
               endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_DV_STANDARD_3.Inputs[Derived Column Input]"
               name="Union All Output 1"
               startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\RA_UN_DESTINO_1.Outputs[Union All Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Union All Output 1]"
+              endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\MC_DEL_UP_1.Inputs[Multicast Input 1]"
+              name="Union All Output 1"
+              startId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[UPDATE SCD2]"
               endId="Package\DF_DWH_DIM_ESTADO_CIVIL_1\MC_UPD_SCD2_1.Inputs[Multicast Input 1]"
@@ -9705,7 +9705,7 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_SK_DEFAUT"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9746,7 +9746,7 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_INI_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9817,7 +9817,7 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9840,7 +9840,7 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9886,7 +9886,7 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9909,7 +9909,7 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_2"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9932,7 +9932,7 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9961,7 +9961,7 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_2"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10964,30 +10964,30 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
           TopLeft="448.601851851854,918.777777777778" />
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Multicast Output 11]"
-          TopLeft="694.93518518519,828.444444444445">
+          TopLeft="1031.82407407408,683.83333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-118.583333333336,90.333333333333"
+              EndConnector="-30.6666666666666,102.611111111115"
               Start="0,0"
-              End="-118.583333333336,82.833333333333">
+              End="-30.6666666666666,95.1111111111151">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.0838483409093" />
+                    End="0,47.4742299327317" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.0838483409093"
-                    Point2="0,29.0838483409093"
-                    Point3="-4,29.0838483409093" />
+                    Point1="0,47.4742299327317"
+                    Point2="0,51.4742299327317"
+                    Point3="-4,51.4742299327317" />
                   <mssgle:LineSegment
-                    End="-114.583333333336,29.0838483409093" />
+                    End="-26.6666666666666,51.4742299327317" />
                   <mssgle:CubicBezierSegment
-                    Point1="-114.583333333336,29.0838483409093"
-                    Point2="-118.583333333336,29.0838483409093"
-                    Point3="-118.583333333336,33.0838483409093" />
+                    Point1="-26.6666666666666,51.4742299327317"
+                    Point2="-30.6666666666666,51.4742299327317"
+                    Point3="-30.6666666666666,55.4742299327317" />
                   <mssgle:LineSegment
-                    End="-118.583333333336,82.833333333333" />
+                    End="-30.6666666666666,95.1111111111151" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10998,30 +10998,18 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Multicast Output 1]"
-          TopLeft="1460.21296296297,575.777777777778">
+          TopLeft="1342.37962962963,932.277777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="136.61111111111,33.472222222223"
+              EndConnector="-720.777777777779,0"
               Start="0,0"
-              End="136.61111111111,25.972222222223">
+              End="-713.277777777779,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.7361111111115" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.7361111111115"
-                    Point2="0,16.7361111111115"
-                    Point3="4,16.7361111111115" />
-                  <mssgle:LineSegment
-                    End="132.61111111111,16.7361111111115" />
-                  <mssgle:CubicBezierSegment
-                    Point1="132.61111111111,16.7361111111115"
-                    Point2="136.61111111111,16.7361111111115"
-                    Point3="136.61111111111,20.7361111111115" />
-                  <mssgle:LineSegment
-                    End="136.61111111111,25.972222222223" />
+                    End="-713.277777777779,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11194,30 +11182,30 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output14]"
-          TopLeft="696.212962962966,82.6111111111111">
+          TopLeft="192,160">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="545.787037037034,98.3888888888889"
+              EndConnector="-25.5,51.916666666667"
               Start="0,0"
-              End="545.787037037034,90.8888888888889">
+              End="-25.5,44.416666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.5015015015015" />
+                    End="0,21.9583333333335" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,54.5015015015015"
-                    Point2="0,58.5015015015015"
-                    Point3="4,58.5015015015015" />
+                    Point1="0,21.9583333333335"
+                    Point2="0,25.9583333333335"
+                    Point3="-4,25.9583333333335" />
                   <mssgle:LineSegment
-                    End="541.787037037034,58.5015015015015" />
+                    End="-21.5,25.9583333333335" />
                   <mssgle:CubicBezierSegment
-                    Point1="541.787037037034,58.5015015015015"
-                    Point2="545.787037037034,58.5015015015015"
-                    Point3="545.787037037034,62.5015015015015" />
+                    Point1="-21.5,25.9583333333335"
+                    Point2="-25.5,25.9583333333335"
+                    Point3="-25.5,29.9583333333335" />
                   <mssgle:LineSegment
-                    End="545.787037037034,90.8888888888889" />
+                    End="-25.5,44.416666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11228,18 +11216,30 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output13]"
-          TopLeft="1218.2962962963,828.444444444445">
+          TopLeft="1325,47">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,55.888888888889"
+              EndConnector="20.5,55"
               Start="0,0"
-              End="0,48.388888888889">
+              End="20.5,47.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,48.388888888889" />
+                    End="0,18.2041763341067" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.2041763341067"
+                    Point2="0,22.2041763341067"
+                    Point3="4,22.2041763341067" />
+                  <mssgle:LineSegment
+                    End="16.5,22.2041763341067" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.5,22.2041763341067"
+                    Point2="20.5,22.2041763341067"
+                    Point3="20.5,26.2041763341067" />
+                  <mssgle:LineSegment
+                    End="20.5,47.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11250,30 +11250,30 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output12]"
-          TopLeft="972.824074074083,1044.55555555556">
+          TopLeft="884.046296296301,979.83333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-437.722222222229,-83.7777777777819"
+              EndConnector="-262.444444444447,-34.3888888888853"
               Start="0,0"
-              End="-437.722222222229,-76.2777777777819">
+              End="-254.944444444447,-34.3888888888853">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-29.8539357772111" />
+                    End="-147.688073394497,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-29.8539357772111"
-                    Point2="0,-33.8539357772111"
-                    Point3="-4,-33.8539357772111" />
+                    Point1="-147.688073394497,0"
+                    Point2="-151.688073394497,0"
+                    Point3="-151.688073394497,-4" />
                   <mssgle:LineSegment
-                    End="-433.722222222229,-33.8539357772111" />
+                    End="-151.688073394497,-30.3888888888853" />
                   <mssgle:CubicBezierSegment
-                    Point1="-433.722222222229,-33.8539357772111"
-                    Point2="-437.722222222229,-33.8539357772111"
-                    Point3="-437.722222222229,-37.8539357772111" />
+                    Point1="-151.688073394497,-30.3888888888853"
+                    Point2="-151.688073394497,-34.3888888888853"
+                    Point3="-155.688073394497,-34.3888888888853" />
                   <mssgle:LineSegment
-                    End="-437.722222222229,-76.2777777777819" />
+                    End="-254.944444444447,-34.3888888888853" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11284,18 +11284,30 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output11]"
-          TopLeft="490.592592592595,372.25">
+          TopLeft="1246.87962962963,288.027777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,546.527777777778"
+              EndConnector="19.7777777777799,26.194444444445"
               Start="0,0"
-              End="0,539.027777777778">
+              End="19.7777777777799,18.694444444445">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,539.027777777778" />
+                    End="0,9.09722222222251" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.09722222222251"
+                    Point2="0,13.0972222222225"
+                    Point3="4,13.0972222222225" />
+                  <mssgle:LineSegment
+                    End="15.7777777777799,13.0972222222225" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.7777777777799,13.0972222222225"
+                    Point2="19.7777777777799,13.0972222222225"
+                    Point3="19.7777777777799,17.0972222222225" />
+                  <mssgle:LineSegment
+                    End="19.7777777777799,18.694444444445" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11306,30 +11318,30 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output10]"
-          TopLeft="703.407407407412,373.25">
+          TopLeft="810.657407407412,501.250000000001">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-168.305555555558,545.527777777778"
+              EndConnector="-85.7222222222221,285.194444444444"
               Start="0,0"
-              End="-168.305555555558,538.027777777778">
+              End="-85.7222222222221,277.694444444444">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,268.763888888889" />
+                    End="0,9.06899055918643" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,268.763888888889"
-                    Point2="0,272.763888888889"
-                    Point3="-4,272.763888888889" />
+                    Point1="0,9.06899055918643"
+                    Point2="0,13.0689905591864"
+                    Point3="-4,13.0689905591864" />
                   <mssgle:LineSegment
-                    End="-164.305555555558,272.763888888889" />
+                    End="-81.7222222222221,13.0689905591864" />
                   <mssgle:CubicBezierSegment
-                    Point1="-164.305555555558,272.763888888889"
-                    Point2="-168.305555555558,272.763888888889"
-                    Point3="-168.305555555558,276.763888888889" />
+                    Point1="-81.7222222222221,13.0689905591864"
+                    Point2="-85.7222222222221,13.0689905591864"
+                    Point3="-85.7222222222221,17.0689905591864" />
                   <mssgle:LineSegment
-                    End="-168.305555555558,538.027777777778" />
+                    End="-85.7222222222221,277.694444444444" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11340,30 +11352,30 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output9]"
-          TopLeft="1890.60185185185,720">
+          TopLeft="291.379629629631,957.88888888889">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-199.27777777778,114.000000000001"
+              EndConnector="87.8055555555557,104.30555555555"
               Start="0,0"
-              End="-199.27777777778,106.500000000001">
+              End="87.8055555555557,96.80555555555">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,53.0000000000005" />
+                    End="0,58.2020182787476" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,53.0000000000005"
-                    Point2="0,57.0000000000005"
-                    Point3="-4,57.0000000000005" />
+                    Point1="0,58.2020182787476"
+                    Point2="0,62.2020182787476"
+                    Point3="4,62.2020182787476" />
                   <mssgle:LineSegment
-                    End="-195.27777777778,57.0000000000005" />
+                    End="83.8055555555557,62.2020182787476" />
                   <mssgle:CubicBezierSegment
-                    Point1="-195.27777777778,57.0000000000005"
-                    Point2="-199.27777777778,57.0000000000005"
-                    Point3="-199.27777777778,61.0000000000005" />
+                    Point1="83.8055555555557,62.2020182787476"
+                    Point2="87.8055555555557,62.2020182787476"
+                    Point3="87.8055555555557,66.2020182787476" />
                   <mssgle:LineSegment
-                    End="-199.27777777778,106.500000000001" />
+                    End="87.8055555555557,96.80555555555" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11374,30 +11386,18 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output8]"
-          TopLeft="1266.65740740741,356.222222222223">
+          TopLeft="1419.76851851852,876.000000000001">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-11.9444444444398,24.8888888888879"
+              EndConnector="0,33.444444444444"
               Start="0,0"
-              End="-11.9444444444398,17.3888888888879">
+              End="0,25.944444444444">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,8.44444444444397" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8.44444444444397"
-                    Point2="0,12.444444444444"
-                    Point3="-4,12.444444444444" />
-                  <mssgle:LineSegment
-                    End="-7.9444444444398,12.444444444444" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-7.9444444444398,12.444444444444"
-                    Point2="-11.9444444444398,12.444444444444"
-                    Point3="-11.9444444444398,16.444444444444" />
-                  <mssgle:LineSegment
-                    End="-11.9444444444398,17.3888888888879" />
+                    End="0,25.944444444444" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11442,18 +11442,30 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output6]"
-          TopLeft="1419.76851851852,876.000000000001">
+          TopLeft="1266.65740740741,356.222222222223">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33.444444444444"
+              EndConnector="-11.9444444444398,24.8888888888879"
               Start="0,0"
-              End="0,25.944444444444">
+              End="-11.9444444444398,17.3888888888879">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.944444444444" />
+                    End="0,8.44444444444397" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.44444444444397"
+                    Point2="0,12.444444444444"
+                    Point3="-4,12.444444444444" />
+                  <mssgle:LineSegment
+                    End="-7.9444444444398,12.444444444444" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.9444444444398,12.444444444444"
+                    Point2="-11.9444444444398,12.444444444444"
+                    Point3="-11.9444444444398,16.444444444444" />
+                  <mssgle:LineSegment
+                    End="-11.9444444444398,17.3888888888879" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11464,30 +11476,30 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output5]"
-          TopLeft="291.379629629631,957.88888888889">
+          TopLeft="1890.60185185185,720">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="87.8055555555557,104.30555555555"
+              EndConnector="-199.27777777778,114.000000000001"
               Start="0,0"
-              End="87.8055555555557,96.80555555555">
+              End="-199.27777777778,106.500000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.2020182787476" />
+                    End="0,53.0000000000005" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,58.2020182787476"
-                    Point2="0,62.2020182787476"
-                    Point3="4,62.2020182787476" />
+                    Point1="0,53.0000000000005"
+                    Point2="0,57.0000000000005"
+                    Point3="-4,57.0000000000005" />
                   <mssgle:LineSegment
-                    End="83.8055555555557,62.2020182787476" />
+                    End="-195.27777777778,57.0000000000005" />
                   <mssgle:CubicBezierSegment
-                    Point1="83.8055555555557,62.2020182787476"
-                    Point2="87.8055555555557,62.2020182787476"
-                    Point3="87.8055555555557,66.2020182787476" />
+                    Point1="-195.27777777778,57.0000000000005"
+                    Point2="-199.27777777778,57.0000000000005"
+                    Point3="-199.27777777778,61.0000000000005" />
                   <mssgle:LineSegment
-                    End="87.8055555555557,96.80555555555" />
+                    End="-199.27777777778,106.500000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11498,30 +11510,30 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output4]"
-          TopLeft="810.657407407412,501.250000000001">
+          TopLeft="703.407407407412,373.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-85.7222222222221,285.194444444444"
+              EndConnector="-168.305555555558,545.527777777778"
               Start="0,0"
-              End="-85.7222222222221,277.694444444444">
+              End="-168.305555555558,538.027777777778">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9.06899055918643" />
+                    End="0,268.763888888889" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9.06899055918643"
-                    Point2="0,13.0689905591864"
-                    Point3="-4,13.0689905591864" />
+                    Point1="0,268.763888888889"
+                    Point2="0,272.763888888889"
+                    Point3="-4,272.763888888889" />
                   <mssgle:LineSegment
-                    End="-81.7222222222221,13.0689905591864" />
+                    End="-164.305555555558,272.763888888889" />
                   <mssgle:CubicBezierSegment
-                    Point1="-81.7222222222221,13.0689905591864"
-                    Point2="-85.7222222222221,13.0689905591864"
-                    Point3="-85.7222222222221,17.0689905591864" />
+                    Point1="-164.305555555558,272.763888888889"
+                    Point2="-168.305555555558,272.763888888889"
+                    Point3="-168.305555555558,276.763888888889" />
                   <mssgle:LineSegment
-                    End="-85.7222222222221,277.694444444444" />
+                    End="-168.305555555558,538.027777777778" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11532,30 +11544,18 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output3]"
-          TopLeft="1246.87962962963,288.027777777778">
+          TopLeft="490.592592592595,372.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="19.7777777777799,26.194444444445"
+              EndConnector="0,546.527777777778"
               Start="0,0"
-              End="19.7777777777799,18.694444444445">
+              End="0,539.027777777778">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9.09722222222251" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9.09722222222251"
-                    Point2="0,13.0972222222225"
-                    Point3="4,13.0972222222225" />
-                  <mssgle:LineSegment
-                    End="15.7777777777799,13.0972222222225" />
-                  <mssgle:CubicBezierSegment
-                    Point1="15.7777777777799,13.0972222222225"
-                    Point2="19.7777777777799,13.0972222222225"
-                    Point3="19.7777777777799,17.0972222222225" />
-                  <mssgle:LineSegment
-                    End="19.7777777777799,18.694444444445" />
+                    End="0,539.027777777778" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11566,30 +11566,30 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output2]"
-          TopLeft="884.046296296301,979.83333333333">
+          TopLeft="972.824074074083,1044.55555555556">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-262.444444444447,-34.3888888888853"
+              EndConnector="-437.722222222229,-83.7777777777819"
               Start="0,0"
-              End="-254.944444444447,-34.3888888888853">
+              End="-437.722222222229,-76.2777777777819">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-147.688073394497,0" />
+                    End="0,-29.8539357772111" />
                   <mssgle:CubicBezierSegment
-                    Point1="-147.688073394497,0"
-                    Point2="-151.688073394497,0"
-                    Point3="-151.688073394497,-4" />
+                    Point1="0,-29.8539357772111"
+                    Point2="0,-33.8539357772111"
+                    Point3="-4,-33.8539357772111" />
                   <mssgle:LineSegment
-                    End="-151.688073394497,-30.3888888888853" />
+                    End="-433.722222222229,-33.8539357772111" />
                   <mssgle:CubicBezierSegment
-                    Point1="-151.688073394497,-30.3888888888853"
-                    Point2="-151.688073394497,-34.3888888888853"
-                    Point3="-155.688073394497,-34.3888888888853" />
+                    Point1="-433.722222222229,-33.8539357772111"
+                    Point2="-437.722222222229,-33.8539357772111"
+                    Point3="-437.722222222229,-37.8539357772111" />
                   <mssgle:LineSegment
-                    End="-254.944444444447,-34.3888888888853" />
+                    End="-437.722222222229,-76.2777777777819" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11600,30 +11600,18 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output1]"
-          TopLeft="1325,47">
+          TopLeft="1218.2962962963,828.444444444445">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="20.5,55"
+              EndConnector="0,55.888888888889"
               Start="0,0"
-              End="20.5,47.5">
+              End="0,48.388888888889">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.2041763341067" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.2041763341067"
-                    Point2="0,22.2041763341067"
-                    Point3="4,22.2041763341067" />
-                  <mssgle:LineSegment
-                    End="16.5,22.2041763341067" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.5,22.2041763341067"
-                    Point2="20.5,22.2041763341067"
-                    Point3="20.5,26.2041763341067" />
-                  <mssgle:LineSegment
-                    End="20.5,47.5" />
+                    End="0,48.388888888889" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11634,30 +11622,30 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Derived Column Output]"
-          TopLeft="192,160">
+          TopLeft="696.212962962966,82.6111111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-25.5,51.916666666667"
+              EndConnector="545.787037037034,98.3888888888889"
               Start="0,0"
-              End="-25.5,44.416666666667">
+              End="545.787037037034,90.8888888888889">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.9583333333335" />
+                    End="0,54.5015015015015" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.9583333333335"
-                    Point2="0,25.9583333333335"
-                    Point3="-4,25.9583333333335" />
+                    Point1="0,54.5015015015015"
+                    Point2="0,58.5015015015015"
+                    Point3="4,58.5015015015015" />
                   <mssgle:LineSegment
-                    End="-21.5,25.9583333333335" />
+                    End="541.787037037034,58.5015015015015" />
                   <mssgle:CubicBezierSegment
-                    Point1="-21.5,25.9583333333335"
-                    Point2="-25.5,25.9583333333335"
-                    Point3="-25.5,29.9583333333335" />
+                    Point1="541.787037037034,58.5015015015015"
+                    Point2="545.787037037034,58.5015015015015"
+                    Point3="545.787037037034,62.5015015015015" />
                   <mssgle:LineSegment
-                    End="-25.5,44.416666666667" />
+                    End="545.787037037034,90.8888888888889" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11860,6 +11848,28 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Union All Output 12]"
+          TopLeft="448.601851851854,938.333333333334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-66.222222222223,0"
+              Start="0,0"
+              End="-58.722222222223,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-58.722222222223,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Union All Output 11]"
           TopLeft="1059.32407407408,501.111111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11893,7 +11903,7 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Union All Output 11]"
+          Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Union All Output 1]"
           TopLeft="1461.46296296297,501.111111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11906,28 +11916,6 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,25.1666666666671" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Union All Output 1]"
-          TopLeft="448.601851851854,938.333333333334">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-66.222222222223,0"
-              Start="0,0"
-              End="-58.722222222223,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-58.722222222223,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12514,62 +12502,6 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Multicast Output 14]"
-          TopLeft="1342.37962962963,932.277777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-720.777777777779,0"
-              Start="0,0"
-              End="-713.277777777779,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-713.277777777779,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Multicast Output 13]"
-          TopLeft="1031.82407407408,683.83333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-30.6666666666666,102.611111111115"
-              Start="0,0"
-              End="-30.6666666666666,95.1111111111151">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,47.4742299327317" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,47.4742299327317"
-                    Point2="0,51.4742299327317"
-                    Point3="-4,51.4742299327317" />
-                  <mssgle:LineSegment
-                    End="-26.6666666666666,51.4742299327317" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-26.6666666666666,51.4742299327317"
-                    Point2="-30.6666666666666,51.4742299327317"
-                    Point3="-30.6666666666666,55.4742299327317" />
-                  <mssgle:LineSegment
-                    End="-30.6666666666666,95.1111111111151" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Multicast Output 12]"
           TopLeft="560.833333333336,62.1111111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12582,6 +12514,74 @@ ORDER BY [CD_ESTADO_CIVIL] ASC</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="26.3796296296299,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Multicast Output 13]"
+          TopLeft="1460.21296296297,575.777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="136.61111111111,33.472222222223"
+              Start="0,0"
+              End="136.61111111111,25.972222222223">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.7361111111115" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.7361111111115"
+                    Point2="0,16.7361111111115"
+                    Point3="4,16.7361111111115" />
+                  <mssgle:LineSegment
+                    End="132.61111111111,16.7361111111115" />
+                  <mssgle:CubicBezierSegment
+                    Point1="132.61111111111,16.7361111111115"
+                    Point2="136.61111111111,16.7361111111115"
+                    Point3="136.61111111111,20.7361111111115" />
+                  <mssgle:LineSegment
+                    End="136.61111111111,25.972222222223" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_ESTADO_CIVIL_1.Paths[Multicast Output 12]"
+          TopLeft="694.93518518519,828.444444444445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-118.583333333336,90.333333333333"
+              Start="0,0"
+              End="-118.583333333336,82.833333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.0838483409093" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.0838483409093"
+                    Point2="0,29.0838483409093"
+                    Point3="-4,29.0838483409093" />
+                  <mssgle:LineSegment
+                    End="-114.583333333336,29.0838483409093" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-114.583333333336,29.0838483409093"
+                    Point2="-118.583333333336,29.0838483409093"
+                    Point3="-118.583333333336,33.0838483409093" />
+                  <mssgle:LineSegment
+                    End="-118.583333333336,82.833333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

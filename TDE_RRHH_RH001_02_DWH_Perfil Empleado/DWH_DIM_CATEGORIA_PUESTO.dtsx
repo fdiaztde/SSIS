@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="DWH_DIM_CATEGORIA_SALARIAL"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="341"
-  DTS:VersionGUID="{A99F0FA1-F9E8-4391-92D5-C944C7B50031}">
+  DTS:VersionBuild="342"
+  DTS:VersionGUID="{5122C76F-4E3B-451C-AA5D-605F10BFEEF9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -3182,7 +3182,7 @@ where [CD_EMPRESA] = ? and ? BETWEEN [FC_INI_VAL] and [FC_FIN_VAL]</property>
       ,[FC_FIN_VAL]
       ,[SK_EJECUCION_CREACION]
       ,[SK_EJECUCION_MODIFICACION]
-FROM [TDE_DWH_EikonBI_DES].[RH01].[DIM_CATEGORIA_PUESTO]
+FROM [RH01].[DIM_CATEGORIA_PUESTO]
 WHERE  ? BETWEEN FC_INI_VAL AND FC_FIN_VAL
 ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
                 <property
@@ -9104,74 +9104,74 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
               startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_AGG_STANDARD_2.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output13]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_DEL_UP_2.Inputs[Multicast Input 1]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output12]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output11]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DV_FECHA_GENERICA_1.Inputs[Derived Column Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DV_TRATA_NULOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output10]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output9]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\LKP_SK_EMPRESA_1.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DV_V_FC_ACTUAL_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output7]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_VAL_CORRECTO_1.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output8]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output5]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output4]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output3]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output2]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_SRT_TABLA_4.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output1]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\CS_INS_UPD_DEL_1.Inputs[Conditional Split Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DV_FECHA_GENERICA_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output]"
               endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_SRT_TABLA_1.Inputs[Sort Input]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_TABLA_1.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output6]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_DEL_UP_2.Inputs[Multicast Input 1]"
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output11]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\CS_INS_UPD_DEL_1.Inputs[Conditional Split Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DV_FECHA_GENERICA_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output10]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_SRT_TABLA_4.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output9]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output7]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output8]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output5]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_VAL_CORRECTO_1.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output4]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\LKP_SK_EMPRESA_1.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DV_V_FC_ACTUAL_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output3]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output2]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DV_FECHA_GENERICA_1.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DV_TRATA_NULOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output1]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output6]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[INSERT]"
               endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_UN_IN_UP_1.Inputs[Union All Input 1]"
@@ -9204,34 +9204,34 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
               startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_MJ_VAL_CORREC_1.Outputs[Merge Join Output]" />
             <path
               refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 14]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DV_V_FC_ACTUAL_1.Inputs[Derived Column Input]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_STANDARD_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 15]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_SCT_UPDATE_PE_DIM_CATEGORIA_PUESTO_1.Inputs[OLE DB Command Input]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_DEL_UP_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 13]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 6]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_DEL_UP_2.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 11]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_VAL_CORRECTO_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 1]"
               endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DTN_DIM_CATEGORIA_PUESTO_1.Inputs[OLE DB Destination Input]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_INS_ERROR_1.Outputs[Multicast Output 1]" />
             <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 12]"
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 15]"
               endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Right Input]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_SRC_DWH_1.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 13]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_VAL_CORRECTO_1.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 11]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_SCT_UPDATE_PE_DIM_CATEGORIA_PUESTO_1.Inputs[OLE DB Command Input]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_DEL_UP_1.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 1]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DV_V_FC_ACTUAL_1.Inputs[Derived Column Input]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_STANDARD_1.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 12]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 6]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_DEL_UP_2.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 2]"
               endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_SRT_TABLA_3.Inputs[Sort Input]"
@@ -9329,19 +9329,19 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
               startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_SRT_TABLA_4.Outputs[Sort Output]" />
             <path
               refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Union All Output 11]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_SCT_SECUENCIAL_1.Inputs[Input 0]"
-              name="Union All Output 1"
-              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_UN_IN_UP_1.Outputs[Union All Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Union All Output 12]"
               endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_DEL_UP_1.Inputs[Multicast Input 1]"
               name="Union All Output 1"
               startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1]" />
             <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Union All Output 1]"
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Union All Output 12]"
               endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_3.Inputs[Derived Column Input]"
               name="Union All Output 1"
               startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_UN_DESTINO_1.Outputs[Union All Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Union All Output 1]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_SCT_SECUENCIAL_1.Inputs[Input 0]"
+              name="Union All Output 1"
+              startId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_UN_IN_UP_1.Outputs[Union All Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[UPDATE SCD2]"
               endId="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_UPD_SCD2_1.Inputs[Multicast Input 1]"
@@ -9374,7 +9374,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_CREATE_MAX_ID_1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9491,7 +9491,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_MAX_ID_1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9568,7 +9568,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_INI_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9685,7 +9685,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9708,7 +9708,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_2"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9731,7 +9731,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10616,117 +10616,65 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
       <GraphLayout
         Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="330,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_SCT_UPDATE_PE_DIM_CATEGORIA_PUESTO_1"
-          TopLeft="1253.07407407408,614.250000000001" />
+          Size="159,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_UN_IN_UP_1"
+          TopLeft="942.074074074079,459.111111111111" />
         <NodeLayout
-          Size="233,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_UPDATE_CORRECTOS_1"
-          TopLeft="856.074074074083,1044.55555555556" />
+          Size="148,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_DEL_UP_2"
+          TopLeft="1304.62962962963,909.444444444445" />
         <NodeLayout
           Size="244,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\ER_DV_REGISTROS_INVALIDOS_2"
           TopLeft="14.12962962963,352.583333333329" />
         <NodeLayout
-          Size="193,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_AGG_REG_TOTAL_1"
-          TopLeft="1073.85185185186,713" />
+          Size="173,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_UN_DESTINO_1"
+          TopLeft="410.851851851854,918.777777777778" />
         <NodeLayout
           Size="148,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_DEL_UP_1"
           TopLeft="1348.46296296297,533.777777777778" />
         <NodeLayout
-          Size="199,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DV_TRATA_NULOS_1"
-          TopLeft="1113.62962962963,219.027777777778" />
-        <NodeLayout
-          Size="165,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_SRT_TABLA_2"
-          TopLeft="636.18518518519,883.333333333334" />
-        <NodeLayout
-          Size="215,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DV_FECHA_GENERICA_1"
-          TopLeft="1099.40740740741,293.222222222223" />
-        <NodeLayout
-          Size="160,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_TABLA_1"
-          TopLeft="1097.40740740741,786.444444444445" />
-        <NodeLayout
-          Size="188,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_AGG_REG_ERRO_1"
-          TopLeft="740.074074074079,551.250000000001" />
-        <NodeLayout
-          Size="188,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_AGG_UP_ERROR_1"
-          TopLeft="1292.72486772487,761.444444444445" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_1"
-          TopLeft="358.583333333336,330.25" />
-        <NodeLayout
-          Size="194,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_SCT_SECUENCIAL_1"
-          TopLeft="930.074074074079,551.250000000001" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_8"
-          TopLeft="574.657407407412,331.25" />
-        <NodeLayout
-          Size="166,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_UN_DEL_UP_1"
-          TopLeft="1341.96296296297,459.111111111111" />
-        <NodeLayout
-          Size="165,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_SRT_TABLA_1"
-          TopLeft="1101.18518518519,884.333333333334" />
-        <NodeLayout
-          Size="233,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\DTN_REGISTROS_INVALIDOS_3"
-          TopLeft="18.87962962963,453.805555555551" />
-        <NodeLayout
-          Size="218,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_AGG_REG_ACTULIZADOS"
-          TopLeft="1546.12962962963,533.777777777778" />
-        <NodeLayout
-          Size="265,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DWH_DIM_CATEGORIA_PUESTO_1"
-          TopLeft="977.574074074079,14" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_3"
-          TopLeft="162.629629629631,915.88888888889" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_7"
-          TopLeft="1565.85185185185,687" />
-        <NodeLayout
-          Size="203,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DV_V_FC_ACTUAL_1"
-          TopLeft="556.962962962966,40.6111111111111" />
+          Size="176,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_MJ_SRC_DWH_1"
+          TopLeft="874,197" />
         <NodeLayout
           Size="250,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_REGISTROS_CORRECTOS_1"
           TopLeft="846.296296296301,958.83333333333" />
         <NodeLayout
-          Size="177,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\LKP_SK_EMPRESA_1"
-          TopLeft="487.240740740742,100.11111111112" />
+          Size="218,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_AGG_REG_ACTULIZADOS"
+          TopLeft="1546.12962962963,533.777777777778" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DV_TRATA_NULOS_1"
+          TopLeft="1113.62962962963,219.027777777778" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_8"
+          TopLeft="574.657407407412,331.25" />
+        <NodeLayout
+          Size="260,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_SRC_DIM_CATEGORIA_PUESTO_1"
+          TopLeft="11.3240740740742,0.361111111111111" />
         <NodeLayout
           Size="165,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_SRT_TABLA_3"
           TopLeft="1299.07407407408,979.444444444445" />
         <NodeLayout
-          Size="159,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_UN_IN_UP_1"
-          TopLeft="942.074074074079,459.111111111111" />
+          Size="188,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_AGG_UP_ERROR_1"
+          TopLeft="1292.72486772487,761.444444444445" />
         <NodeLayout
-          Size="202,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\ER_SCT_GEN_DESCRIP_1"
-          TopLeft="31.62962962963,258.472222222218" />
+          Size="215,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DV_FECHA_GENERICA_1"
+          TopLeft="1099.40740740741,293.222222222223" />
         <NodeLayout
-          Size="148,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_DEL_UP_2"
-          TopLeft="1304.62962962963,909.444444444445" />
+          Size="182,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_1"
+          TopLeft="358.583333333336,330.25" />
         <NodeLayout
           Size="165,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_SRT_TABLA_4"
@@ -10736,6 +10684,54 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
           Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_5"
           TopLeft="710.907407407412,459.250000000001" />
         <NodeLayout
+          Size="330,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_SCT_UPDATE_PE_DIM_CATEGORIA_PUESTO_1"
+          TopLeft="1253.07407407408,614.250000000001" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_SRT_TABLA_1"
+          TopLeft="1101.18518518519,884.333333333334" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_AGG_STANDARD_2"
+          TopLeft="564.240740740746,218.027777777778" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_7"
+          TopLeft="1565.85185185185,687" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_4"
+          TopLeft="1294.40740740741,834.000000000001" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_MJ_VAL_CORREC_1"
+          TopLeft="868.962962962967,885.333333333334" />
+        <NodeLayout
+          Size="265,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DWH_DIM_CATEGORIA_PUESTO_1"
+          TopLeft="977.574074074079,14" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_MJ_DEL_ERR_1"
+          TopLeft="1568.62962962963,979.444444444445" />
+        <NodeLayout
+          Size="202,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\ER_SCT_GEN_DESCRIP_1"
+          TopLeft="31.62962962963,258.472222222218" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_AGG_STANDARD_1"
+          TopLeft="353.083333333336,218.027777777778" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_SCT_SECUENCIAL_1"
+          TopLeft="930.074074074079,551.250000000001" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DV_V_FC_ACTUAL_1"
+          TopLeft="556.962962962966,40.6111111111111" />
+        <NodeLayout
           Size="262,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_DTN_DIM_CATEGORIA_PUESTO_1"
           TopLeft="809.074074074079,785.444444444445" />
@@ -10744,13 +10740,17 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
           Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\DTN_RECONCILIACION_AUTOMATICA"
           TopLeft="75.76851851852,1035.19444444444" />
         <NodeLayout
-          Size="182,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_4"
-          TopLeft="1294.40740740741,834.000000000001" />
+          Size="233,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\DTN_REGISTROS_INVALIDOS_3"
+          TopLeft="18.87962962963,453.805555555551" />
         <NodeLayout
-          Size="189,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_AGG_STANDARD_2"
-          TopLeft="564.240740740746,218.027777777778" />
+          Size="160,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_SRC_DWH_1"
+          TopLeft="968.740740740745,81.444444444444" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\LKP_SK_EMPRESA_1"
+          TopLeft="487.240740740742,100.11111111112" />
         <NodeLayout
           Size="188,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_VAL_CORRECTO_1"
@@ -10760,41 +10760,41 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
           Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\ER_DV_STANDARD_4"
           TopLeft="48.37962962963,142.361111111111" />
         <NodeLayout
-          Size="173,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_UN_DESTINO_1"
-          TopLeft="410.851851851854,918.777777777778" />
+          Size="193,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_AGG_REG_TOTAL_1"
+          TopLeft="1073.85185185186,713" />
         <NodeLayout
           Size="162,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_UPD_SCD2_1"
           TopLeft="1137.74074074074,459.111111111111" />
         <NodeLayout
-          Size="260,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_SRC_DIM_CATEGORIA_PUESTO_1"
-          TopLeft="11.3240740740742,0.361111111111111" />
-        <NodeLayout
-          Size="191,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_MJ_VAL_CORREC_1"
-          TopLeft="868.962962962967,885.333333333334" />
-        <NodeLayout
           Size="164,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_STANDARD_1"
           TopLeft="359.083333333336,41.6111111111111" />
         <NodeLayout
-          Size="172,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_MJ_DEL_ERR_1"
-          TopLeft="1568.62962962963,979.444444444445" />
-        <NodeLayout
-          Size="189,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_AGG_STANDARD_1"
-          TopLeft="353.083333333336,218.027777777778" />
+          Size="233,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_UPDATE_CORRECTOS_1"
+          TopLeft="856.074074074083,1044.55555555556" />
         <NodeLayout
           Size="160,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_SRC_DWH_1"
-          TopLeft="968.740740740745,81.444444444444" />
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_TABLA_1"
+          TopLeft="1097.40740740741,786.444444444445" />
         <NodeLayout
-          Size="176,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_MJ_SRC_DWH_1"
-          TopLeft="874,197" />
+          Size="165,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_SRT_TABLA_2"
+          TopLeft="636.18518518519,883.333333333334" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\PR_UN_DEL_UP_1"
+          TopLeft="1341.96296296297,459.111111111111" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_DV_STANDARD_3"
+          TopLeft="162.629629629631,915.88888888889" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\RA_AGG_REG_ERRO_1"
+          TopLeft="740.074074074079,551.250000000001" />
         <NodeLayout
           Size="176,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\CS_INS_UPD_DEL_1"
@@ -10803,6 +10803,1044 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
           Size="167,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1\MC_INS_ERROR_1"
           TopLeft="937.074074074079,641.83333333333" />
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 26]"
+          TopLeft="1047.07407407408,683.83333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="123.277777777784,29.16666666667"
+              Start="0,0"
+              End="123.277777777784,21.66666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.83274021352452" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.83274021352452"
+                    Point2="0,11.8327402135245"
+                    Point3="4,11.8327402135245" />
+                  <mssgle:LineSegment
+                    End="119.277777777784,11.8327402135245" />
+                  <mssgle:CubicBezierSegment
+                    Point1="119.277777777784,11.8327402135245"
+                    Point2="123.277777777784,11.8327402135245"
+                    Point3="123.277777777784,15.8327402135245" />
+                  <mssgle:LineSegment
+                    End="123.277777777784,21.66666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 25]"
+          TopLeft="1496.46296296297,554.777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49.6666666666599,0"
+              Start="0,0"
+              End="42.1666666666599,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="42.1666666666599,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 24]"
+          TopLeft="444.333333333336,83.6111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,134.416666666667"
+              Start="0,0"
+              End="0,126.916666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,126.916666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 23]"
+          TopLeft="717.93518518519,828.444444444445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54.888888888889"
+              Start="0,0"
+              End="0,47.388888888889">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.388888888889" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 22]"
+          TopLeft="1023.40740740741,123.444444444444">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-364.666666666666,94.583333333334"
+              Start="0,0"
+              End="-364.666666666666,87.083333333334">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.3952145214524" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.3952145214524"
+                    Point2="0,38.3952145214524"
+                    Point3="-4,38.3952145214524" />
+                  <mssgle:LineSegment
+                    End="-360.666666666666,38.3952145214524" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-360.666666666666,38.3952145214524"
+                    Point2="-364.666666666666,38.3952145214524"
+                    Point3="-364.666666666666,42.3952145214524" />
+                  <mssgle:LineSegment
+                    End="-364.666666666666,87.083333333334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 21]"
+          TopLeft="1137.74074074074,480.111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-36.6666666666642,0"
+              Start="0,0"
+              End="-29.1666666666642,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-29.1666666666642,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 2]"
+          TopLeft="1380.10185185186,951.444444444445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28"
+              Start="0,0"
+              End="0,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 15]"
+          TopLeft="1074.07407407408,123.444444444444">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-84.0740740740782,73.555555555556"
+              Start="0,0"
+              End="-84.0740740740782,66.055555555556">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.8185966210386" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.8185966210386"
+                    Point2="0,36.8185966210386"
+                    Point3="-4,36.8185966210386" />
+                  <mssgle:LineSegment
+                    End="-80.0740740740782,36.8185966210386" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-80.0740740740782,36.8185966210386"
+                    Point2="-84.0740740740782,36.8185966210386"
+                    Point3="-84.0740740740782,40.8185966210386" />
+                  <mssgle:LineSegment
+                    End="-84.0740740740782,66.055555555556" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 14]"
+          TopLeft="994.074074074079,683.83333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11.6666666666666,101.611111111115"
+              Start="0,0"
+              End="-11.6666666666666,94.1111111111151">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.021933560479" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.021933560479"
+                    Point2="0,51.021933560479"
+                    Point3="-4,51.021933560479" />
+                  <mssgle:LineSegment
+                    End="-7.66666666666663,51.021933560479" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.66666666666663,51.021933560479"
+                    Point2="-11.6666666666666,51.021933560479"
+                    Point3="-11.6666666666666,55.021933560479" />
+                  <mssgle:LineSegment
+                    End="-11.6666666666666,94.1111111111151" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 13]"
+          TopLeft="657.18518518519,828.444444444445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-118.583333333336,90.333333333333"
+              Start="0,0"
+              End="-118.583333333336,82.833333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.0838483409093" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.0838483409093"
+                    Point2="0,29.0838483409093"
+                    Point3="-4,29.0838483409093" />
+                  <mssgle:LineSegment
+                    End="-114.583333333336,29.0838483409093" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-114.583333333336,29.0838483409093"
+                    Point2="-118.583333333336,29.0838483409093"
+                    Point3="-118.583333333336,33.0838483409093" />
+                  <mssgle:LineSegment
+                    End="-118.583333333336,82.833333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 12]"
+          TopLeft="1304.62962962963,932.277777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-720.777777777779,0"
+              Start="0,0"
+              End="-713.277777777779,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-713.277777777779,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 11]"
+          TopLeft="1420.26851851853,575.777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.472222222223"
+              Start="0,0"
+              End="0,30.972222222223">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.972222222223" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 1]"
+          TopLeft="523.083333333336,62.1111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="33.8796296296299,0"
+              Start="0,0"
+              End="26.3796296296299,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="26.3796296296299,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Merge Join Output2]"
+          TopLeft="967.879629629634,927.333333333334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.4999999999959"
+              Start="0,0"
+              End="0,23.9999999999959">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.9999999999959" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Merge Join Output1]"
+          TopLeft="1654.62962962963,1021.44444444445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-644.55555555555,23.111111111115"
+              Start="0,0"
+              End="-644.55555555555,15.611111111115">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.77209434498666" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.77209434498666"
+                    Point2="0,13.7720943449867"
+                    Point3="-4,13.7720943449867" />
+                  <mssgle:LineSegment
+                    End="-640.55555555555,13.7720943449867" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-640.55555555555,13.7720943449867"
+                    Point2="-644.55555555555,13.7720943449867"
+                    Point3="-644.55555555555,17.7720943449867" />
+                  <mssgle:LineSegment
+                    End="-644.55555555555,15.611111111115" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Merge Join Output]"
+          TopLeft="1050,218">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63.62962962963,22.027777777778"
+              Start="0,0"
+              End="56.12962962963,22.027777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="27.814814814815,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.814814814815,0"
+                    Point2="31.814814814815,0"
+                    Point3="31.814814814815,4" />
+                  <mssgle:LineSegment
+                    End="31.814814814815,18.027777777778" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.814814814815,18.027777777778"
+                    Point2="31.814814814815,22.027777777778"
+                    Point3="35.814814814815,22.027777777778" />
+                  <mssgle:LineSegment
+                    End="56.12962962963,22.027777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Lookup Match Output]"
+          TopLeft="575.740740740742,142.11111111112">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="358.259259259258,54.88888888888"
+              Start="0,0"
+              End="358.259259259258,47.38888888888">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.6366366366313" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.6366366366313"
+                    Point2="0,32.6366366366313"
+                    Point3="4,32.6366366366313" />
+                  <mssgle:LineSegment
+                    End="354.259259259258,32.6366366366313" />
+                  <mssgle:CubicBezierSegment
+                    Point1="354.259259259258,32.6366366366313"
+                    Point2="358.259259259258,32.6366366366313"
+                    Point3="358.259259259258,36.6366366366313" />
+                  <mssgle:LineSegment
+                    End="358.259259259258,47.38888888888" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="130.938242910879,37.6366366366313,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[LOGICAL DELETE]"
+          TopLeft="1254.96296296297,412.111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="170,47"
+              Start="0,0"
+              End="170,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.134328358209" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.134328358209"
+                    Point2="0,16.134328358209"
+                    Point3="4,16.134328358209" />
+                  <mssgle:LineSegment
+                    End="166,16.134328358209" />
+                  <mssgle:CubicBezierSegment
+                    Point1="166,16.134328358209"
+                    Point2="170,16.134328358209"
+                    Point3="170,20.134328358209" />
+                  <mssgle:LineSegment
+                    End="170,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="46.02705078125,21.134328358209,77.9458984375,9.5732421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[INSERT]"
+          TopLeft="1170.96296296297,412.111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-149.388888888894,47"
+              Start="0,0"
+              End="-149.388888888894,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.134328358209" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.134328358209"
+                    Point2="0,16.134328358209"
+                    Point3="-4,16.134328358209" />
+                  <mssgle:LineSegment
+                    End="-145.388888888894,16.134328358209" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-145.388888888894,16.134328358209"
+                    Point2="-149.388888888894,16.134328358209"
+                    Point3="-149.388888888894,20.134328358209" />
+                  <mssgle:LineSegment
+                    End="-149.388888888894,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-92.284756944447,21.134328358209,35.180625,9.5341796875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output13]"
+          TopLeft="1382.01851851852,876.000000000001">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.444444444444"
+              Start="0,0"
+              End="0,25.944444444444">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.944444444444" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output12]"
+          TopLeft="1180.5462962963,828.444444444445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.888888888889"
+              Start="0,0"
+              End="0,48.388888888889">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.388888888889" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output11]"
+          TopLeft="1209.93518518519,335.222222222223">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.8888888888879"
+              Start="0,0"
+              End="0,27.3888888888879">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.3888888888879" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output10]"
+          TopLeft="1655.21296296296,729">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,105.000000000001"
+              Start="0,0"
+              End="0,97.500000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,97.500000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output9]"
+          TopLeft="251.032407407409,957.88888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,77.30555555555"
+              Start="0,0"
+              End="0,69.80555555555">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.80555555555" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output8]"
+          TopLeft="452.842592592595,372.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,546.527777777778"
+              Start="0,0"
+              End="0,539.027777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,539.027777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output7]"
+          TopLeft="665.657407407412,373.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-168.305555555558,545.527777777778"
+              Start="0,0"
+              End="-168.305555555558,538.027777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,268.763888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,268.763888888889"
+                    Point2="0,272.763888888889"
+                    Point3="-4,272.763888888889" />
+                  <mssgle:LineSegment
+                    End="-164.305555555558,272.763888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-164.305555555558,272.763888888889"
+                    Point2="-168.305555555558,272.763888888889"
+                    Point3="-168.305555555558,276.763888888889" />
+                  <mssgle:LineSegment
+                    End="-168.305555555558,538.027777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output6]"
+          TopLeft="136.00462962963,184.361111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74.111111111107"
+              Start="0,0"
+              End="0,66.611111111107">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.611111111107" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output5]"
+          TopLeft="772.907407407412,501.250000000001">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-85.7222222222221,285.194444444444"
+              Start="0,0"
+              End="-85.7222222222221,277.694444444444">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.06899055918643" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.06899055918643"
+                    Point2="0,13.0689905591864"
+                    Point3="-4,13.0689905591864" />
+                  <mssgle:LineSegment
+                    End="-81.7222222222221,13.0689905591864" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-81.7222222222221,13.0689905591864"
+                    Point2="-85.7222222222221,13.0689905591864"
+                    Point3="-85.7222222222221,17.0689905591864" />
+                  <mssgle:LineSegment
+                    End="-85.7222222222221,277.694444444444" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output4]"
+          TopLeft="556.962962962966,67.2777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="18.777777777776,32.8333333333422"
+              Start="0,0"
+              End="18.777777777776,25.3333333333422">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="14.777777777776,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14.777777777776,0"
+                    Point2="18.777777777776,0"
+                    Point3="18.777777777776,4" />
+                  <mssgle:LineSegment
+                    End="18.777777777776,25.3333333333422" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output3]"
+          TopLeft="935.074074074083,1044.55555555556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-437.722222222229,-83.7777777777819"
+              Start="0,0"
+              End="-437.722222222229,-76.2777777777819">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-29.8539357772111" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-29.8539357772111"
+                    Point2="0,-33.8539357772111"
+                    Point3="-4,-33.8539357772111" />
+                  <mssgle:LineSegment
+                    End="-433.722222222229,-33.8539357772111" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-433.722222222229,-33.8539357772111"
+                    Point2="-437.722222222229,-33.8539357772111"
+                    Point3="-437.722222222229,-37.8539357772111" />
+                  <mssgle:LineSegment
+                    End="-437.722222222229,-76.2777777777819" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output2]"
+          TopLeft="1210.01851851852,261.027777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.194444444445"
+              Start="0,0"
+              End="0,24.694444444445">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.694444444445" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output1]"
+          TopLeft="846.296296296301,979.83333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-262.444444444447,-34.3888888888853"
+              Start="0,0"
+              End="-254.944444444447,-34.3888888888853">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-147.688073394497,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-147.688073394497,0"
+                    Point2="-151.688073394497,0"
+                    Point3="-151.688073394497,-4" />
+                  <mssgle:LineSegment
+                    End="-151.688073394497,-30.3888888888853" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-151.688073394497,-30.3888888888853"
+                    Point2="-151.688073394497,-34.3888888888853"
+                    Point3="-155.688073394497,-34.3888888888853" />
+                  <mssgle:LineSegment
+                    End="-254.944444444447,-34.3888888888853" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output]"
+          TopLeft="135.75462962963,394.583333333329">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.2222222222219"
+              Start="0,0"
+              End="0,51.7222222222219">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.7222222222219" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Aggregate Output 15]"
+          TopLeft="662.199074074079,260.027777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,71.222222222222"
+              Start="0,0"
+              End="0,63.722222222222">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,63.722222222222" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Aggregate Output 14]"
+          TopLeft="1655.99074074074,575.777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,111.222222222222"
+              Start="0,0"
+              End="0,103.722222222222">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,103.722222222222" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Aggregate Output 13]"
+          TopLeft="1173.87962962963,755">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.444444444445"
+              Start="0,0"
+              End="0,23.944444444445">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.944444444445" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Aggregate Output 12]"
+          TopLeft="1386.06613756614,803.444444444445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.555555555556"
+              Start="0,0"
+              End="0,23.055555555556">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.055555555556" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Aggregate Output 11]"
+          TopLeft="448.583333333336,260.027777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70.222222222222"
+              Start="0,0"
+              End="0,62.722222222222">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.722222222222" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Aggregate Output 1]"
+          TopLeft="832.490740740745,551.250000000001">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-50"
+              Start="0,0"
+              End="0,-42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[UPDATE SCD2]"
           TopLeft="1215.85185185186,412.111111111111">
@@ -10828,29 +11866,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Union All Output 11]"
-          TopLeft="1024.32407407408,501.111111111111">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50.1388888888901"
-              Start="0,0"
-              End="0,42.6388888888901">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.6388888888901" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Union All Output 1]"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Union All Output 12]"
           TopLeft="410.851851851854,938.333333333334">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10872,7 +11888,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Union All Output 12]"
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Union All Output 11]"
           TopLeft="1423.71296296297,501.111111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10885,6 +11901,28 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,25.1666666666671" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Union All Output 1]"
+          TopLeft="1024.32407407408,501.111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.1388888888901"
+              Start="0,0"
+              End="0,42.6388888888901">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.6388888888901" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11203,1044 +12241,6 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_PUESTO] ASC</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="34.7222222222299,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 26]"
-          TopLeft="1047.07407407408,683.83333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="123.277777777784,29.16666666667"
-              Start="0,0"
-              End="123.277777777784,21.66666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,7.83274021352452" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,7.83274021352452"
-                    Point2="0,11.8327402135245"
-                    Point3="4,11.8327402135245" />
-                  <mssgle:LineSegment
-                    End="119.277777777784,11.8327402135245" />
-                  <mssgle:CubicBezierSegment
-                    Point1="119.277777777784,11.8327402135245"
-                    Point2="123.277777777784,11.8327402135245"
-                    Point3="123.277777777784,15.8327402135245" />
-                  <mssgle:LineSegment
-                    End="123.277777777784,21.66666666667" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 25]"
-          TopLeft="1496.46296296297,554.777777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="49.6666666666599,0"
-              Start="0,0"
-              End="42.1666666666599,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="42.1666666666599,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 24]"
-          TopLeft="444.333333333336,83.6111111111111">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,134.416666666667"
-              Start="0,0"
-              End="0,126.916666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,126.916666666667" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 23]"
-          TopLeft="717.93518518519,828.444444444445">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,54.888888888889"
-              Start="0,0"
-              End="0,47.388888888889">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,47.388888888889" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 22]"
-          TopLeft="1023.40740740741,123.444444444444">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-364.666666666666,94.583333333334"
-              Start="0,0"
-              End="-364.666666666666,87.083333333334">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.3952145214524" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.3952145214524"
-                    Point2="0,38.3952145214524"
-                    Point3="-4,38.3952145214524" />
-                  <mssgle:LineSegment
-                    End="-360.666666666666,38.3952145214524" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-360.666666666666,38.3952145214524"
-                    Point2="-364.666666666666,38.3952145214524"
-                    Point3="-364.666666666666,42.3952145214524" />
-                  <mssgle:LineSegment
-                    End="-364.666666666666,87.083333333334" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 21]"
-          TopLeft="1137.74074074074,480.111111111111">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-36.6666666666642,0"
-              Start="0,0"
-              End="-29.1666666666642,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-29.1666666666642,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 2]"
-          TopLeft="1380.10185185186,951.444444444445">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28"
-              Start="0,0"
-              End="0,20.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 11]"
-          TopLeft="657.18518518519,828.444444444445">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-118.583333333336,90.333333333333"
-              Start="0,0"
-              End="-118.583333333336,82.833333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.0838483409093" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.0838483409093"
-                    Point2="0,29.0838483409093"
-                    Point3="-4,29.0838483409093" />
-                  <mssgle:LineSegment
-                    End="-114.583333333336,29.0838483409093" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-114.583333333336,29.0838483409093"
-                    Point2="-118.583333333336,29.0838483409093"
-                    Point3="-118.583333333336,33.0838483409093" />
-                  <mssgle:LineSegment
-                    End="-118.583333333336,82.833333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 1]"
-          TopLeft="994.074074074079,683.83333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-11.6666666666666,101.611111111115"
-              Start="0,0"
-              End="-11.6666666666666,94.1111111111151">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,47.021933560479" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,47.021933560479"
-                    Point2="0,51.021933560479"
-                    Point3="-4,51.021933560479" />
-                  <mssgle:LineSegment
-                    End="-7.66666666666663,51.021933560479" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-7.66666666666663,51.021933560479"
-                    Point2="-11.6666666666666,51.021933560479"
-                    Point3="-11.6666666666666,55.021933560479" />
-                  <mssgle:LineSegment
-                    End="-11.6666666666666,94.1111111111151" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 12]"
-          TopLeft="1074.07407407408,123.444444444444">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-84.0740740740782,73.555555555556"
-              Start="0,0"
-              End="-84.0740740740782,66.055555555556">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.8185966210386" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.8185966210386"
-                    Point2="0,36.8185966210386"
-                    Point3="-4,36.8185966210386" />
-                  <mssgle:LineSegment
-                    End="-80.0740740740782,36.8185966210386" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-80.0740740740782,36.8185966210386"
-                    Point2="-84.0740740740782,36.8185966210386"
-                    Point3="-84.0740740740782,40.8185966210386" />
-                  <mssgle:LineSegment
-                    End="-84.0740740740782,66.055555555556" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 15]"
-          TopLeft="1420.26851851853,575.777777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38.472222222223"
-              Start="0,0"
-              End="0,30.972222222223">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.972222222223" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 13]"
-          TopLeft="1304.62962962963,932.277777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-720.777777777779,0"
-              Start="0,0"
-              End="-713.277777777779,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-713.277777777779,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Multicast Output 14]"
-          TopLeft="523.083333333336,62.1111111111111">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="33.8796296296299,0"
-              Start="0,0"
-              End="26.3796296296299,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="26.3796296296299,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Merge Join Output2]"
-          TopLeft="967.879629629634,927.333333333334">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.4999999999959"
-              Start="0,0"
-              End="0,23.9999999999959">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.9999999999959" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Merge Join Output1]"
-          TopLeft="1654.62962962963,1021.44444444445">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-644.55555555555,23.111111111115"
-              Start="0,0"
-              End="-644.55555555555,15.611111111115">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9.77209434498666" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9.77209434498666"
-                    Point2="0,13.7720943449867"
-                    Point3="-4,13.7720943449867" />
-                  <mssgle:LineSegment
-                    End="-640.55555555555,13.7720943449867" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-640.55555555555,13.7720943449867"
-                    Point2="-644.55555555555,13.7720943449867"
-                    Point3="-644.55555555555,17.7720943449867" />
-                  <mssgle:LineSegment
-                    End="-644.55555555555,15.611111111115" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Merge Join Output]"
-          TopLeft="1050,218">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="63.62962962963,22.027777777778"
-              Start="0,0"
-              End="56.12962962963,22.027777777778">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="27.814814814815,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="27.814814814815,0"
-                    Point2="31.814814814815,0"
-                    Point3="31.814814814815,4" />
-                  <mssgle:LineSegment
-                    End="31.814814814815,18.027777777778" />
-                  <mssgle:CubicBezierSegment
-                    Point1="31.814814814815,18.027777777778"
-                    Point2="31.814814814815,22.027777777778"
-                    Point3="35.814814814815,22.027777777778" />
-                  <mssgle:LineSegment
-                    End="56.12962962963,22.027777777778" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Lookup Match Output]"
-          TopLeft="575.740740740742,142.11111111112">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="358.259259259258,54.88888888888"
-              Start="0,0"
-              End="358.259259259258,47.38888888888">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.6366366366313" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.6366366366313"
-                    Point2="0,32.6366366366313"
-                    Point3="4,32.6366366366313" />
-                  <mssgle:LineSegment
-                    End="354.259259259258,32.6366366366313" />
-                  <mssgle:CubicBezierSegment
-                    Point1="354.259259259258,32.6366366366313"
-                    Point2="358.259259259258,32.6366366366313"
-                    Point3="358.259259259258,36.6366366366313" />
-                  <mssgle:LineSegment
-                    End="358.259259259258,47.38888888888" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="130.938242910879,37.6366366366313,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[LOGICAL DELETE]"
-          TopLeft="1254.96296296297,412.111111111111">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="170,47"
-              Start="0,0"
-              End="170,39.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.134328358209" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.134328358209"
-                    Point2="0,16.134328358209"
-                    Point3="4,16.134328358209" />
-                  <mssgle:LineSegment
-                    End="166,16.134328358209" />
-                  <mssgle:CubicBezierSegment
-                    Point1="166,16.134328358209"
-                    Point2="170,16.134328358209"
-                    Point3="170,20.134328358209" />
-                  <mssgle:LineSegment
-                    End="170,39.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="46.02705078125,21.134328358209,77.9458984375,9.5732421875"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[INSERT]"
-          TopLeft="1170.96296296297,412.111111111111">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-149.388888888894,47"
-              Start="0,0"
-              End="-149.388888888894,39.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.134328358209" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.134328358209"
-                    Point2="0,16.134328358209"
-                    Point3="-4,16.134328358209" />
-                  <mssgle:LineSegment
-                    End="-145.388888888894,16.134328358209" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-145.388888888894,16.134328358209"
-                    Point2="-149.388888888894,16.134328358209"
-                    Point3="-149.388888888894,20.134328358209" />
-                  <mssgle:LineSegment
-                    End="-149.388888888894,39.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-92.284756944447,21.134328358209,35.180625,9.5341796875"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output]"
-          TopLeft="1180.5462962963,828.444444444445">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,55.888888888889"
-              Start="0,0"
-              End="0,48.388888888889">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48.388888888889" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output1]"
-          TopLeft="1209.93518518519,335.222222222223">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34.8888888888879"
-              Start="0,0"
-              End="0,27.3888888888879">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.3888888888879" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output2]"
-          TopLeft="1655.21296296296,729">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,105.000000000001"
-              Start="0,0"
-              End="0,97.500000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,97.500000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output3]"
-          TopLeft="251.032407407409,957.88888888889">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,77.30555555555"
-              Start="0,0"
-              End="0,69.80555555555">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,69.80555555555" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output4]"
-          TopLeft="452.842592592595,372.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,546.527777777778"
-              Start="0,0"
-              End="0,539.027777777778">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,539.027777777778" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output6]"
-          TopLeft="1382.01851851852,876.000000000001">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33.444444444444"
-              Start="0,0"
-              End="0,25.944444444444">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.944444444444" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output5]"
-          TopLeft="665.657407407412,373.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-168.305555555558,545.527777777778"
-              Start="0,0"
-              End="-168.305555555558,538.027777777778">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,268.763888888889" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,268.763888888889"
-                    Point2="0,272.763888888889"
-                    Point3="-4,272.763888888889" />
-                  <mssgle:LineSegment
-                    End="-164.305555555558,272.763888888889" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-164.305555555558,272.763888888889"
-                    Point2="-168.305555555558,272.763888888889"
-                    Point3="-168.305555555558,276.763888888889" />
-                  <mssgle:LineSegment
-                    End="-168.305555555558,538.027777777778" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output13]"
-          TopLeft="135.75462962963,394.583333333329">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.2222222222219"
-              Start="0,0"
-              End="0,51.7222222222219">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.7222222222219" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output7]"
-          TopLeft="772.907407407412,501.250000000001">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-85.7222222222221,285.194444444444"
-              Start="0,0"
-              End="-85.7222222222221,277.694444444444">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9.06899055918643" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9.06899055918643"
-                    Point2="0,13.0689905591864"
-                    Point3="-4,13.0689905591864" />
-                  <mssgle:LineSegment
-                    End="-81.7222222222221,13.0689905591864" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-81.7222222222221,13.0689905591864"
-                    Point2="-85.7222222222221,13.0689905591864"
-                    Point3="-85.7222222222221,17.0689905591864" />
-                  <mssgle:LineSegment
-                    End="-85.7222222222221,277.694444444444" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output8]"
-          TopLeft="136.00462962963,184.361111111111">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,74.111111111107"
-              Start="0,0"
-              End="0,66.611111111107">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,66.611111111107" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output9]"
-          TopLeft="556.962962962966,67.2777777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="18.777777777776,32.8333333333422"
-              Start="0,0"
-              End="18.777777777776,25.3333333333422">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="14.777777777776,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="14.777777777776,0"
-                    Point2="18.777777777776,0"
-                    Point3="18.777777777776,4" />
-                  <mssgle:LineSegment
-                    End="18.777777777776,25.3333333333422" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output10]"
-          TopLeft="935.074074074083,1044.55555555556">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-437.722222222229,-83.7777777777819"
-              Start="0,0"
-              End="-437.722222222229,-76.2777777777819">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-29.8539357772111" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-29.8539357772111"
-                    Point2="0,-33.8539357772111"
-                    Point3="-4,-33.8539357772111" />
-                  <mssgle:LineSegment
-                    End="-433.722222222229,-33.8539357772111" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-433.722222222229,-33.8539357772111"
-                    Point2="-437.722222222229,-33.8539357772111"
-                    Point3="-437.722222222229,-37.8539357772111" />
-                  <mssgle:LineSegment
-                    End="-437.722222222229,-76.2777777777819" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output11]"
-          TopLeft="1210.01851851852,261.027777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32.194444444445"
-              Start="0,0"
-              End="0,24.694444444445">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.694444444445" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Derived Column Output12]"
-          TopLeft="846.296296296301,979.83333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-262.444444444447,-34.3888888888853"
-              Start="0,0"
-              End="-254.944444444447,-34.3888888888853">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-147.688073394497,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-147.688073394497,0"
-                    Point2="-151.688073394497,0"
-                    Point3="-151.688073394497,-4" />
-                  <mssgle:LineSegment
-                    End="-151.688073394497,-30.3888888888853" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-151.688073394497,-30.3888888888853"
-                    Point2="-151.688073394497,-34.3888888888853"
-                    Point3="-155.688073394497,-34.3888888888853" />
-                  <mssgle:LineSegment
-                    End="-254.944444444447,-34.3888888888853" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Aggregate Output 15]"
-          TopLeft="662.199074074079,260.027777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,71.222222222222"
-              Start="0,0"
-              End="0,63.722222222222">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,63.722222222222" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Aggregate Output 14]"
-          TopLeft="1655.99074074074,575.777777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,111.222222222222"
-              Start="0,0"
-              End="0,103.722222222222">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,103.722222222222" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Aggregate Output 13]"
-          TopLeft="1173.87962962963,755">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.444444444445"
-              Start="0,0"
-              End="0,23.944444444445">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.944444444445" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Aggregate Output 12]"
-          TopLeft="1386.06613756614,803.444444444445">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,30.555555555556"
-              Start="0,0"
-              End="0,23.055555555556">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.055555555556" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Aggregate Output 11]"
-          TopLeft="448.583333333336,260.027777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,70.222222222222"
-              Start="0,0"
-              End="0,62.722222222222">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,62.722222222222" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_PUESTO_1.Paths[Aggregate Output 1]"
-          TopLeft="832.490740740745,551.250000000001">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,-50"
-              Start="0,0"
-              End="0,-42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-42.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

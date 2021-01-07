@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="DWH_DIM_FAMILIA_PUESTO"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="249"
-  DTS:VersionGUID="{20ACFB45-1F08-4247-ADBB-794AC762AE99}">
+  DTS:VersionBuild="250"
+  DTS:VersionGUID="{1F92F1B1-658A-43FD-A6C6-E406F1428468}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -2916,7 +2916,7 @@ WHERE
       ,[FC_FIN_VAL]
       ,[SK_EJECUCION_CREACION]
       ,[SK_EJECUCION_MODIFICACION]
-  FROM [TDE_DWH_EikonBI_DES].[RH01].[DIM_FAMILIA_PUESTO]
+  FROM [RH01].[DIM_FAMILIA_PUESTO]
    WHERE ? BETWEEN FC_INI_VAL AND FC_FIN_VAL
 	    ORDER BY [CD_FAMILIA_PUESTO] ASC</property>
                 <property
@@ -4412,7 +4412,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT  [CD_FAMILIA_PUESTO]
       ,[DESC_FAMILIA_PUESTO]
-  FROM [TDE_STG_EikonBI_DES].[RH01].[STG_DIM_FAMILIA_PUESTO]
+  FROM [RH01].[STG_DIM_FAMILIA_PUESTO]
   ORDER BY [CD_FAMILIA_PUESTO] ASC</property>
                 <property
                   dataType="System.String"
@@ -8277,69 +8277,69 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_AGG_STANDARD_2.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output12]"
-              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
+              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_SRT_STANDARD_2.Inputs[Sort Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_DV_STANDARD_6.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output11]"
-              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output10]"
-              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_DV_FECHAS_GENERICAS_1.Inputs[Derived Column Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output9]"
-              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output8]"
-              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_CS_SCD2_1.Inputs[Conditional Split Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_DV_FECHAS_GENERICAS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output6]"
-              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\MC_STANDARD_3.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output7]"
-              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\MC_STANDARD_1.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output4]"
-              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output3]"
-              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output2]"
-              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output1]"
-              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_SRT_STANDARD_4.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output]"
               endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output5]"
-              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_SRT_STANDARD_2.Inputs[Sort Input]"
+              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output10]"
+              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_SRT_STANDARD_4.Inputs[Sort Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_DV_STANDARD_6.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output9]"
+              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output8]"
+              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output6]"
+              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\MC_STANDARD_1.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output7]"
+              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output4]"
+              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_CS_SCD2_1.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_DV_FECHAS_GENERICAS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output3]"
+              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output2]"
+              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_DV_FECHAS_GENERICAS_1.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output1]"
+              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output]"
+              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output5]"
+              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\MC_STANDARD_3.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[INSERT]"
               endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_UN_STANDARD_2.Inputs[Union All Input 1]"
@@ -8367,34 +8367,34 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_MJ_STANDARD_2.Outputs[Merge Join Output]" />
             <path
               refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 14]"
-              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_MJ_STANDARD_1.Inputs[Merge Join Right Input]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\MC_STANDARD_4.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 15]"
-              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\MC_STANDARD_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 13]"
-              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_DTN_DIM_FAMILIA_PUESTO_UPD.Inputs[OLE DB Command Input]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\MC_STANDARD_2.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 12]"
-              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_UN_STANDARD_2.Inputs[Union All Input 2]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_MC_UPD_SCD2_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 11]"
               endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_DTN_DIM_FAMILIA_PUESTO.Inputs[OLE DB Destination Input]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\MC_STANDARD_7.Outputs[Multicast Output 1]" />
             <path
-              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 1]"
+              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 15]"
               endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 6]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\MC_STANDARD_3.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 13]"
+              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_UN_STANDARD_2.Inputs[Union All Input 2]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_MC_UPD_SCD2_1.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 12]"
+              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_DTN_DIM_FAMILIA_PUESTO_UPD.Inputs[OLE DB Command Input]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\MC_STANDARD_2.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 11]"
+              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\MC_STANDARD_1.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 1]"
+              endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\PR_MJ_STANDARD_1.Inputs[Merge Join Right Input]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\MC_STANDARD_4.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 2]"
               endId="Package\DF_DWH_DIM_FAMILIA_PUESTO_1\RA_SRT_STANDARD_1.Inputs[Sort Input]"
@@ -8537,7 +8537,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_CREATE_MAX_ID_1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -8652,7 +8652,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_MAX_ID_1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -8688,7 +8688,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_SK_DEFAUT"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -8729,7 +8729,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_INI_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -8800,7 +8800,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -8823,7 +8823,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -8846,7 +8846,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -8869,7 +8869,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_2"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -8915,7 +8915,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -8938,7 +8938,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -8967,7 +8967,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10651,35 +10651,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 11]"
-          TopLeft="1485,669">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-96,28"
-              Start="0,0"
-              End="-96,20.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-92,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-92,0"
-                    Point2="-96,0"
-                    Point3="-96,4" />
-                  <mssgle:LineSegment
-                    End="-96,20.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 1]"
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 15]"
           TopLeft="1796,949">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10713,7 +10685,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 12]"
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 14]"
+          TopLeft="1485,669">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-96,28"
+              Start="0,0"
+              End="-96,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-92,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-92,0"
+                    Point2="-96,0"
+                    Point3="-96,4" />
+                  <mssgle:LineSegment
+                    End="-96,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 13]"
           TopLeft="1589,505">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10735,7 +10735,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 13]"
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 12]"
           TopLeft="1916.25,597.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10769,7 +10769,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 14]"
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 11]"
+          TopLeft="1037,809">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-191,0"
+              Start="0,0"
+              End="-183.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-183.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 1]"
           TopLeft="1563,120">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10794,28 +10816,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                     Point3="82.5,15.5" />
                   <mssgle:LineSegment
                     End="82.5,15.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Multicast Output 15]"
-          TopLeft="1037,809">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-191,0"
-              Start="0,0"
-              End="-183.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-183.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10999,7 +10999,41 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output]"
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output12]"
+          TopLeft="1584,832">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="39.5,91"
+              Start="0,0"
+              End="39.5,83.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,41.5"
+                    Point2="0,45.5"
+                    Point3="4,45.5" />
+                  <mssgle:LineSegment
+                    End="35.5,45.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="35.5,45.5"
+                    Point2="39.5,45.5"
+                    Point3="39.5,49.5" />
+                  <mssgle:LineSegment
+                    End="39.5,83.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output11]"
           TopLeft="1328,260">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11033,7 +11067,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output1]"
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output10]"
           TopLeft="2250,702">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11067,7 +11101,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output2]"
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output9]"
           TopLeft="796.5,1162">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11101,7 +11135,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output3]"
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output8]"
           TopLeft="740.5,310">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11135,7 +11169,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output4]"
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output7]"
           TopLeft="1384.66666666667,1093">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11170,6 +11204,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output6]"
+          TopLeft="1122.75,753">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output5]"
           TopLeft="1946,874">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11203,97 +11259,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output5]"
-          TopLeft="1584,832">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="39.5,91"
-              Start="0,0"
-              End="39.5,83.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,41.5"
-                    Point2="0,45.5"
-                    Point3="4,45.5" />
-                  <mssgle:LineSegment
-                    End="35.5,45.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="35.5,45.5"
-                    Point2="39.5,45.5"
-                    Point3="39.5,49.5" />
-                  <mssgle:LineSegment
-                    End="39.5,83.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output12]"
-          TopLeft="2136,1033">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-1327,-201"
-              Start="0,0"
-              End="-1327,-193.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-119.253185570711" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-119.253185570711"
-                    Point2="0,-123.253185570711"
-                    Point3="-4,-123.253185570711" />
-                  <mssgle:LineSegment
-                    End="-1323,-123.253185570711" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-1323,-123.253185570711"
-                    Point2="-1327,-123.253185570711"
-                    Point3="-1327,-127.253185570711" />
-                  <mssgle:LineSegment
-                    End="-1327,-193.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output7]"
-          TopLeft="1122.75,753">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33"
-              Start="0,0"
-              End="0,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output8]"
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output4]"
           TopLeft="1661.5,340">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11327,7 +11293,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output9]"
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output3]"
           TopLeft="529.25,388">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11349,7 +11315,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output10]"
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output2]"
           TopLeft="1659,273">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11371,7 +11337,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output11]"
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output1]"
           TopLeft="515.833333333333,236">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11384,6 +11350,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_FAMILIA_PUESTO_1.Paths[Derived Column Output]"
+          TopLeft="2136,1033">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-1327,-201"
+              Start="0,0"
+              End="-1327,-193.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-119.253185570711" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-119.253185570711"
+                    Point2="0,-123.253185570711"
+                    Point3="-4,-123.253185570711" />
+                  <mssgle:LineSegment
+                    End="-1323,-123.253185570711" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-1323,-123.253185570711"
+                    Point2="-1327,-123.253185570711"
+                    Point3="-1327,-127.253185570711" />
+                  <mssgle:LineSegment
+                    End="-1327,-193.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

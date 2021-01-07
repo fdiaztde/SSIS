@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="STG_DIM_GRUPO_ITEM_NOM"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="238"
-  DTS:VersionGUID="{9202F4E4-5301-4418-9A0F-E15B0D5B213A}">
+  DTS:VersionBuild="251"
+  DTS:VersionGUID="{7D841B02-3423-4D8F-9EA4-BF5B21AFEB17}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -565,16 +565,23 @@
                       refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[CD_GRUPO_ITEM_NOM]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="5"
+                      cachedLength="20"
                       cachedName="CD_GRUPO_ITEM_NOM"
                       lineageId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Error Output].Columns[CD_GRUPO_ITEM_NOM]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[DESC_GRUPO_ITEM_NOM]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="16"
+                      cachedLength="255"
                       cachedName="DESC_GRUPO_ITEM_NOM"
                       lineageId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Error Output].Columns[DESC_GRUPO_ITEM_NOM]" />
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[CD_EMPRESA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CD_EMPRESA"
+                      lineageId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Error Output].Columns[CD_EMPRESA]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -648,13 +655,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,8000,1252)((DT_WSTR,20)#{Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Error Output].Columns[CD_GRUPO_ITEM_NOM]} + "|" + (DT_WSTR,150)#{Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Error Output].Columns[DESC_GRUPO_ITEM_NOM]})</property>
+                          name="Expression">(DT_STR,8000,1252)((DT_WSTR,20)#{Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Error Output].Columns[CD_GRUPO_ITEM_NOM]} + "|" + (DT_WSTR,20)#{Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Error Output].Columns[CD_EMPRESA]} + "|" + (DT_WSTR,150)#{Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Error Output].Columns[DESC_GRUPO_ITEM_NOM]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,8000,1252)((DT_WSTR,20)CD_GRUPO_ITEM_NOM + "|" + (DT_WSTR,150)DESC_GRUPO_ITEM_NOM)</property>
+                          name="FriendlyExpression">(DT_STR,8000,1252)((DT_WSTR,20)CD_GRUPO_ITEM_NOM + "|" + (DT_WSTR,20)CD_EMPRESA + "|" + (DT_WSTR,150)DESC_GRUPO_ITEM_NOM)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -4133,7 +4140,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_DTN_DIM_GRUPO_ITEM_NOM.Inputs[OLE DB Destination Input].Columns[CD_EMPRESA]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="2"
+                      cachedLength="20"
                       cachedName="CD_EMPRESA"
                       externalMetadataColumnId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_DTN_DIM_GRUPO_ITEM_NOM.Inputs[OLE DB Destination Input].ExternalColumns[CD_EMPRESA]"
                       lineageId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Output].Columns[CD_EMPRESA]" />
@@ -4141,7 +4148,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_DTN_DIM_GRUPO_ITEM_NOM.Inputs[OLE DB Destination Input].Columns[CD_GRUPO_ITEM_NOM]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="5"
+                      cachedLength="20"
                       cachedName="CD_GRUPO_ITEM_NOM"
                       externalMetadataColumnId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_DTN_DIM_GRUPO_ITEM_NOM.Inputs[OLE DB Destination Input].ExternalColumns[CD_GRUPO_ITEM_NOM]"
                       lineageId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Output].Columns[CD_GRUPO_ITEM_NOM]" />
@@ -4149,7 +4156,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_DTN_DIM_GRUPO_ITEM_NOM.Inputs[OLE DB Destination Input].Columns[DESC_GRUPO_ITEM_NOM]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="16"
+                      cachedLength="255"
                       cachedName="DESC_GRUPO_ITEM_NOM"
                       externalMetadataColumnId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_DTN_DIM_GRUPO_ITEM_NOM.Inputs[OLE DB Destination Input].ExternalColumns[DESC_GRUPO_ITEM_NOM]"
                       lineageId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Output].Columns[DESC_GRUPO_ITEM_NOM]" />
@@ -4219,7 +4226,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_DV_TRATAMIENTO_DE_NULOS_1.Inputs[Derived Column Input].Columns[CD_EMPRESA]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="2"
+                      cachedLength="20"
                       cachedName="CD_EMPRESA"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -4244,7 +4251,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_DV_TRATAMIENTO_DE_NULOS_1.Inputs[Derived Column Input].Columns[CD_GRUPO_ITEM_NOM]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="5"
+                      cachedLength="20"
                       cachedName="CD_GRUPO_ITEM_NOM"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -4269,7 +4276,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_DV_TRATAMIENTO_DE_NULOS_1.Inputs[Derived Column Input].Columns[DESC_GRUPO_ITEM_NOM]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="16"
+                      cachedLength="255"
                       cachedName="DESC_GRUPO_ITEM_NOM"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -4353,66 +4360,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select distinct em_empresa as CD_EMPRESA,
-case wc_codigo when 00001 then '00001' when 00002 then '00001' when 00005 then '00001'
-when 00004 then '00002' when 00007 then '00002'  when 00008 then '00002' 
-when 00029 then '00002'  when 00030 then '00002' when 00031 then '00002'  
-when 00032 then '00002'  when 00033 then '00002' when 00034 then '00002'  
-when 00038 then '00002'  when 00040 then '00002' when 00051 then '00002'  
-when 00052 then '00002'  when 00053 then '00002' when 00054 then '00002'
-when 00056 then '00002'  when 00057 then '00002' when 00058 then '00002'  
-when 00059 then '00002'  when 00060 then '00002' when 00061 then '00002'  
-when 00062 then '00002'  when 00063 then '00002' when 00064 then '00002'  
-when 00066 then '00002'  when 00071 then '00002' 
-when 00003 then '00003' when 00006 then '00003'  when 00012 then '00003' 
-when 00013 then '00003' when 00014 then '00003'  when 00018 then '00003'
-when 00019 then '00003' when 00020 then '00003'  when 00023 then '00003' 
-when 00025 then '00003' when 00039 then '00003'  when 00041 then '00003' 
-when 00042 then '00004' when 00043 then '00004'  when 00044 then '00004' 
-when 00045 then '00004' when 00046 then '00004'  when 00047 then '00004' 
-when 00048 then '00004' when 00049 then '00004'  when 00050 then '00004' 
-when 00055 then '00004' when 00058 then '00004'  when 00067 then '00004' 
-when 00069 then '00004' 
-when 00015 then '00005' when 00065 then '00005'  when 00070 then '00005' 
-when 00016 then '00006' when 00072 then '00006'
-when 00010 then '00007' when 00011 then '00007' when 00017 then '00007'
-when 00024 then '00007' when 00026 then '00007' when 00027 then '00007'
-when 00028 then '00007' when 00035 then '00007' when 00036 then '00007'
-when 00037 then '00007'
-when 00009 then '00008' when 00021 then '00008' when 00022 then '00008'
-when 00068 then '00008'
-else '0000' 
-end CD_GRUPO_ITEM_NOM,
-case wc_codigo when 00001 then 'INGRESOS' when 00002 then 'INGRESOS' when 00005 then 'INGRESOS' 
-when 00004 then 'OTROS INGRESOS'  when 00007 then 'OTROS INGRESOS' when 00008 then 'OTROS INGRESOS' 
-when 00029 then 'OTROS INGRESOS'  when 00030 then 'OTROS INGRESOS' when 00031 then 'OTROS INGRESOS'  
-when 00032 then 'OTROS INGRESOS'  when 00033 then 'OTROS INGRESOS' when 00034 then 'OTROS INGRESOS'  
-when 00038 then 'OTROS INGRESOS'  when 00040 then 'OTROS INGRESOS' when 00051 then 'OTROS INGRESOS'  
-when 00052 then 'OTROS INGRESOS'  when 00053 then 'OTROS INGRESOS' when 00054 then 'OTROS INGRESOS'
-when 00056 then 'OTROS INGRESOS'  when 00057 then 'OTROS INGRESOS' when 00058 then 'OTROS INGRESOS'  
-when 00059 then 'OTROS INGRESOS'  when 00060 then 'OTROS INGRESOS' when 00061 then 'OTROS INGRESOS'  
-when 00062 then 'OTROS INGRESOS'  when 00063 then 'OTROS INGRESOS' when 00064 then 'OTROS INGRESOS'  
-when 00066 then 'OTROS INGRESOS'  when 00071 then 'OTROS INGRESOS' 
-when 00003 then 'BENEFICIOS' when 00006 then 'BENEFICIOS'  when 00012 then 'BENEFICIOS' 
-when 00013 then 'BENEFICIOS' when 00014 then 'BENEFICIOS'  when 00018 then 'BENEFICIOS'
-when 00019 then 'BENEFICIOS' when 00020 then 'BENEFICIOS'  when 00023 then 'BENEFICIOS' 
-when 00025 then 'BENEFICIOS' when 00039 then 'BENEFICIOS'  when 00041 then 'BENEFICIOS' 
-when 00042 then 'AHOOROS' when 00043 then 'AHOOROS'  when 00044 then 'AHOOROS' 
-when 00045 then 'AHOOROS' when 00046 then 'AHOOROS'  when 00047 then 'AHOOROS' 
-when 00048 then 'AHOOROS' when 00049 then 'AHOOROS'  when 00050 then 'AHOOROS' 
-when 00055 then 'AHOOROS' when 00056 then 'AHOOROS'  when 00058 then 'AHOOROS' 
-when 00060 then 'AHOOROS' when 00067 then 'AHOOROS'  when 00069 then 'AHOOROS' 
-when 00015 then 'DESCUENTOS' when 00065 then 'DESCUENTOS'  when 00070 then 'DESCUENTOS' 
-when 00016 then 'OTROS DESCUENTOS' when 00072 then 'OTROS DESCUENTOS'  
-when 00010 then 'IMPUESTOS' when 00011 then 'IMPUESTOS' when 00017 then 'IMPUESTOS'
-when 00024 then 'IMPUESTOS' when 00026 then 'IMPUESTOS' when 00027 then 'IMPUESTOS'
-when 00028 then 'IMPUESTOS' when 00035 then 'IMPUESTOS' when 00036 then 'IMPUESTOS'
-when 00037 then 'IMPUESTOS'
-when 00009 then 'PRESTAMO' when 00021 then 'PRESTAMO' when 00022 then 'PRESTAMO'
-when 00068 then 'PRESTAMO'
-else 'N/A' end DESC_GRUPO_ITEM_NOM
-from trhwc010
-where wc_estatus = 'A'</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT DISTINCT [CD_GRUPO_ITEM_NOM], [CD_EMPRESA], [DESC_GRUPO_ITEM_NOM], CD_ITEM_NOM
+FROM source03.GRUPO_ITEM_NOM</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -4438,8 +4387,8 @@ where wc_estatus = 'A'</property>
               <connections>
                 <connection
                   refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Connections[OleDbConnection]"
-                  connectionManagerID="{E9FB503A-EA8E-4A9F-B343-EABE9FAE7238}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[CNX_SSISDB]"
+                  connectionManagerID="{0FF0AD30-6E55-442C-80A7-5CCEDC7030D5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_SRC_RRHH_02]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4455,7 +4404,7 @@ where wc_estatus = 'A'</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Output].ExternalColumns[CD_EMPRESA]"
-                      length="2"
+                      length="20"
                       lineageId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Output].Columns[CD_EMPRESA]"
                       name="CD_EMPRESA"
                       truncationRowDisposition="RedirectRow" />
@@ -4466,7 +4415,7 @@ where wc_estatus = 'A'</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Output].ExternalColumns[CD_GRUPO_ITEM_NOM]"
-                      length="5"
+                      length="20"
                       lineageId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Output].Columns[CD_GRUPO_ITEM_NOM]"
                       name="CD_GRUPO_ITEM_NOM"
                       truncationRowDisposition="RedirectRow" />
@@ -4477,10 +4426,21 @@ where wc_estatus = 'A'</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Output].ExternalColumns[DESC_GRUPO_ITEM_NOM]"
-                      length="16"
+                      length="255"
                       lineageId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Output].Columns[DESC_GRUPO_ITEM_NOM]"
                       name="DESC_GRUPO_ITEM_NOM"
                       truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Output].Columns[CD_ITEM_NOM]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Output].ExternalColumns[CD_ITEM_NOM]"
+                      length="20"
+                      lineageId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Output].Columns[CD_ITEM_NOM]"
+                      name="CD_ITEM_NOM"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4488,20 +4448,26 @@ where wc_estatus = 'A'</property>
                       refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Output].ExternalColumns[CD_EMPRESA]"
                       codePage="1252"
                       dataType="str"
-                      length="2"
+                      length="20"
                       name="CD_EMPRESA" />
                     <externalMetadataColumn
                       refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Output].ExternalColumns[CD_GRUPO_ITEM_NOM]"
                       codePage="1252"
                       dataType="str"
-                      length="5"
+                      length="20"
                       name="CD_GRUPO_ITEM_NOM" />
                     <externalMetadataColumn
                       refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Output].ExternalColumns[DESC_GRUPO_ITEM_NOM]"
                       codePage="1252"
                       dataType="str"
-                      length="16"
+                      length="255"
                       name="DESC_GRUPO_ITEM_NOM" />
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Output].ExternalColumns[CD_ITEM_NOM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CD_ITEM_NOM" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -4513,23 +4479,30 @@ where wc_estatus = 'A'</property>
                       refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Error Output].Columns[CD_EMPRESA]"
                       codePage="1252"
                       dataType="str"
-                      length="2"
+                      length="20"
                       lineageId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Error Output].Columns[CD_EMPRESA]"
                       name="CD_EMPRESA" />
                     <outputColumn
                       refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Error Output].Columns[CD_GRUPO_ITEM_NOM]"
                       codePage="1252"
                       dataType="str"
-                      length="5"
+                      length="20"
                       lineageId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Error Output].Columns[CD_GRUPO_ITEM_NOM]"
                       name="CD_GRUPO_ITEM_NOM" />
                     <outputColumn
                       refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Error Output].Columns[DESC_GRUPO_ITEM_NOM]"
                       codePage="1252"
                       dataType="str"
-                      length="16"
+                      length="255"
                       lineageId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Error Output].Columns[DESC_GRUPO_ITEM_NOM]"
                       name="DESC_GRUPO_ITEM_NOM" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Error Output].Columns[CD_ITEM_NOM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Error Output].Columns[CD_ITEM_NOM]"
+                      name="CD_ITEM_NOM" />
                     <outputColumn
                       refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -4973,39 +4946,39 @@ where wc_estatus = 'A'</property>
               startId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_STANDARD_2.Outputs[Derived Column Error Output]" />
             <path
               refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output5]"
-              endId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\ER_UN_STANDARD_1.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_REGISTROS_INVALIDOS_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output4]"
-              endId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\UN_STANDARD.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_STANDARD_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output3]"
-              endId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\ER_UN_STANDARD_1.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output6]"
-              endId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\UN_STANDARD.Inputs[Union All Input 4]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output1]"
-              endId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\UN_STANDARD.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_STANDARD_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output]"
               endId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_STANDARD_3.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output2]"
+              refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output4]"
+              endId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\UN_STANDARD.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_STANDARD_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output3]"
+              endId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\UN_STANDARD.Inputs[Union All Input 4]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output6]"
               endId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_DTN_DIM_GRUPO_ITEM_NOM.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output1]"
+              endId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\UN_STANDARD.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_STANDARD_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output]"
+              endId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\ER_UN_STANDARD_1.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_REGISTROS_INVALIDOS_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output2]"
+              endId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\ER_UN_STANDARD_1.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Multicast Output 2]"
               endId="Package\DF_STG_DIM_GRUPO_ITEM_NOM\RA_AGG_STANDARD_1.Inputs[Aggregate Input 1]"
@@ -5352,7 +5325,7 @@ where wc_estatus = 'A'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5376,7 +5349,7 @@ where wc_estatus = 'A'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6254,210 +6227,86 @@ where wc_estatus = 'A'</property>
         <NodeLayout
           Size="219,42"
           Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\ER_DTN_ERROR_ROWS_LOG"
-          TopLeft="103,707" />
-        <NodeLayout
-          Size="261,42"
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DTN_RECONCILIACION_AUTOMATICA"
-          TopLeft="1270,557" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_STANDARD_2"
-          TopLeft="890,439" />
-        <NodeLayout
-          Size="200,42"
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\ER_SCT_DESCRIPTION_1"
-          TopLeft="87,281" />
-        <NodeLayout
-          Size="189,42"
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\RA_AGG_STANDARD_1"
-          TopLeft="1206,102" />
-        <NodeLayout
-          Size="226,42"
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_REGISTROS_INVALIDOS_2"
-          TopLeft="176,441" />
-        <NodeLayout
-          Size="183,42"
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\RA_MC_STANDARD_2"
-          TopLeft="732,183" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_STANDARD_4"
-          TopLeft="623,601" />
-        <NodeLayout
-          Size="226,42"
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_REGISTROS_INVALIDOS_3"
-          TopLeft="886,654" />
-        <NodeLayout
-          Size="170,42"
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\AGG_STANDARD_2"
-          TopLeft="880,352" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_STANDARD_1"
-          TopLeft="1236,204" />
-        <NodeLayout
-          Size="240,42"
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM"
-          TopLeft="334,0" />
-        <NodeLayout
-          Size="242,42"
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_DTN_DIM_GRUPO_ITEM_NOM"
-          TopLeft="571,406" />
+          TopLeft="117,707" />
         <NodeLayout
           Size="152,42"
           Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\UN_STANDARD"
-          TopLeft="1239,304" />
+          TopLeft="1253,304" />
         <NodeLayout
-          Size="257,42"
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_DV_TRATAMIENTO_DE_NULOS_1"
-          TopLeft="480,286" />
+          Size="261,42"
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DTN_RECONCILIACION_AUTOMATICA"
+          TopLeft="1284,557" />
         <NodeLayout
           Size="163,42"
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_STANDARD_3"
-          TopLeft="1320,440" />
-        <NodeLayout
-          Size="183,42"
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\RA_MC_STANDARD_1"
-          TopLeft="538,94" />
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_STANDARD_2"
+          TopLeft="904,439" />
         <NodeLayout
           Size="200,42"
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\ER_SCT_DESCRIPTION_1 1"
-          TopLeft="894,538" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\AGGREGATE_1_1"
-          TopLeft="578,515" />
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\ER_SCT_DESCRIPTION_1"
+          TopLeft="101,281" />
         <NodeLayout
           Size="182,42"
           Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\ER_UN_STANDARD_1"
-          TopLeft="132,596" />
+          TopLeft="146,596" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\RA_MC_STANDARD_2"
+          TopLeft="746,183" />
+        <NodeLayout
+          Size="226,42"
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_REGISTROS_INVALIDOS_2"
+          TopLeft="190,441" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_STANDARD_4"
+          TopLeft="637,601" />
+        <NodeLayout
+          Size="226,42"
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_REGISTROS_INVALIDOS_3"
+          TopLeft="900,654" />
+        <NodeLayout
+          Size="240,42"
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_SRC_DIM_GRUPO_ITEM_NOM"
+          TopLeft="160,87" />
+        <NodeLayout
+          Size="242,42"
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_DTN_DIM_GRUPO_ITEM_NOM"
+          TopLeft="585,406" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\AGG_STANDARD_2"
+          TopLeft="894,352" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_STANDARD_1"
+          TopLeft="1250,204" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\RA_MC_STANDARD_1"
+          TopLeft="552,94" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\ER_SCT_DESCRIPTION_1 1"
+          TopLeft="908,538" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\DV_STANDARD_3"
+          TopLeft="1334,440" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\RA_AGG_STANDARD_1"
+          TopLeft="1220,102" />
+        <NodeLayout
+          Size="257,42"
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\PR_DV_TRATAMIENTO_DE_NULOS_1"
+          TopLeft="494,286" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM\AGGREGATE_1_1"
+          TopLeft="592,515" />
         <EdgeLayout
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Multicast Output 21]"
-          TopLeft="823.5,225">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="141.5,127"
-              Start="0,0"
-              End="141.5,119.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,59.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,59.5"
-                    Point2="0,63.5"
-                    Point3="4,63.5" />
-                  <mssgle:LineSegment
-                    End="137.5,63.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="137.5,63.5"
-                    Point2="141.5,63.5"
-                    Point3="141.5,67.5" />
-                  <mssgle:LineSegment
-                    End="141.5,119.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Multicast Output 2]"
-          TopLeft="721,115">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="485,8"
-              Start="0,0"
-              End="477.5,8">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="238.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="238.5,0"
-                    Point2="242.5,0"
-                    Point3="242.5,4" />
-                  <mssgle:LineSegment
-                    End="242.5,4" />
-                  <mssgle:CubicBezierSegment
-                    Point1="242.5,4"
-                    Point2="242.5,8"
-                    Point3="246.5,8" />
-                  <mssgle:LineSegment
-                    End="477.5,8" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output3]"
-          TopLeft="289,483">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-66,113"
-              Start="0,0"
-              End="-66,105.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,52.5"
-                    Point2="0,56.5"
-                    Point3="-4,56.5" />
-                  <mssgle:LineSegment
-                    End="-62,56.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-62,56.5"
-                    Point2="-66,56.5"
-                    Point3="-66,60.5" />
-                  <mssgle:LineSegment
-                    End="-66,105.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output]"
-          TopLeft="1401,482">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,75"
-              Start="0,0"
-              End="0,67.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,67.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output1]"
-          TopLeft="997.333333333333,439">
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output4]"
+          TopLeft="1011.33333333333,439">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6490,42 +6339,8 @@ where wc_estatus = 'A'</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output2]"
-          TopLeft="608.5,328">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="83.5,78"
-              Start="0,0"
-              End="83.5,70.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35"
-                    Point2="0,39"
-                    Point3="4,39" />
-                  <mssgle:LineSegment
-                    End="79.5,39" />
-                  <mssgle:CubicBezierSegment
-                    Point1="79.5,39"
-                    Point2="83.5,39"
-                    Point3="83.5,43" />
-                  <mssgle:LineSegment
-                    End="83.5,70.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output6]"
-          TopLeft="730.333333333333,601">
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output3]"
+          TopLeft="744.333333333333,601">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6558,8 +6373,42 @@ where wc_estatus = 'A'</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output4]"
-          TopLeft="1316.25,246">
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output2]"
+          TopLeft="303,483">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-66,113"
+              Start="0,0"
+              End="-66,105.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,52.5"
+                    Point2="0,56.5"
+                    Point3="-4,56.5" />
+                  <mssgle:LineSegment
+                    End="-62,56.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-62,56.5"
+                    Point2="-66,56.5"
+                    Point3="-66,60.5" />
+                  <mssgle:LineSegment
+                    End="-66,105.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output1]"
+          TopLeft="1330.25,246">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6580,8 +6429,8 @@ where wc_estatus = 'A'</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output5]"
-          TopLeft="886,675">
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output]"
+          TopLeft="900,675">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6615,7 +6464,7 @@ where wc_estatus = 'A'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Error Output]"
-          TopLeft="971.5,481">
+          TopLeft="985.5,481">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6651,7 +6500,7 @@ where wc_estatus = 'A'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Aggregate Output 12]"
-          TopLeft="968.25,394">
+          TopLeft="982.25,394">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6673,7 +6522,7 @@ where wc_estatus = 'A'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Aggregate Output 11]"
-          TopLeft="1300.5,144">
+          TopLeft="1314.5,144">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6707,7 +6556,7 @@ where wc_estatus = 'A'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Aggregate Output 1]"
-          TopLeft="658.5,557">
+          TopLeft="672.5,557">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6741,7 +6590,7 @@ where wc_estatus = 'A'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Union All Output 11]"
-          TopLeft="1351,346">
+          TopLeft="1365,346">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6775,7 +6624,7 @@ where wc_estatus = 'A'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Union All Output 1]"
-          TopLeft="223,638">
+          TopLeft="237,638">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6809,7 +6658,7 @@ where wc_estatus = 'A'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Output 01]"
-          TopLeft="996.5,580">
+          TopLeft="1010.5,580">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6831,7 +6680,7 @@ where wc_estatus = 'A'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Output 0]"
-          TopLeft="187,323">
+          TopLeft="201,323">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6864,78 +6713,8 @@ where wc_estatus = 'A'</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[OLE DB Source Output]"
-          TopLeft="492.666666666667,42">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="136.833333333333,52"
-              Start="0,0"
-              End="136.833333333333,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.0066225165563" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.0066225165563"
-                    Point2="0,21.0066225165563"
-                    Point3="4,21.0066225165563" />
-                  <mssgle:LineSegment
-                    End="132.833333333333,21.0066225165563" />
-                  <mssgle:CubicBezierSegment
-                    Point1="132.833333333333,21.0066225165563"
-                    Point2="136.833333333333,21.0066225165563"
-                    Point3="136.833333333333,25.0066225165563" />
-                  <mssgle:LineSegment
-                    End="136.833333333333,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[OLE DB Source Error Output]"
-          TopLeft="415.333333333333,42">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-228.333333333333,239"
-              Start="0,0"
-              End="-228.333333333333,231.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,92.5496688741722" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,92.5496688741722"
-                    Point2="0,96.5496688741722"
-                    Point3="-4,96.5496688741722" />
-                  <mssgle:LineSegment
-                    End="-224.333333333333,96.5496688741722" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-224.333333333333,96.5496688741722"
-                    Point2="-228.333333333333,96.5496688741722"
-                    Point3="-228.333333333333,100.549668874172" />
-                  <mssgle:LineSegment
-                    End="-228.333333333333,231.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-177.600572916667,101.549668874172,126.8678125,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[OLE DB Destination Error Output]"
-          TopLeft="692,448">
+          TopLeft="706,448">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6971,7 +6750,7 @@ where wc_estatus = 'A'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Multicast Output 31]"
-          TopLeft="794.333333333333,225">
+          TopLeft="808.333333333333,225">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7005,7 +6784,7 @@ where wc_estatus = 'A'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Multicast Output 3]"
-          TopLeft="629.5,136">
+          TopLeft="643.5,136">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7035,6 +6814,188 @@ where wc_estatus = 'A'</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Multicast Output 21]"
+          TopLeft="837.5,225">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="141.5,127"
+              Start="0,0"
+              End="141.5,119.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,59.5"
+                    Point2="0,63.5"
+                    Point3="4,63.5" />
+                  <mssgle:LineSegment
+                    End="137.5,63.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="137.5,63.5"
+                    Point2="141.5,63.5"
+                    Point3="141.5,67.5" />
+                  <mssgle:LineSegment
+                    End="141.5,119.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Multicast Output 2]"
+          TopLeft="735,115">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="485,8"
+              Start="0,0"
+              End="477.5,8">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="238.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="238.5,0"
+                    Point2="242.5,0"
+                    Point3="242.5,4" />
+                  <mssgle:LineSegment
+                    End="242.5,4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="242.5,4"
+                    Point2="242.5,8"
+                    Point3="246.5,8" />
+                  <mssgle:LineSegment
+                    End="477.5,8" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output6]"
+          TopLeft="622.5,328">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="83.5,78"
+              Start="0,0"
+              End="83.5,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35"
+                    Point2="0,39"
+                    Point3="4,39" />
+                  <mssgle:LineSegment
+                    End="79.5,39" />
+                  <mssgle:CubicBezierSegment
+                    Point1="79.5,39"
+                    Point2="83.5,39"
+                    Point3="83.5,43" />
+                  <mssgle:LineSegment
+                    End="83.5,70.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[Derived Column Output5]"
+          TopLeft="1415,482">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,75"
+              Start="0,0"
+              End="0,67.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[OLE DB Source Output]"
+          TopLeft="400,111.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="152,0"
+              Start="0,0"
+              End="144.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="144.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_GRUPO_ITEM_NOM.Paths[OLE DB Source Error Output]"
+          TopLeft="280,129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-79,152"
+              Start="0,0"
+              End="-79,144.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,72" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,72"
+                    Point2="0,76"
+                    Point3="-4,76" />
+                  <mssgle:LineSegment
+                    End="-75,76" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-75,76"
+                    Point2="-79,76"
+                    Point3="-79,80" />
+                  <mssgle:LineSegment
+                    End="-79,144.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-102.93390625,81,126.8678125,11.43359375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

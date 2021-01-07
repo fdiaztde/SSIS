@@ -7,13 +7,13 @@
   DTS:CreatorName="TDESOL\rjmedina"
   DTS:DTSID="{2C82F971-C4EF-4B88-858D-BA7EC6386A85}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.123"
+  DTS:LastModifiedProductVersion="15.0.2000.128"
   DTS:LocaleID="2057"
   DTS:ObjectName="STG_DIM_CARGO"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="232"
-  DTS:VersionGUID="{B861E632-9D9E-4CF1-9EAB-C7C6CEA75095}">
+  DTS:VersionBuild="233"
+  DTS:VersionGUID="{3929C421-7C50-4748-B02E-88D2DA203386}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -4972,39 +4972,39 @@ from frhpu010</property>
               startId="Package\DF_STG_DIM_CARGO_1\DV_STANDARD_2.Outputs[Derived Column Error Output]" />
             <path
               refId="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output5]"
-              endId="Package\DF_STG_DIM_CARGO_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_CARGO_1\DV_STANDARD_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output4]"
-              endId="Package\DF_STG_DIM_CARGO_1\UN_STANDARD.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_CARGO_1\DV_STANDARD_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output3]"
-              endId="Package\DF_STG_DIM_CARGO_1\UN_STANDARD.Inputs[Union All Input 4]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_CARGO_1\DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output6]"
-              endId="Package\DF_STG_DIM_CARGO_1\ER_UN_STANDARD_1.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_CARGO_1\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output1]"
-              endId="Package\DF_STG_DIM_CARGO_1\ER_UN_STANDARD_1.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_CARGO_1\DV_REGISTROS_INVALIDOS_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output]"
               endId="Package\DF_STG_DIM_CARGO_1\PR_DTN_DIM_CARGO.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\DF_STG_DIM_CARGO_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output2]"
+              refId="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output4]"
+              endId="Package\DF_STG_DIM_CARGO_1\ER_UN_STANDARD_1.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_CARGO_1\DV_REGISTROS_INVALIDOS_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output3]"
+              endId="Package\DF_STG_DIM_CARGO_1\ER_UN_STANDARD_1.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_CARGO_1\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output6]"
               endId="Package\DF_STG_DIM_CARGO_1\UN_STANDARD.Inputs[Union All Input 1]"
               name="Derived Column Output"
               startId="Package\DF_STG_DIM_CARGO_1\DV_STANDARD_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output1]"
+              endId="Package\DF_STG_DIM_CARGO_1\UN_STANDARD.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_CARGO_1\DV_STANDARD_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output]"
+              endId="Package\DF_STG_DIM_CARGO_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_CARGO_1\DV_STANDARD_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output2]"
+              endId="Package\DF_STG_DIM_CARGO_1\UN_STANDARD.Inputs[Union All Input 4]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_CARGO_1\DV_STANDARD_4.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_STG_DIM_CARGO_1.Paths[Multicast Output 2]"
               endId="Package\DF_STG_DIM_CARGO_1\RA_AGG_STANDARD_1.Inputs[Aggregate Input 1]"
@@ -5303,7 +5303,7 @@ from frhpu010</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5327,7 +5327,7 @@ from frhpu010</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5351,7 +5351,7 @@ from frhpu010</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5375,7 +5375,7 @@ from frhpu010</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6763,7 +6763,7 @@ from frhpu010</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output6]"
+          Id="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output3]"
           TopLeft="155.5,467">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6785,7 +6785,7 @@ from frhpu010</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output5]"
+          Id="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output]"
           TopLeft="1401,482">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6807,7 +6807,7 @@ from frhpu010</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output4]"
+          Id="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output1]"
           TopLeft="997.333333333333,439">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6841,7 +6841,7 @@ from frhpu010</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output3]"
+          Id="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output2]"
           TopLeft="730.333333333333,601">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6875,7 +6875,7 @@ from frhpu010</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output2]"
+          Id="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output6]"
           TopLeft="1316.25,246">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6897,7 +6897,7 @@ from frhpu010</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output1]"
+          Id="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output4]"
           TopLeft="860,659">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6931,7 +6931,7 @@ from frhpu010</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output]"
+          Id="Package\DF_STG_DIM_CARGO_1.Paths[Derived Column Output5]"
           TopLeft="608.5,328">
           <EdgeLayout.Curve>
             <mssgle:Curve

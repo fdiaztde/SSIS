@@ -7,13 +7,13 @@
   DTS:CreatorName="TDESOL\jjimenez"
   DTS:DTSID="{F641CA7F-499B-41BD-85FA-63DBFA06200D}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.123"
+  DTS:LastModifiedProductVersion="15.0.2000.128"
   DTS:LocaleID="1033"
   DTS:ObjectName="2_0_0_TDE_RRHH_BI_DWH"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="341"
-  DTS:VersionGUID="{54FC144D-11A9-4AE1-A153-C908329AE0FD}">
+  DTS:VersionBuild="343"
+  DTS:VersionGUID="{D9C82567-653F-42FC-8254-55E79C1AA8FE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -544,13 +544,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="f"
-          ParentId="Package"
-          FontInfo="{assembly:Null}"
-          Size="33,40"
-          Id="fb82117d-2469-4b35-a881-4c7081115e8c"
-          TopLeft="638,502" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

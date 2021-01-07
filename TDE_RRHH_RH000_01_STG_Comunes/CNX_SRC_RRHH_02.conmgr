@@ -10,7 +10,7 @@
 ";Initial Catalog="+ @[$Project::Par_Catalog_SRC_02] +";Provider=SQLOLEDB.1;Persist Security Info=True;"</DTS:PropertyExpression>
   <DTS:ObjectData>
     <DTS:ConnectionManager
-      DTS:ConnectionString="Data Source=tdedatabase03\sql2016;User ID=tdeuser;Initial Catalog=TDE_SRC_EikonBI_DES;Provider=SQLOLEDB.1;Persist Security Info=True;">
+      DTS:ConnectionString="Data Source=TDE-LAP-OP-12;User ID=tdeuser;Initial Catalog=TDE_RRHH_WEB_DES;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-{37F1298F-18F1-47D2-8B78-6F76872E9CC9}CNX_SRC_RRHH_02;">
       <DTS:Password
         DTS:Name="Password"
         Sensitive="1"></DTS:Password>

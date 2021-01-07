@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,70 +12,10 @@
   DTS:ObjectName="STG_DIM_RANGO_EDAD"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="203"
-  DTS:VersionGUID="{F0E6DB1A-E779-4DDC-B1CC-F563ED80F6FF}">
+  DTS:VersionBuild="206"
+  DTS:VersionGUID="{697A86F4-733E-459D-B1E7-4D2272975ABA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DIM_RANGO_EDAD]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{D07E9801-6DEC-42D2-AB91-FA74820D79FE}"
-      DTS:ObjectName="DIM_RANGO_EDAD">
-      <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[$Project::Par_Ruta_File_Ext] + "DIM_RANGO_EDAD.txt"</DTS:PropertyExpression>
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1033"
-          DTS:HeaderRowDelimiter="_x007C_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\fdiaz\source\repos\TDE\TDE_RRHH\src\SSIS\MANUALFILES\DIM_RANGO_EDAD.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x007C_"
-              DTS:MaximumWidth="20"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CD_RANGO_EDAD"
-              DTS:DTSID="{6F4A15EE-97C1-4F5B-B5DC-C975404024C0}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x007C_"
-              DTS:MaximumWidth="100"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="DESC_RANGO_EDAD"
-              DTS:DTSID="{9E24DD99-4019-4AC1-9F76-CE037DB7C141}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x007C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
-              DTS:TextQualified="True"
-              DTS:ObjectName="VALOR_INI_RANGO"
-              DTS:DTSID="{4A9ACC50-F575-4CBF-B5F0-B99359E90E6F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
-              DTS:TextQualified="True"
-              DTS:ObjectName="VALOR_FIN_RANGO"
-              DTS:DTSID="{40F7EBEF-E347-47C3-9E3F-945B7233E687}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:PackageParameters>
     <DTS:PackageParameter
       DTS:CreationName=""
@@ -600,12 +540,6 @@
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[Flat File Source Error Output Column]"
-                      cachedCodepage="1252"
-                      cachedDataType="text"
-                      cachedName="Flat File Source Error Output Column"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]" />
-                    <inputColumn
                       refId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[ErrorDescription]"
                       cachedDataType="wstr"
                       cachedLength="500"
@@ -617,6 +551,20 @@
                       cachedLength="500"
                       cachedName="ErrorColumnName"
                       lineageId="Package\DF_STG_DIM_RANGO_EDAD\ER_SCT_DESCRIPTION_1.Outputs[Output 0].Columns[ErrorColumnName]" />
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[CD_RANGO_EDAD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CD_RANGO_EDAD"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[CD_RANGO_EDAD]" />
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[DESC_RANGO_EDAD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="DESC_RANGO_EDAD"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[DESC_RANGO_EDAD]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -690,13 +638,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,8000,1252)((DT_WSTR,140)((DT_STR,140,1252)#{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]}))</property>
+                          name="Expression">(DT_STR,8000,1252)(#{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[CD_RANGO_EDAD]} + " | " + #{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[DESC_RANGO_EDAD]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,8000,1252)((DT_WSTR,140)((DT_STR,140,1252)[Flat File Source Error Output Column]))</property>
+                          name="FriendlyExpression">(DT_STR,8000,1252)(CD_RANGO_EDAD + " | " + DESC_RANGO_EDAD)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -2236,19 +2184,19 @@ using System.Runtime.CompilerServices;
                       dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
 <c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
 	<msb:PropertyGroup>
-		<msb:CodeName>SC_fd83a24e585e42e5aeefacca70569e8f</msb:CodeName>
 		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>SC_fd83a24e585e42e5aeefacca70569e8f</msb:CodeName>
 		<msb:DisplayName>SC_fd83a24e585e42e5aeefacca70569e8f</msb:DisplayName>
 		<msb:ProjectId>{511C8EF9-88AE-4BF4-A67C-8F45230A1CED}</msb:ProjectId>
 	</msb:PropertyGroup>
 	<msb:ItemGroup>
 		<msb:Project Include="SC_fd83a24e585e42e5aeefacca70569e8f.csproj"/>
-		<msb:File Include="Properties\Settings.Designer.cs"/>
-		<msb:File Include="BufferWrapper.cs"/>
 		<msb:File Include="main.cs"/>
+		<msb:File Include="BufferWrapper.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
 		<msb:File Include="ComponentWrapper.cs"/>
-		<msb:File Include="Properties\Settings.settings"/>
 		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Settings.settings"/>
 		<msb:File Include="Properties\Resources.resx"/>
 		<msb:File Include="Properties\Resources.Designer.cs"/>
 	</msb:ItemGroup>
@@ -2291,93 +2239,7 @@ namespace SC_fd83a24e585e42e5aeefacca70569e8f.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[UTF8]]></arrayElement>
                     <arrayElement
-                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3a401d5f-f9f9-47d6-af70-8b435681ca39}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SC_fd83a24e585e42e5aeefacca70569e8f</RootNamespace>
-    <AssemblyName>SC_7B2F9E0E5BD24336942FF9B23EA47DAC</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
-    <TargetFrameworkProfile></TargetFrameworkProfile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>.\bin\Debug\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DebugSymbols>false</DebugSymbols>
-    <Optimize>true</Optimize>
-    <OutputPath>.\bin\Release\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.SqlServer.TxScript, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Compile Include="main.cs" />
-    <Compile Include="BufferWrapper.cs" />
-    <Compile Include="ComponentWrapper.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <AppDesigner Include="Properties\" />
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <!-- Include the build rules for a C# project.-->
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
-  <ProjectExtensions>
-    <VisualStudio>
-      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
-        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
-        <Host Name="ScriptComponent" GeneratedNamespace="SC_fd83a24e585e42e5aeefacca70569e8f" IconIndex="0"></Host>
-        <ProjectClient>
-          <HostIdentifier>SSIS_SC130</HostIdentifier>
-        </ProjectClient>
-      </FlavorProperties>
-    </VisualStudio>
-  </ProjectExtensions>
-</Project>]]></arrayElement>
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{3a401d5f-f9f9-47d6-af70-8b435681ca39}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>SC_fd83a24e585e42e5aeefacca70569e8f</RootNamespace><AssemblyName>SC_ECC0EB1E7266437CA3F766F5CC406C5B</AssemblyName><TargetFrameworkVersion>v4.5</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.TxScript, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.PipelineHost, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /><Compile Include="main.cs" /><Compile Include="BufferWrapper.cs" /><Compile Include="ComponentWrapper.cs" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><!-- This section defines VSTA properties that describe the host-changable project properties. --><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptComponent" GeneratedNamespace="SC_fd83a24e585e42e5aeefacca70569e8f" IconIndex="0"></Host><ProjectClient><HostIdentifier>SSIS_SC130</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
                     <arrayElement
@@ -2461,11 +2323,11 @@ namespace SC_fd83a24e585e42e5aeefacca70569e8f.Properties {
                   <arrayElements
                     arrayElementCount="2">
                     <arrayElement
-                      dataType="System.String"><![CDATA[SC_7B2F9E0E5BD24336942FF9B23EA47DAC.dll]]></arrayElement>
+                      dataType="System.String"><![CDATA[SC_ECC0EB1E7266437CA3F766F5CC406C5B.dll]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAJS+Pl8AAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAA9jMA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAPgH0V8AAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAA9jMA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAKQzAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2511,8 +2373,8 @@ AwACAAcABQACAAgABwACAAkACQABAAoACwABAAsADQABAAwADwABAA0AEQACABcAEwACABgAFQAB
 ABkAFQACABoAFwAEgAAAAQAAAAAAAAAAAAAAAABFAAAABAAAAAAAAAAAAAAAcwCjAAAAAAANAAAA
 AAAAAAAAAAB8AOsGAAAAAA0AAAAAAAAAAAAAAHwA9wQAAAAADQAAAAAAAAAAAAAAfAAIBwAAAAAE
 AAAAAAAAAAAAAABzABUEAAAAAAAAAAABAAAA0gUAAAAAAElEVFNDb21wb25lbnRNZXRhRGF0YTEw
-MABJRFRTQ29tcG9uZW50TWV0YURhdGExMzAAR2V0SW50MzIAPE1vZHVsZT4AU0NfN0IyRjlFMEU1
-QkQyNDMzNjk0MkZGOUIyM0VBNDdEQUMASW5wdXRJRABHZXRJZGVudGlmaWNhdGlvblN0cmluZ0J5
+MABJRFRTQ29tcG9uZW50TWV0YURhdGExMzAAR2V0SW50MzIAPE1vZHVsZT4AU0NfRUNDMEVCMUU3
+MjY2NDM3Q0EzRjc2NkY1Q0M0MDZDNUIASW5wdXRJRABHZXRJZGVudGlmaWNhdGlvblN0cmluZ0J5
 SUQAZ2V0X0NvbXBvbmVudE1ldGFEYXRhAG1zY29ybGliAGRlZmF1bHRJbnN0YW5jZQBnZXRfRXJy
 b3JDb2RlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAHNldF9FcnJvckNvbHVt
 bk5hbWUASW5wdXROYW1lAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0
@@ -2526,7 +2388,7 @@ dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1
 dGUAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55
 QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAUG9zdEV4
 ZWN1dGUAdmFsdWUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBTdHJpbmcAU3lzdGVtLkNvbXBv
-bmVudE1vZGVsAFNDXzdCMkY5RTBFNUJEMjQzMzY5NDJGRjlCMjNFQTQ3REFDLmRsbABnZXRfRXJy
+bmVudE1vZGVsAFNDX0VDQzBFQjFFNzI2NjQzN0NBM0Y3NjZGNUNDNDA2QzVCLmRsbABnZXRfRXJy
 b3JDb2RlX0lzTnVsbABzZXRfRXJyb3JDb2x1bW5OYW1lX0lzTnVsbABnZXRfRXJyb3JDb2x1bW5f
 SXNOdWxsAHNldF9FcnJvckRlc2NyaXB0aW9uX0lzTnVsbABTZXROdWxsAHNldF9JdGVtAFN5c3Rl
 bQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAGdldF9FcnJvckNvbHVtbgBTeXN0ZW0uQ29uZmlndXJh
@@ -2548,8 +2410,8 @@ cwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAg
 AHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAA
 dABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAAAHFT
 AEMAXwBmAGQAOAAzAGEAMgA0AGUANQA4ADUAZQA0ADIAZQA1AGEAZQBlAGYAYQBjAGMAYQA3ADAA
-NQA2ADkAZQA4AGYALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAD4B
-JUHb4L5CnmfUxxxT4oUABCABAQgDIAABBSABARERBCABAQ4FIAEBEV0EBwESOQQgABJtBCABDggJ
+NQA2ADkAZQA4AGYALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAFGt
+LxVf06REjZdnhrPNNt4ABCABAQgDIAABBSABARERBCABAQ4FIAEBEV0EBwESOQQgABJtBCABDggJ
 IAMBEkEdCBJFAwYSQQMGHQgEIAEICAQgAQIIBSACAQgcAyAAAgYgAgIOEXkFIAEdCAgHAAESfRGA
 gQUgABKAhQcgAgEOEoCFCLd6XFYZNOCJCImEXc2AgMyRAwYSFAMGEhgDBhJJAwYSVQMGElkDBhIg
 BSABARIMAyAACAQgAQECCSAEAQgOEkESRQUgAQESSQQAABJVBAAAElkFAAEBElkEAAASIAMAAAED
@@ -2571,13 +2433,13 @@ MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
 AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
 AABTAEMAXwBmAGQAOAAzAGEAMgA0AGUANQA4ADUAZQA0ADIAZQA1AGEAZQBlAGYAYQBjAGMAYQA3
 ADAANQA2ADkAZQA4AGYAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
-MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADcAQgAyAEYAOQBF
-ADAARQA1AEIARAAyADQAMwAzADYAOQA0ADIARgBGADkAQgAyADMARQBBADQANwBEAEEAQwAuAGQA
+MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfAEUAQwBDADAARQBC
+ADEARQA3ADIANgA2ADQAMwA3AEMAQQAzAEYANwA2ADYARgA1AEMAQwA0ADAANgBDADUAQgAuAGQA
 bABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBo
 AHQAIABAACAAIAAyADAAMQA5AAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMA
-AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8ANwBC
-ADIARgA5AEUAMABFADUAQgBEADIANAAzADMANgA5ADQAMgBGAEYAOQBCADIAMwBFAEEANAA3AEQA
-QQBDAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfAGYAZAA4
+AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8ARQBD
+AEMAMABFAEIAMQBFADcAMgA2ADYANAAzADcAQwBBADMARgA3ADYANgBGADUAQwBDADQAMAA2AEMA
+NQBCAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfAGYAZAA4
 ADMAYQAyADQAZQA1ADgANQBlADQAMgBlADUAYQBlAGUAZgBhAGMAYwBhADcAMAA1ADYAOQBlADgA
 ZgAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4
 AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAA
@@ -2604,7 +2466,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   dataType="System.String"
                   description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
                   name="VSTAProjectName"
-                  typeConverter="NOTBROWSABLE">SC_7b2f9e0e5bd24336942ff9b23ea47dac</property>
+                  typeConverter="NOTBROWSABLE">SC_ecc0eb1e7266437ca3f766f5cc406c5b</property>
                 <property
                   dataType="System.String"
                   description="Specifies the programming language used by the script."
@@ -2658,12 +2520,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\DF_STG_DIM_RANGO_EDAD\ER_SCT_DESCRIPTION_1.Inputs[Input 0].Columns[ErrorCode]"
                       cachedDataType="i4"
                       cachedName="ErrorCode"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Error Output].Columns[ErrorCode]" />
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[ErrorCode]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_RANGO_EDAD\ER_SCT_DESCRIPTION_1.Inputs[Input 0].Columns[ErrorColumn]"
                       cachedDataType="i4"
                       cachedName="ErrorColumn"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Error Output].Columns[ErrorColumn]" />
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -3662,180 +3524,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               version="1">
               <inputs>
                 <input
-                  refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 1]"
-                  name="Union All Input 1">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[NOMBRE_TABLA]"
-                      cachedDataType="wstr"
-                      cachedLength="8"
-                      cachedName="NOMBRE_TABLA"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NOMBRE_TABLA]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[NOMBRE_TABLA]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Error Output].Columns[ErrorCode]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[ErrorCode]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Error Output].Columns[ErrorColumn]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[ErrorColumn]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[ErrorDescription]"
-                      cachedDataType="wstr"
-                      cachedLength="500"
-                      cachedName="ErrorDescription"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\ER_SCT_DESCRIPTION_1.Outputs[Output 0].Columns[ErrorDescription]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[ErrorDescription]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[ErrorColumnName]"
-                      cachedDataType="wstr"
-                      cachedLength="500"
-                      cachedName="ErrorColumnName"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\ER_SCT_DESCRIPTION_1.Outputs[Output 0].Columns[ErrorColumnName]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[ErrorColumnName]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[FECHA_ERROR]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="FECHA_ERROR"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[FECHA_ERROR]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[FECHA_ERROR]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[NOMBRE_PAQUETE]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="NOMBRE_PAQUETE"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NOMBRE_PAQUETE]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[NOMBRE_PAQUETE]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[NOMBRE_COMPONENTE]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="NOMBRE_COMPONENTE"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NOMBRE_COMPONENTE]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[NOMBRE_COMPONENTE]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[TEXTO_DETALLE_REGISTRO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="8000"
-                      cachedName="TEXTO_DETALLE_REGISTRO"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[TEXTO_DETALLE_REGISTRO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[TEXTO_DETALLE_REGISTRO]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[NM_COLUMNA_ERROR]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="NM_COLUMNA_ERROR"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NM_COLUMNA_ERROR]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[NM_COLUMNA_ERROR]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[DESC_ERROR]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="DESC_ERROR"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[DESC_ERROR]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DESC_ERROR]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[SK_EJECUCION]"
-                      cachedDataType="i4"
-                      cachedName="SK_EJECUCION"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[SK_EJECUCION]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SK_EJECUCION]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
                   refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 2]"
                   hasSideEffects="true"
                   name="Union All Input 2">
@@ -4012,9 +3700,158 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 </input>
                 <input
                   refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 3]"
-                  dangling="true"
                   hasSideEffects="true"
                   name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[ErrorDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="ErrorDescription"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\ER_SCT_DESCRIPTION_1.Outputs[Output 0].Columns[ErrorDescription]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[ErrorDescription]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[ErrorColumnName]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="ErrorColumnName"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\ER_SCT_DESCRIPTION_1.Outputs[Output 0].Columns[ErrorColumnName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[ErrorColumnName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[NOMBRE_PAQUETE]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="NOMBRE_PAQUETE"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NOMBRE_PAQUETE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[NOMBRE_PAQUETE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[NOMBRE_TABLA]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="NOMBRE_TABLA"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NOMBRE_TABLA]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[NOMBRE_TABLA]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[TEXTO_DETALLE_REGISTRO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8000"
+                      cachedName="TEXTO_DETALLE_REGISTRO"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[TEXTO_DETALLE_REGISTRO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[TEXTO_DETALLE_REGISTRO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[FECHA_ERROR]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FECHA_ERROR"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[FECHA_ERROR]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[FECHA_ERROR]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[NOMBRE_COMPONENTE]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="NOMBRE_COMPONENTE"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NOMBRE_COMPONENTE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[NOMBRE_COMPONENTE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[SK_EJECUCION]"
+                      cachedDataType="i4"
+                      cachedName="SK_EJECUCION"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[SK_EJECUCION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SK_EJECUCION]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[NM_COLUMNA_ERROR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="NM_COLUMNA_ERROR"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NM_COLUMNA_ERROR]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[NM_COLUMNA_ERROR]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[DESC_ERROR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="DESC_ERROR"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[DESC_ERROR]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DESC_ERROR]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 1]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 1">
                   <externalMetadataColumns />
                 </input>
               </inputs>
@@ -4178,29 +4015,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedLength="20"
                       cachedName="CD_RANGO_EDAD"
                       externalMetadataColumnId="Package\DF_STG_DIM_RANGO_EDAD\PR_DTN_DIM_RANGO_EDAD.Inputs[OLE DB Destination Input].ExternalColumns[CD_RANGO_EDAD]"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[CD_RANGO_EDAD]" />
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[CD_RANGO_EDAD]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_RANGO_EDAD\PR_DTN_DIM_RANGO_EDAD.Inputs[OLE DB Destination Input].Columns[DESC_RANGO_EDAD]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="100"
+                      cachedLength="255"
                       cachedName="DESC_RANGO_EDAD"
                       externalMetadataColumnId="Package\DF_STG_DIM_RANGO_EDAD\PR_DTN_DIM_RANGO_EDAD.Inputs[OLE DB Destination Input].ExternalColumns[DESC_RANGO_EDAD]"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[DESC_RANGO_EDAD]" />
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[DESC_RANGO_EDAD]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_RANGO_EDAD\PR_DTN_DIM_RANGO_EDAD.Inputs[OLE DB Destination Input].Columns[VALOR_INI_RANGO]"
                       cachedDataType="numeric"
                       cachedName="VALOR_INI_RANGO"
-                      cachedPrecision="18"
+                      cachedPrecision="22"
+                      cachedScale="2"
                       externalMetadataColumnId="Package\DF_STG_DIM_RANGO_EDAD\PR_DTN_DIM_RANGO_EDAD.Inputs[OLE DB Destination Input].ExternalColumns[VALOR_INI_RANGO]"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[VALOR_INI_RANGO]" />
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[VALOR_INI_RANGO]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_RANGO_EDAD\PR_DTN_DIM_RANGO_EDAD.Inputs[OLE DB Destination Input].Columns[VALOR_FIN_RANGO]"
                       cachedDataType="numeric"
                       cachedName="VALOR_FIN_RANGO"
-                      cachedPrecision="18"
+                      cachedPrecision="22"
+                      cachedScale="2"
                       externalMetadataColumnId="Package\DF_STG_DIM_RANGO_EDAD\PR_DTN_DIM_RANGO_EDAD.Inputs[OLE DB Destination Input].ExternalColumns[VALOR_FIN_RANGO]"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[VALOR_FIN_RANGO]" />
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[VALOR_FIN_RANGO]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4277,7 +4116,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedName="CD_RANGO_EDAD"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[CD_RANGO_EDAD]"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[CD_RANGO_EDAD]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4285,7 +4124,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[CD_RANGO_EDAD]}) ? "-1" : #{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[CD_RANGO_EDAD]}</property>
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[CD_RANGO_EDAD]}) ? "-1" : #{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[CD_RANGO_EDAD]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4298,11 +4137,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\DF_STG_DIM_RANGO_EDAD\PR_DV_TRATAMIENTO_DE_NULOS_1.Inputs[Derived Column Input].Columns[DESC_RANGO_EDAD]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="100"
+                      cachedLength="255"
                       cachedName="DESC_RANGO_EDAD"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[DESC_RANGO_EDAD]"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[DESC_RANGO_EDAD]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4310,7 +4149,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[DESC_RANGO_EDAD]}) ? "-1" : #{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[DESC_RANGO_EDAD]}</property>
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[DESC_RANGO_EDAD]}) ? "-1" : #{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[DESC_RANGO_EDAD]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4323,10 +4162,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\DF_STG_DIM_RANGO_EDAD\PR_DV_TRATAMIENTO_DE_NULOS_1.Inputs[Derived Column Input].Columns[VALOR_INI_RANGO]"
                       cachedDataType="numeric"
                       cachedName="VALOR_INI_RANGO"
-                      cachedPrecision="18"
+                      cachedPrecision="22"
+                      cachedScale="2"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[VALOR_INI_RANGO]"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[VALOR_INI_RANGO]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4334,7 +4174,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[VALOR_INI_RANGO]}) ? -1 : #{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[VALOR_INI_RANGO]}</property>
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[VALOR_INI_RANGO]}) ? -1 : #{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[VALOR_INI_RANGO]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4347,10 +4187,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\DF_STG_DIM_RANGO_EDAD\PR_DV_TRATAMIENTO_DE_NULOS_1.Inputs[Derived Column Input].Columns[VALOR_FIN_RANGO]"
                       cachedDataType="numeric"
                       cachedName="VALOR_FIN_RANGO"
-                      cachedPrecision="18"
+                      cachedPrecision="22"
+                      cachedScale="2"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[VALOR_FIN_RANGO]"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[VALOR_FIN_RANGO]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4358,7 +4199,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[VALOR_FIN_RANGO]}) ? -1 : #{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[VALOR_FIN_RANGO]}</property>
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[VALOR_FIN_RANGO]}) ? -1 : #{Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[VALOR_FIN_RANGO]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4407,170 +4248,182 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </component>
             <component
               refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="1033"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
               name="PR_SRC_DIM_RANGO_EDAD"
               usesDispositions="true"
-              version="1">
+              version="7">
               <properties>
                 <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT CD_RANGO_EDAD, DESC_RANGO_EDAD, VALOR_INI_RANGO, VALOR_FIN_RANGO
+FROM source01.RANGO_EDAD</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DIM_RANGO_EDAD]"
-                  connectionManagerRefId="Package.ConnectionManagers[DIM_RANGO_EDAD]"
-                  name="FlatFileConnection" />
+                  refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Connections[OleDbConnection]"
+                  connectionManagerID="{641873F6-0A17-4B7E-9D5C-4F0C3D641DC6}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_SRC_RRHH_02]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
+                  refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[CD_RANGO_EDAD]"
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[CD_RANGO_EDAD]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].ExternalColumns[CD_RANGO_EDAD]"
+                      externalMetadataColumnId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_RANGO_EDAD]"
                       length="20"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[CD_RANGO_EDAD]"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[CD_RANGO_EDAD]"
                       name="CD_RANGO_EDAD"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
+                      truncationRowDisposition="RedirectRow" />
                     <outputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[DESC_RANGO_EDAD]"
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[DESC_RANGO_EDAD]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].ExternalColumns[DESC_RANGO_EDAD]"
-                      length="100"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[DESC_RANGO_EDAD]"
+                      externalMetadataColumnId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].ExternalColumns[DESC_RANGO_EDAD]"
+                      length="255"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[DESC_RANGO_EDAD]"
                       name="DESC_RANGO_EDAD"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
+                      truncationRowDisposition="RedirectRow" />
                     <outputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[VALOR_INI_RANGO]"
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[VALOR_INI_RANGO]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].ExternalColumns[VALOR_INI_RANGO]"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[VALOR_INI_RANGO]"
+                      externalMetadataColumnId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].ExternalColumns[VALOR_INI_RANGO]"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[VALOR_INI_RANGO]"
                       name="VALOR_INI_RANGO"
-                      precision="18"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
+                      precision="22"
+                      scale="2"
+                      truncationRowDisposition="RedirectRow" />
                     <outputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[VALOR_FIN_RANGO]"
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[VALOR_FIN_RANGO]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].ExternalColumns[VALOR_FIN_RANGO]"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].Columns[VALOR_FIN_RANGO]"
+                      externalMetadataColumnId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].ExternalColumns[VALOR_FIN_RANGO]"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].Columns[VALOR_FIN_RANGO]"
                       name="VALOR_FIN_RANGO"
-                      precision="18"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
+                      precision="22"
+                      scale="2"
+                      truncationRowDisposition="RedirectRow" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].ExternalColumns[CD_RANGO_EDAD]"
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_RANGO_EDAD]"
                       codePage="1252"
                       dataType="str"
                       length="20"
                       name="CD_RANGO_EDAD" />
                     <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].ExternalColumns[DESC_RANGO_EDAD]"
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].ExternalColumns[DESC_RANGO_EDAD]"
                       codePage="1252"
                       dataType="str"
-                      length="100"
+                      length="255"
                       name="DESC_RANGO_EDAD" />
                     <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].ExternalColumns[VALOR_INI_RANGO]"
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].ExternalColumns[VALOR_INI_RANGO]"
                       dataType="numeric"
                       name="VALOR_INI_RANGO"
-                      precision="18" />
+                      precision="22"
+                      scale="2" />
                     <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output].ExternalColumns[VALOR_FIN_RANGO]"
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output].ExternalColumns[VALOR_FIN_RANGO]"
                       dataType="numeric"
                       name="VALOR_FIN_RANGO"
-                      precision="18" />
+                      precision="22"
+                      scale="2" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Error Output]"
+                  refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
-                  name="Flat File Source Error Output">
+                  name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[CD_RANGO_EDAD]"
                       codePage="1252"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[CD_RANGO_EDAD]"
+                      name="CD_RANGO_EDAD" />
                     <outputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[DESC_RANGO_EDAD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[DESC_RANGO_EDAD]"
+                      name="DESC_RANGO_EDAD" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[VALOR_INI_RANGO]"
+                      dataType="numeric"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[VALOR_INI_RANGO]"
+                      name="VALOR_INI_RANGO"
+                      precision="22"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[VALOR_FIN_RANGO]"
+                      dataType="numeric"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[VALOR_FIN_RANGO]"
+                      name="VALOR_FIN_RANGO"
+                      precision="22"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -5004,22 +4857,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               startId="Package\DF_STG_DIM_RANGO_EDAD\DV_STANDARD_2.Outputs[Derived Column Error Output]" />
             <path
               refId="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Output5]"
-              endId="Package\DF_STG_DIM_RANGO_EDAD\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_RANGO_EDAD\DV_STANDARD_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Output4]"
-              endId="Package\DF_STG_DIM_RANGO_EDAD\UN_STANDARD.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_RANGO_EDAD\DV_STANDARD_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Output3]"
               endId="Package\DF_STG_DIM_RANGO_EDAD\UN_STANDARD.Inputs[Union All Input 4]"
               name="Derived Column Output"
               startId="Package\DF_STG_DIM_RANGO_EDAD\DV_STANDARD_4.Outputs[Derived Column Output]" />
             <path
+              refId="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Output4]"
+              endId="Package\DF_STG_DIM_RANGO_EDAD\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_RANGO_EDAD\DV_STANDARD_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Output3]"
+              endId="Package\DF_STG_DIM_RANGO_EDAD\UN_STANDARD.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_RANGO_EDAD\DV_STANDARD_2.Outputs[Derived Column Output]" />
+            <path
               refId="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Output6]"
-              endId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 1]"
+              endId="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1.Inputs[Union All Input 3]"
               name="Derived Column Output"
               startId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
             <path
@@ -5037,16 +4890,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               endId="Package\DF_STG_DIM_RANGO_EDAD\UN_STANDARD.Inputs[Union All Input 1]"
               name="Derived Column Output"
               startId="Package\DF_STG_DIM_RANGO_EDAD\DV_STANDARD_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_RANGO_EDAD.Paths[Flat File Source Error Output]"
-              endId="Package\DF_STG_DIM_RANGO_EDAD\ER_SCT_DESCRIPTION_1.Inputs[Input 0]"
-              name="Flat File Source Error Output"
-              startId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Error Output]" />
-            <path
-              refId="Package\DF_STG_DIM_RANGO_EDAD.Paths[Flat File Source Output]"
-              endId="Package\DF_STG_DIM_RANGO_EDAD\RA_MC_STANDARD_1.Inputs[Multicast Input 1]"
-              name="Flat File Source Output"
-              startId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[Flat File Source Output]" />
             <path
               refId="Package\DF_STG_DIM_RANGO_EDAD.Paths[Multicast Output 2]"
               endId="Package\DF_STG_DIM_RANGO_EDAD\RA_AGG_STANDARD_1.Inputs[Aggregate Input 1]"
@@ -5073,15 +4916,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               name="OLE DB Destination Error Output"
               startId="Package\DF_STG_DIM_RANGO_EDAD\PR_DTN_DIM_RANGO_EDAD.Outputs[OLE DB Destination Error Output]" />
             <path
-              refId="Package\DF_STG_DIM_RANGO_EDAD.Paths[Output 0]"
-              endId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input]"
-              name="Output 0"
-              startId="Package\DF_STG_DIM_RANGO_EDAD\ER_SCT_DESCRIPTION_1.Outputs[Output 0]" />
+              refId="Package\DF_STG_DIM_RANGO_EDAD.Paths[OLE DB Source Error Output]"
+              endId="Package\DF_STG_DIM_RANGO_EDAD\ER_SCT_DESCRIPTION_1.Inputs[Input 0]"
+              name="OLE DB Source Error Output"
+              startId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Error Output]" />
             <path
-              refId="Package\DF_STG_DIM_RANGO_EDAD.Paths[Output 01]"
+              refId="Package\DF_STG_DIM_RANGO_EDAD.Paths[OLE DB Source Output]"
+              endId="Package\DF_STG_DIM_RANGO_EDAD\RA_MC_STANDARD_1.Inputs[Multicast Input 1]"
+              name="OLE DB Source Output"
+              startId="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DF_STG_DIM_RANGO_EDAD.Paths[Output 0]"
               endId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_3.Inputs[Derived Column Input]"
               name="Output 0"
               startId="Package\DF_STG_DIM_RANGO_EDAD\ER_SCT_DESCRIPTION_1 1.Outputs[Output 0]" />
+            <path
+              refId="Package\DF_STG_DIM_RANGO_EDAD.Paths[Output 01]"
+              endId="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input]"
+              name="Output 0"
+              startId="Package\DF_STG_DIM_RANGO_EDAD\ER_SCT_DESCRIPTION_1.Outputs[Output 0]" />
             <path
               refId="Package\DF_STG_DIM_RANGO_EDAD.Paths[Union All Output 1]"
               endId="Package\DF_STG_DIM_RANGO_EDAD\DV_STANDARD_3.Inputs[Derived Column Input]"
@@ -5104,7 +4957,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_CREATE_DATE_1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5180,7 +5033,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_DATE_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5335,7 +5188,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5359,7 +5212,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5455,7 +5308,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_2 1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5479,7 +5332,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE_STAGING_AREA"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5497,7 +5350,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE_STAGING_AREA_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6271,88 +6124,124 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="152,42"
-          Id="Package\DF_STG_DIM_RANGO_EDAD\UN_STANDARD"
-          TopLeft="1239,323" />
-        <NodeLayout
           Size="219,42"
           Id="Package\DF_STG_DIM_RANGO_EDAD\ER_DTN_ERROR_ROWS_LOG"
-          TopLeft="72,710" />
+          TopLeft="72,744" />
         <NodeLayout
-          Size="261,42"
-          Id="Package\DF_STG_DIM_RANGO_EDAD\DTN_RECONCILIACION_AUTOMATICA"
-          TopLeft="1270,576" />
-        <NodeLayout
-          Size="183,42"
-          Id="Package\DF_STG_DIM_RANGO_EDAD\RA_MC_STANDARD_2"
-          TopLeft="732,202" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\DF_STG_DIM_RANGO_EDAD\DV_STANDARD_2"
-          TopLeft="890,458" />
-        <NodeLayout
-          Size="216,42"
-          Id="Package\DF_STG_DIM_RANGO_EDAD\PR_DTN_DIM_RANGO_EDAD"
-          TopLeft="571,424" />
-        <NodeLayout
-          Size="183,42"
-          Id="Package\DF_STG_DIM_RANGO_EDAD\RA_MC_STANDARD_1"
-          TopLeft="538,113" />
-        <NodeLayout
-          Size="200,42"
-          Id="Package\DF_STG_DIM_RANGO_EDAD\ER_SCT_DESCRIPTION_1"
-          TopLeft="87,300" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1"
-          TopLeft="67,606" />
-        <NodeLayout
-          Size="226,42"
-          Id="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2"
-          TopLeft="40,444" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\DF_STG_DIM_RANGO_EDAD\DV_STANDARD_4"
-          TopLeft="623,620" />
-        <NodeLayout
-          Size="226,42"
-          Id="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_3"
-          TopLeft="860,657" />
-        <NodeLayout
-          Size="170,42"
-          Id="Package\DF_STG_DIM_RANGO_EDAD\AGG_STANDARD_2"
-          TopLeft="880,371" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\DF_STG_DIM_RANGO_EDAD\DV_STANDARD_1"
-          TopLeft="1236,223" />
-        <NodeLayout
-          Size="189,42"
-          Id="Package\DF_STG_DIM_RANGO_EDAD\RA_AGG_STANDARD_1"
-          TopLeft="1206,121" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\DF_STG_DIM_RANGO_EDAD\DV_STANDARD_3"
-          TopLeft="1320,459" />
-        <NodeLayout
-          Size="215,42"
-          Id="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD"
-          TopLeft="303,24" />
+          Size="152,42"
+          Id="Package\DF_STG_DIM_RANGO_EDAD\UN_STANDARD"
+          TopLeft="1239,357" />
         <NodeLayout
           Size="257,42"
           Id="Package\DF_STG_DIM_RANGO_EDAD\PR_DV_TRATAMIENTO_DE_NULOS_1"
-          TopLeft="479,305" />
+          TopLeft="479,339" />
+        <NodeLayout
+          Size="261,42"
+          Id="Package\DF_STG_DIM_RANGO_EDAD\DTN_RECONCILIACION_AUTOMATICA"
+          TopLeft="1270,610" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\DF_STG_DIM_RANGO_EDAD\DV_STANDARD_2"
+          TopLeft="890,492" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\DF_STG_DIM_RANGO_EDAD\RA_MC_STANDARD_2"
+          TopLeft="732,236" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\DF_STG_DIM_RANGO_EDAD\ER_SCT_DESCRIPTION_1"
+          TopLeft="91,216" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\DF_STG_DIM_RANGO_EDAD\ER_UN_STANDARD_1"
+          TopLeft="67,640" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\DF_STG_DIM_RANGO_EDAD\RA_MC_STANDARD_1"
+          TopLeft="538,147" />
+        <NodeLayout
+          Size="226,42"
+          Id="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_2"
+          TopLeft="91,387" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\DF_STG_DIM_RANGO_EDAD\DV_STANDARD_4"
+          TopLeft="623,654" />
+        <NodeLayout
+          Size="226,42"
+          Id="Package\DF_STG_DIM_RANGO_EDAD\DV_REGISTROS_INVALIDOS_3"
+          TopLeft="860,691" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\DF_STG_DIM_RANGO_EDAD\AGG_STANDARD_2"
+          TopLeft="880,405" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\DF_STG_DIM_RANGO_EDAD\DV_STANDARD_1"
+          TopLeft="1236,257" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\DF_STG_DIM_RANGO_EDAD\PR_DTN_DIM_RANGO_EDAD"
+          TopLeft="571,458" />
         <NodeLayout
           Size="200,42"
           Id="Package\DF_STG_DIM_RANGO_EDAD\ER_SCT_DESCRIPTION_1 1"
-          TopLeft="894,557" />
+          TopLeft="894,591" />
+        <NodeLayout
+          Size="215,42"
+          Id="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD"
+          TopLeft="220,26" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\DF_STG_DIM_RANGO_EDAD\RA_AGG_STANDARD_1"
+          TopLeft="1206,155" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\DF_STG_DIM_RANGO_EDAD\DV_STANDARD_3"
+          TopLeft="1320,493" />
         <NodeLayout
           Size="161,42"
           Id="Package\DF_STG_DIM_RANGO_EDAD\AGGREGATE_1_1"
-          TopLeft="578,534" />
+          TopLeft="578,568" />
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Output]"
+          TopLeft="607.5,381">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="71.5,77"
+              Start="0,0"
+              End="71.5,69.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.5"
+                    Point2="0,38.5"
+                    Point3="4,38.5" />
+                  <mssgle:LineSegment
+                    End="67.5,38.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="67.5,38.5"
+                    Point2="71.5,38.5"
+                    Point3="71.5,42.5" />
+                  <mssgle:LineSegment
+                    End="71.5,69.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Error Output]"
-          TopLeft="971.5,500">
+          TopLeft="971.5,534">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6388,7 +6277,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Aggregate Output 12]"
-          TopLeft="968.25,413">
+          TopLeft="968.25,447">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6405,12 +6294,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Aggregate Output 11]"
-          TopLeft="1300.5,163">
+          TopLeft="1300.5,197">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6439,12 +6330,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Aggregate Output 1]"
-          TopLeft="658.5,576">
+          TopLeft="658.5,610">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6473,12 +6366,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Union All Output 11]"
-          TopLeft="158,648">
+          TopLeft="158,682">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6507,12 +6402,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Union All Output 1]"
-          TopLeft="1351,365">
+          TopLeft="1351,399">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6541,12 +6438,50 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Output 01]"
-          TopLeft="994,599">
+          TopLeft="191,258">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="13,129"
+              Start="0,0"
+              End="13,121.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,60.5"
+                    Point2="0,64.5"
+                    Point3="4,64.5" />
+                  <mssgle:LineSegment
+                    End="9,64.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="9,64.5"
+                    Point2="13,64.5"
+                    Point3="13,68.5" />
+                  <mssgle:LineSegment
+                    End="13,121.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Output 0]"
+          TopLeft="994,633">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6575,46 +6510,86 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Output 0]"
-          TopLeft="187,342">
+          Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[OLE DB Source Output]"
+          TopLeft="362,68">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-34,102"
+              EndConnector="267.5,79"
               Start="0,0"
-              End="-34,94.5">
+              End="267.5,71.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47" />
+                    End="0,27.9501385041551" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,47"
-                    Point2="0,51"
-                    Point3="-4,51" />
+                    Point1="0,27.9501385041551"
+                    Point2="0,31.9501385041551"
+                    Point3="4,31.9501385041551" />
                   <mssgle:LineSegment
-                    End="-30,51" />
+                    End="263.5,31.9501385041551" />
                   <mssgle:CubicBezierSegment
-                    Point1="-30,51"
-                    Point2="-34,51"
-                    Point3="-34,55" />
+                    Point1="263.5,31.9501385041551"
+                    Point2="267.5,31.9501385041551"
+                    Point3="267.5,35.9501385041551" />
                   <mssgle:LineSegment
-                    End="-34,94.5" />
+                    End="267.5,71.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[OLE DB Source Error Output]"
+          TopLeft="293,68">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-102,148"
+              Start="0,0"
+              End="-102,140.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.8559556786704" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,55.8559556786704"
+                    Point2="0,59.8559556786704"
+                    Point3="-4,59.8559556786704" />
+                  <mssgle:LineSegment
+                    End="-98,59.8559556786704" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-98,59.8559556786704"
+                    Point2="-102,59.8559556786704"
+                    Point3="-102,63.8559556786704" />
+                  <mssgle:LineSegment
+                    End="-102,140.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-114.43390625,64.8559556786704,126.8678125,11.43359375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[OLE DB Destination Error Output]"
-          TopLeft="679,466">
+          TopLeft="679,500">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6650,7 +6625,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Multicast Output 31]"
-          TopLeft="794.333333333333,244">
+          TopLeft="794.333333333333,278">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6679,12 +6654,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Multicast Output 3]"
-          TopLeft="629.5,155">
+          TopLeft="629.5,189">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6713,12 +6690,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Multicast Output 21]"
-          TopLeft="823.5,244">
+          TopLeft="823.5,278">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6747,12 +6726,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Multicast Output 2]"
-          TopLeft="721,134">
+          TopLeft="721,168">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6781,160 +6762,50 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Flat File Source Output]"
-          TopLeft="445,66">
+          Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Output6]"
+          TopLeft="204,429">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="184.5,47"
+              EndConnector="-46,211"
               Start="0,0"
-              End="184.5,39.5">
+              End="-46,203.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.0083102493075" />
+                    End="0,101.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,15.0083102493075"
-                    Point2="0,19.0083102493075"
-                    Point3="4,19.0083102493075" />
+                    Point1="0,101.5"
+                    Point2="0,105.5"
+                    Point3="-4,105.5" />
                   <mssgle:LineSegment
-                    End="180.5,19.0083102493075" />
+                    End="-42,105.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="180.5,19.0083102493075"
-                    Point2="184.5,19.0083102493075"
-                    Point3="184.5,23.0083102493075" />
+                    Point1="-42,105.5"
+                    Point2="-46,105.5"
+                    Point3="-46,109.5" />
                   <mssgle:LineSegment
-                    End="184.5,39.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Flat File Source Error Output]"
-          TopLeft="376,66">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-189,234"
-              Start="0,0"
-              End="-189,226.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,90.6371191135734" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,90.6371191135734"
-                    Point2="0,94.6371191135734"
-                    Point3="-4,94.6371191135734" />
-                  <mssgle:LineSegment
-                    End="-185,94.6371191135734" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-185,94.6371191135734"
-                    Point2="-189,94.6371191135734"
-                    Point3="-189,98.6371191135734" />
-                  <mssgle:LineSegment
-                    End="-189,226.5" />
+                    End="-46,203.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-158.12638671875,99.6371191135734,127.2527734375,11.609375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Output6]"
-          TopLeft="155.5,486">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,120"
-              Start="0,0"
-              End="0,112.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,112.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Output5]"
-          TopLeft="1401,501">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,75"
-              Start="0,0"
-              End="0,67.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,67.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Output4]"
-          TopLeft="997.333333333333,458">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="317.666666666667,-93"
-              Start="0,0"
-              End="317.666666666667,-85.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-33.7424058323208" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-33.7424058323208"
-                    Point2="0,-37.7424058323208"
-                    Point3="4,-37.7424058323208" />
-                  <mssgle:LineSegment
-                    End="313.666666666667,-37.7424058323208" />
-                  <mssgle:CubicBezierSegment
-                    Point1="313.666666666667,-37.7424058323208"
-                    Point2="317.666666666667,-37.7424058323208"
-                    Point3="317.666666666667,-41.7424058323208" />
-                  <mssgle:LineSegment
-                    End="317.666666666667,-85.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Output3]"
-          TopLeft="730.333333333333,620">
+          TopLeft="730.333333333333,654">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6963,12 +6834,74 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Output4]"
+          TopLeft="1401,535">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,75"
+              Start="0,0"
+              End="0,67.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Output3]"
+          TopLeft="997.333333333333,492">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="317.666666666667,-93"
+              Start="0,0"
+              End="317.666666666667,-85.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-33.7424058323208" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-33.7424058323208"
+                    Point2="0,-37.7424058323208"
+                    Point3="4,-37.7424058323208" />
+                  <mssgle:LineSegment
+                    End="313.666666666667,-37.7424058323208" />
+                  <mssgle:CubicBezierSegment
+                    Point1="313.666666666667,-37.7424058323208"
+                    Point2="317.666666666667,-37.7424058323208"
+                    Point3="317.666666666667,-41.7424058323208" />
+                  <mssgle:LineSegment
+                    End="317.666666666667,-85.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Output2]"
-          TopLeft="1316.25,265">
+          TopLeft="1316.25,299">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6985,12 +6918,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Output1]"
-          TopLeft="860,678">
+          TopLeft="860,712">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7019,41 +6954,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_RANGO_EDAD.Paths[Derived Column Output]"
-          TopLeft="607.5,347">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="71.5,77"
-              Start="0,0"
-              End="71.5,69.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.5"
-                    Point2="0,38.5"
-                    Point3="4,38.5" />
-                  <mssgle:LineSegment
-                    End="67.5,38.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="67.5,38.5"
-                    Point2="71.5,38.5"
-                    Point3="71.5,42.5" />
-                  <mssgle:LineSegment
-                    End="71.5,69.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7095,6 +6998,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_STG_DIM_RANGO_EDAD\PR_SRC_DIM_RANGO_EDAD">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

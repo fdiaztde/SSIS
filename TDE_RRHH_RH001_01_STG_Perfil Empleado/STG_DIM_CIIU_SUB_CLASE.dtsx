@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="STG_DIM_CIIU_SUB_CLASE"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="348"
-  DTS:VersionGUID="{E2802B33-4C7C-4230-83E4-B1E3AA650BBB}">
+  DTS:VersionBuild="349"
+  DTS:VersionGUID="{424E81BB-825C-45F1-A057-EA4122870639}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -505,13 +505,6 @@
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[CD_CIIU_SECCION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="CD_CIIU_SECCION"
-                      lineageId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SECCION]" />
-                    <inputColumn
                       refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[CD_CIIU_DIVISION]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -556,6 +549,13 @@
                       cachedLength="20"
                       cachedName="CD_CIIU_GRP"
                       lineageId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_GRP]" />
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[CD_CIIU_SESION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CD_CIIU_SESION"
+                      lineageId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SESION]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -629,13 +629,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,8000,1252)((DT_WSTR,255)#{Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SUB_CL]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[DESC_CIIU_SUB_CL]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_CL]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SECCION]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_GRP]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_DIVISION]})</property>
+                          name="Expression">(DT_STR,8000,1252)((DT_WSTR,255)#{Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SUB_CL]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[DESC_CIIU_SUB_CL]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_CL]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SESION]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_GRP]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_DIVISION]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,8000,1252)((DT_WSTR,255)CD_CIIU_SUB_CL + "|" + (DT_WSTR,255)DESC_CIIU_SUB_CL + "|" + (DT_WSTR,255)CD_CIIU_CL + "|" + (DT_WSTR,255)CD_CIIU_SECCION + "|" + (DT_WSTR,255)CD_CIIU_GRP + "|" + (DT_WSTR,255)CD_CIIU_DIVISION)</property>
+                          name="FriendlyExpression">(DT_STR,8000,1252)((DT_WSTR,255)CD_CIIU_SUB_CL + "|" + (DT_WSTR,255)DESC_CIIU_SUB_CL + "|" + (DT_WSTR,255)CD_CIIU_CL + "|" + (DT_WSTR,255)CD_CIIU_SESION + "|" + (DT_WSTR,255)CD_CIIU_GRP + "|" + (DT_WSTR,255)CD_CIIU_DIVISION)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -4105,14 +4105,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].Columns[CD_CIIU_SECCION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="CD_CIIU_SECCION"
-                      externalMetadataColumnId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].ExternalColumns[CD_CIIU_SECCION]"
-                      lineageId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_SECCION]" />
-                    <inputColumn
                       refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].Columns[CD_CIIU_DIVISION]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -4152,15 +4144,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedName="CD_CIIU_GRP"
                       externalMetadataColumnId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].ExternalColumns[CD_CIIU_GRP]"
                       lineageId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_GRP]" />
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].Columns[CD_CIIU_SESION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CD_CIIU_SESION"
+                      externalMetadataColumnId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].ExternalColumns[CD_CIIU_SESION]"
+                      lineageId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_SESION]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].ExternalColumns[CD_CIIU_SECCION]"
-                      codePage="1252"
-                      dataType="str"
-                      length="20"
-                      name="CD_CIIU_SECCION" />
                     <externalMetadataColumn
                       refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].ExternalColumns[CD_CIIU_DIVISION]"
                       codePage="1252"
@@ -4191,6 +4185,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       dataType="str"
                       length="20"
                       name="CD_CIIU_GRP" />
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].ExternalColumns[CD_CIIU_SESION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CD_CIIU_SESION" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -4232,31 +4232,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Inputs[Derived Column Input].Columns[CD_CIIU_SECCION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="CD_CIIU_SECCION"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_SECCION]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_SECCION]}) ? "-1" : #{Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_SECCION]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">ISNULL(CD_CIIU_SECCION) ? "-1" : CD_CIIU_SECCION</property>
-                      </properties>
-                    </inputColumn>
                     <inputColumn
                       refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Inputs[Derived Column Input].Columns[CD_CIIU_DIVISION]"
                       cachedCodepage="1252"
@@ -4445,7 +4420,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT * FROM [RH01].[STG_DIM_CIIU_SUB_CLASE]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT CD_CIIU_SUB_CLASE CD_CIIU_SUB_CL
+, DESC_CIIU_SUB_CLASE DESC_CIIU_SUB_CL
+, CD_CIIU_CLASE CD_CIIU_CL
+,  CD_CIIU_SESION, CD_CIIU_GRP, CD_CIIU_DIVISION
+  FROM source01.CIIU_SUB_CLASE</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -4462,7 +4441,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">2</property>
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
@@ -4471,8 +4450,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Connections[OleDbConnection]"
-                  connectionManagerID="{257F1096-3C1F-4B54-9256-F02D9CFFC700}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[CNX_SSISDB]"
+                  connectionManagerID="{641873F6-0A17-4B7E-9D5C-4F0C3D641DC6}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_SRC_RRHH_02]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4481,17 +4460,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_SECCION]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_SECCION]"
-                      length="20"
-                      lineageId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_SECCION]"
-                      name="CD_CIIU_SECCION"
-                      truncationRowDisposition="RedirectRow" />
                     <outputColumn
                       refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_DIVISION]"
                       codePage="1252"
@@ -4503,6 +4471,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       lineageId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_DIVISION]"
                       name="CD_CIIU_DIVISION"
                       truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_GRP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_GRP]"
+                      length="20"
+                      lineageId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_GRP]"
+                      name="CD_CIIU_GRP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_SESION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_SESION]"
+                      length="20"
+                      lineageId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_SESION]"
+                      name="CD_CIIU_SESION"
+                      truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_SUB_CL]"
                       codePage="1252"
@@ -4536,32 +4526,27 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       lineageId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_CL]"
                       name="CD_CIIU_CL"
                       truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_GRP]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_GRP]"
-                      length="20"
-                      lineageId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_GRP]"
-                      name="CD_CIIU_GRP"
-                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_SECCION]"
-                      codePage="1252"
-                      dataType="str"
-                      length="20"
-                      name="CD_CIIU_SECCION" />
                     <externalMetadataColumn
                       refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_DIVISION]"
                       codePage="1252"
                       dataType="str"
                       length="20"
                       name="CD_CIIU_DIVISION" />
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_GRP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CD_CIIU_GRP" />
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_SESION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CD_CIIU_SESION" />
                     <externalMetadataColumn
                       refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_SUB_CL]"
                       codePage="1252"
@@ -4580,12 +4565,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       dataType="str"
                       length="20"
                       name="CD_CIIU_CL" />
-                    <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_GRP]"
-                      codePage="1252"
-                      dataType="str"
-                      length="20"
-                      name="CD_CIIU_GRP" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -4615,12 +4594,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       lineageId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_CL]"
                       name="CD_CIIU_CL" />
                     <outputColumn
-                      refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SECCION]"
+                      refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SESION]"
                       codePage="1252"
                       dataType="str"
                       length="20"
-                      lineageId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SECCION]"
-                      name="CD_CIIU_SECCION" />
+                      lineageId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SESION]"
+                      name="CD_CIIU_SESION" />
                     <outputColumn
                       refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_GRP]"
                       codePage="1252"
@@ -5026,39 +5005,39 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               startId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\DV_STANDARD_2.Outputs[Derived Column Error Output]" />
             <path
               refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output5]"
-              endId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output4]"
-              endId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\UN_STANDARD.Inputs[Union All Input 4]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output3]"
-              endId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\DV_STANDARD_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output6]"
-              endId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\ER_UN_STANDARD_1.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\DV_REGISTROS_INVALIDOS_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output1]"
-              endId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\UN_STANDARD.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\DV_STANDARD_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output]"
               endId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\ER_UN_STANDARD_1.Inputs[Union All Input 1]"
               name="Derived Column Output"
               startId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output2]"
+              refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output4]"
+              endId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\UN_STANDARD.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\DV_STANDARD_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output3]"
+              endId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\ER_UN_STANDARD_1.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\DV_REGISTROS_INVALIDOS_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output6]"
               endId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\UN_STANDARD.Inputs[Union All Input 2]"
               name="Derived Column Output"
               startId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\DV_STANDARD_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output1]"
+              endId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\UN_STANDARD.Inputs[Union All Input 4]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output]"
+              endId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output2]"
+              endId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\DV_STANDARD_3.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 2]"
               endId="Package\DF_STG_DIM_CIIU_SUB_CLASE_1\AGG_STANDARD_2.Inputs[Aggregate Input 1]"
@@ -5126,7 +5105,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_CREATE_DATE_1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5202,7 +5181,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_DATE_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5285,7 +5264,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_INI_ESTATUS_RUNNING_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5357,7 +5336,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5381,7 +5360,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5405,7 +5384,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5429,7 +5408,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5453,7 +5432,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5477,7 +5456,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_2 1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5519,7 +5498,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE_STAGING_AREA_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6739,73 +6718,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output3]"
-          TopLeft="1313.5,577">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,78"
-              Start="0,0"
-              End="0,70.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,70.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output]"
-          TopLeft="148,466">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,75"
-              Start="0,0"
-              End="0,67.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,67.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output1]"
-          TopLeft="1316.25,246">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58"
-              Start="0,0"
-              End="0,50.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output2]"
+          Id="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output6]"
           TopLeft="1027.33333333333,428">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6839,7 +6752,51 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output6]"
+          Id="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output5]"
+          TopLeft="148,466">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,75"
+              Start="0,0"
+              End="0,67.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output4]"
+          TopLeft="1316.25,246">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output3]"
           TopLeft="936.666666666667,638">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6873,7 +6830,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output4]"
+          Id="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output2]"
+          TopLeft="1313.5,577">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,78"
+              Start="0,0"
+              End="0,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output1]"
           TopLeft="698.666666666667,534">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6907,7 +6886,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output5]"
+          Id="Package\DF_STG_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output]"
           TopLeft="594.25,319">
           <EdgeLayout.Curve>
             <mssgle:Curve

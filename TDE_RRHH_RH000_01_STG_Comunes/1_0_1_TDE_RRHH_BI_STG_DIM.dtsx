@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="8/19/2020 2:55:52 PM"
@@ -7,13 +7,13 @@
   DTS:CreatorName="TDESOL\fdiaz"
   DTS:DTSID="{72B53470-0FFE-4FD8-932C-DC8491EBBA2A}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.123"
+  DTS:LastModifiedProductVersion="15.0.2000.128"
   DTS:LocaleID="1033"
   DTS:ObjectName="1_1_1_TDE_RRHH_BI_STG_DIM"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{6DAFCE72-4514-47A0-8ECD-286C94D14E0E}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{4BF47302-82CD-4373-8518-3CD27E3DA6F5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -185,6 +185,7 @@
           DTS:refId="Package\1_1_1_TDE_RRHH_BI_STG_DIM\STG_DIM_SUB_BARRIO"
           DTS:CreationName="Microsoft.ExecutePackageTask"
           DTS:Description="Execute Package Task"
+          DTS:Disabled="True"
           DTS:DTSID="{1417A661-5910-4BC1-A898-8850A9DF0BD0}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"

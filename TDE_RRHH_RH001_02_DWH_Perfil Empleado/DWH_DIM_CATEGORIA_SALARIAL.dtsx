@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="DWH_DIM_CATEGORIA_SALARIAL"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="337"
-  DTS:VersionGUID="{BCE7B207-53E9-4CA0-BFA6-A964F79842AD}">
+  DTS:VersionBuild="338"
+  DTS:VersionGUID="{6D674F52-5B30-468C-A708-E15623F0D280}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -3271,7 +3271,7 @@ where [CD_EMPRESA] = ? and ? BETWEEN [FC_INI_VAL] and [FC_FIN_VAL]</property>
       ,[FC_FIN_VAL]
       ,[SK_EJECUCION_CREACION]
       ,[SK_EJECUCION_MODIFICACION]
-FROM [TDE_DWH_EikonBI_DES].[RH01].[DIM_CATEGORIA_SALARIAL]
+FROM [RH01].[DIM_CATEGORIA_SALARIAL]
 WHERE  ? BETWEEN FC_INI_VAL AND FC_FIN_VAL
 ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
                 <property
@@ -5245,7 +5245,7 @@ WHERE
       ,[VALOR_MEDIO_SALARIO]
       ,[VALOR_MAXIMO_SALARIO]
       ,[VALOR_MINIMO_ENTRADA_SALARIO]
-  FROM [TDE_STG_EikonBI_DES].[RH01].[STG_DIM_CATEGORIA_SALARIAL]
+  FROM [RH01].[STG_DIM_CATEGORIA_SALARIAL]
 ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
                 <property
                   dataType="System.String"
@@ -9630,74 +9630,74 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
               startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_AGG_STANDARD_2.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output13]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_SRT_TABLA_1.Inputs[Sort Input]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_TABLA_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output12]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\CS_INS_UPD_DEL_1.Inputs[Conditional Split Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_DV_FECHA_GENERICA_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output11]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_SRT_TABLA_4.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output10]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output9]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output7]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output8]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_DEL_UP_2.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output5]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_VAL_CORRECTO_1.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output4]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output3]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\LKP_SK_EMPRESA_1.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_DV_V_FC_ACTUAL_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output2]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output1]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_DV_FECHA_GENERICA_1.Inputs[Derived Column Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_DV_TRATA_NULOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output]"
               endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output6]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output11]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_DV_FECHA_GENERICA_1.Inputs[Derived Column Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_DV_TRATA_NULOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output10]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output9]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\LKP_SK_EMPRESA_1.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_DV_V_FC_ACTUAL_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output7]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_VAL_CORRECTO_1.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output8]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output5]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output4]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output3]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output2]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_SRT_TABLA_4.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output1]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\CS_INS_UPD_DEL_1.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_DV_FECHA_GENERICA_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_SRT_TABLA_1.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_TABLA_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output6]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_DEL_UP_2.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[INSERT]"
               endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_UN_IN_UP_1.Inputs[Union All Input 1]"
@@ -9730,34 +9730,34 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
               startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_MJ_VAL_CORREC_1.Outputs[Merge Join Output]" />
             <path
               refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 14]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_DTN_DIM_CATEGORIA_SALARIAL_1.Inputs[OLE DB Destination Input]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_INS_ERROR_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 15]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_VAL_CORRECTO_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 13]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Right Input]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_SRC_DWH_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 11]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 6]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_DEL_UP_2.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 1]"
               endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_DV_V_FC_ACTUAL_1.Inputs[Derived Column Input]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_STANDARD_1.Outputs[Multicast Output 1]" />
             <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 12]"
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 15]"
               endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_SCT_UPDATE_PE_DIM_CATEGORIA_SALARIAL_1.Inputs[OLE DB Command Input]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_DEL_UP_1.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 13]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 6]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_DEL_UP_2.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 11]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_VAL_CORRECTO_1.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 1]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_DTN_DIM_CATEGORIA_SALARIAL_1.Inputs[OLE DB Destination Input]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_INS_ERROR_1.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 12]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Right Input]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_SRC_DWH_1.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 2]"
               endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_SRT_TABLA_3.Inputs[Sort Input]"
@@ -9855,19 +9855,19 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
               startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_SRT_TABLA_4.Outputs[Sort Output]" />
             <path
               refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Union All Output 11]"
-              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_3.Inputs[Derived Column Input]"
-              name="Union All Output 1"
-              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_UN_DESTINO_1.Outputs[Union All Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Union All Output 12]"
               endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_SCT_SECUENCIAL_1.Inputs[Input 0]"
               name="Union All Output 1"
               startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_UN_IN_UP_1.Outputs[Union All Output 1]" />
             <path
-              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Union All Output 1]"
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Union All Output 12]"
               endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_DEL_UP_1.Inputs[Multicast Input 1]"
               name="Union All Output 1"
               startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Union All Output 1]"
+              endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_3.Inputs[Derived Column Input]"
+              name="Union All Output 1"
+              startId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_UN_DESTINO_1.Outputs[Union All Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[UPDATE SCD2]"
               endId="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_UPD_SCD2_1.Inputs[Multicast Input 1]"
@@ -10165,7 +10165,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10188,7 +10188,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10211,7 +10211,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10280,7 +10280,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_2"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10303,7 +10303,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10332,7 +10332,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_2"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -11142,17 +11142,13 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
       <GraphLayout
         Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="199,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_DV_TRATA_NULOS_1"
-          TopLeft="1113.62962962963,219.027777777778" />
-        <NodeLayout
           Size="330,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_SCT_UPDATE_PE_DIM_CATEGORIA_SALARIAL_1"
           TopLeft="1253.07407407408,614.250000000001" />
         <NodeLayout
-          Size="148,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_DEL_UP_2"
-          TopLeft="1304.62962962963,909.444444444445" />
+          Size="233,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_UPDATE_CORRECTOS_1"
+          TopLeft="856.074074074083,1044.55555555556" />
         <NodeLayout
           Size="244,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\ER_DV_REGISTROS_INVALIDOS_2"
@@ -11166,21 +11162,9 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_DEL_UP_1"
           TopLeft="1348.46296296297,533.777777777778" />
         <NodeLayout
-          Size="172,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_MJ_DEL_ERR_1"
-          TopLeft="1568.62962962963,979.444444444445" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_4"
-          TopLeft="1294.40740740741,834.000000000001" />
-        <NodeLayout
-          Size="162,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_UPD_SCD2_1"
-          TopLeft="1137.74074074074,459.111111111111" />
-        <NodeLayout
-          Size="160,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_TABLA_1"
-          TopLeft="1097.40740740741,786.444444444445" />
+          Size="199,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_DV_TRATA_NULOS_1"
+          TopLeft="1113.62962962963,219.027777777778" />
         <NodeLayout
           Size="165,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_SRT_TABLA_2"
@@ -11190,21 +11174,21 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_DV_FECHA_GENERICA_1"
           TopLeft="1099.40740740741,293.222222222223" />
         <NodeLayout
-          Size="165,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_SRT_TABLA_1"
-          TopLeft="1101.18518518519,884.333333333334" />
+          Size="160,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_TABLA_1"
+          TopLeft="1097.40740740741,786.444444444445" />
         <NodeLayout
           Size="188,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_AGG_REG_ERRO_1"
           TopLeft="740.074074074079,551.250000000001" />
         <NodeLayout
-          Size="233,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_UPDATE_CORRECTOS_1"
-          TopLeft="856.074074074083,1044.55555555556" />
+          Size="188,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_AGG_UP_ERROR_1"
+          TopLeft="1292.72486772487,761.444444444445" />
         <NodeLayout
-          Size="165,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_SRT_TABLA_3"
-          TopLeft="1299.07407407408,979.444444444445" />
+          Size="182,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_1"
+          TopLeft="358.583333333336,330.25" />
         <NodeLayout
           Size="194,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_SCT_SECUENCIAL_1"
@@ -11218,9 +11202,13 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_UN_DEL_UP_1"
           TopLeft="1341.96296296297,459.111111111111" />
         <NodeLayout
-          Size="250,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_REGISTROS_CORRECTOS_1"
-          TopLeft="846.296296296301,958.83333333333" />
+          Size="165,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_SRT_TABLA_1"
+          TopLeft="1101.18518518519,884.333333333334" />
+        <NodeLayout
+          Size="233,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\DTN_REGISTROS_INVALIDOS_3"
+          TopLeft="18.87962962963,453.805555555551" />
         <NodeLayout
           Size="218,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_AGG_REG_ACTULIZADOS"
@@ -11238,21 +11226,21 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_7"
           TopLeft="1565.85185185185,687" />
         <NodeLayout
-          Size="191,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_MJ_VAL_CORREC_1"
-          TopLeft="868.962962962967,885.333333333334" />
-        <NodeLayout
           Size="203,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_DV_V_FC_ACTUAL_1"
           TopLeft="556.962962962966,40.6111111111111" />
         <NodeLayout
-          Size="188,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_AGG_UP_ERROR_1"
-          TopLeft="1292.72486772487,761.444444444445" />
+          Size="250,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_REGISTROS_CORRECTOS_1"
+          TopLeft="846.296296296301,958.83333333333" />
         <NodeLayout
           Size="177,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\LKP_SK_EMPRESA_1"
           TopLeft="530.240740740742,89.11111111112" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_SRT_TABLA_3"
+          TopLeft="1299.07407407408,979.444444444445" />
         <NodeLayout
           Size="159,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_UN_IN_UP_1"
@@ -11261,6 +11249,10 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           Size="202,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\ER_SCT_GEN_DESCRIP_1"
           TopLeft="31.62962962963,258.472222222218" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_DEL_UP_2"
+          TopLeft="1304.62962962963,909.444444444445" />
         <NodeLayout
           Size="165,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_SRT_TABLA_4"
@@ -11278,9 +11270,9 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\DTN_RECONCILIACION_AUTOMATICA"
           TopLeft="75.76851851852,1035.19444444444" />
         <NodeLayout
-          Size="233,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\DTN_REGISTROS_INVALIDOS_3"
-          TopLeft="18.87962962963,453.805555555551" />
+          Size="182,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_4"
+          TopLeft="1294.40740740741,834.000000000001" />
         <NodeLayout
           Size="189,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_AGG_STANDARD_2"
@@ -11294,17 +11286,29 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\ER_DV_STANDARD_4"
           TopLeft="48.37962962963,142.361111111111" />
         <NodeLayout
+          Size="173,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_UN_DESTINO_1"
+          TopLeft="410.851851851854,918.777777777778" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_UPD_SCD2_1"
+          TopLeft="1137.74074074074,459.111111111111" />
+        <NodeLayout
           Size="268,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_SRC_DIM_CATEGORIA_SALARIAL_1"
           TopLeft="11.3240740740742,0.361111111111111" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_MJ_VAL_CORREC_1"
+          TopLeft="868.962962962967,885.333333333334" />
         <NodeLayout
           Size="164,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_STANDARD_1"
           TopLeft="359.083333333336,41.6111111111111" />
         <NodeLayout
-          Size="182,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_DV_STANDARD_1"
-          TopLeft="358.583333333336,330.25" />
+          Size="172,42"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_MJ_DEL_ERR_1"
+          TopLeft="1568.62962962963,979.444444444445" />
         <NodeLayout
           Size="189,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_AGG_STANDARD_1"
@@ -11313,10 +11317,6 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           Size="160,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\MC_SRC_DWH_1"
           TopLeft="950.740740740745,70.444444444444" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\RA_UN_DESTINO_1"
-          TopLeft="410.851851851854,918.777777777778" />
         <NodeLayout
           Size="176,42"
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1\PR_MJ_SRC_DWH_1"
@@ -11354,29 +11354,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Union All Output 11]"
-          TopLeft="410.851851851854,938.333333333334">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-66.222222222223,0"
-              Start="0,0"
-              End="-58.722222222223,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-58.722222222223,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Union All Output 1]"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Union All Output 12]"
           TopLeft="1423.71296296297,501.111111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11398,7 +11376,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Union All Output 12]"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Union All Output 11]"
           TopLeft="1024.32407407408,501.111111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11411,6 +11389,28 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,42.6388888888901" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Union All Output 1]"
+          TopLeft="410.851851851854,938.333333333334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-66.222222222223,0"
+              Start="0,0"
+              End="-58.722222222223,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-58.722222222223,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11548,9 +11548,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,12.5416666666645,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11918,51 +11916,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 11]"
-          TopLeft="1304.62962962963,932.277777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-720.777777777779,0"
-              Start="0,0"
-              End="-713.277777777779,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-713.277777777779,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 1]"
-          TopLeft="523.083333333336,62.1111111111111">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="33.8796296296299,0"
-              Start="0,0"
-              End="26.3796296296299,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="26.3796296296299,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 12]"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 15]"
           TopLeft="1420.26851851853,575.777777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11984,31 +11938,19 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 15]"
-          TopLeft="657.18518518519,828.444444444445">
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 14]"
+          TopLeft="523.083333333336,62.1111111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-118.583333333336,90.333333333333"
+              EndConnector="33.8796296296299,0"
               Start="0,0"
-              End="-118.583333333336,82.833333333333">
+              End="26.3796296296299,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.0838483409093" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.0838483409093"
-                    Point2="0,29.0838483409093"
-                    Point3="-4,29.0838483409093" />
-                  <mssgle:LineSegment
-                    End="-114.583333333336,29.0838483409093" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-114.583333333336,29.0838483409093"
-                    Point2="-118.583333333336,29.0838483409093"
-                    Point3="-118.583333333336,33.0838483409093" />
-                  <mssgle:LineSegment
-                    End="-118.583333333336,82.833333333333" />
+                    End="26.3796296296299,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12019,6 +11961,28 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 13]"
+          TopLeft="1304.62962962963,932.277777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-720.777777777779,0"
+              Start="0,0"
+              End="-713.277777777779,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-713.277777777779,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 12]"
           TopLeft="1056.07407407408,112.444444444444">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12052,7 +12016,41 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 14]"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 11]"
+          TopLeft="657.18518518519,828.444444444445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-118.583333333336,90.333333333333"
+              Start="0,0"
+              End="-118.583333333336,82.833333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.0838483409093" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.0838483409093"
+                    Point2="0,29.0838483409093"
+                    Point3="-4,29.0838483409093" />
+                  <mssgle:LineSegment
+                    End="-114.583333333336,29.0838483409093" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-114.583333333336,29.0838483409093"
+                    Point2="-118.583333333336,29.0838483409093"
+                    Point3="-118.583333333336,33.0838483409093" />
+                  <mssgle:LineSegment
+                    End="-118.583333333336,82.833333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Multicast Output 1]"
           TopLeft="990.574074074079,683.83333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12272,7 +12270,29 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output]"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output13]"
+          TopLeft="135.75462962963,394.583333333329">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.2222222222219"
+              Start="0,0"
+              End="0,51.7222222222219">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.7222222222219" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output12]"
           TopLeft="846.296296296301,979.83333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12306,7 +12326,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output1]"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output11]"
           TopLeft="1210.01851851852,261.027777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12328,7 +12348,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output2]"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output10]"
           TopLeft="935.074074074083,1044.55555555556">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12362,7 +12382,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output3]"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output9]"
           TopLeft="556.962962962966,66.61111111112">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12390,7 +12410,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output4]"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output8]"
           TopLeft="136.00462962963,184.361111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12412,29 +12432,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output6]"
-          TopLeft="135.75462962963,394.583333333329">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.2222222222219"
-              Start="0,0"
-              End="0,51.7222222222219">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.7222222222219" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output5]"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output7]"
           TopLeft="772.907407407412,501.250000000001">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12468,19 +12466,19 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output13]"
-          TopLeft="1180.5462962963,828.444444444445">
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output6]"
+          TopLeft="1382.01851851852,876.000000000001">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,55.888888888889"
+              EndConnector="0,33.444444444444"
               Start="0,0"
-              End="0,48.388888888889">
+              End="0,25.944444444444">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,48.388888888889" />
+                    End="0,25.944444444444" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12490,7 +12488,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output7]"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output5]"
           TopLeft="665.657407407412,373.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12524,29 +12522,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output8]"
-          TopLeft="1382.01851851852,876.000000000001">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33.444444444444"
-              Start="0,0"
-              End="0,25.944444444444">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.944444444444" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output9]"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output4]"
           TopLeft="452.842592592595,372.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12568,7 +12544,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output10]"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output3]"
           TopLeft="251.032407407409,957.88888888889">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12590,7 +12566,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output11]"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output2]"
           TopLeft="1655.21296296296,729">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12612,7 +12588,7 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output12]"
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output1]"
           TopLeft="1209.93518518519,335.222222222223">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12630,9 +12606,29 @@ ORDER BY [CD_EMPRESA],[CD_CATEGORIA_SALARIAL] ASC</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,5.69444444444395,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CATEGORIA_SALARIAL_1.Paths[Derived Column Output]"
+          TopLeft="1180.5462962963,828.444444444445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.888888888889"
+              Start="0,0"
+              End="0,48.388888888889">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.388888888889" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout

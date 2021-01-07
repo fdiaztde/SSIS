@@ -10,7 +10,7 @@
 ";Initial Catalog="+ @[$Project::Par_Catalog_DWH] +";Provider=SQLNCLI11.1;Persist Security Info=True;"</DTS:PropertyExpression>
   <DTS:ObjectData>
     <DTS:ConnectionManager
-      DTS:ConnectionString="Data Source=tdedatabase03\sql2016;User ID=tdeuser;Initial Catalog=TDE_DWH_EikonBI_DES;Provider=SQLNCLI11.1;Persist Security Info=True;">
+      DTS:ConnectionString="Data Source=TDE-LAP-OP-12;User ID=tdeuser;Initial Catalog=TDE_DWH_EikonBI_DES;Provider=SQLNCLI11.1;Persist Security Info=True;">
       <DTS:Password
         DTS:Name="Password"
         Sensitive="1"></DTS:Password>

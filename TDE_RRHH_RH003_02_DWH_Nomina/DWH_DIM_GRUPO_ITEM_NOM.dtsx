@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="DWH_DIM_GRUPO_ITEM_NOM"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="401"
-  DTS:VersionGUID="{A15EBC1F-923E-400F-B5B4-2B3035C32D65}">
+  DTS:VersionBuild="410"
+  DTS:VersionGUID="{7E94E53A-DC87-4D73-984C-EE256B5C5F82}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -2493,7 +2493,7 @@ where [CD_EMPRESA] = ? and ? between [FC_INI_VAL] and [FC_FIN_VAL]</property>
                 <input
                   refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DTN_DIM_GRUPO_ITEM_NOM_1.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
-                  errorRowDisposition="RedirectRow"
+                  errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
@@ -2532,22 +2532,6 @@ where [CD_EMPRESA] = ? and ? between [FC_INI_VAL] and [FC_FIN_VAL]</property>
                       externalMetadataColumnId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DTN_DIM_GRUPO_ITEM_NOM_1.Inputs[OLE DB Destination Input].ExternalColumns[SK_GRUPO_ITEM_NOM]"
                       lineageId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_SCT_SECUENCIAL_1.Outputs[Output 0].Columns[SKDWH]" />
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DTN_DIM_GRUPO_ITEM_NOM_1.Inputs[OLE DB Destination Input].Columns[DWH_SK_EJECUCION_CREACION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="DWH_SK_EJECUCION_CREACION"
-                      externalMetadataColumnId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DTN_DIM_GRUPO_ITEM_NOM_1.Inputs[OLE DB Destination Input].ExternalColumns[SK_EJECUCION_CREACION]"
-                      lineageId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_EJECUCION_CREACION]" />
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DTN_DIM_GRUPO_ITEM_NOM_1.Inputs[OLE DB Destination Input].Columns[DWH_SK_EJECUCION_MODIFICACION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="DWH_SK_EJECUCION_MODIFICACION"
-                      externalMetadataColumnId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DTN_DIM_GRUPO_ITEM_NOM_1.Inputs[OLE DB Destination Input].ExternalColumns[SK_EJECUCION_MODIFICACION]"
-                      lineageId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_EJECUCION_MODIFICACION]" />
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DTN_DIM_GRUPO_ITEM_NOM_1.Inputs[OLE DB Destination Input].Columns[SRC_SK_EMPRESA_LKP]"
                       cachedDataType="numeric"
                       cachedName="SRC_SK_EMPRESA_LKP"
@@ -2562,6 +2546,13 @@ where [CD_EMPRESA] = ? and ? between [FC_INI_VAL] and [FC_FIN_VAL]</property>
                       cachedName="SRC_CD_EMPRESA"
                       externalMetadataColumnId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DTN_DIM_GRUPO_ITEM_NOM_1.Inputs[OLE DB Destination Input].ExternalColumns[CD_EMPRESA]"
                       lineageId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_EMPRESA]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DTN_DIM_GRUPO_ITEM_NOM_1.Inputs[OLE DB Destination Input].Columns[EXECUTIONID]"
+                      cachedDataType="numeric"
+                      cachedName="EXECUTIONID"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DTN_DIM_GRUPO_ITEM_NOM_1.Inputs[OLE DB Destination Input].ExternalColumns[SK_EJECUCION_CREACION]"
+                      lineageId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[EXECUTIONID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2836,56 +2827,6 @@ where [CD_EMPRESA] = ? and ? between [FC_INI_VAL] and [FC_FIN_VAL]</property>
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
                           name="FriendlyExpression">DWH_FC_FIN_VAL</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DV_TRATA_NULOS_1.Inputs[Derived Column Input].Columns[DWH_SK_EJECUCION_CREACION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="DWH_SK_EJECUCION_CREACION"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_EJECUCION_CREACION]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_EJECUCION_CREACION]}) ? "-1" : #{Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_EJECUCION_CREACION]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">ISNULL(DWH_SK_EJECUCION_CREACION) ? "-1" : DWH_SK_EJECUCION_CREACION</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DV_TRATA_NULOS_1.Inputs[Derived Column Input].Columns[DWH_SK_EJECUCION_MODIFICACION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="DWH_SK_EJECUCION_MODIFICACION"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_EJECUCION_MODIFICACION]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_EJECUCION_MODIFICACION]}) ? "-1" : #{Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_EJECUCION_MODIFICACION]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">ISNULL(DWH_SK_EJECUCION_MODIFICACION) ? "-1" : DWH_SK_EJECUCION_MODIFICACION</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -9266,74 +9207,74 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
               startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_AGG_STANDARD_2.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output13]"
-              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\LKP_DIM_EMPRESA.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DV_V_FC_ACTUAL_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output12]"
-              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DV_FECHA_GENERICA_1.Inputs[Derived Column Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DV_TRATA_NULOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output11]"
-              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_DEL_UP_2.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output10]"
-              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output9]"
-              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output8]"
-              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_SRT_TABLA_1.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_TABLA_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output7]"
-              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output5]"
-              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output4]"
-              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output3]"
               endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output2]"
-              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output12]"
+              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output1]"
-              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_VAL_CORRECTO_1.Inputs[Multicast Input 1]"
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output11]"
+              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output]"
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output10]"
+              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\CS_INS_UPD_DEL_1.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DV_FECHA_GENERICA_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output9]"
               endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_SRT_TABLA_4.Inputs[Sort Input]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output6]"
-              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\CS_INS_UPD_DEL_1.Inputs[Conditional Split Input]"
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output8]"
+              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_VAL_CORRECTO_1.Inputs[Multicast Input 1]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DV_FECHA_GENERICA_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output7]"
+              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output5]"
+              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_DEL_UP_2.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output4]"
+              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DV_FECHA_GENERICA_1.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DV_TRATA_NULOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output3]"
+              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\LKP_DIM_EMPRESA.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DV_V_FC_ACTUAL_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output2]"
+              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output1]"
+              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_SRT_TABLA_1.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_TABLA_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output]"
+              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output6]"
+              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[INSERT]"
               endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_UN_IN_UP_1.Inputs[Union All Input 1]"
@@ -9366,29 +9307,29 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
               startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output]" />
             <path
               refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 14]"
-              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_VAL_CORRECTO_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 13]"
-              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DV_V_FC_ACTUAL_1.Inputs[Derived Column Input]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_STANDARD_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 11]"
               endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DTN_DIM_GRUPO_ITEM_NOM_1.Inputs[OLE DB Destination Input]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_INS_ERROR_1.Outputs[Multicast Output 1]" />
             <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 1]"
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 13]"
+              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_VAL_CORRECTO_1.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 11]"
               endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_SCT_UPDATE_CM_DIM_GRUPO_ITEM_NOM_1.Inputs[OLE DB Command Input]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_DEL_UP_1.Outputs[Multicast Output 1]" />
             <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 12]"
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 1]"
               endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_UN_DESTINO_1.Inputs[Union All Input 6]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_DEL_UP_2.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 12]"
+              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DV_V_FC_ACTUAL_1.Inputs[Derived Column Input]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_STANDARD_1.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 2]"
               endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_AGG_REG_ACTULIZADOS.Inputs[Aggregate Input 1]"
@@ -9491,19 +9432,19 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
               startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_SRT_TABLA_2.Outputs[Sort Output]" />
             <path
               refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Union All Output 11]"
-              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_DEL_UP_1.Inputs[Multicast Input 1]"
-              name="Union All Output 1"
-              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Union All Output 12]"
               endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_SCT_SECUENCIAL_1.Inputs[Input 0]"
               name="Union All Output 1"
               startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_UN_IN_UP_1.Outputs[Union All Output 1]" />
             <path
-              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Union All Output 1]"
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Union All Output 12]"
               endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_3.Inputs[Derived Column Input]"
               name="Union All Output 1"
               startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_UN_DESTINO_1.Outputs[Union All Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Union All Output 1]"
+              endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_DEL_UP_1.Inputs[Multicast Input 1]"
+              name="Union All Output 1"
+              startId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[UPDATE SCD2]"
               endId="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_UPD_SCD2_1.Inputs[Multicast Input 1]"
@@ -9824,7 +9765,7 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9847,7 +9788,7 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9870,7 +9811,7 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_2"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9968,7 +9909,7 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_2"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10794,37 +10735,57 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_DEL_UP_2"
           TopLeft="1259.91666666667,1121.19444444445" />
         <NodeLayout
-          Size="176,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_MJ_SRC_DWH_1"
-          TopLeft="1069,224.944444444444" />
+          Size="244,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\ER_DV_REGISTROS_INVALIDOS_2"
+          TopLeft="46,345" />
         <NodeLayout
-          Size="182,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_5"
-          TopLeft="661.944444444449,550.750000000001" />
+          Size="188,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_AGG_UP_ERROR_1"
+          TopLeft="1271.01190476191,814.194444444445" />
         <NodeLayout
           Size="148,42"
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_DEL_UP_1"
           TopLeft="1291.50000000001,626.277777777778" />
         <NodeLayout
+          Size="165,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_SRT_TABLA_3"
+          TopLeft="1433.36111111112,1119.19444444445" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_SRT_TABLA_4"
+          TopLeft="1530.11111111111,920.750000000001" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_MJ_SRC_DWH_1"
+          TopLeft="1069,224.944444444444" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DV_TRATA_NULOS_1"
+          TopLeft="1064.66666666667,310.527777777778" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_5"
+          TopLeft="661.944444444449,550.750000000001" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_1"
+          TopLeft="304.120370370373,422.75" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_3"
+          TopLeft="63.666666666668,1050.38888888889" />
+        <NodeLayout
           Size="252,42"
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_SRC_DIM_GRUPO_ITEM_NOM_1"
           TopLeft="70.6444444444443,23.111111111111" />
-        <NodeLayout
-          Size="165,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_SRT_TABLA_1"
-          TopLeft="1043.22222222223,976.833333333334" />
         <NodeLayout
           Size="189,42"
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_AGG_STANDARD_2"
           TopLeft="498.736111111116,309.527777777778" />
         <NodeLayout
-          Size="166,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_UN_DEL_UP_1"
-          TopLeft="1289,551" />
-        <NodeLayout
-          Size="257,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DWH_DIM_GRUPO_ITEM_NOM_1"
-          TopLeft="752.111111111116,19" />
+          Size="165,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_SRT_TABLA_1"
+          TopLeft="1043.22222222223,976.833333333334" />
         <NodeLayout
           Size="173,42"
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\LKP_DIM_EMPRESA"
@@ -10834,61 +10795,61 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DV_FECHA_GENERICA_1"
           TopLeft="1050.44444444445,384.722222222223" />
         <NodeLayout
+          Size="182,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_4"
+          TopLeft="1272.69444444445,895.750000000001" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_7"
+          TopLeft="1524.88888888889,778.5" />
+        <NodeLayout
           Size="317,42"
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_SCT_UPDATE_CM_DIM_GRUPO_ITEM_NOM_1"
           TopLeft="1206.11111111112,717.750000000001" />
-        <NodeLayout
-          Size="189,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_AGG_STANDARD_1"
-          TopLeft="300.620370370373,309.527777777778" />
         <NodeLayout
           Size="233,42"
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\DTN_REGISTROS_INVALIDOS_3"
           TopLeft="44.1444444444443,455.75" />
         <NodeLayout
-          Size="182,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_1"
-          TopLeft="304.120370370373,422.75" />
-        <NodeLayout
-          Size="233,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_UPDATE_CORRECTOS_1"
-          TopLeft="296.11111111112,1190.05555555556" />
-        <NodeLayout
-          Size="191,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_MJ_VAL_CORREC_1"
-          TopLeft="816.000000000004,976.833333333334" />
-        <NodeLayout
-          Size="244,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\ER_DV_REGISTROS_INVALIDOS_2"
-          TopLeft="46,345" />
-        <NodeLayout
-          Size="193,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_AGG_REG_TOTAL_1"
-          TopLeft="1020.8888888889,813.194444444445" />
-        <NodeLayout
-          Size="194,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_SCT_SECUENCIAL_1"
-          TopLeft="883,644" />
-        <NodeLayout
-          Size="203,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DV_V_FC_ACTUAL_1"
-          TopLeft="689,262.111111111111" />
-        <NodeLayout
-          Size="202,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\ER_SCT_GEN_DESCRIP_1"
-          TopLeft="59.6444444444443,249" />
+          Size="189,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_AGG_STANDARD_1"
+          TopLeft="300.620370370373,309.527777777778" />
         <NodeLayout
           Size="165,42"
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_SRT_TABLA_2"
           TopLeft="556.222222222227,976.833333333334" />
         <NodeLayout
-          Size="165,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_SRT_TABLA_3"
-          TopLeft="1433.36111111112,1119.19444444445" />
+          Size="218,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_AGG_REG_ACTULIZADOS"
+          TopLeft="1505.16666666667,625.277777777778" />
         <NodeLayout
-          Size="199,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DV_TRATA_NULOS_1"
-          TopLeft="1064.66666666667,310.527777777778" />
+          Size="233,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_UPDATE_CORRECTOS_1"
+          TopLeft="296.11111111112,1190.05555555556" />
+        <NodeLayout
+          Size="257,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DWH_DIM_GRUPO_ITEM_NOM_1"
+          TopLeft="752.111111111116,19" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_AGG_REG_TOTAL_1"
+          TopLeft="1020.8888888889,813.194444444445" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_MJ_VAL_CORREC_1"
+          TopLeft="816.000000000004,976.833333333334" />
+        <NodeLayout
+          Size="202,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\ER_SCT_GEN_DESCRIP_1"
+          TopLeft="59.6444444444443,249" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DV_V_FC_ACTUAL_1"
+          TopLeft="689,262.111111111111" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_TABLA_1"
+          TopLeft="1044.19444444445,895.944444444445" />
         <NodeLayout
           Size="254,42"
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DTN_DIM_GRUPO_ITEM_NOM_1"
@@ -10899,10 +10860,6 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
           TopLeft="22.8055555555569,1190.05555555556" />
         <NodeLayout
           Size="188,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_AGG_REG_ERRO_1"
-          TopLeft="694.111111111116,642.750000000001" />
-        <NodeLayout
-          Size="188,42"
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_VAL_CORRECTO_1"
           TopLeft="510.222222222227,812.194444444445" />
         <NodeLayout
@@ -10910,57 +10867,45 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\ER_DV_STANDARD_4"
           TopLeft="69.6444444444443,132.05555555556" />
         <NodeLayout
-          Size="182,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_4"
-          TopLeft="1272.69444444445,895.750000000001" />
+          Size="194,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_SCT_SECUENCIAL_1"
+          TopLeft="883,644" />
         <NodeLayout
           Size="162,42"
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_UPD_SCD2_1"
           TopLeft="1088.77777777778,550" />
         <NodeLayout
-          Size="172,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_MJ_DEL_ERR_1"
-          TopLeft="1503.66666666667,1197.94444444445" />
+          Size="182,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_8"
+          TopLeft="502.236111111116,422.75" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_STANDARD_1"
+          TopLeft="306.120370370373,93.111111111111" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_AGG_REG_ERRO_1"
+          TopLeft="694.111111111116,642.750000000001" />
         <NodeLayout
           Size="250,42"
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_REGISTROS_CORRECTOS_1"
           TopLeft="793.333333333338,1050.33333333333" />
         <NodeLayout
-          Size="218,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_AGG_REG_ACTULIZADOS"
-          TopLeft="1505.16666666667,625.277777777778" />
+          Size="160,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_SRC_DWH_1"
+          TopLeft="801.777777777782,99.944444444444" />
         <NodeLayout
           Size="159,42"
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_UN_IN_UP_1"
           TopLeft="899,550" />
         <NodeLayout
-          Size="164,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_STANDARD_1"
-          TopLeft="313.120370370373,131.111111111111" />
+          Size="166,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_UN_DEL_UP_1"
+          TopLeft="1289,551" />
         <NodeLayout
           Size="173,42"
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_UN_DESTINO_1"
           TopLeft="348.888888888891,1049.27777777778" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_8"
-          TopLeft="502.236111111116,422.75" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_7"
-          TopLeft="1524.88888888889,778.5" />
-        <NodeLayout
-          Size="160,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_SRC_DWH_1"
-          TopLeft="801.777777777782,99.944444444444" />
-        <NodeLayout
-          Size="160,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_TABLA_1"
-          TopLeft="1044.19444444445,895.944444444445" />
-        <NodeLayout
-          Size="165,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_SRT_TABLA_4"
-          TopLeft="1530.11111111111,920.750000000001" />
         <NodeLayout
           Size="167,42"
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\MC_INS_ERROR_1"
@@ -10970,37 +10915,11 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\CS_INS_UPD_DEL_1"
           TopLeft="1076.00000000001,461.611111111111" />
         <NodeLayout
-          Size="188,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_AGG_UP_ERROR_1"
-          TopLeft="1271.01190476191,814.194444444445" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_DV_STANDARD_3"
-          TopLeft="63.666666666668,1050.38888888889" />
+          Size="172,42"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\RA_MJ_DEL_ERR_1"
+          TopLeft="1503.66666666667,1197.94444444445" />
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output5]"
-          TopLeft="164.322222222222,387">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,68.75"
-              Start="0,0"
-              End="0,61.25">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,61.25" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output4]"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output12]"
           TopLeft="410.250000000005,1190.05555555556">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11022,19 +10941,19 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output3]"
-          TopLeft="793.333333333338,1070.80555555556">
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output11]"
+          TopLeft="164.322222222222,387">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-271.444444444447,0"
+              EndConnector="0,68.75"
               Start="0,0"
-              End="-263.944444444447,0">
+              End="0,61.25">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-263.944444444447,0" />
+                    End="0,61.25" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11044,19 +10963,19 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output2]"
-          TopLeft="153.986111111112,1092.38888888889">
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output10]"
+          TopLeft="1160.97222222223,426.722222222223">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,97.6666666666699"
+              EndConnector="0,34.8888888888879"
               Start="0,0"
-              End="0,90.1666666666699">
+              End="0,27.3888888888879">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,90.1666666666699" />
+                    End="0,27.3888888888879" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11066,7 +10985,29 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output1]"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output9]"
+          TopLeft="1614.25,820.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,100.250000000001"
+              Start="0,0"
+              End="0,92.750000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,92.750000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output8]"
           TopLeft="723.944444444449,592.750000000001">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11100,19 +11041,197 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output]"
-          TopLeft="1614.25,820.5">
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output7]"
+          TopLeft="153.986111111112,1092.38888888889">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,100.250000000001"
+              EndConnector="0,97.6666666666699"
               Start="0,0"
-              End="0,92.750000000001">
+              End="0,90.1666666666699">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,92.750000000001" />
+                    End="0,90.1666666666699" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output6]"
+          TopLeft="394.629629629632,464.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,584.52777777778"
+              Start="0,0"
+              End="0,577.02777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,577.02777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output5]"
+          TopLeft="1360.47222222223,937.750000000001">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,183.444444444449"
+              Start="0,0"
+              End="0,175.944444444449">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,175.944444444449" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output4]"
+          TopLeft="1161.05555555556,352.527777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.194444444445"
+              Start="0,0"
+              End="0,24.694444444445">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.694444444445" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output3]"
+          TopLeft="790.5,304.111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="72.5,44.888888888889"
+              Start="0,0"
+              End="72.5,37.388888888889">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.6865215731196" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.6865215731196"
+                    Point2="0,26.6865215731196"
+                    Point3="4,26.6865215731196" />
+                  <mssgle:LineSegment
+                    End="68.5,26.6865215731196" />
+                  <mssgle:CubicBezierSegment
+                    Point1="68.5,26.6865215731196"
+                    Point2="72.5,26.6865215731196"
+                    Point3="72.5,30.6865215731196" />
+                  <mssgle:LineSegment
+                    End="72.5,37.388888888889" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output2]"
+          TopLeft="593.236111111116,464.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-157.847222222225,584.52777777778"
+              Start="0,0"
+              End="-157.847222222225,577.02777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,288.26388888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,288.26388888889"
+                    Point2="0,292.26388888889"
+                    Point3="-4,292.26388888889" />
+                  <mssgle:LineSegment
+                    End="-153.847222222225,292.26388888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-153.847222222225,292.26388888889"
+                    Point2="-157.847222222225,292.26388888889"
+                    Point3="-157.847222222225,296.26388888889" />
+                  <mssgle:LineSegment
+                    End="-157.847222222225,577.02777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output1]"
+          TopLeft="1124.95833333334,937.944444444445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.888888888889"
+              Start="0,0"
+              End="0,31.388888888889">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.388888888889" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output]"
+          TopLeft="160.644444444444,174.05555555556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74.94444444444"
+              Start="0,0"
+              End="0,67.44444444444">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.44444444444" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11279,6 +11398,28 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Union All Output 12]"
+          TopLeft="348.888888888891,1070.83333333334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-103.222222222223,0"
+              Start="0,0"
+              End="-95.722222222223,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-95.722222222223,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Union All Output 11]"
           TopLeft="979.25,592">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11300,7 +11441,7 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Union All Output 11]"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Union All Output 1]"
           TopLeft="1368.75000000001,593">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11313,28 +11454,6 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,25.7777777777781" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Union All Output 1]"
-          TopLeft="348.888888888891,1070.83333333334">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-103.222222222223,0"
-              Start="0,0"
-              End="-95.722222222223,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-95.722222222223,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11515,26 +11634,26 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="157.809259259262,66"
+              EndConnector="150.809259259262,28"
               Start="0,0"
-              End="157.809259259262,58.5">
+              End="150.809259259262,20.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.6498422712934" />
+                    End="0,7.30599369085174" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.6498422712934"
-                    Point2="0,26.6498422712934"
-                    Point3="4,26.6498422712934" />
+                    Point1="0,7.30599369085174"
+                    Point2="0,11.3059936908517"
+                    Point3="4,11.3059936908517" />
                   <mssgle:LineSegment
-                    End="153.809259259262,26.6498422712934" />
+                    End="146.809259259262,11.3059936908517" />
                   <mssgle:CubicBezierSegment
-                    Point1="153.809259259262,26.6498422712934"
-                    Point2="157.809259259262,26.6498422712934"
-                    Point3="157.809259259262,30.6498422712934" />
+                    Point1="146.809259259262,11.3059936908517"
+                    Point2="150.809259259262,11.3059936908517"
+                    Point3="150.809259259262,15.3059936908517" />
                   <mssgle:LineSegment
-                    End="157.809259259262,58.5" />
+                    End="150.809259259262,20.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11741,18 +11860,30 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 24]"
-          TopLeft="395.120370370373,173.111111111111">
+          TopLeft="362.120370370373,135.111111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,136.416666666667"
+              EndConnector="33,174.416666666667"
               Start="0,0"
-              End="0,128.916666666667">
+              End="33,166.916666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,128.916666666667" />
+                    End="0,66.7777777777779" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,66.7777777777779"
+                    Point2="0,70.7777777777779"
+                    Point3="4,70.7777777777779" />
+                  <mssgle:LineSegment
+                    End="29,70.7777777777779" />
+                  <mssgle:CubicBezierSegment
+                    Point1="29,70.7777777777779"
+                    Point2="33,70.7777777777779"
+                    Point3="33,74.7777777777779" />
+                  <mssgle:LineSegment
+                    End="33,166.916666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11863,6 +11994,42 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 14]"
+          TopLeft="957.111111111116,775.33333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-89.75,37.8611111111151"
+              Start="0,0"
+              End="-89.75,30.3611111111151">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.0066978733261" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.0066978733261"
+                    Point2="0,19.0066978733261"
+                    Point3="-4,19.0066978733261" />
+                  <mssgle:LineSegment
+                    End="-85.75,19.0066978733261" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-85.75,19.0066978733261"
+                    Point2="-89.75,19.0066978733261"
+                    Point3="-89.75,23.0066978733261" />
+                  <mssgle:LineSegment
+                    End="-89.75,30.3611111111151" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-52.875,24.0066978733261,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 13]"
           TopLeft="574.222222222227,854.194444444445">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11896,31 +12063,31 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 13]"
-          TopLeft="421.120370370373,173.111111111111">
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 12]"
+          TopLeft="414.120370370373,135.111111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="369.379629629627,89"
+              EndConnector="376.379629629627,127"
               Start="0,0"
-              End="369.379629629627,81.5">
+              End="376.379629629627,119.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.1159420289855" />
+                    End="0,47.536231884058" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,32.1159420289855"
-                    Point2="0,36.1159420289855"
-                    Point3="4,36.1159420289855" />
+                    Point1="0,47.536231884058"
+                    Point2="0,51.536231884058"
+                    Point3="4,51.536231884058" />
                   <mssgle:LineSegment
-                    End="365.379629629627,36.1159420289855" />
+                    End="372.379629629627,51.536231884058" />
                   <mssgle:CubicBezierSegment
-                    Point1="365.379629629627,36.1159420289855"
-                    Point2="369.379629629627,36.1159420289855"
-                    Point3="369.379629629627,40.1159420289855" />
+                    Point1="372.379629629627,51.536231884058"
+                    Point2="376.379629629627,51.536231884058"
+                    Point3="376.379629629627,55.536231884058" />
                   <mssgle:LineSegment
-                    End="369.379629629627,81.5" />
+                    End="376.379629629627,119.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11930,7 +12097,29 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 12]"
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 11]"
+          TopLeft="1365.05555555556,668.277777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.472222222223"
+              Start="0,0"
+              End="0,41.972222222223">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.972222222223" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 1]"
           TopLeft="1310.58333333334,1121.19444444445">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11955,62 +12144,6 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
                     Point3="-847.694444444446,-18.9868297391365" />
                   <mssgle:LineSegment
                     End="-847.694444444446,-22.4166666666699" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 11]"
-          TopLeft="957.111111111116,775.33333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-89.75,37.8611111111151"
-              Start="0,0"
-              End="-89.75,30.3611111111151">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.0066978733261" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.0066978733261"
-                    Point2="0,19.0066978733261"
-                    Point3="-4,19.0066978733261" />
-                  <mssgle:LineSegment
-                    End="-85.75,19.0066978733261" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-85.75,19.0066978733261"
-                    Point2="-89.75,19.0066978733261"
-                    Point3="-89.75,23.0066978733261" />
-                  <mssgle:LineSegment
-                    End="-89.75,30.3611111111151" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Multicast Output 1]"
-          TopLeft="1365.05555555556,668.277777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,49.472222222223"
-              Start="0,0"
-              End="0,41.972222222223">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.972222222223" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12195,196 +12328,18 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output13]"
-          TopLeft="790.5,304.111111111111">
+          TopLeft="793.333333333338,1070.80555555556">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="72.5,44.888888888889"
+              EndConnector="-271.444444444447,0"
               Start="0,0"
-              End="72.5,37.388888888889">
+              End="-263.944444444447,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.6865215731196" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.6865215731196"
-                    Point2="0,26.6865215731196"
-                    Point3="4,26.6865215731196" />
-                  <mssgle:LineSegment
-                    End="68.5,26.6865215731196" />
-                  <mssgle:CubicBezierSegment
-                    Point1="68.5,26.6865215731196"
-                    Point2="72.5,26.6865215731196"
-                    Point3="72.5,30.6865215731196" />
-                  <mssgle:LineSegment
-                    End="72.5,37.388888888889" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output12]"
-          TopLeft="1161.05555555556,352.527777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32.194444444445"
-              Start="0,0"
-              End="0,24.694444444445">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.694444444445" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output11]"
-          TopLeft="1360.47222222223,937.750000000001">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,183.444444444449"
-              Start="0,0"
-              End="0,175.944444444449">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,175.944444444449" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output10]"
-          TopLeft="394.629629629632,464.75">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,584.52777777778"
-              Start="0,0"
-              End="0,577.02777777778">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,577.02777777778" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output9]"
-          TopLeft="160.644444444444,174.05555555556">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,74.94444444444"
-              Start="0,0"
-              End="0,67.44444444444">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,67.44444444444" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output8]"
-          TopLeft="1124.95833333334,937.944444444445">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38.888888888889"
-              Start="0,0"
-              End="0,31.388888888889">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.388888888889" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output7]"
-          TopLeft="593.236111111116,464.75">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-157.847222222225,584.52777777778"
-              Start="0,0"
-              End="-157.847222222225,577.02777777778">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,288.26388888889" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,288.26388888889"
-                    Point2="0,292.26388888889"
-                    Point3="-4,292.26388888889" />
-                  <mssgle:LineSegment
-                    End="-153.847222222225,292.26388888889" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-153.847222222225,292.26388888889"
-                    Point2="-157.847222222225,292.26388888889"
-                    Point3="-157.847222222225,296.26388888889" />
-                  <mssgle:LineSegment
-                    End="-157.847222222225,577.02777777778" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1.Paths[Derived Column Output6]"
-          TopLeft="1160.97222222223,426.722222222223">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34.8888888888879"
-              Start="0,0"
-              End="0,27.3888888888879">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.3888888888879" />
+                    End="-263.944444444447,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12410,19 +12365,6 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DWH_DIM_GRUPO_ITEM_NOM_1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\LKP_DIM_EMPRESA">
     <Properties>
       <Property>
@@ -12433,7 +12375,7 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q3:int">0</Value>
+          type="q3:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -12447,6 +12389,19 @@ ORDER BY [CD_GRUPO_ITEM_NOM],[CD_EMPRESA] ASC</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\DTN_REGISTROS_INVALIDOS_3">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_DWH_DIM_GRUPO_ITEM_NOM_1\PR_DWH_DIM_GRUPO_ITEM_NOM_1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

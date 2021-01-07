@@ -7,13 +7,13 @@
   DTS:CreatorName="TDESOL\jjimenez"
   DTS:DTSID="{38E73535-9950-46C3-931F-CAD6839BA2C7}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.123"
+  DTS:LastModifiedProductVersion="15.0.2000.128"
   DTS:LocaleID="1033"
   DTS:ObjectName="1_0_0_TDE_RRHH_BI_STG"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="368"
-  DTS:VersionGUID="{EA176445-940A-4743-A2A7-B01618CD4E18}">
+  DTS:VersionBuild="371"
+  DTS:VersionGUID="{9968F5B9-D6EF-4A64-A723-46A3AB06A7B8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>

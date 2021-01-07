@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="DWH_DIM_CIIU_SUB_CLASE"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="372"
-  DTS:VersionGUID="{1F324034-9E7F-4715-9206-7C1D7F4BE782}">
+  DTS:VersionBuild="374"
+  DTS:VersionGUID="{507948B1-67B3-46F2-9361-DA1DD53BF61F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -2337,21 +2337,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       externalMetadataColumnId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].ExternalColumns[DESC_CIIU_SUB_CL]"
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_DESC_CIIU_SUB_CL]" />
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].Columns[SRC_SK_CIIU_SECCION_LKP]"
-                      cachedDataType="numeric"
-                      cachedName="SRC_SK_CIIU_SECCION_LKP"
-                      cachedPrecision="18"
-                      externalMetadataColumnId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].ExternalColumns[SK_CIIU_SECCION]"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_SECCION_LKP]" />
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].Columns[SRC_CD_CIIU_SECCION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="SRC_CD_CIIU_SECCION"
-                      externalMetadataColumnId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].ExternalColumns[CD_CIIU_SECCION]"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SECCION]" />
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].Columns[SRC_SK_CIIU_GRP_LKP]"
                       cachedDataType="numeric"
                       cachedName="SRC_SK_CIIU_GRP_LKP"
@@ -2400,6 +2385,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedPrecision="18"
                       externalMetadataColumnId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].ExternalColumns[SK_EJECUCION_CREACION]"
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[EXECUTIONID]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].Columns[SRC_SK_CIIU_SESION_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_SK_CIIU_SESION_LKP"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].ExternalColumns[SK_CIIU_SESION]"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_SESION_LKP]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].Columns[SRC_CD_CIIU_SESION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="SRC_CD_CIIU_SESION"
+                      externalMetadataColumnId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].ExternalColumns[CD_CIIU_SESION]"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SESION]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2452,17 +2452,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       length="150"
                       name="DESC_CIIU_SUB_CL" />
                     <externalMetadataColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].ExternalColumns[SK_CIIU_SECCION]"
-                      dataType="numeric"
-                      name="SK_CIIU_SECCION"
-                      precision="18" />
-                    <externalMetadataColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].ExternalColumns[CD_CIIU_SECCION]"
-                      codePage="1252"
-                      dataType="str"
-                      length="20"
-                      name="CD_CIIU_SECCION" />
-                    <externalMetadataColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].ExternalColumns[SK_CIIU_GRP]"
                       dataType="numeric"
                       name="SK_CIIU_GRP"
@@ -2484,6 +2473,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       dataType="str"
                       length="20"
                       name="CD_CIIU_DIVISION" />
+                    <externalMetadataColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].ExternalColumns[SK_CIIU_SESION]"
+                      dataType="numeric"
+                      name="SK_CIIU_SESION"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input].ExternalColumns[CD_CIIU_SESION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CD_CIIU_SESION" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2866,31 +2866,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_TRATA_NULOS_1.Inputs[Derived Column Input].Columns[SRC_CD_CIIU_SECCION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="SRC_CD_CIIU_SECCION"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SECCION]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SECCION]}) ? "-1" : #{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SECCION]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">ISNULL(SRC_CD_CIIU_SECCION) ? "-1" : SRC_CD_CIIU_SECCION</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_TRATA_NULOS_1.Inputs[Derived Column Input].Columns[SRC_CD_CIIU_DIVISION]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -2938,55 +2913,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
                           name="FriendlyExpression">ISNULL(SRC_CD_CIIU_GRP) ? "-1" : SRC_CD_CIIU_GRP</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_TRATA_NULOS_1.Inputs[Derived Column Input].Columns[DWH_SK_CIIU_SECCION]"
-                      cachedDataType="numeric"
-                      cachedName="DWH_SK_CIIU_SECCION"
-                      cachedPrecision="18"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SECCION]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SECCION]}) ? -1 : #{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SECCION]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">ISNULL(DWH_SK_CIIU_SECCION) ? -1 : DWH_SK_CIIU_SECCION</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_TRATA_NULOS_1.Inputs[Derived Column Input].Columns[DWH_CD_CIIU_SECCION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="DWH_CD_CIIU_SECCION"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SECCION]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SECCION]}) ? "-1" : #{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SECCION]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">ISNULL(DWH_CD_CIIU_SECCION) ? "-1" : DWH_CD_CIIU_SECCION</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3112,30 +3038,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_TRATA_NULOS_1.Inputs[Derived Column Input].Columns[SRC_SK_CIIU_SECCION_LKP]"
-                      cachedDataType="numeric"
-                      cachedName="SRC_SK_CIIU_SECCION_LKP"
-                      cachedPrecision="18"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_SECCION_LKP]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_SECCION_LKP]}) ? -1 : #{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_SECCION_LKP]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">ISNULL(SRC_SK_CIIU_SECCION_LKP) ? -1 : SRC_SK_CIIU_SECCION_LKP</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_TRATA_NULOS_1.Inputs[Derived Column Input].Columns[SRC_SK_CIIU_DIVISION_LKP]"
                       cachedDataType="numeric"
                       cachedName="SRC_SK_CIIU_DIVISION_LKP"
@@ -3157,6 +3059,104 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
                           name="FriendlyExpression">ISNULL(SRC_SK_CIIU_DIVISION_LKP) ? -1 : SRC_SK_CIIU_DIVISION_LKP</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_TRATA_NULOS_1.Inputs[Derived Column Input].Columns[SRC_SK_CIIU_SESION_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_SK_CIIU_SESION_LKP"
+                      cachedPrecision="18"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_SESION_LKP]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_SESION_LKP]}) ? -1 : #{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_SESION_LKP]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(SRC_SK_CIIU_SESION_LKP) ? -1 : SRC_SK_CIIU_SESION_LKP</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_TRATA_NULOS_1.Inputs[Derived Column Input].Columns[SRC_CD_CIIU_SESION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="SRC_CD_CIIU_SESION"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SESION]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SESION]}) ? "-1" : #{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SESION]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(SRC_CD_CIIU_SESION) ? "-1" : SRC_CD_CIIU_SESION</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_TRATA_NULOS_1.Inputs[Derived Column Input].Columns[DWH_SK_CIIU_SESION]"
+                      cachedDataType="numeric"
+                      cachedName="DWH_SK_CIIU_SESION"
+                      cachedPrecision="18"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SESION]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SESION]}) ? -1 : #{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SESION]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(DWH_SK_CIIU_SESION) ? -1 : DWH_SK_CIIU_SESION</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_TRATA_NULOS_1.Inputs[Derived Column Input].Columns[DWH_CD_CIIU_SESION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="DWH_CD_CIIU_SESION"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SESION]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SESION]}) ? "-1" : #{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SESION]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(DWH_CD_CIIU_SESION) ? "-1" : DWH_CD_CIIU_SESION</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -3325,8 +3325,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       ,[DESC_CIIU_SUB_CL]
       ,[SK_CIIU_CL]
       ,[CD_CIIU_CL]
-      ,[SK_CIIU_SECCION]
-      ,[CD_CIIU_SECCION]
+      ,[SK_CIIU_SESION]
+      ,[CD_CIIU_SESION]
       ,[SK_CIIU_GRP]
       ,[CD_CIIU_GRP]
       ,[SK_CIIU_DIVISION]
@@ -3467,27 +3467,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       name="DESC_CIIU_SUB_CL"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[SK_CIIU_SECCION]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[SK_CIIU_SECCION]"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[SK_CIIU_SECCION]"
-                      name="SK_CIIU_SECCION"
-                      precision="18"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_SECCION]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_SECCION]"
-                      length="20"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_SECCION]"
-                      name="CD_CIIU_SECCION"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[SK_CIIU_GRP]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
@@ -3528,6 +3507,27 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       length="20"
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_DIVISION]"
                       name="CD_CIIU_DIVISION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[SK_CIIU_SESION]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[SK_CIIU_SESION]"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[SK_CIIU_SESION]"
+                      name="SK_CIIU_SESION"
+                      precision="18"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_SESION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_SESION]"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_SESION]"
+                      name="CD_CIIU_SESION"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -3581,17 +3581,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       length="150"
                       name="DESC_CIIU_SUB_CL" />
                     <externalMetadataColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[SK_CIIU_SECCION]"
-                      dataType="numeric"
-                      name="SK_CIIU_SECCION"
-                      precision="18" />
-                    <externalMetadataColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_SECCION]"
-                      codePage="1252"
-                      dataType="str"
-                      length="20"
-                      name="CD_CIIU_SECCION" />
-                    <externalMetadataColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[SK_CIIU_GRP]"
                       dataType="numeric"
                       name="SK_CIIU_GRP"
@@ -3613,6 +3602,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       dataType="str"
                       length="20"
                       name="CD_CIIU_DIVISION" />
+                    <externalMetadataColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[SK_CIIU_SESION]"
+                      dataType="numeric"
+                      name="SK_CIIU_SESION"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_SESION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CD_CIIU_SESION" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -3654,18 +3654,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_CL]"
                       name="CD_CIIU_CL" />
                     <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[SK_CIIU_SECCION]"
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[SK_CIIU_SESION]"
                       dataType="numeric"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[SK_CIIU_SECCION]"
-                      name="SK_CIIU_SECCION"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[SK_CIIU_SESION]"
+                      name="SK_CIIU_SESION"
                       precision="18" />
                     <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SECCION]"
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SESION]"
                       codePage="1252"
                       dataType="str"
                       length="20"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SECCION]"
-                      name="CD_CIIU_SECCION" />
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SESION]"
+                      name="CD_CIIU_SESION" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Error Output].Columns[SK_CIIU_GRP]"
                       dataType="numeric"
@@ -3946,7 +3946,7 @@ where CD_CIIU_CL  = ? and  ? Between FC_INI_VAL and FC_FIN_VAL</property>
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from RH01.DIM_CIIU_DIVISION
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from RH01.DIM_CIIU_DIVISION 
 where CD_CIIU_DIVISION  = ? and  ? Between FC_INI_VAL and FC_FIN_VAL</property>
                 <property
                   dataType="System.Int32"
@@ -3978,7 +3978,7 @@ where CD_CIIU_DIVISION  = ? and  ? Between FC_INI_VAL and FC_FIN_VAL</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="SK_CIIU_DIVISION" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CD_CIIU_DIVISION" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DESC_CIIU_DIVISION" dataType="DT_STR" length="150" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SK_CIIU_SECCION" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CD_CIIU_SECCION" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FC_INI_VAL" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FC_FIN_VAL" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SK_EJECUCION_CREACION" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SK_EJECUCION_MODIFICACION" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="SK_CIIU_DIVISION" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CD_CIIU_DIVISION" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DESC_CIIU_DIVISION" dataType="DT_STR" length="150" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SK_CIIU_SESION" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CD_CIIU_SESION" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FC_INI_VAL" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FC_FIN_VAL" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SK_EJECUCION_CREACION" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SK_EJECUCION_MODIFICACION" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -4054,21 +4054,6 @@ where CD_CIIU_DIVISION  = ? and  ? Between FC_INI_VAL and FC_FIN_VAL</property>
                   synchronousInputId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_LKP_CIIU_DIVISION.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_LKP_CIIU_DIVISION.Outputs[Lookup Match Output].Columns[SK_CIIU_SECCION_LKP]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_LKP_CIIU_DIVISION.Outputs[Lookup Match Output].Columns[SK_CIIU_SECCION_LKP]"
-                      name="SK_CIIU_SECCION_LKP"
-                      precision="18"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">SK_CIIU_SECCION</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_LKP_CIIU_DIVISION.Outputs[Lookup Match Output].Columns[SK_CIIU_DIVISION_LKP]"
                       dataType="numeric"
                       errorOrTruncationOperation="Copy Column"
@@ -4081,6 +4066,21 @@ where CD_CIIU_DIVISION  = ? and  ? Between FC_INI_VAL and FC_FIN_VAL</property>
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
                           name="CopyFromReferenceColumn">SK_CIIU_DIVISION</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_LKP_CIIU_DIVISION.Outputs[Lookup Match Output].Columns[SK_CIIU_SESION_LKP]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_LKP_CIIU_DIVISION.Outputs[Lookup Match Output].Columns[SK_CIIU_SESION_LKP]"
+                      name="SK_CIIU_SESION_LKP"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">SK_CIIU_SESION</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -4179,13 +4179,6 @@ where CD_CIIU_DIVISION  = ? and  ? Between FC_INI_VAL and FC_FIN_VAL</property>
                       cachedPrecision="18"
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_LKP_CIIU_CLASE.Outputs[Lookup Match Output].Columns[SK_CIIU_CL_LKP]" />
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[CD_CIIU_SECCION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="CD_CIIU_SECCION"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Output].Columns[CD_CIIU_SECCION]" />
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[CD_CIIU_DIVISION]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -4206,17 +4199,24 @@ where CD_CIIU_DIVISION  = ? and  ? Between FC_INI_VAL and FC_FIN_VAL</property>
                       cachedPrecision="18"
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_LKP_CIIU_CLASE.Outputs[Lookup Match Output].Columns[SK_CIIU_GRP_LKP]" />
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[SK_CIIU_SECCION_LKP]"
-                      cachedDataType="numeric"
-                      cachedName="SK_CIIU_SECCION_LKP"
-                      cachedPrecision="18"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_LKP_CIIU_DIVISION.Outputs[Lookup Match Output].Columns[SK_CIIU_SECCION_LKP]" />
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[SK_CIIU_DIVISION_LKP]"
                       cachedDataType="numeric"
                       cachedName="SK_CIIU_DIVISION_LKP"
                       cachedPrecision="18"
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_LKP_CIIU_DIVISION.Outputs[Lookup Match Output].Columns[SK_CIIU_DIVISION_LKP]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[SK_CIIU_SESION_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SK_CIIU_SESION_LKP"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_LKP_CIIU_DIVISION.Outputs[Lookup Match Output].Columns[SK_CIIU_SESION_LKP]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[CD_CIIU_SESION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CD_CIIU_SESION"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Output].Columns[CD_CIIU_SESION]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4272,19 +4272,6 @@ where CD_CIIU_DIVISION  = ? and  ? Between FC_INI_VAL and FC_FIN_VAL</property>
                       cachedName="DESC_CIIU_SUB_CL"
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[DESC_CIIU_SUB_CL]" />
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Right Input].Columns[SK_CIIU_SECCION]"
-                      cachedDataType="numeric"
-                      cachedName="SK_CIIU_SECCION"
-                      cachedPrecision="18"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[SK_CIIU_SECCION]" />
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Right Input].Columns[CD_CIIU_SECCION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="CD_CIIU_SECCION"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_SECCION]" />
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Right Input].Columns[SK_CIIU_GRP]"
                       cachedDataType="numeric"
                       cachedName="SK_CIIU_GRP"
@@ -4310,6 +4297,19 @@ where CD_CIIU_DIVISION  = ? and  ? Between FC_INI_VAL and FC_FIN_VAL</property>
                       cachedLength="20"
                       cachedName="CD_CIIU_DIVISION"
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_DIVISION]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Right Input].Columns[SK_CIIU_SESION]"
+                      cachedDataType="numeric"
+                      cachedName="SK_CIIU_SESION"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[SK_CIIU_SESION]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Right Input].Columns[CD_CIIU_SESION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CD_CIIU_SESION"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DWH_DIM_CIIU_SUB_CLASE.Outputs[OLE DB Source Output].Columns[CD_CIIU_SESION]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4482,21 +4482,6 @@ where CD_CIIU_DIVISION  = ? and  ? Between FC_INI_VAL and FC_FIN_VAL</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SECCION]"
-                      codePage="1252"
-                      dataType="str"
-                      length="20"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SECCION]"
-                      name="SRC_CD_CIIU_SECCION">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[CD_CIIU_SECCION]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_DIVISION]"
                       codePage="1252"
                       dataType="str"
@@ -4524,35 +4509,6 @@ where CD_CIIU_DIVISION  = ? and  ? Between FC_INI_VAL and FC_FIN_VAL</property>
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[CD_CIIU_GRP]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SECCION]"
-                      dataType="numeric"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SECCION]"
-                      name="DWH_SK_CIIU_SECCION"
-                      precision="18">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Right Input].Columns[SK_CIIU_SECCION]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SECCION]"
-                      codePage="1252"
-                      dataType="str"
-                      length="20"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SECCION]"
-                      name="DWH_CD_CIIU_SECCION">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Right Input].Columns[CD_CIIU_SECCION]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -4628,20 +4584,6 @@ where CD_CIIU_DIVISION  = ? and  ? Between FC_INI_VAL and FC_FIN_VAL</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_SECCION_LKP]"
-                      dataType="numeric"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_SECCION_LKP]"
-                      name="SRC_SK_CIIU_SECCION_LKP"
-                      precision="18">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[SK_CIIU_SECCION_LKP]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_DIVISION_LKP]"
                       dataType="numeric"
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_DIVISION_LKP]"
@@ -4653,6 +4595,64 @@ where CD_CIIU_DIVISION  = ? and  ? Between FC_INI_VAL and FC_FIN_VAL</property>
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[SK_CIIU_DIVISION_LKP]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_SESION_LKP]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_SESION_LKP]"
+                      name="SRC_SK_CIIU_SESION_LKP"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[SK_CIIU_SESION_LKP]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SESION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SESION]"
+                      name="SRC_CD_CIIU_SESION">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[CD_CIIU_SESION]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SESION]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SESION]"
+                      name="DWH_SK_CIIU_SESION"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Right Input].Columns[SK_CIIU_SESION]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SESION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SESION]"
+                      name="DWH_CD_CIIU_SESION">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Right Input].Columns[CD_CIIU_SESION]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -5729,7 +5729,7 @@ WHERE
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT  [CD_CIIU_SUB_CL]
       ,[DESC_CIIU_SUB_CL]
       ,[CD_CIIU_CL]
-      ,[CD_CIIU_SECCION]
+      ,[CD_CIIU_SESION]
       ,[CD_CIIU_GRP]
       ,[CD_CIIU_DIVISION]
   FROM [RH01].[STG_DIM_CIIU_SUB_CLASE]
@@ -5805,17 +5805,6 @@ WHERE
                       name="DESC_CIIU_SUB_CL"
                       truncationRowDisposition="RedirectRow" />
                     <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Output].Columns[CD_CIIU_SECCION]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_SECCION]"
-                      length="20"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Output].Columns[CD_CIIU_SECCION]"
-                      name="CD_CIIU_SECCION"
-                      truncationRowDisposition="RedirectRow" />
-                    <outputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Output].Columns[CD_CIIU_GRP]"
                       codePage="1252"
                       dataType="str"
@@ -5837,6 +5826,17 @@ WHERE
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Output].Columns[CD_CIIU_DIVISION]"
                       name="CD_CIIU_DIVISION"
                       truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Output].Columns[CD_CIIU_SESION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_SESION]"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Output].Columns[CD_CIIU_SESION]"
+                      name="CD_CIIU_SESION"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5859,12 +5859,6 @@ WHERE
                       length="255"
                       name="DESC_CIIU_SUB_CL" />
                     <externalMetadataColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_SECCION]"
-                      codePage="1252"
-                      dataType="str"
-                      length="20"
-                      name="CD_CIIU_SECCION" />
-                    <externalMetadataColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_GRP]"
                       codePage="1252"
                       dataType="str"
@@ -5876,6 +5870,12 @@ WHERE
                       dataType="str"
                       length="20"
                       name="CD_CIIU_DIVISION" />
+                    <externalMetadataColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Output].ExternalColumns[CD_CIIU_SESION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CD_CIIU_SESION" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -5905,12 +5905,12 @@ WHERE
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_CL]"
                       name="CD_CIIU_CL" />
                     <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SECCION]"
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SESION]"
                       codePage="1252"
                       dataType="str"
                       length="20"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SECCION]"
-                      name="CD_CIIU_SECCION" />
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_SESION]"
+                      name="CD_CIIU_SESION" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SRC_DIM_CIIU_SUB_CLASE_1.Outputs[OLE DB Source Error Output].Columns[CD_CIIU_GRP]"
                       codePage="1252"
@@ -6117,21 +6117,6 @@ WHERE
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 3].Columns[SRC_CD_CIIU_SECCION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="SRC_CD_CIIU_SECCION"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SECCION]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SECCION]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 3].Columns[SRC_CD_CIIU_DIVISION]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -6159,35 +6144,6 @@ WHERE
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_GRP]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 3].Columns[DWH_SK_CIIU_SECCION]"
-                      cachedDataType="numeric"
-                      cachedName="DWH_SK_CIIU_SECCION"
-                      cachedPrecision="18"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SECCION]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_SECCION]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 3].Columns[DWH_CD_CIIU_SECCION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="DWH_CD_CIIU_SECCION"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SECCION]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_CD_CIIU_SECCION]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -6299,6 +6255,92 @@ WHERE
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[V_FC_FIN_VAL]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 3].Columns[SRC_SK_CIIU_GRP_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_SK_CIIU_GRP_LKP"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_GRP_LKP]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_GRP_LKP]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 3].Columns[SRC_SK_CIIU_DIVISION_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_SK_CIIU_DIVISION_LKP"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_DIVISION_LKP]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_DIVISION_LKP]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 3].Columns[SRC_SK_CIIU_SESION_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_SK_CIIU_SESION_LKP"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_SESION_LKP]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_SESION_LKP]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 3].Columns[SRC_CD_CIIU_SESION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="SRC_CD_CIIU_SESION"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SESION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SESION]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 3].Columns[DWH_SK_CIIU_SESION]"
+                      cachedDataType="numeric"
+                      cachedName="DWH_SK_CIIU_SESION"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SESION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_SESION]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 3].Columns[DWH_CD_CIIU_SESION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="DWH_CD_CIIU_SESION"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SESION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_CD_CIIU_SESION]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -6471,21 +6513,6 @@ WHERE
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 1].Columns[SRC_CD_CIIU_SECCION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="SRC_CD_CIIU_SECCION"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SECCION]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SECCION]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 1].Columns[SRC_CD_CIIU_DIVISION]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -6513,35 +6540,6 @@ WHERE
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_GRP]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 1].Columns[DWH_SK_CIIU_SECCION]"
-                      cachedDataType="numeric"
-                      cachedName="DWH_SK_CIIU_SECCION"
-                      cachedPrecision="18"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SECCION]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_SECCION]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 1].Columns[DWH_CD_CIIU_SECCION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="DWH_CD_CIIU_SECCION"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SECCION]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_CD_CIIU_SECCION]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -6655,6 +6653,92 @@ WHERE
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[V_FC_FIN_VAL]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 1].Columns[SRC_SK_CIIU_GRP_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_SK_CIIU_GRP_LKP"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_GRP_LKP]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_GRP_LKP]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 1].Columns[SRC_SK_CIIU_DIVISION_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_SK_CIIU_DIVISION_LKP"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_DIVISION_LKP]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_DIVISION_LKP]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 1].Columns[SRC_SK_CIIU_SESION_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_SK_CIIU_SESION_LKP"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_SESION_LKP]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_SESION_LKP]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 1].Columns[SRC_CD_CIIU_SESION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="SRC_CD_CIIU_SESION"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SESION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SESION]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 1].Columns[DWH_SK_CIIU_SESION]"
+                      cachedDataType="numeric"
+                      cachedName="DWH_SK_CIIU_SESION"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SESION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_SESION]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Inputs[Union All Input 1].Columns[DWH_CD_CIIU_SESION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="DWH_CD_CIIU_SESION"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SESION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_CD_CIIU_SESION]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -6744,13 +6828,6 @@ WHERE
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_DESC_CIIU_SUB_CL]"
                       name="DWH_DESC_CIIU_SUB_CL" />
                     <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SECCION]"
-                      codePage="1252"
-                      dataType="str"
-                      length="20"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SECCION]"
-                      name="SRC_CD_CIIU_SECCION" />
-                    <outputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_DIVISION]"
                       codePage="1252"
                       dataType="str"
@@ -6764,19 +6841,6 @@ WHERE
                       length="20"
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_GRP]"
                       name="SRC_CD_CIIU_GRP" />
-                    <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_SECCION]"
-                      dataType="numeric"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_SECCION]"
-                      name="DWH_SK_CIIU_SECCION"
-                      precision="18" />
-                    <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_CD_CIIU_SECCION]"
-                      codePage="1252"
-                      dataType="str"
-                      length="20"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_CD_CIIU_SECCION]"
-                      name="DWH_CD_CIIU_SECCION" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_GRP]"
                       dataType="numeric"
@@ -6824,6 +6888,44 @@ WHERE
                       dataType="dbTimeStamp"
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[V_FC_FIN_VAL]"
                       name="V_FC_FIN_VAL" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_GRP_LKP]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_GRP_LKP]"
+                      name="SRC_SK_CIIU_GRP_LKP"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_DIVISION_LKP]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_DIVISION_LKP]"
+                      name="SRC_SK_CIIU_DIVISION_LKP"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_SESION_LKP]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_SESION_LKP]"
+                      name="SRC_SK_CIIU_SESION_LKP"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SESION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SESION]"
+                      name="SRC_CD_CIIU_SESION" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_SESION]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_SESION]"
+                      name="DWH_SK_CIIU_SESION"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_CD_CIIU_SESION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[DWH_CD_CIIU_SESION]"
+                      name="DWH_CD_CIIU_SESION" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -7004,21 +7106,6 @@ WHERE
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 2].Columns[SRC_CD_CIIU_SECCION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="SRC_CD_CIIU_SECCION"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SECCION]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SECCION]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 2].Columns[SRC_CD_CIIU_DIVISION]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -7046,35 +7133,6 @@ WHERE
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_GRP]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 2].Columns[DWH_SK_CIIU_SECCION]"
-                      cachedDataType="numeric"
-                      cachedName="DWH_SK_CIIU_SECCION"
-                      cachedPrecision="18"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SECCION]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_SECCION]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 2].Columns[DWH_CD_CIIU_SECCION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="DWH_CD_CIIU_SECCION"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SECCION]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_CD_CIIU_SECCION]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -7203,20 +7261,6 @@ WHERE
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 2].Columns[SRC_SK_CIIU_SECCION_LKP]"
-                      cachedDataType="numeric"
-                      cachedName="SRC_SK_CIIU_SECCION_LKP"
-                      cachedPrecision="18"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_SECCION_LKP]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_SECCION_LKP]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 2].Columns[SRC_SK_CIIU_DIVISION_LKP]"
                       cachedDataType="numeric"
                       cachedName="SRC_SK_CIIU_DIVISION_LKP"
@@ -7228,6 +7272,64 @@ WHERE
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_DIVISION_LKP]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 2].Columns[SRC_SK_CIIU_SESION_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_SK_CIIU_SESION_LKP"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_SESION_LKP]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_SESION_LKP]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 2].Columns[SRC_CD_CIIU_SESION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="SRC_CD_CIIU_SESION"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SESION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SESION]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 2].Columns[DWH_SK_CIIU_SESION]"
+                      cachedDataType="numeric"
+                      cachedName="DWH_SK_CIIU_SESION"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SESION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_SESION]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 2].Columns[DWH_CD_CIIU_SESION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="DWH_CD_CIIU_SESION"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SESION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_CD_CIIU_SESION]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -7400,21 +7502,6 @@ WHERE
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 1].Columns[SRC_CD_CIIU_SECCION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="SRC_CD_CIIU_SECCION"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SECCION]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SECCION]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 1].Columns[SRC_CD_CIIU_DIVISION]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -7442,35 +7529,6 @@ WHERE
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_GRP]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 1].Columns[DWH_SK_CIIU_SECCION]"
-                      cachedDataType="numeric"
-                      cachedName="DWH_SK_CIIU_SECCION"
-                      cachedPrecision="18"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SECCION]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_SECCION]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 1].Columns[DWH_CD_CIIU_SECCION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="DWH_CD_CIIU_SECCION"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SECCION]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_CD_CIIU_SECCION]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -7599,20 +7657,6 @@ WHERE
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 1].Columns[SRC_SK_CIIU_SECCION_LKP]"
-                      cachedDataType="numeric"
-                      cachedName="SRC_SK_CIIU_SECCION_LKP"
-                      cachedPrecision="18"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_SECCION_LKP]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_SECCION_LKP]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 1].Columns[SRC_SK_CIIU_DIVISION_LKP]"
                       cachedDataType="numeric"
                       cachedName="SRC_SK_CIIU_DIVISION_LKP"
@@ -7624,6 +7668,64 @@ WHERE
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_DIVISION_LKP]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 1].Columns[SRC_SK_CIIU_SESION_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_SK_CIIU_SESION_LKP"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_SK_CIIU_SESION_LKP]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_SESION_LKP]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 1].Columns[SRC_CD_CIIU_SESION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="SRC_CD_CIIU_SESION"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_CIIU_SESION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SESION]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 1].Columns[DWH_SK_CIIU_SESION]"
+                      cachedDataType="numeric"
+                      cachedName="DWH_SK_CIIU_SESION"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_SK_CIIU_SESION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_SESION]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 1].Columns[DWH_CD_CIIU_SESION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="DWH_CD_CIIU_SESION"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[DWH_CD_CIIU_SESION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_CD_CIIU_SESION]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -7715,13 +7817,6 @@ WHERE
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_DESC_CIIU_SUB_CL]"
                       name="DWH_DESC_CIIU_SUB_CL" />
                     <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SECCION]"
-                      codePage="1252"
-                      dataType="str"
-                      length="20"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SECCION]"
-                      name="SRC_CD_CIIU_SECCION" />
-                    <outputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_DIVISION]"
                       codePage="1252"
                       dataType="str"
@@ -7735,19 +7830,6 @@ WHERE
                       length="20"
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_GRP]"
                       name="SRC_CD_CIIU_GRP" />
-                    <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_SECCION]"
-                      dataType="numeric"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_SECCION]"
-                      name="DWH_SK_CIIU_SECCION"
-                      precision="18" />
-                    <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_CD_CIIU_SECCION]"
-                      codePage="1252"
-                      dataType="str"
-                      length="20"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_CD_CIIU_SECCION]"
-                      name="DWH_CD_CIIU_SECCION" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_GRP]"
                       dataType="numeric"
@@ -7802,17 +7884,37 @@ WHERE
                       name="SRC_SK_CIIU_GRP_LKP"
                       precision="18" />
                     <outputColumn
-                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_SECCION_LKP]"
-                      dataType="numeric"
-                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_SECCION_LKP]"
-                      name="SRC_SK_CIIU_SECCION_LKP"
-                      precision="18" />
-                    <outputColumn
                       refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_DIVISION_LKP]"
                       dataType="numeric"
                       lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_DIVISION_LKP]"
                       name="SRC_SK_CIIU_DIVISION_LKP"
                       precision="18" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_SESION_LKP]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_CIIU_SESION_LKP]"
+                      name="SRC_SK_CIIU_SESION_LKP"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SESION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_CIIU_SESION]"
+                      name="SRC_CD_CIIU_SESION" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_SESION]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_SK_CIIU_SESION]"
+                      name="DWH_SK_CIIU_SESION"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_CD_CIIU_SESION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[DWH_CD_CIIU_SESION]"
+                      name="DWH_CD_CIIU_SESION" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -10714,74 +10816,74 @@ WHERE
               startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_AGG_STANDARD_2.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output13]"
-              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_FECHA_GENERICA_1.Inputs[Derived Column Input]"
+              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_TRATA_NULOS_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output12]"
-              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output11]"
-              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_LKP_CIIU_CLASE.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_V_FC_ACTUAL_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output10]"
-              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_SRT_TABLA_4.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output9]"
-              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_SRT_TABLA_1.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_DV_TABLA_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output7]"
-              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\MC_DEL_UP_2.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output8]"
-              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output5]"
-              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output4]"
-              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\CS_INS_UPD_DEL_1.Inputs[Conditional Split Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_FECHA_GENERICA_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output3]"
-              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output2]"
-              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\MC_VAL_CORRECTO_1.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output1]"
-              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output]"
               endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output6]"
-              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
+              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output11]"
+              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output10]"
+              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\MC_VAL_CORRECTO_1.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output9]"
+              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output7]"
+              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output8]"
+              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\CS_INS_UPD_DEL_1.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_FECHA_GENERICA_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output5]"
+              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\MC_DEL_UP_2.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output4]"
+              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_SRT_TABLA_1.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_DV_TABLA_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output3]"
+              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_SRT_TABLA_4.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output2]"
+              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_LKP_CIIU_CLASE.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_V_FC_ACTUAL_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output1]"
+              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output]"
+              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_FECHA_GENERICA_1.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DV_TRATA_NULOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output6]"
+              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[INSERT]"
               endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_UN_IN_UP_1.Inputs[Union All Input 2]"
@@ -10819,29 +10921,29 @@ WHERE
               startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output]" />
             <path
               refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 14]"
-              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_UN_DESTINO_1.Inputs[Union All Input 6]"
+              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SCT_UPDATE_PE_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Command Input]"
               name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\MC_DEL_UP_2.Outputs[Multicast Output 1]" />
+              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\MC_DEL_UP_1.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 13]"
-              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\MC_VAL_CORRECTO_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 1]"
-              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\MC_INS_ERROR_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 11]"
               endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_MJ_SRC_DWH_1.Inputs[Merge Join Right Input]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\MC_SRC_DWH_1.Outputs[Multicast Output 1]" />
             <path
-              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 12]"
-              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_SCT_UPDATE_PE_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Command Input]"
+              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 1]"
+              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_UN_DESTINO_1.Inputs[Union All Input 6]"
               name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\MC_DEL_UP_1.Outputs[Multicast Output 1]" />
+              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\MC_DEL_UP_2.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 11]"
+              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\MC_VAL_CORRECTO_1.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 12]"
+              endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_DTN_DIM_CIIU_SUB_CLASE.Inputs[OLE DB Destination Input]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\MC_INS_ERROR_1.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 2]"
               endId="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_SRT_TABLA_3.Inputs[Sort Input]"
@@ -11298,7 +11400,7 @@ WHERE
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -11321,7 +11423,7 @@ WHERE
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_2"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -12382,7 +12484,7 @@ WHERE
         <NodeLayout
           Size="191,42"
           Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\PR_LKP_CIIU_CLASE"
-          TopLeft="767,156" />
+          TopLeft="773,153" />
         <NodeLayout
           Size="165,42"
           Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1\RA_SRT_TABLA_3"
@@ -12474,9 +12576,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12510,9 +12610,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12546,9 +12644,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12570,9 +12666,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12606,9 +12700,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12630,9 +12722,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12654,9 +12744,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12690,9 +12778,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12714,9 +12800,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12738,9 +12822,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12774,9 +12856,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12906,9 +12986,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12942,9 +13020,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12972,9 +13048,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13008,9 +13082,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13032,9 +13104,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13068,9 +13138,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13092,9 +13160,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13116,9 +13182,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13140,85 +13204,11 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 14]"
-          TopLeft="1278.41666666667,997.444444444445">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-833.277777777779,-8.8333333333336"
-              Start="0,0"
-              End="-825.777777777779,-8.8333333333336">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-477.619266055046,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-477.619266055046,0"
-                    Point2="-481.619266055046,0"
-                    Point3="-481.619266055046,-4" />
-                  <mssgle:LineSegment
-                    End="-481.619266055046,-4.8333333333336" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-481.619266055046,-4.8333333333336"
-                    Point2="-481.619266055046,-8.8333333333336"
-                    Point3="-485.619266055046,-8.8333333333336" />
-                  <mssgle:LineSegment
-                    End="-825.777777777779,-8.8333333333336" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 13]"
-          TopLeft="535.722222222227,903.944444444445">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-177.083333333336,69.333333333333"
-              Start="0,0"
-              End="-177.083333333336,61.833333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.6666666666665" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30.6666666666665"
-                    Point2="0,34.6666666666665"
-                    Point3="-4,34.6666666666665" />
-                  <mssgle:LineSegment
-                    End="-173.083333333336,34.6666666666665" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-173.083333333336,34.6666666666665"
-                    Point2="-177.083333333336,34.6666666666665"
-                    Point3="-177.083333333336,38.6666666666665" />
-                  <mssgle:LineSegment
-                    End="-177.083333333336,61.833333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 12]"
           TopLeft="1396.25000000001,642.777777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13248,13 +13238,11 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 11]"
+          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 13]"
           TopLeft="1184.52777777778,128.444444444444">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13284,13 +13272,11 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 1]"
+          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 12]"
           TopLeft="1047.36111111112,738.83333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13320,9 +13306,75 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 11]"
+          TopLeft="535.722222222227,903.944444444445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-177.083333333336,69.333333333333"
+              Start="0,0"
+              End="-177.083333333336,61.833333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.6666666666665" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.6666666666665"
+                    Point2="0,34.6666666666665"
+                    Point3="-4,34.6666666666665" />
+                  <mssgle:LineSegment
+                    End="-173.083333333336,34.6666666666665" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-173.083333333336,34.6666666666665"
+                    Point2="-177.083333333336,34.6666666666665"
+                    Point3="-177.083333333336,38.6666666666665" />
+                  <mssgle:LineSegment
+                    End="-177.083333333336,61.833333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Multicast Output 1]"
+          TopLeft="1278.41666666667,997.444444444445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-833.277777777779,-8.8333333333336"
+              Start="0,0"
+              End="-825.777777777779,-8.8333333333336">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-477.619266055046,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-477.619266055046,0"
+                    Point2="-481.619266055046,0"
+                    Point3="-481.619266055046,-4" />
+                  <mssgle:LineSegment
+                    End="-481.619266055046,-4.8333333333336" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-481.619266055046,-4.8333333333336"
+                    Point2="-481.619266055046,-8.8333333333336"
+                    Point3="-485.619266055046,-8.8333333333336" />
+                  <mssgle:LineSegment
+                    End="-825.777777777779,-8.8333333333336" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13356,9 +13408,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13392,9 +13442,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13416,9 +13464,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13459,25 +13505,37 @@ WHERE
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Lookup Match Output]"
-          TopLeft="860.708333333334,198">
+          TopLeft="868.5,195">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,28.55555555556"
+              EndConnector="-9.58333333333201,31.55555555556"
               Start="0,0"
-              End="0,21.05555555556">
+              End="-9.58333333333201,24.05555555556">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.05555555556" />
+                    End="0,11.77777777778" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.77777777778"
+                    Point2="0,15.77777777778"
+                    Point3="-4,15.77777777778" />
+                  <mssgle:LineSegment
+                    End="-5.58333333333201,15.77777777778" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.58333333333201,15.77777777778"
+                    Point2="-9.58333333333201,15.77777777778"
+                    Point3="-9.58333333333201,19.77777777778" />
+                  <mssgle:LineSegment
+                    End="-9.58333333333201,24.05555555556" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,4.72309027777999,96.3827734375,11.609375"
+              BoundingBox="-52.983053385416,20.77777777778,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -13555,198 +13613,6 @@ WHERE
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output13]"
-          TopLeft="1180.68055555556,328.527777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,30.694444444445"
-              Start="0,0"
-              End="0,23.194444444445">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.194444444445" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output12]"
-          TopLeft="111.916666666668,1008.88888888889">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="112.138888888889,86.30555555555"
-              Start="0,0"
-              End="112.138888888889,78.80555555555">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.152777777775" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,39.152777777775"
-                    Point2="0,43.152777777775"
-                    Point3="4,43.152777777775" />
-                  <mssgle:LineSegment
-                    End="108.138888888889,43.152777777775" />
-                  <mssgle:CubicBezierSegment
-                    Point1="108.138888888889,43.152777777775"
-                    Point2="112.138888888889,43.152777777775"
-                    Point3="112.138888888889,47.152777777775" />
-                  <mssgle:LineSegment
-                    End="112.138888888889,78.80555555555" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output11]"
-          TopLeft="646.916666666668,177.27777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="120.083333333332,0"
-              Start="0,0"
-              End="112.583333333332,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="112.583333333332,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output10]"
-          TopLeft="1629,796">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,105.000000000001"
-              Start="0,0"
-              End="0,97.500000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,97.500000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output9]"
-          TopLeft="1149.83333333334,907.444444444445">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,43.888888888889"
-              Start="0,0"
-              End="0,36.388888888889">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.388888888889" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output8]"
-          TopLeft="423.370370370373,439.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-105.981481481482,534.027777777778"
-              Start="0,0"
-              End="-105.981481481482,526.527777777778">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,346.614062829433" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,346.614062829433"
-                    Point2="0,350.614062829433"
-                    Point3="-4,350.614062829433" />
-                  <mssgle:LineSegment
-                    End="-101.981481481482,350.614062829433" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-101.981481481482,350.614062829433"
-                    Point2="-105.981481481482,350.614062829433"
-                    Point3="-105.981481481482,354.614062829433" />
-                  <mssgle:LineSegment
-                    End="-105.981481481482,526.527777777778" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output7]"
-          TopLeft="1355.80555555556,943.000000000001">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33.444444444444"
-              Start="0,0"
-              End="0,25.944444444444">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.944444444444" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output6]"
           TopLeft="167.75,214">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13776,169 +13642,11 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output5]"
-          TopLeft="164.662037037037,381.027777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.2222222222219"
-              Start="0,0"
-              End="0,51.7222222222219">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.7222222222219" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output4]"
-          TopLeft="1183.72222222223,401.222222222223">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35.8888888888879"
-              Start="0,0"
-              End="0,28.3888888888879">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.3888888888879" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output3]"
-          TopLeft="815.083333333338,1045.83333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-369.944444444447,-45.8888888888853"
-              Start="0,0"
-              End="-362.444444444447,-45.8888888888853">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-209.821100917432,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-209.821100917432,0"
-                    Point2="-213.821100917432,0"
-                    Point3="-213.821100917432,-4" />
-                  <mssgle:LineSegment
-                    End="-213.821100917432,-41.8888888888853" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-213.821100917432,-41.8888888888853"
-                    Point2="-213.821100917432,-45.8888888888853"
-                    Point3="-217.821100917432,-45.8888888888853" />
-                  <mssgle:LineSegment
-                    End="-362.444444444447,-45.8888888888853" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output2]"
-          TopLeft="647.694444444449,804.250000000001">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-111.972222222222,57.694444444444"
-              Start="0,0"
-              End="-111.972222222222,50.194444444444">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.847222222222" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.847222222222"
-                    Point2="0,28.847222222222"
-                    Point3="-4,28.847222222222" />
-                  <mssgle:LineSegment
-                    End="-107.972222222222,28.847222222222" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-107.972222222222,28.847222222222"
-                    Point2="-111.972222222222,28.847222222222"
-                    Point3="-111.972222222222,32.847222222222" />
-                  <mssgle:LineSegment
-                    End="-111.972222222222,50.194444444444" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output1]"
-          TopLeft="898.86111111112,1112.55555555556">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-540.222222222229,-97.2777777777819"
-              Start="0,0"
-              End="-540.222222222229,-89.7777777777819">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-35.309178743963" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-35.309178743963"
-                    Point2="0,-39.309178743963"
-                    Point3="-4,-39.309178743963" />
-                  <mssgle:LineSegment
-                    End="-536.222222222229,-39.309178743963" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-536.222222222229,-39.309178743963"
-                    Point2="-540.222222222229,-39.309178743963"
-                    Point3="-540.222222222229,-43.309178743963" />
-                  <mssgle:LineSegment
-                    End="-540.222222222229,-89.7777777777819" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output]"
+          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output12]"
           TopLeft="631.444444444449,292.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13968,9 +13676,331 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output11]"
+          TopLeft="898.86111111112,1112.55555555556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-540.222222222229,-97.2777777777819"
+              Start="0,0"
+              End="-540.222222222229,-89.7777777777819">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-35.309178743963" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-35.309178743963"
+                    Point2="0,-39.309178743963"
+                    Point3="-4,-39.309178743963" />
+                  <mssgle:LineSegment
+                    End="-536.222222222229,-39.309178743963" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-536.222222222229,-39.309178743963"
+                    Point2="-540.222222222229,-39.309178743963"
+                    Point3="-540.222222222229,-43.309178743963" />
+                  <mssgle:LineSegment
+                    End="-540.222222222229,-89.7777777777819" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output10]"
+          TopLeft="647.694444444449,804.250000000001">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-111.972222222222,57.694444444444"
+              Start="0,0"
+              End="-111.972222222222,50.194444444444">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.847222222222" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.847222222222"
+                    Point2="0,28.847222222222"
+                    Point3="-4,28.847222222222" />
+                  <mssgle:LineSegment
+                    End="-107.972222222222,28.847222222222" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-107.972222222222,28.847222222222"
+                    Point2="-111.972222222222,28.847222222222"
+                    Point3="-111.972222222222,32.847222222222" />
+                  <mssgle:LineSegment
+                    End="-111.972222222222,50.194444444444" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output9]"
+          TopLeft="815.083333333338,1045.83333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-369.944444444447,-45.8888888888853"
+              Start="0,0"
+              End="-362.444444444447,-45.8888888888853">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-209.821100917432,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-209.821100917432,0"
+                    Point2="-213.821100917432,0"
+                    Point3="-213.821100917432,-4" />
+                  <mssgle:LineSegment
+                    End="-213.821100917432,-41.8888888888853" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-213.821100917432,-41.8888888888853"
+                    Point2="-213.821100917432,-45.8888888888853"
+                    Point3="-217.821100917432,-45.8888888888853" />
+                  <mssgle:LineSegment
+                    End="-362.444444444447,-45.8888888888853" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output8]"
+          TopLeft="1183.72222222223,401.222222222223">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.8888888888879"
+              Start="0,0"
+              End="0,28.3888888888879">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.3888888888879" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output7]"
+          TopLeft="164.662037037037,381.027777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.2222222222219"
+              Start="0,0"
+              End="0,51.7222222222219">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.7222222222219" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output6]"
+          TopLeft="423.370370370373,439.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-105.981481481482,534.027777777778"
+              Start="0,0"
+              End="-105.981481481482,526.527777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,346.614062829433" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,346.614062829433"
+                    Point2="0,350.614062829433"
+                    Point3="-4,350.614062829433" />
+                  <mssgle:LineSegment
+                    End="-101.981481481482,350.614062829433" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-101.981481481482,350.614062829433"
+                    Point2="-105.981481481482,350.614062829433"
+                    Point3="-105.981481481482,354.614062829433" />
+                  <mssgle:LineSegment
+                    End="-105.981481481482,526.527777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output5]"
+          TopLeft="1355.80555555556,943.000000000001">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.444444444444"
+              Start="0,0"
+              End="0,25.944444444444">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.944444444444" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output4]"
+          TopLeft="1149.83333333334,907.444444444445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.888888888889"
+              Start="0,0"
+              End="0,36.388888888889">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.388888888889" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output3]"
+          TopLeft="1629,796">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,105.000000000001"
+              Start="0,0"
+              End="0,97.500000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,97.500000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output2]"
+          TopLeft="646.916666666668,175.77777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="126.083333333332,0"
+              Start="0,0"
+              End="118.583333333332,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="118.583333333332,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output1]"
+          TopLeft="111.916666666668,1008.88888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="112.138888888889,86.30555555555"
+              Start="0,0"
+              End="112.138888888889,78.80555555555">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.152777777775" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.152777777775"
+                    Point2="0,43.152777777775"
+                    Point3="4,43.152777777775" />
+                  <mssgle:LineSegment
+                    End="108.138888888889,43.152777777775" />
+                  <mssgle:CubicBezierSegment
+                    Point1="108.138888888889,43.152777777775"
+                    Point2="112.138888888889,43.152777777775"
+                    Point3="112.138888888889,47.152777777775" />
+                  <mssgle:LineSegment
+                    End="112.138888888889,78.80555555555" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_CIIU_SUB_CLASE_1.Paths[Derived Column Output]"
+          TopLeft="1180.68055555556,328.527777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.694444444445"
+              Start="0,0"
+              End="0,23.194444444445">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.194444444445" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14004,9 +14034,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14028,9 +14056,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14052,9 +14078,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14076,9 +14100,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14100,9 +14122,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14136,9 +14156,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14189,7 +14207,7 @@ WHERE
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q3:string">0</Value>
+          type="q3:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -14197,7 +14215,7 @@ WHERE
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q4:string">true</Value>
+          type="q4:boolean">true</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -14225,7 +14243,7 @@ WHERE
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q3:string">0</Value>
+          type="q3:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

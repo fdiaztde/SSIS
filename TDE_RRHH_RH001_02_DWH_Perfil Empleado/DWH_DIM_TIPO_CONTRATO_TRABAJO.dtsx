@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="DWH_DIM_TIPO_CONTRATO_TRABAJO"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="438"
-  DTS:VersionGUID="{2799D740-7720-41D9-8656-E2D5547EA562}">
+  DTS:VersionBuild="440"
+  DTS:VersionGUID="{E1817E20-1965-428E-85D5-E872F1749FF0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -3182,7 +3182,7 @@ WHERE
       ,[FC_FIN_VAL]
       ,[SK_EJECUCION_CREACION]
       ,[SK_EJECUCION_MODIFICACION]
-  FROM [TDE_DWH_EikonBI_DES].[RH01].[DIM_TIPO_CONTRATO_TRABAJO]
+  FROM [RH01].[DIM_TIPO_CONTRATO_TRABAJO]
    WHERE ? BETWEEN FC_INI_VAL AND FC_FIN_VAL
 	    ORDER BY [CD_TIPO_CONTRATO_TRABAJO] ASC</property>
                 <property
@@ -9009,74 +9009,74 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_AGG_STANDARD_2.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output13]"
-              endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output12]"
-              endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\MC_STANDARD_3.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output11]"
-              endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output10]"
-              endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\MC_STANDARD_1.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output9]"
-              endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output8]"
-              endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\PR_DV_FECHAS_GENERICAS_1.Inputs[Derived Column Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output7]"
               endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_SRT_STANDARD_2.Inputs[Sort Input]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_DV_STANDARD_6.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output5]"
-              endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output12]"
+              endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output4]"
+              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output11]"
+              endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\MC_STANDARD_3.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output10]"
+              endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output9]"
+              endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\MC_STANDARD_1.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output8]"
+              endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output7]"
+              endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\PR_DV_FECHAS_GENERICAS_1.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output5]"
               endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output3]"
+              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output4]"
               endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_SRT_STANDARD_4.Inputs[Sort Input]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output2]"
+              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output3]"
               endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_SRT_STANDARD_8.Inputs[Sort Input]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\PR_DV_TRATAMIENTO_DE_NULOS_2.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output1]"
+              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output2]"
               endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output]"
+              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output1]"
               endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\PR_CS_SCD2_1.Inputs[Conditional Split Input]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\PR_DV_FECHAS_GENERICAS_1.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output6]"
+              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output]"
               endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output6]"
+              endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[INSERT]"
               endId="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1\PR_UN_STANDARD_2.Inputs[Union All Input 1]"
@@ -9279,7 +9279,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_CREATE_MAX_ID_1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9394,7 +9394,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_MAX_ID_1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9588,7 +9588,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9611,7 +9611,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_2"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -11718,198 +11718,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output13]"
-          TopLeft="832.5,320">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-69.5,697"
-              Start="0,0"
-              End="-69.5,689.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,484.182186234818" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,484.182186234818"
-                    Point2="0,488.182186234818"
-                    Point3="-4,488.182186234818" />
-                  <mssgle:LineSegment
-                    End="-65.5,488.182186234818" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-65.5,488.182186234818"
-                    Point2="-69.5,488.182186234818"
-                    Point3="-69.5,492.182186234818" />
-                  <mssgle:LineSegment
-                    End="-69.5,689.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output12]"
-          TopLeft="1831.5,891">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41"
-              Start="0,0"
-              End="0,33.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output11]"
-          TopLeft="1328,260">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-499,757"
-              Start="0,0"
-              End="-499,749.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,414.405750798722" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,414.405750798722"
-                    Point2="0,418.405750798722"
-                    Point3="-4,418.405750798722" />
-                  <mssgle:LineSegment
-                    End="-495,418.405750798722" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-495,418.405750798722"
-                    Point2="-499,418.405750798722"
-                    Point3="-499,422.405750798722" />
-                  <mssgle:LineSegment
-                    End="-499,749.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output10]"
-          TopLeft="1137.5,782">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="15.5,59"
-              Start="0,0"
-              End="15.5,51.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.5"
-                    Point2="0,29.5"
-                    Point3="4,29.5" />
-                  <mssgle:LineSegment
-                    End="11.5,29.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="11.5,29.5"
-                    Point2="15.5,29.5"
-                    Point3="15.5,33.5" />
-                  <mssgle:LineSegment
-                    End="15.5,51.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output9]"
-          TopLeft="536,382">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-16.5,60"
-              Start="0,0"
-              End="-16.5,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="-4,30" />
-                  <mssgle:LineSegment
-                    End="-12.5,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-12.5,30"
-                    Point2="-16.5,30"
-                    Point3="-16.5,34" />
-                  <mssgle:LineSegment
-                    End="-16.5,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output8]"
-          TopLeft="1640.5,276">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="25,44"
-              Start="0,0"
-              End="25,36.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18"
-                    Point2="0,22"
-                    Point3="4,22" />
-                  <mssgle:LineSegment
-                    End="21,22" />
-                  <mssgle:CubicBezierSegment
-                    Point1="21,22"
-                    Point2="25,22"
-                    Point3="25,26" />
-                  <mssgle:LineSegment
-                    End="25,36.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output7]"
           TopLeft="1616,829">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11943,31 +11751,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output6]"
-          TopLeft="2105,1053">
+          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output12]"
+          TopLeft="832.5,320">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-1206,-15"
+              EndConnector="-69.5,697"
               Start="0,0"
-              End="-1198.5,-15">
+              End="-69.5,689.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-599,0" />
+                    End="0,484.182186234818" />
                   <mssgle:CubicBezierSegment
-                    Point1="-599,0"
-                    Point2="-603,0"
-                    Point3="-603,-4" />
+                    Point1="0,484.182186234818"
+                    Point2="0,488.182186234818"
+                    Point3="-4,488.182186234818" />
                   <mssgle:LineSegment
-                    End="-603,-11" />
+                    End="-65.5,488.182186234818" />
                   <mssgle:CubicBezierSegment
-                    Point1="-603,-11"
-                    Point2="-603,-15"
-                    Point3="-607,-15" />
+                    Point1="-65.5,488.182186234818"
+                    Point2="-69.5,488.182186234818"
+                    Point3="-69.5,492.182186234818" />
                   <mssgle:LineSegment
-                    End="-1198.5,-15" />
+                    End="-69.5,689.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11977,7 +11785,165 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output5]"
+          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output11]"
+          TopLeft="1831.5,891">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output10]"
+          TopLeft="1328,260">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-499,757"
+              Start="0,0"
+              End="-499,749.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,414.405750798722" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,414.405750798722"
+                    Point2="0,418.405750798722"
+                    Point3="-4,418.405750798722" />
+                  <mssgle:LineSegment
+                    End="-495,418.405750798722" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-495,418.405750798722"
+                    Point2="-499,418.405750798722"
+                    Point3="-499,422.405750798722" />
+                  <mssgle:LineSegment
+                    End="-499,749.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output9]"
+          TopLeft="1137.5,782">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15.5,59"
+              Start="0,0"
+              End="15.5,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.5"
+                    Point2="0,29.5"
+                    Point3="4,29.5" />
+                  <mssgle:LineSegment
+                    End="11.5,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.5,29.5"
+                    Point2="15.5,29.5"
+                    Point3="15.5,33.5" />
+                  <mssgle:LineSegment
+                    End="15.5,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output8]"
+          TopLeft="536,382">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-16.5,60"
+              Start="0,0"
+              End="-16.5,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="-4,30" />
+                  <mssgle:LineSegment
+                    End="-12.5,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12.5,30"
+                    Point2="-16.5,30"
+                    Point3="-16.5,34" />
+                  <mssgle:LineSegment
+                    End="-16.5,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output7]"
+          TopLeft="1640.5,276">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="25,44"
+              Start="0,0"
+              End="25,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18"
+                    Point2="0,22"
+                    Point3="4,22" />
+                  <mssgle:LineSegment
+                    End="21,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21,22"
+                    Point2="25,22"
+                    Point3="25,26" />
+                  <mssgle:LineSegment
+                    End="25,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output6]"
           TopLeft="796.5,1162">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12011,7 +11977,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output4]"
+          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output5]"
           TopLeft="1384.66666666667,1093">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12045,7 +12011,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output3]"
+          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output4]"
           TopLeft="2250,702">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12079,7 +12045,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output2]"
+          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output3]"
           TopLeft="1858.5,127">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12113,7 +12079,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output1]"
+          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output2]"
           TopLeft="516.368434388359,217">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12135,7 +12101,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output]"
+          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output1]"
           TopLeft="1665.5,362">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12160,6 +12126,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                     Point3="-20,17.5" />
                   <mssgle:LineSegment
                     End="-20,19.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_TIPO_CONTRATO_TRABAJO_1.Paths[Derived Column Output]"
+          TopLeft="2105,1053">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-1206,-15"
+              Start="0,0"
+              End="-1198.5,-15">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-599,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-599,0"
+                    Point2="-603,0"
+                    Point3="-603,-4" />
+                  <mssgle:LineSegment
+                    End="-603,-11" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-603,-11"
+                    Point2="-603,-15"
+                    Point3="-607,-15" />
+                  <mssgle:LineSegment
+                    End="-1198.5,-15" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

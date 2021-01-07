@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,52 +12,10 @@
   DTS:ObjectName="STG_DIM_VIA_CONTACTO"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="197"
-  DTS:VersionGUID="{251518D7-A774-44D4-BF6A-12160CBFED31}">
+  DTS:VersionBuild="204"
+  DTS:VersionGUID="{4D11FFA3-55D2-4464-9302-7670CD47A32A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DIM_VIA_CONTACTO]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{5ACF3E5E-ED18-4163-BA4A-42A810078B2B}"
-      DTS:ObjectName="DIM_VIA_CONTACTO">
-      <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[$Project::Par_Ruta_File_Ext] + "DIM_VIA_CONTACTO.txt"</DTS:PropertyExpression>
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1033"
-          DTS:HeaderRowDelimiter="_x007C_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\fdiaz\source\repos\TDE\TDE_RRHH\src\SSIS\MANUALFILES\DIM_VIA_CONTACTO.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x007C_"
-              DTS:MaximumWidth="20"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CD_VIA_CONTACTO"
-              DTS:DTSID="{F759359F-86B7-401F-8B89-3E005394CF34}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="150"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="DESC_VIA_CONTACTO"
-              DTS:DTSID="{B5A84E64-56A4-46F6-A1DB-E327A5D9E2C6}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:PackageParameters>
     <DTS:PackageParameter
       DTS:CreationName=""
@@ -569,55 +527,63 @@
               </outputs>
             </component>
             <component
-              refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2"
+              refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="DV_REGISTROS_INVALIDOS_2"
+              name="DV_REGISTROS_INVALIDOS_2 1"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input]"
+                  refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[Flat File Source Error Output Column]"
-                      cachedCodepage="1252"
-                      cachedDataType="text"
-                      cachedName="Flat File Source Error Output Column"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]" />
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[ErrorDescription]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Inputs[Derived Column Input].Columns[ErrorDescription]"
                       cachedDataType="wstr"
                       cachedLength="500"
                       cachedName="ErrorDescription"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1.Outputs[Output 0].Columns[ErrorDescription]" />
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2.Outputs[Output 0].Columns[ErrorDescription]" />
                     <inputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[ErrorColumnName]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Inputs[Derived Column Input].Columns[ErrorColumnName]"
                       cachedDataType="wstr"
                       cachedLength="500"
                       cachedName="ErrorColumnName"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1.Outputs[Output 0].Columns[ErrorColumnName]" />
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2.Outputs[Output 0].Columns[ErrorColumnName]" />
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Inputs[Derived Column Input].Columns[CD_VIA_CONTACTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CD_VIA_CONTACTO"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Error Output].Columns[CD_VIA_CONTACTO]" />
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Inputs[Derived Column Input].Columns[DESC_VIA_CONTACTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="DESC_VIA_CONTACTO"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Error Output].Columns[DESC_VIA_CONTACTO]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]"
+                  refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NOMBRE_PAQUETE]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[NOMBRE_PAQUETE]"
                       dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       length="200"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NOMBRE_PAQUETE]"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[NOMBRE_PAQUETE]"
                       name="NOMBRE_PAQUETE"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -635,12 +601,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NOMBRE_TABLA]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[NOMBRE_TABLA]"
                       dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       length="200"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NOMBRE_TABLA]"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[NOMBRE_TABLA]"
                       name="NOMBRE_TABLA"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -658,13 +624,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[TEXTO_DETALLE_REGISTRO]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[TEXTO_DETALLE_REGISTRO]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       length="8000"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[TEXTO_DETALLE_REGISTRO]"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[TEXTO_DETALLE_REGISTRO]"
                       name="TEXTO_DETALLE_REGISTRO"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -672,21 +638,21 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,8000,1252)((DT_WSTR,140)((DT_STR,140,1252)#{Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]}))</property>
+                          name="Expression">(DT_STR,8000,1252)(#{Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Error Output].Columns[CD_VIA_CONTACTO]} + " | " + #{Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Error Output].Columns[DESC_VIA_CONTACTO]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,8000,1252)((DT_WSTR,140)((DT_STR,140,1252)[Flat File Source Error Output Column]))</property>
+                          name="FriendlyExpression">(DT_STR,8000,1252)(CD_VIA_CONTACTO + " | " + DESC_VIA_CONTACTO)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[FECHA_ERROR]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[FECHA_ERROR]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[FECHA_ERROR]"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[FECHA_ERROR]"
                       name="FECHA_ERROR"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -704,12 +670,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NOMBRE_COMPONENTE]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[NOMBRE_COMPONENTE]"
                       dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       length="200"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NOMBRE_COMPONENTE]"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[NOMBRE_COMPONENTE]"
                       name="NOMBRE_COMPONENTE"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -727,11 +693,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[SK_EJECUCION]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[SK_EJECUCION]"
                       dataType="i4"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[SK_EJECUCION]"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[SK_EJECUCION]"
                       name="SK_EJECUCION"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -749,37 +715,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[DESC_ERROR]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[NM_COLUMNA_ERROR]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[DESC_ERROR]"
-                      name="DESC_ERROR"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_STR,255,1252)#{Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1.Outputs[Output 0].Columns[ErrorDescription]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,255,1252)ErrorDescription</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NM_COLUMNA_ERROR]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NM_COLUMNA_ERROR]"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[NM_COLUMNA_ERROR]"
                       name="NM_COLUMNA_ERROR"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -787,7 +729,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,255,1252)#{Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1.Outputs[Output 0].Columns[ErrorColumnName]}</property>
+                          name="Expression">(DT_STR,255,1252)#{Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2.Outputs[Output 0].Columns[ErrorColumnName]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -796,27 +738,51 @@
                           name="FriendlyExpression">(DT_STR,255,1252)ErrorColumnName</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[DESC_ERROR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[DESC_ERROR]"
+                      name="DESC_ERROR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,255,1252)#{Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2.Outputs[Output 0].Columns[ErrorDescription]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,255,1252)ErrorDescription</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Error Output]"
+                  refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1707,967 +1673,6 @@
                       lineageId="Package\DF_STG_DIM_VIA_CONTACTO\ER_DTN_ERROR_ROWS_LOG.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1"
-              componentClassID="Microsoft.ManagedComponentHost"
-              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;11"
-              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
-              name="ER_SCT_DESCRIPTION_1"
-              version="10">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Stores the source code of the component"
-                  isArray="true"
-                  name="SourceCode"
-                  state="cdata">
-                  <arrayElements
-                    arrayElementCount="30">
-                    <arrayElement
-                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
-<root>
-  <!-- 
-    Microsoft ResX Schema 
-    
-    Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
-    associated with the data types.
-    
-    Example:
-    
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-                
-    There are any number of "resheader" rows that contain simple 
-    name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
-    mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
-    read any of the formats listed below.
-    
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
-
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-</root>]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
-/* The Script Component allows you to perform virtually any operation that can be accomplished in
- * a .Net application within the context of an Integration Services data flow.
- *
- * Expand the other regions which have "Help" prefixes for examples of specific ways to use
- * Integration Services features within this script component. */
-#endregion
-
-#region Namespaces
-using System;
-using System.Data;
-using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
-using Microsoft.SqlServer.Dts.Runtime.Wrapper;
-#endregion
-
-/// <summary>
-/// This is the class to which to add your code.  Do not change the name, attributes, or parent
-/// of this class.
-/// </summary>
-[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
-public class ScriptMain : UserComponent
-{
-    #region Help:  Using Integration Services variables and parameters
-    /* To use a variable in this script, first ensure that the variable has been added to
-     * either the list contained in the ReadOnlyVariables property or the list contained in
-     * the ReadWriteVariables property of this script component, according to whether or not your
-     * code needs to write into the variable.  To do so, save this script, close this instance of
-     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
-     * Script Transformation Editor window.
-     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
-     *
-     * Example of reading from a variable or parameter:
-     *  DateTime startTime = Variables.MyStartTime;
-     *
-     * Example of writing to a variable:
-     *  Variables.myStringVariable = "new value";
-     */
-    #endregion
-
-    #region Help:  Using Integration Services Connnection Managers
-    /* Some types of connection managers can be used in this script component.  See the help topic
-     * "Working with Connection Managers Programatically" for details.
-     *
-     * To use a connection manager in this script, first ensure that the connection manager has
-     * been added to either the list of connection managers on the Connection Managers page of the
-     * script component editor.  To add the connection manager, save this script, close this instance of
-     * Visual Studio, and add the Connection Manager to the list.
-     *
-     * If the component needs to hold a connection open while processing rows, override the
-     * AcquireConnections and ReleaseConnections methods.
-     * 
-     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
-     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
-     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
-     *
-     * Example of using a File connection manager to acquire a file path:
-     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
-     *  string filePath = (string)rawConnection;
-     *
-     * Example of releasing a connection manager:
-     *  Connections.SalesDB.ReleaseConnection(rawConnection);
-     */
-    #endregion
-
-    #region Help:  Firing Integration Services Events
-    /* This script component can fire events.
-     *
-     * Example of firing an error event:
-     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
-     *
-     * Example of firing an information event:
-     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
-     *
-     * Example of firing a warning event:
-     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
-     */
-    #endregion
-
-    /// <summary>
-    /// This method is called once, before rows begin to be processed in the data flow.
-    ///
-    /// You can remove this method if you don't need to do anything here.
-    /// </summary>
-    public override void PreExecute()
-    {
-        base.PreExecute();
-        /*
-         * Add your code here
-         */
-    }
-
-    /// <summary>
-    /// This method is called after all the rows have passed through this component.
-    ///
-    /// You can delete this method if you don't need to do anything here.
-    /// </summary>
-    public override void PostExecute()
-    {
-        base.PostExecute();
-        /*
-         * Add your code here
-         */
-    }
-
-    /// <summary>
-    /// This method is called once for every row that passes through the component from Input0.
-    ///
-    /// Example of reading a value from a column in the the row:
-    ///  string zipCode = Row.ZipCode
-    ///
-    /// Example of writing a value to a column in the row:
-    ///  Row.ZipCode = zipCode
-    /// </summary>
-    /// <param name="Row">The row that is currently passing through the component</param>
-    public override void Input0_ProcessInputRow(Input0Buffer Row)
-    {
-        /*
-        * Add your code here
-        */
-        Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);
-        IDTSComponentMetaData130 componentMetaData = this.ComponentMetaData as IDTSComponentMetaData130;
-        Row.ErrorColumnName = componentMetaData.GetIdentificationStringByID(Row.ErrorColumn);
-    }
-
-}
-]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
-*  Microsoft SQL Server Integration Services buffer wrappers
-*  This module defines classes for accessing data flow buffers
-*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
-
-
-
-using System;
-using System.Data;
-using Microsoft.SqlServer.Dts.Pipeline;
-using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
-
-public class Input0Buffer: ScriptBuffer
-
-{
-    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
-        : base(Buffer, BufferColumnIndexes, OutputMap)
-    {
-    }
-
-    public Int32 ErrorCode
-    {
-        get
-        {
-            return Buffer.GetInt32(BufferColumnIndexes[0]);
-        }
-    }
-    public bool ErrorCode_IsNull
-    {
-        get
-        {
-            return IsNull(0);
-        }
-    }
-
-    public Int32 ErrorColumn
-    {
-        get
-        {
-            return Buffer.GetInt32(BufferColumnIndexes[1]);
-        }
-    }
-    public bool ErrorColumn_IsNull
-    {
-        get
-        {
-            return IsNull(1);
-        }
-    }
-
-    public String ErrorDescription
-    {
-        set
-        {
-            this[2] = value;
-        }
-    }
-    public bool ErrorDescription_IsNull
-    {
-        set
-        {
-            if (value)
-            {
-                SetNull(2);
-            }
-            else
-            {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
-            }
-        }
-    }
-
-    public String ErrorColumnName
-    {
-        set
-        {
-            this[3] = value;
-        }
-    }
-    public bool ErrorColumnName_IsNull
-    {
-        set
-        {
-            if (value)
-            {
-                SetNull(3);
-            }
-            else
-            {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
-            }
-        }
-    }
-
-    new public bool NextRow()
-    {
-        return base.NextRow();
-    }
-
-    new public bool EndOfRowset()
-    {
-        return base.EndOfRowset();
-    }
-
-}
-]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
-*  Microsoft SQL Server Integration Services component wrapper
-*  This module defines the base class for your component
-*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
-
-using System;
-using System.Data;
-using Microsoft.SqlServer.Dts.Pipeline;
-using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
-using Microsoft.SqlServer.Dts.Runtime.Wrapper;
-
-public class UserComponent: ScriptComponent
-{
-    public Connections Connections;
-    public Variables Variables;
-    public UserComponent()
-    {
-        Connections = new Connections(this);
-        Variables = new Variables(this);
-    }
-
-    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
-    {
-
-        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
-        {
-            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
-        }
-
-    }
-
-    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
-    {
-        while (Buffer.NextRow())
-        {
-            Input0_ProcessInputRow(Buffer);
-        }
-    }
-
-    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
-    {
-    }
-
-}
-
-public class Connections
-{
-    ScriptComponent ParentComponent;
-
-    public Connections(ScriptComponent Component)
-    {
-        ParentComponent = Component;
-    }
-
-}
-
-public class Variables
-{
-    ScriptComponent ParentComponent;
-
-    public Variables(ScriptComponent Component)
-    {
-        ParentComponent = Component;
-    }
-
-}
-]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("SC_fd83a24e585e42e5aeefacca70569e8f")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SC_fd83a24e585e42e5aeefacca70569e8f")]
-[assembly: AssemblyCopyright("Copyright @  2019")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.0.0")]
-]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[Project]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
-	<msb:PropertyGroup>
-		<msb:CodeName>SC_fd83a24e585e42e5aeefacca70569e8f</msb:CodeName>
-		<msb:Language>msBuild</msb:Language>
-		<msb:DisplayName>SC_fd83a24e585e42e5aeefacca70569e8f</msb:DisplayName>
-		<msb:ProjectId>{511C8EF9-88AE-4BF4-A67C-8F45230A1CED}</msb:ProjectId>
-	</msb:PropertyGroup>
-	<msb:ItemGroup>
-		<msb:Project Include="SC_fd83a24e585e42e5aeefacca70569e8f.csproj"/>
-		<msb:File Include="Properties\Settings.Designer.cs"/>
-		<msb:File Include="BufferWrapper.cs"/>
-		<msb:File Include="main.cs"/>
-		<msb:File Include="ComponentWrapper.cs"/>
-		<msb:File Include="Properties\Settings.settings"/>
-		<msb:File Include="Properties\AssemblyInfo.cs"/>
-		<msb:File Include="Properties\Resources.resx"/>
-		<msb:File Include="Properties\Resources.Designer.cs"/>
-	</msb:ItemGroup>
-</c:Project>]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_fd83a24e585e42e5aeefacca70569e8f.Properties.Settings.get_Default():SC_fd83a24e585e42e5aeefacca70569e8f.Properties.Sett" +
-    "ings")]
-
-namespace SC_fd83a24e585e42e5aeefacca70569e8f.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}
-]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[SC_fd83a24e585e42e5aeefacca70569e8f.csproj]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3a401d5f-f9f9-47d6-af70-8b435681ca39}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SC_fd83a24e585e42e5aeefacca70569e8f</RootNamespace>
-    <AssemblyName>SC_7B2F9E0E5BD24336942FF9B23EA47DAC</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
-    <TargetFrameworkProfile></TargetFrameworkProfile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>.\bin\Debug\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DebugSymbols>false</DebugSymbols>
-    <Optimize>true</Optimize>
-    <OutputPath>.\bin\Release\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.SqlServer.TxScript, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Compile Include="main.cs" />
-    <Compile Include="BufferWrapper.cs" />
-    <Compile Include="ComponentWrapper.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <AppDesigner Include="Properties\" />
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <!-- Include the build rules for a C# project.-->
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
-  <ProjectExtensions>
-    <VisualStudio>
-      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
-        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
-        <Host Name="ScriptComponent" GeneratedNamespace="SC_fd83a24e585e42e5aeefacca70569e8f" IconIndex="0"></Host>
-        <ProjectClient>
-          <HostIdentifier>SSIS_SC130</HostIdentifier>
-        </ProjectClient>
-      </FlavorProperties>
-    </VisualStudio>
-  </ProjectExtensions>
-</Project>]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_fd83a24e585e42e5aeefacca70569e8f.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
-    "rceManager")]
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_fd83a24e585e42e5aeefacca70569e8f.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
-    "fo")]
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_fd83a24e585e42e5aeefacca70569e8f.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
-    "):Void")]
-
-namespace SC_fd83a24e585e42e5aeefacca70569e8f.Properties {
-    
-    
-    /// <summary>
-    ///   A strongly-typed resource class, for looking up localized strings, etc.
-    /// </summary>
-    // This class was auto-generated by the StronglyTypedResourceBuilder
-    // class via a tool like ResGen or Visual Studio.
-    // To add or remove a member, edit your .ResX file then rerun ResGen
-    // with the /str option, or rebuild your VS project.
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    internal class Resources {
-        
-        private static global::System.Resources.ResourceManager resourceMan;
-        
-        private static global::System.Globalization.CultureInfo resourceCulture;
-        
-        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
-        }
-        
-        /// <summary>
-        ///   Returns the cached ResourceManager instance used by this class.
-        /// </summary>
-        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
-            get {
-                if ((resourceMan == null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_fd83a24e585e42e5aeefacca70569e8f.Properties.Resources", typeof(Resources).Assembly);
-                    resourceMan = temp;
-                }
-                return resourceMan;
-            }
-        }
-        
-        /// <summary>
-        ///   Overrides the current thread's CurrentUICulture property for all
-        ///   resource lookups using this strongly typed resource class.
-        /// </summary>
-        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
-            get {
-                return resourceCulture;
-            }
-            set {
-                resourceCulture = value;
-            }
-        }
-    }
-}
-]]></arrayElement>
-                  </arrayElements>
-                </property>
-                <property
-                  dataType="System.String"
-                  description="Stores the binary representation of the component"
-                  isArray="true"
-                  name="BinaryCode"
-                  state="cdata">
-                  <arrayElements
-                    arrayElementCount="2">
-                    <arrayElement
-                      dataType="System.String"><![CDATA[SC_7B2F9E0E5BD24336942FF9B23EA47DAC.dll]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAJIzPF8AAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAA9jMA
-AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAKQzAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
-AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA/BMAAAAgAAAAFAAAAAIA
-AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAWAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADY
-MwAAAAAAAEgAAAACAAUAHCIAANAQAAABAAAAAAAAAOwyAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAMANgAAAAEAABEDAigSAAAK
-A28GAAAGbxMAAApvCgAABgIoEgAACnUOAAABCgMGA28IAAAGbxQAAApvDAAABioeAigQAAAGKioC
-AwQFKBUAAAoqUgJ7FgAACgJ7FwAAChaUbxgAAAoqIgIWKBkAAAoqUgJ7FgAACgJ7FwAACheUbxgA
-AAoqIgIXKBkAAAoqJgIYAygaAAAKKloDLAgCGCgbAAAKKnIBAABwcxwAAAp6JgIZAygaAAAKKloD
-LAgCGSgbAAAKKnIBAABwcxwAAAp6HgIoHQAACioeAigeAAAKKn4CKB8AAAoCAnMUAAAGfQEAAAQC
-AnMVAAAGfQIAAAQqkgRyngAAcBpvIAAACiwVAgUCAyghAAAKDgRzBQAABm8SAAAGKkorBwIDbxMA
-AAYDbw4AAAYt8SoGKjoCKCIAAAoCA30DAAAEKjoCKCIAAAoCA30EAAAEKh4CKCIAAAoqrn4FAAAE
-LR5yrgAAcNAHAAACKCMAAApvJAAACnMlAAAKgAUAAAR+BQAABCoafgYAAAQqHgKABgAABCoafgcA
-AAQqHgIoJgAACioucxsAAAaABwAABCoAAABCU0pCAQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAF
-AGwAAAAQBgAAI34AAHwGAABsBwAAI1N0cmluZ3MAAAAA6A0AACABAAAjVVMACA8AABAAAAAjR1VJ
-RAAAABgPAAC4AQAAI0Jsb2IAAAAAAAAAAgAAAVcVogEJAQAAAPoBMwAWAAABAAAAIQAAAAgAAAAH
-AAAAHAAAABEAAAAmAAAAEAAAAAEAAAADAAAACwAAAAwAAAABAAAABQAAAAEAAAAAAHkDAQAAAAAA
-BgBzAqEFBgAHA6EFBgC/AY4FDwAVBgAABgDsAW0EBgBWAm0EBgA3Am0EBgDuAm0EBgCTAm0EBgCs
-Am0EBgADAm0EBgAeAkIDCgDHAgwBDgAaAFgFCgA3BQwBEgAoBQwBCgDfBAwBCgDbBgwBBgCeBhUE
-BgCiAY4FBgBIBcEFBgDTBFgEFgByAWMDFgDTAWMDFgBaAUMEBgCHAaEFDgABAFgFBgB/BBUEBgBc
-AxUEBgDCBBUEBgAtARUEBgDKABUEBgBgB20EAAAAADwAAAAAAAEAAQABABAAKAQAABAAAQABAAEA
-EAAbBQAAPQABAAUAAQAQAL0GAABJAAEAEAABABAAkgYAAE0AAwAUAAEAEABTBgAATQAEABUAAAAQ
-AMgFJAZNAAUAFgAAARAAggYkBmUABwAaAAYAkgaFAAYAUwaJAAEAywaNAAEAywaNABEAHASRABEA
-SgGVABEArACZAFAgAAAAAMYAJQMGAAEAWCAAAAAAxgAwAwYAAQBgIAAAAADGAD0HnQABAKIgAAAA
-AIYYgQUGAAIAqiAAAAAAhhiBBSoAAgC1IAAAAACGCLwAowAFAMogAAAAAIYIoQNMAAUA0yAAAAAA
-hggzBKMABQDoIAAAAACGCNEDTAAFAPEgAAAAAIYImQQQAAUA+yAAAAAAhgjoA6cABgASIQAAAACG
-CO4AEAAHABwhAAAAAIYItgOnAAgAMyEAAAAAhgBUB0wACQA7IQAAAACGAKUGTAAJAEMhAAAAAIYY
-gQUGAAkAYyEAAAAAxgAwB6wACQCIIQAAAADGASkHnQANAJshAAAAAMYBPQedAA4AnSEAAAAAhhiB
-BbYADwCsIQAAAACGGIEFtgAQALshAAAAAIMYgQUGABEAwyEAAAAAkwhEBbwAEQDvIQAAAACTCDIB
-wQARAPYhAAAAAJMIPgHGABEA/iEAAAAAlgixBswAEgAFIgAAAACGGIEFBgASAA0iAAAAAJEYhwXR
-ABIAAAABAFgHAAABAD0FAAACAF0GAAADAO0EAAABADwDAAABADwDAAABADwDAAABADwDAAABAGkA
-AAACAAIBAAADAD0FAAAEAO0EAAABAD0FAAABAFgHAAABAOEGAAABAOEGAAABADwDCQCBBQEAEQCB
-BQYAGQCBBQoAKQCBBRAAMQCBBRAAOQCBBRAAQQCBBRAASQCBBRAAUQCBBRAAWQCBBRAAYQCBBRAA
-aQCBBQYAoQCBBQYAwQCBBRUA0QCBBQYAkQAlAwYAkQAwAwYAkQCNACAA2QCuBCUAcQBxACUAeQCB
-BSoAeQA9BTQAeQBdBjgAgQAzADwAeQD9A0EAeQAMBEYAeQAEBAEA4QCBBRAAeQBUB0wAeQClBkwA
-kQCBBQYA6QCLBlAAkQBxBlcAmQCBBQYA+QDcAF0A+QBcB2UAqQCBBWsAyQCBBQYALgALAPAALgAT
-APkALgAbABgBLgAjACEBLgArAEoBLgAzAEoBLgA7AEoBLgBDACEBLgBLAFABLgBTAEoBLgBbAGcB
-QwBjALEB4QB7ALEB4wBrALEBKQFzABgBSQFzABgBGwADAAEABwAJAAgACwAAAMAA1QAAAKUD2QAA
-ADcE1QAAANUD2QAAALEE3QAAAOwD2QAAAPIA3QAAALoD2QAAAEgF4QAAAFIB5gAAALUG6wACAAYA
-AwACAAcABQACAAgABwACAAkACQABAAoACwABAAsADQABAAwADwABAA0AEQACABcAEwACABgAFQAB
-ABkAFQACABoAFwAEgAAAAQAAAAAAAAAAAAAAAABFAAAABAAAAAAAAAAAAAAAcwCjAAAAAAANAAAA
-AAAAAAAAAAB8AOsGAAAAAA0AAAAAAAAAAAAAAHwA9wQAAAAADQAAAAAAAAAAAAAAfAAIBwAAAAAE
-AAAAAAAAAAAAAABzABUEAAAAAAAAAAABAAAA0gUAAAAAAElEVFNDb21wb25lbnRNZXRhRGF0YTEw
-MABJRFRTQ29tcG9uZW50TWV0YURhdGExMzAAR2V0SW50MzIAPE1vZHVsZT4AU0NfN0IyRjlFMEU1
-QkQyNDMzNjk0MkZGOUIyM0VBNDdEQUMASW5wdXRJRABHZXRJZGVudGlmaWNhdGlvblN0cmluZ0J5
-SUQAZ2V0X0NvbXBvbmVudE1ldGFEYXRhAG1zY29ybGliAGRlZmF1bHRJbnN0YW5jZQBnZXRfRXJy
-b3JDb2RlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAHNldF9FcnJvckNvbHVt
-bk5hbWUASW5wdXROYW1lAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0
-X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NC
-YXNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVn
-Z2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2Fi
-bGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJp
-YnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmli
-dXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0
-dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1
-dGUAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55
-QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAUG9zdEV4
-ZWN1dGUAdmFsdWUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBTdHJpbmcAU3lzdGVtLkNvbXBv
-bmVudE1vZGVsAFNDXzdCMkY5RTBFNUJEMjQzMzY5NDJGRjlCMjNFQTQ3REFDLmRsbABnZXRfRXJy
-b3JDb2RlX0lzTnVsbABzZXRfRXJyb3JDb2x1bW5OYW1lX0lzTnVsbABnZXRfRXJyb3JDb2x1bW5f
-SXNOdWxsAHNldF9FcnJvckRlc2NyaXB0aW9uX0lzTnVsbABTZXROdWxsAHNldF9JdGVtAFN5c3Rl
-bQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAGdldF9FcnJvckNvbHVtbgBTeXN0ZW0uQ29uZmlndXJh
-dGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBJbnZhbGlkT3BlcmF0
-aW9uRXhjZXB0aW9uAHNldF9FcnJvckRlc2NyaXB0aW9uAEdldEVycm9yRGVzY3JpcHRpb24AU3Ry
-aW5nQ29tcGFyaXNvbgBDdWx0dXJlSW5mbwBPdXRwdXROYW1lTWFwAE91dHB1dE1hcABNaWNyb3Nv
-ZnQuU3FsU2VydmVyLkRUU1BpcGVsaW5lV3JhcABJbnB1dDBCdWZmZXIAUGlwZWxpbmVCdWZmZXIA
-U2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFnZXIATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMu
-UGlwZWxpbmUuV3JhcHBlcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdub3N0aWNzAFN5c3RlbS5S
-dW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBTQ19mZDgzYTI0ZTU4NWU0
-MmU1YWVlZmFjY2E3MDU2OWU4Zi5Qcm9wZXJ0aWVzLlJlc291cmNlcy5yZXNvdXJjZXMARGVidWdn
-aW5nTW9kZXMAU0NfZmQ4M2EyNGU1ODVlNDJlNWFlZWZhY2NhNzA1NjllOGYuUHJvcGVydGllcwBW
-YXJpYWJsZXMAQnVmZmVyQ29sdW1uSW5kZXhlcwBHZXRDb2x1bW5JbmRleGVzAFNldHRpbmdzAEVx
-dWFscwBDb25uZWN0aW9ucwBPYmplY3QARW5kT2ZSb3dzZXQAZ2V0X0RlZmF1bHQAVXNlckNvbXBv
-bmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29tcG9uZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIu
-VHhTY3JpcHQATWljcm9zb2Z0LlNxbFNlcnZlci5QaXBlbGluZUhvc3QASW5wdXQwX1Byb2Nlc3NJ
-bnB1dABJbnB1dDBfUHJvY2Vzc0lucHV0Um93AE5leHRSb3cAZ2V0X0Fzc2VtYmx5AAAAAACAm0kA
-cwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAg
-AHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAA
-dABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAAAHFT
-AEMAXwBmAGQAOAAzAGEAMgA0AGUANQA4ADUAZQA0ADIAZQA1AGEAZQBlAGYAYQBjAGMAYQA3ADAA
-NQA2ADkAZQA4AGYALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAInD
-yokDmahGgL2IAbtbx6EABCABAQgDIAABBSABARERBCABAQ4FIAEBEV0EBwESOQQgABJtBCABDggJ
-IAMBEkEdCBJFAwYSQQMGHQgEIAEICAQgAQIIBSACAQgcAyAAAgYgAgIOEXkFIAEdCAgHAAESfRGA
-gQUgABKAhQcgAgEOEoCFCLd6XFYZNOCJCImEXc2AgMyRAwYSFAMGEhgDBhJJAwYSVQMGElkDBhIg
-BSABARIMAyAACAQgAQECCSAEAQgOEkESRQUgAQESSQQAABJVBAAAElkFAAEBElkEAAASIAMAAAED
-KAAIAygAAgMoAA4ECAASVQQIABJZBAgAEiAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRp
-b25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDX2ZkODNhMjRlNTg1ZTQyZTVhZWVmYWNjYTcwNTY5ZThm
-AAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMTkAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249
-djQuNQEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC41BAEAAAAAALQA
-AADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIs
-IFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1
-NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAA
-UEFEUEFEULQAAADMMwAAAAAAAAAAAADmMwAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2DMAAAAA
-AAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAA
-AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
-SAAAAFhAAADsAwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
-AAAAvQTv/gAAAQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
-AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
-AAAAAAAAALAETAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAA
-MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
-AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
-AABTAEMAXwBmAGQAOAAzAGEAMgA0AGUANQA4ADUAZQA0ADIAZQA1AGEAZQBlAGYAYQBjAGMAYQA3
-ADAANQA2ADkAZQA4AGYAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
-MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADcAQgAyAEYAOQBF
-ADAARQA1AEIARAAyADQAMwAzADYAOQA0ADIARgBGADkAQgAyADMARQBBADQANwBEAEEAQwAuAGQA
-bABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBo
-AHQAIABAACAAIAAyADAAMQA5AAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMA
-AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8ANwBC
-ADIARgA5AEUAMABFADUAQgBEADIANAAzADMANgA5ADQAMgBGAEYAOQBCADIAMwBFAEEANAA3AEQA
-QQBDAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfAGYAZAA4
-ADMAYQAyADQAZQA1ADgANQBlADQAMgBlADUAYQBlAGUAZgBhAGMAYwBhADcAMAA1ADYAOQBlADgA
-ZgAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4
-AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAA+DMAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
-                  </arrayElements>
-                </property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
-                  name="VSTAProjectName"
-                  typeConverter="NOTBROWSABLE">SC_7b2f9e0e5bd24336942ff9b23ea47dac</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the programming language used by the script."
-                  name="ScriptLanguage"
-                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a comma-separated list of read-only variables."
-                  name="ReadOnlyVariables"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a comma-separated list of read/write variables."
-                  name="ReadWriteVariables"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
-                <property
-                  dataType="System.String"
-                  description="List of breakpoints present on the script."
-                  isArray="true"
-                  name="BreakpointCollection"
-                  typeConverter="NOTBROWSABLE">
-                  <arrayElements
-                    arrayElementCount="0" />
-                </property>
-                <property
-                  dataType="System.String"
-                  description="Checksum to match component metedata against compiled codes."
-                  name="MetadataChecksum140"
-                  typeConverter="NOTBROWSABLE">ED</property>
-                <property
-                  dataType="System.String"
-                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
-                <property
-                  dataType="System.String"
-                  description="Checksum to match component metedata against compiled codes."
-                  name="MetadataShaChecksum"
-                  typeConverter="NOTBROWSABLE">47f6367fb2b7d2907fdceb26657a52e1983a4b7b</property>
-                <property
-                  dataType="System.String"
-                  description="Checksum to match component metedata against compiled codes."
-                  name="MetadataChecksum"
-                  typeConverter="NOTBROWSABLE">a70960887ca3084bc2538695c839b8c0</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1.Inputs[Input 0]"
-                  hasSideEffects="true"
-                  name="Input 0">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1.Inputs[Input 0].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Error Output].Columns[ErrorCode]" />
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1.Inputs[Input 0].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Error Output].Columns[ErrorColumn]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1.Outputs[Output 0]"
-                  name="Output 0"
-                  synchronousInputId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1.Inputs[Input 0]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1.Outputs[Output 0].Columns[ErrorDescription]"
-                      dataType="wstr"
-                      length="500"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1.Outputs[Output 0].Columns[ErrorDescription]"
-                      name="ErrorDescription" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1.Outputs[Output 0].Columns[ErrorColumnName]"
-                      dataType="wstr"
-                      length="500"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1.Outputs[Output 0].Columns[ErrorColumnName]"
-                      name="ErrorColumnName" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -3636,6 +2641,881 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </outputs>
             </component>
             <component
+              refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;11"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="ER_SCT_DESCRIPTION_1 2"
+              version="10">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from Input0.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        /*
+        * Add your code here
+        */
+        Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);
+        IDTSComponentMetaData130 componentMetaData = this.ComponentMetaData as IDTSComponentMetaData130;
+        Row.ErrorColumnName = componentMetaData.GetIdentificationStringByID(Row.ErrorColumn);
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Input0Buffer: ScriptBuffer
+
+{
+    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public Int32 ErrorCode
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[0]);
+        }
+    }
+    public bool ErrorCode_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+    }
+
+    public Int32 ErrorColumn
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[1]);
+        }
+    }
+    public bool ErrorColumn_IsNull
+    {
+        get
+        {
+            return IsNull(1);
+        }
+    }
+
+    public String ErrorDescription
+    {
+        set
+        {
+            this[2] = value;
+        }
+    }
+    public bool ErrorDescription_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(2);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String ErrorColumnName
+    {
+        set
+        {
+            this[3] = value;
+        }
+    }
+    public bool ErrorColumnName_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(3);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_fd83a24e585e42e5aeefacca70569e8f")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_fd83a24e585e42e5aeefacca70569e8f")]
+[assembly: AssemblyCopyright("Copyright @  2019")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>SC_fd83a24e585e42e5aeefacca70569e8f</msb:CodeName>
+		<msb:DisplayName>SC_fd83a24e585e42e5aeefacca70569e8f</msb:DisplayName>
+		<msb:ProjectId>{511C8EF9-88AE-4BF4-A67C-8F45230A1CED}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="SC_fd83a24e585e42e5aeefacca70569e8f.csproj"/>
+		<msb:File Include="main.cs"/>
+		<msb:File Include="BufferWrapper.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="ComponentWrapper.cs"/>
+		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Settings.settings"/>
+		<msb:File Include="Properties\Resources.resx"/>
+		<msb:File Include="Properties\Resources.Designer.cs"/>
+	</msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_fd83a24e585e42e5aeefacca70569e8f.Properties.Settings.get_Default():SC_fd83a24e585e42e5aeefacca70569e8f.Properties.Sett" +
+    "ings")]
+
+namespace SC_fd83a24e585e42e5aeefacca70569e8f.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_fd83a24e585e42e5aeefacca70569e8f.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{3a401d5f-f9f9-47d6-af70-8b435681ca39}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>SC_fd83a24e585e42e5aeefacca70569e8f</RootNamespace><AssemblyName>SC_D3FFD7F2A5DD4F7C9159CCF75F6A8966</AssemblyName><TargetFrameworkVersion>v4.5</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.TxScript, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.PipelineHost, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" /><Compile Include="main.cs" /><Compile Include="BufferWrapper.cs" /><Compile Include="ComponentWrapper.cs" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><!-- This section defines VSTA properties that describe the host-changable project properties. --><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptComponent" GeneratedNamespace="SC_fd83a24e585e42e5aeefacca70569e8f" IconIndex="0"></Host><ProjectClient><HostIdentifier>SSIS_SC130</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_fd83a24e585e42e5aeefacca70569e8f.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_fd83a24e585e42e5aeefacca70569e8f.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_fd83a24e585e42e5aeefacca70569e8f.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_fd83a24e585e42e5aeefacca70569e8f.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_fd83a24e585e42e5aeefacca70569e8f.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_D3FFD7F2A5DD4F7C9159CCF75F6A8966.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAEkc0V8AAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAA9jMA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAKQzAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA/BMAAAAgAAAAFAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAWAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADY
+MwAAAAAAAEgAAAACAAUAHCIAANAQAAABAAAAAAAAAOwyAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAMANgAAAAEAABEDAigSAAAK
+A28GAAAGbxMAAApvCgAABgIoEgAACnUOAAABCgMGA28IAAAGbxQAAApvDAAABioeAigQAAAGKioC
+AwQFKBUAAAoqUgJ7FgAACgJ7FwAAChaUbxgAAAoqIgIWKBkAAAoqUgJ7FgAACgJ7FwAACheUbxgA
+AAoqIgIXKBkAAAoqJgIYAygaAAAKKloDLAgCGCgbAAAKKnIBAABwcxwAAAp6JgIZAygaAAAKKloD
+LAgCGSgbAAAKKnIBAABwcxwAAAp6HgIoHQAACioeAigeAAAKKn4CKB8AAAoCAnMUAAAGfQEAAAQC
+AnMVAAAGfQIAAAQqkgRyngAAcBpvIAAACiwVAgUCAyghAAAKDgRzBQAABm8SAAAGKkorBwIDbxMA
+AAYDbw4AAAYt8SoGKjoCKCIAAAoCA30DAAAEKjoCKCIAAAoCA30EAAAEKh4CKCIAAAoqrn4FAAAE
+LR5yrgAAcNAHAAACKCMAAApvJAAACnMlAAAKgAUAAAR+BQAABCoafgYAAAQqHgKABgAABCoafgcA
+AAQqHgIoJgAACioucxsAAAaABwAABCoAAABCU0pCAQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAF
+AGwAAAAQBgAAI34AAHwGAABsBwAAI1N0cmluZ3MAAAAA6A0AACABAAAjVVMACA8AABAAAAAjR1VJ
+RAAAABgPAAC4AQAAI0Jsb2IAAAAAAAAAAgAAAVcVogEJAQAAAPoBMwAWAAABAAAAIQAAAAgAAAAH
+AAAAHAAAABEAAAAmAAAAEAAAAAEAAAADAAAACwAAAAwAAAABAAAABQAAAAEAAAAAAHkDAQAAAAAA
+BgBzAqEFBgAHA6EFBgC/AY4FDwAVBgAABgDsAW0EBgBWAm0EBgA3Am0EBgDuAm0EBgCTAm0EBgCs
+Am0EBgADAm0EBgAeAkIDCgDHAgwBDgAaAFgFCgA3BQwBEgAoBQwBCgDfBAwBCgDbBgwBBgCeBhUE
+BgCiAY4FBgBIBcEFBgDTBFgEFgByAWMDFgDTAWMDFgBaAUMEBgCHAaEFDgABAFgFBgB/BBUEBgBc
+AxUEBgDCBBUEBgAtARUEBgDKABUEBgBgB20EAAAAAGAAAAAAAAEAAQABABAAKAQAABAAAQABAAEA
+EAAbBQAAPQABAAUAAQAQAL0GAABJAAEAEAABABAAkgYAAE0AAwAUAAEAEABTBgAATQAEABUAAAAQ
+AMgFJAZNAAUAFgAAARAAggYkBmUABwAaAAYAkgaFAAYAUwaJAAEAywaNAAEAywaNABEAHASRABEA
+SgGVABEArACZAFAgAAAAAMYAJQMGAAEAWCAAAAAAxgAwAwYAAQBgIAAAAADGAD0HnQABAKIgAAAA
+AIYYgQUGAAIAqiAAAAAAhhiBBSoAAgC1IAAAAACGCLwAowAFAMogAAAAAIYIoQNMAAUA0yAAAAAA
+hggzBKMABQDoIAAAAACGCNEDTAAFAPEgAAAAAIYImQQQAAUA+yAAAAAAhgjoA6cABgASIQAAAACG
+CO4AEAAHABwhAAAAAIYItgOnAAgAMyEAAAAAhgBUB0wACQA7IQAAAACGAKUGTAAJAEMhAAAAAIYY
+gQUGAAkAYyEAAAAAxgAwB6wACQCIIQAAAADGASkHnQANAJshAAAAAMYBPQedAA4AnSEAAAAAhhiB
+BbYADwCsIQAAAACGGIEFtgAQALshAAAAAIMYgQUGABEAwyEAAAAAkwhEBbwAEQDvIQAAAACTCDIB
+wQARAPYhAAAAAJMIPgHGABEA/iEAAAAAlgixBswAEgAFIgAAAACGGIEFBgASAA0iAAAAAJEYhwXR
+ABIAAAABAFgHAAABAD0FAAACAF0GAAADAO0EAAABADwDAAABADwDAAABADwDAAABADwDAAABAGkA
+AAACAAIBAAADAD0FAAAEAO0EAAABAD0FAAABAFgHAAABAOEGAAABAOEGAAABADwDCQCBBQEAEQCB
+BQYAGQCBBQoAKQCBBRAAMQCBBRAAOQCBBRAAQQCBBRAASQCBBRAAUQCBBRAAWQCBBRAAYQCBBRAA
+aQCBBQYAoQCBBQYAwQCBBRUA0QCBBQYAkQAlAwYAkQAwAwYAkQCNACAA2QCuBCUAcQBxACUAeQCB
+BSoAeQA9BTQAeQBdBjgAgQAzADwAeQD9A0EAeQAMBEYAeQAEBAEA4QCBBRAAeQBUB0wAeQClBkwA
+kQCBBQYA6QCLBlAAkQBxBlcAmQCBBQYA+QDcAF0A+QBcB2UAqQCBBWsAyQCBBQYALgALAPAALgAT
+APkALgAbABgBLgAjACEBLgArAEoBLgAzAEoBLgA7AEoBLgBDACEBLgBLAFABLgBTAEoBLgBbAGcB
+QwBjALEB4QB7ALEB4wBrALEBKQFzABgBSQFzABgBGwADAAEABwAJAAgACwAAAMAA1QAAAKUD2QAA
+ADcE1QAAANUD2QAAALEE3QAAAOwD2QAAAPIA3QAAALoD2QAAAEgF4QAAAFIB5gAAALUG6wACAAYA
+AwACAAcABQACAAgABwACAAkACQABAAoACwABAAsADQABAAwADwABAA0AEQACABcAEwACABgAFQAB
+ABkAFQACABoAFwAEgAAAAQAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAAAAAAAcwCjAAAAAAANAAAA
+AAAAAAAAAAB8AOsGAAAAAA0AAAAAAAAAAAAAAHwA9wQAAAAADQAAAAAAAAAAAAAAfAAIBwAAAAAE
+AAAAAAAAAAAAAABzABUEAAAAAAAAAAABAAAA0gUAAAAAAElEVFNDb21wb25lbnRNZXRhRGF0YTEw
+MABJRFRTQ29tcG9uZW50TWV0YURhdGExMzAAR2V0SW50MzIAU0NfRDNGRkQ3RjJBNURENEY3Qzkx
+NTlDQ0Y3NUY2QTg5NjYAPE1vZHVsZT4ASW5wdXRJRABHZXRJZGVudGlmaWNhdGlvblN0cmluZ0J5
+SUQAZ2V0X0NvbXBvbmVudE1ldGFEYXRhAG1zY29ybGliAGRlZmF1bHRJbnN0YW5jZQBnZXRfRXJy
+b3JDb2RlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAHNldF9FcnJvckNvbHVt
+bk5hbWUASW5wdXROYW1lAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0
+X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NC
+YXNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVn
+Z2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2Fi
+bGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJp
+YnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmli
+dXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0
+dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1
+dGUAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55
+QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAUG9zdEV4
+ZWN1dGUAdmFsdWUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBTdHJpbmcAU3lzdGVtLkNvbXBv
+bmVudE1vZGVsAFNDX0QzRkZEN0YyQTVERDRGN0M5MTU5Q0NGNzVGNkE4OTY2LmRsbABnZXRfRXJy
+b3JDb2RlX0lzTnVsbABzZXRfRXJyb3JDb2x1bW5OYW1lX0lzTnVsbABnZXRfRXJyb3JDb2x1bW5f
+SXNOdWxsAHNldF9FcnJvckRlc2NyaXB0aW9uX0lzTnVsbABTZXROdWxsAHNldF9JdGVtAFN5c3Rl
+bQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAGdldF9FcnJvckNvbHVtbgBTeXN0ZW0uQ29uZmlndXJh
+dGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBJbnZhbGlkT3BlcmF0
+aW9uRXhjZXB0aW9uAHNldF9FcnJvckRlc2NyaXB0aW9uAEdldEVycm9yRGVzY3JpcHRpb24AU3Ry
+aW5nQ29tcGFyaXNvbgBDdWx0dXJlSW5mbwBPdXRwdXROYW1lTWFwAE91dHB1dE1hcABNaWNyb3Nv
+ZnQuU3FsU2VydmVyLkRUU1BpcGVsaW5lV3JhcABJbnB1dDBCdWZmZXIAUGlwZWxpbmVCdWZmZXIA
+U2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFnZXIATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMu
+UGlwZWxpbmUuV3JhcHBlcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdub3N0aWNzAFN5c3RlbS5S
+dW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBTQ19mZDgzYTI0ZTU4NWU0
+MmU1YWVlZmFjY2E3MDU2OWU4Zi5Qcm9wZXJ0aWVzLlJlc291cmNlcy5yZXNvdXJjZXMARGVidWdn
+aW5nTW9kZXMAU0NfZmQ4M2EyNGU1ODVlNDJlNWFlZWZhY2NhNzA1NjllOGYuUHJvcGVydGllcwBW
+YXJpYWJsZXMAQnVmZmVyQ29sdW1uSW5kZXhlcwBHZXRDb2x1bW5JbmRleGVzAFNldHRpbmdzAEVx
+dWFscwBDb25uZWN0aW9ucwBPYmplY3QARW5kT2ZSb3dzZXQAZ2V0X0RlZmF1bHQAVXNlckNvbXBv
+bmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29tcG9uZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIu
+VHhTY3JpcHQATWljcm9zb2Z0LlNxbFNlcnZlci5QaXBlbGluZUhvc3QASW5wdXQwX1Byb2Nlc3NJ
+bnB1dABJbnB1dDBfUHJvY2Vzc0lucHV0Um93AE5leHRSb3cAZ2V0X0Fzc2VtYmx5AAAAAACAm0kA
+cwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAg
+AHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAA
+dABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAAAHFT
+AEMAXwBmAGQAOAAzAGEAMgA0AGUANQA4ADUAZQA0ADIAZQA1AGEAZQBlAGYAYQBjAGMAYQA3ADAA
+NQA2ADkAZQA4AGYALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAIDl
+ChBzBpVBt4A4If0T2CoABCABAQgDIAABBSABARERBCABAQ4FIAEBEV0EBwESOQQgABJtBCABDggJ
+IAMBEkEdCBJFAwYSQQMGHQgEIAEICAQgAQIIBSACAQgcAyAAAgYgAgIOEXkFIAEdCAgHAAESfRGA
+gQUgABKAhQcgAgEOEoCFCLd6XFYZNOCJCImEXc2AgMyRAwYSFAMGEhgDBhJJAwYSVQMGElkDBhIg
+BSABARIMAyAACAQgAQECCSAEAQgOEkESRQUgAQESSQQAABJVBAAAElkFAAEBElkEAAASIAMAAAED
+KAAIAygAAgMoAA4ECAASVQQIABJZBAgAEiAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRp
+b25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDX2ZkODNhMjRlNTg1ZTQyZTVhZWVmYWNjYTcwNTY5ZThm
+AAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMTkAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249
+djQuNQEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC41BAEAAAAAALQA
+AADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIs
+IFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1
+NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAA
+UEFEUEFEULQAAADMMwAAAAAAAAAAAADmMwAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2DMAAAAA
+AAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAA
+AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
+SAAAAFhAAADsAwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
+AAAAvQTv/gAAAQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
+AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
+AAAAAAAAALAETAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAA
+MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
+AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
+AABTAEMAXwBmAGQAOAAzAGEAMgA0AGUANQA4ADUAZQA0ADIAZQA1AGEAZQBlAGYAYQBjAGMAYQA3
+ADAANQA2ADkAZQA4AGYAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
+MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfAEQAMwBGAEYARAA3
+AEYAMgBBADUARABEADQARgA3AEMAOQAxADUAOQBDAEMARgA3ADUARgA2AEEAOAA5ADYANgAuAGQA
+bABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBo
+AHQAIABAACAAIAAyADAAMQA5AAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMA
+AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8ARAAz
+AEYARgBEADcARgAyAEEANQBEAEQANABGADcAQwA5ADEANQA5AEMAQwBGADcANQBGADYAQQA4ADkA
+NgA2AC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfAGYAZAA4
+ADMAYQAyADQAZQA1ADgANQBlADQAMgBlADUAYQBlAGUAZgBhAGMAYwBhADcAMAA1ADYAOQBlADgA
+ZgAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4
+AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAA+DMAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_d3ffd7f2a5dd4f7c9159ccf75f6a8966</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE">ED</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataShaChecksum"
+                  typeConverter="NOTBROWSABLE">47f6367fb2b7d2907fdceb26657a52e1983a4b7b</property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum"
+                  typeConverter="NOTBROWSABLE">a70960887ca3084bc2538695c839b8c0</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2.Inputs[Input 0]"
+                  hasSideEffects="true"
+                  name="Input 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2.Inputs[Input 0].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2.Inputs[Input 0].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2.Outputs[Output 0]"
+                  name="Output 0"
+                  synchronousInputId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2.Inputs[Input 0]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2.Outputs[Output 0].Columns[ErrorDescription]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2.Outputs[Output 0].Columns[ErrorDescription]"
+                      name="ErrorDescription" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2.Outputs[Output 0].Columns[ErrorColumnName]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2.Outputs[Output 0].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1"
               componentClassID="Microsoft.UnionAll"
               contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -3643,180 +3523,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               name="ER_UN_STANDARD_1"
               version="1">
               <inputs>
-                <input
-                  refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 1]"
-                  name="Union All Input 1">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[NOMBRE_TABLA]"
-                      cachedDataType="wstr"
-                      cachedLength="8"
-                      cachedName="NOMBRE_TABLA"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NOMBRE_TABLA]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[NOMBRE_TABLA]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Error Output].Columns[ErrorCode]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[ErrorCode]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Error Output].Columns[ErrorColumn]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[ErrorColumn]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[ErrorDescription]"
-                      cachedDataType="wstr"
-                      cachedLength="500"
-                      cachedName="ErrorDescription"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1.Outputs[Output 0].Columns[ErrorDescription]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[ErrorDescription]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[ErrorColumnName]"
-                      cachedDataType="wstr"
-                      cachedLength="500"
-                      cachedName="ErrorColumnName"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1.Outputs[Output 0].Columns[ErrorColumnName]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[ErrorColumnName]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[FECHA_ERROR]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="FECHA_ERROR"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[FECHA_ERROR]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[FECHA_ERROR]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[NOMBRE_PAQUETE]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="NOMBRE_PAQUETE"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NOMBRE_PAQUETE]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[NOMBRE_PAQUETE]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[NOMBRE_COMPONENTE]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="NOMBRE_COMPONENTE"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NOMBRE_COMPONENTE]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[NOMBRE_COMPONENTE]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[TEXTO_DETALLE_REGISTRO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="8000"
-                      cachedName="TEXTO_DETALLE_REGISTRO"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[TEXTO_DETALLE_REGISTRO]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[TEXTO_DETALLE_REGISTRO]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[SK_EJECUCION]"
-                      cachedDataType="i4"
-                      cachedName="SK_EJECUCION"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[SK_EJECUCION]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SK_EJECUCION]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[DESC_ERROR]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="DESC_ERROR"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[DESC_ERROR]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DESC_ERROR]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[NM_COLUMNA_ERROR]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="NM_COLUMNA_ERROR"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output].Columns[NM_COLUMNA_ERROR]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[NM_COLUMNA_ERROR]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
                 <input
                   refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 2]"
                   hasSideEffects="true"
@@ -3994,9 +3700,158 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 </input>
                 <input
                   refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 3]"
-                  dangling="true"
                   hasSideEffects="true"
                   name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[ErrorDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="ErrorDescription"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2.Outputs[Output 0].Columns[ErrorDescription]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[ErrorDescription]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[ErrorColumnName]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="ErrorColumnName"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2.Outputs[Output 0].Columns[ErrorColumnName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[ErrorColumnName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[NOMBRE_PAQUETE]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="NOMBRE_PAQUETE"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[NOMBRE_PAQUETE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[NOMBRE_PAQUETE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[NOMBRE_TABLA]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="NOMBRE_TABLA"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[NOMBRE_TABLA]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[NOMBRE_TABLA]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[TEXTO_DETALLE_REGISTRO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8000"
+                      cachedName="TEXTO_DETALLE_REGISTRO"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[TEXTO_DETALLE_REGISTRO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[TEXTO_DETALLE_REGISTRO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[FECHA_ERROR]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FECHA_ERROR"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[FECHA_ERROR]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[FECHA_ERROR]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[NOMBRE_COMPONENTE]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="NOMBRE_COMPONENTE"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[NOMBRE_COMPONENTE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[NOMBRE_COMPONENTE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[SK_EJECUCION]"
+                      cachedDataType="i4"
+                      cachedName="SK_EJECUCION"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[SK_EJECUCION]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SK_EJECUCION]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[NM_COLUMNA_ERROR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="NM_COLUMNA_ERROR"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[NM_COLUMNA_ERROR]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[NM_COLUMNA_ERROR]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 3].Columns[DESC_ERROR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="DESC_ERROR"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output].Columns[DESC_ERROR]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DESC_ERROR]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 1]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 1">
                   <externalMetadataColumns />
                 </input>
               </inputs>
@@ -4160,15 +4015,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedLength="20"
                       cachedName="CD_VIA_CONTACTO"
                       externalMetadataColumnId="Package\DF_STG_DIM_VIA_CONTACTO\PR_DTN_DIM_VIA_CONTACTO.Inputs[OLE DB Destination Input].ExternalColumns[CD_VIA_CONTACTO]"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output].Columns[CD_VIA_CONTACTO]" />
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output].Columns[CD_VIA_CONTACTO]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_DTN_DIM_VIA_CONTACTO.Inputs[OLE DB Destination Input].Columns[DESC_VIA_CONTACTO]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="150"
+                      cachedLength="255"
                       cachedName="DESC_VIA_CONTACTO"
                       externalMetadataColumnId="Package\DF_STG_DIM_VIA_CONTACTO\PR_DTN_DIM_VIA_CONTACTO.Inputs[OLE DB Destination Input].ExternalColumns[DESC_VIA_CONTACTO]"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output].Columns[DESC_VIA_CONTACTO]" />
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output].Columns[DESC_VIA_CONTACTO]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4233,7 +4088,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedName="CD_VIA_CONTACTO"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output].Columns[CD_VIA_CONTACTO]"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output].Columns[CD_VIA_CONTACTO]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4241,7 +4096,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output].Columns[CD_VIA_CONTACTO]}) ? "-1" : #{Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output].Columns[CD_VIA_CONTACTO]}</property>
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output].Columns[CD_VIA_CONTACTO]}) ? "-1" : #{Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output].Columns[CD_VIA_CONTACTO]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4254,11 +4109,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_DV_TRATAMIENTO_DE_NULOS_1.Inputs[Derived Column Input].Columns[DESC_VIA_CONTACTO]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="150"
+                      cachedLength="255"
                       cachedName="DESC_VIA_CONTACTO"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output].Columns[DESC_VIA_CONTACTO]"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output].Columns[DESC_VIA_CONTACTO]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4266,7 +4121,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output].Columns[DESC_VIA_CONTACTO]}) ? "-1" : #{Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output].Columns[DESC_VIA_CONTACTO]}</property>
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output].Columns[DESC_VIA_CONTACTO]}) ? "-1" : #{Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output].Columns[DESC_VIA_CONTACTO]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4315,118 +4170,134 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </component>
             <component
               refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="1033"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
               name="PR_SRC_DIM_VIA_CONTACTO"
               usesDispositions="true"
-              version="1">
+              version="7">
               <properties>
                 <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT CD_VIA_CONTACTO, DESC_VIA_CONTACTO
+FROM source00.VIA_CONTACTO</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DIM_VIA_CONTACTO]"
-                  connectionManagerRefId="Package.ConnectionManagers[DIM_VIA_CONTACTO]"
-                  name="FlatFileConnection" />
+                  refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Connections[OleDbConnection]"
+                  connectionManagerID="{37F1298F-18F1-47D2-8B78-6F76872E9CC9}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_SRC_RRHH_02]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
+                  refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output].Columns[CD_VIA_CONTACTO]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output].Columns[CD_VIA_CONTACTO]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output].ExternalColumns[CD_VIA_CONTACTO]"
+                      externalMetadataColumnId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output].ExternalColumns[CD_VIA_CONTACTO]"
                       length="20"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output].Columns[CD_VIA_CONTACTO]"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output].Columns[CD_VIA_CONTACTO]"
                       name="CD_VIA_CONTACTO"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
+                      truncationRowDisposition="RedirectRow" />
                     <outputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output].Columns[DESC_VIA_CONTACTO]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output].Columns[DESC_VIA_CONTACTO]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
-                      externalMetadataColumnId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output].ExternalColumns[DESC_VIA_CONTACTO]"
-                      length="150"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output].Columns[DESC_VIA_CONTACTO]"
+                      externalMetadataColumnId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output].ExternalColumns[DESC_VIA_CONTACTO]"
+                      length="255"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output].Columns[DESC_VIA_CONTACTO]"
                       name="DESC_VIA_CONTACTO"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
+                      truncationRowDisposition="RedirectRow" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output].ExternalColumns[CD_VIA_CONTACTO]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output].ExternalColumns[CD_VIA_CONTACTO]"
                       codePage="1252"
                       dataType="str"
                       length="20"
                       name="CD_VIA_CONTACTO" />
                     <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output].ExternalColumns[DESC_VIA_CONTACTO]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output].ExternalColumns[DESC_VIA_CONTACTO]"
                       codePage="1252"
                       dataType="str"
-                      length="150"
+                      length="255"
                       name="DESC_VIA_CONTACTO" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Error Output]"
+                  refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
-                  name="Flat File Source Error Output">
+                  name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Error Output].Columns[CD_VIA_CONTACTO]"
                       codePage="1252"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Error Output].Columns[CD_VIA_CONTACTO]"
+                      name="CD_VIA_CONTACTO" />
                     <outputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Error Output].Columns[DESC_VIA_CONTACTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Error Output].Columns[DESC_VIA_CONTACTO]"
+                      name="DESC_VIA_CONTACTO" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -4860,49 +4731,39 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               startId="Package\DF_STG_DIM_VIA_CONTACTO\DV_STANDARD_2.Outputs[Derived Column Error Output]" />
             <path
               refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output5]"
-              endId="Package\DF_STG_DIM_VIA_CONTACTO\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_VIA_CONTACTO\DV_STANDARD_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output4]"
-              endId="Package\DF_STG_DIM_VIA_CONTACTO\UN_STANDARD.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_VIA_CONTACTO\DV_STANDARD_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output3]"
-              endId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output6]"
               endId="Package\DF_STG_DIM_VIA_CONTACTO\UN_STANDARD.Inputs[Union All Input 1]"
               name="Derived Column Output"
               startId="Package\DF_STG_DIM_VIA_CONTACTO\DV_STANDARD_1.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output1]"
+              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output4]"
+              endId="Package\DF_STG_DIM_VIA_CONTACTO\PR_DTN_DIM_VIA_CONTACTO.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_VIA_CONTACTO\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output3]"
               endId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 2]"
               name="Derived Column Output"
               startId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_3.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output]"
-              endId="Package\DF_STG_DIM_VIA_CONTACTO\PR_DTN_DIM_VIA_CONTACTO.Inputs[OLE DB Destination Input]"
+              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output6]"
+              endId="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1.Inputs[Union All Input 3]"
               name="Derived Column Output"
-              startId="Package\DF_STG_DIM_VIA_CONTACTO\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output1]"
+              endId="Package\DF_STG_DIM_VIA_CONTACTO\UN_STANDARD.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_VIA_CONTACTO\DV_STANDARD_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output]"
+              endId="Package\DF_STG_DIM_VIA_CONTACTO\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_VIA_CONTACTO\DV_STANDARD_3.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output2]"
               endId="Package\DF_STG_DIM_VIA_CONTACTO\UN_STANDARD.Inputs[Union All Input 4]"
               name="Derived Column Output"
               startId="Package\DF_STG_DIM_VIA_CONTACTO\DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Flat File Source Error Output]"
-              endId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1.Inputs[Input 0]"
-              name="Flat File Source Error Output"
-              startId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Error Output]" />
-            <path
-              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Flat File Source Output]"
-              endId="Package\DF_STG_DIM_VIA_CONTACTO\RA_MC_STANDARD_1.Inputs[Multicast Input 1]"
-              name="Flat File Source Output"
-              startId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[Flat File Source Output]" />
             <path
               refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Multicast Output 2]"
               endId="Package\DF_STG_DIM_VIA_CONTACTO\RA_AGG_STANDARD_1.Inputs[Aggregate Input 1]"
@@ -4929,15 +4790,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               name="OLE DB Destination Error Output"
               startId="Package\DF_STG_DIM_VIA_CONTACTO\PR_DTN_DIM_VIA_CONTACTO.Outputs[OLE DB Destination Error Output]" />
             <path
-              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Output 0]"
-              endId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input]"
-              name="Output 0"
-              startId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1.Outputs[Output 0]" />
+              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[OLE DB Source Error Output]"
+              endId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2.Inputs[Input 0]"
+              name="OLE DB Source Error Output"
+              startId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Error Output]" />
             <path
-              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Output 01]"
+              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[OLE DB Source Output]"
+              endId="Package\DF_STG_DIM_VIA_CONTACTO\RA_MC_STANDARD_1.Inputs[Multicast Input 1]"
+              name="OLE DB Source Output"
+              startId="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Output 0]"
               endId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_3.Inputs[Derived Column Input]"
               name="Output 0"
               startId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 1.Outputs[Output 0]" />
+            <path
+              refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Output 01]"
+              endId="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1.Inputs[Derived Column Input]"
+              name="Output 0"
+              startId="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2.Outputs[Output 0]" />
             <path
               refId="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Union All Output 1]"
               endId="Package\DF_STG_DIM_VIA_CONTACTO\DV_STANDARD_3.Inputs[Derived Column Input]"
@@ -4960,7 +4831,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_CREATE_DATE_1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5036,7 +4907,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_DATE_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5119,7 +4990,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_INI_ESTATUS_RUNNING_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5215,7 +5086,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5263,7 +5134,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5287,7 +5158,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6131,9 +6002,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           Id="Package\DF_STG_DIM_VIA_CONTACTO\ER_DTN_ERROR_ROWS_LOG"
           TopLeft="72,710" />
         <NodeLayout
+          Size="257,42"
+          Id="Package\DF_STG_DIM_VIA_CONTACTO\PR_DV_TRATAMIENTO_DE_NULOS_1"
+          TopLeft="480,305" />
+        <NodeLayout
           Size="183,42"
-          Id="Package\DF_STG_DIM_VIA_CONTACTO\RA_MC_STANDARD_2"
-          TopLeft="732,202" />
+          Id="Package\DF_STG_DIM_VIA_CONTACTO\RA_MC_STANDARD_1"
+          TopLeft="538,113" />
         <NodeLayout
           Size="261,42"
           Id="Package\DF_STG_DIM_VIA_CONTACTO\DTN_RECONCILIACION_AUTOMATICA"
@@ -6143,25 +6018,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           Id="Package\DF_STG_DIM_VIA_CONTACTO\DV_STANDARD_2"
           TopLeft="890,458" />
         <NodeLayout
-          Size="225,42"
-          Id="Package\DF_STG_DIM_VIA_CONTACTO\PR_DTN_DIM_VIA_CONTACTO"
-          TopLeft="571,424" />
-        <NodeLayout
           Size="183,42"
-          Id="Package\DF_STG_DIM_VIA_CONTACTO\RA_MC_STANDARD_1"
-          TopLeft="538,113" />
+          Id="Package\DF_STG_DIM_VIA_CONTACTO\RA_MC_STANDARD_2"
+          TopLeft="732,202" />
         <NodeLayout
           Size="200,42"
-          Id="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1"
-          TopLeft="87,300" />
+          Id="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 1"
+          TopLeft="894,557" />
         <NodeLayout
           Size="182,42"
           Id="Package\DF_STG_DIM_VIA_CONTACTO\ER_UN_STANDARD_1"
           TopLeft="67,606" />
         <NodeLayout
           Size="226,42"
-          Id="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2"
-          TopLeft="40,444" />
+          Id="Package\DF_STG_DIM_VIA_CONTACTO\DV_REGISTROS_INVALIDOS_2 1"
+          TopLeft="77,363" />
         <NodeLayout
           Size="163,42"
           Id="Package\DF_STG_DIM_VIA_CONTACTO\DV_STANDARD_4"
@@ -6183,63 +6054,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           Id="Package\DF_STG_DIM_VIA_CONTACTO\DV_STANDARD_1"
           TopLeft="1236,223" />
         <NodeLayout
+          Size="225,42"
+          Id="Package\DF_STG_DIM_VIA_CONTACTO\PR_DTN_DIM_VIA_CONTACTO"
+          TopLeft="571,424" />
+        <NodeLayout
+          Size="210,42"
+          Id="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 2"
+          TopLeft="131,211" />
+        <NodeLayout
           Size="224,42"
           Id="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO"
-          TopLeft="305,24" />
-        <NodeLayout
-          Size="189,42"
-          Id="Package\DF_STG_DIM_VIA_CONTACTO\RA_AGG_STANDARD_1"
-          TopLeft="1206,121" />
+          TopLeft="217,47" />
         <NodeLayout
           Size="163,42"
           Id="Package\DF_STG_DIM_VIA_CONTACTO\DV_STANDARD_3"
           TopLeft="1320,459" />
         <NodeLayout
-          Size="200,42"
-          Id="Package\DF_STG_DIM_VIA_CONTACTO\ER_SCT_DESCRIPTION_1 1"
-          TopLeft="894,557" />
+          Size="189,42"
+          Id="Package\DF_STG_DIM_VIA_CONTACTO\RA_AGG_STANDARD_1"
+          TopLeft="1206,121" />
         <NodeLayout
           Size="161,42"
           Id="Package\DF_STG_DIM_VIA_CONTACTO\AGGREGATE_1_1"
           TopLeft="578,534" />
-        <NodeLayout
-          Size="257,42"
-          Id="Package\DF_STG_DIM_VIA_CONTACTO\PR_DV_TRATAMIENTO_DE_NULOS_1"
-          TopLeft="480,305" />
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Union All Output 11]"
-          TopLeft="158,648">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="23.5,62"
-              Start="0,0"
-              End="23.5,54.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27"
-                    Point2="0,31"
-                    Point3="4,31" />
-                  <mssgle:LineSegment
-                    End="19.5,31" />
-                  <mssgle:CubicBezierSegment
-                    Point1="19.5,31"
-                    Point2="23.5,31"
-                    Point3="23.5,35" />
-                  <mssgle:LineSegment
-                    End="23.5,54.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Union All Output 1]"
           TopLeft="1350,363">
@@ -6271,11 +6108,49 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Output 01]"
+          TopLeft="236,253">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-46,110"
+              Start="0,0"
+              End="-46,102.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,51"
+                    Point2="0,55"
+                    Point3="-4,55" />
+                  <mssgle:LineSegment
+                    End="-42,55" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-42,55"
+                    Point2="-46,55"
+                    Point3="-46,59" />
+                  <mssgle:LineSegment
+                    End="-46,102.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Output 0]"
           TopLeft="994,599">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6305,41 +6180,81 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Output 0]"
-          TopLeft="187,342">
+          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[OLE DB Source Output]"
+          TopLeft="365,89">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-34,102"
+              EndConnector="264.5,24"
               Start="0,0"
-              End="-34,94.5">
+              End="264.5,16.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47" />
+                    End="0,5.70212765957447" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,47"
-                    Point2="0,51"
-                    Point3="-4,51" />
+                    Point1="0,5.70212765957447"
+                    Point2="0,9.70212765957447"
+                    Point3="4,9.70212765957447" />
                   <mssgle:LineSegment
-                    End="-30,51" />
+                    End="260.5,9.70212765957447" />
                   <mssgle:CubicBezierSegment
-                    Point1="-30,51"
-                    Point2="-34,51"
-                    Point3="-34,55" />
+                    Point1="260.5,9.70212765957447"
+                    Point2="264.5,9.70212765957447"
+                    Point3="264.5,13.7021276595745" />
                   <mssgle:LineSegment
-                    End="-34,94.5" />
+                    End="264.5,16.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[OLE DB Source Error Output]"
+          TopLeft="293,89">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-57,122"
+              Start="0,0"
+              End="-57,114.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.3191489361702" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.3191489361702"
+                    Point2="0,49.3191489361702"
+                    Point3="-4,49.3191489361702" />
+                  <mssgle:LineSegment
+                    End="-53,49.3191489361702" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-53,49.3191489361702"
+                    Point2="-57,49.3191489361702"
+                    Point3="-57,53.3191489361702" />
+                  <mssgle:LineSegment
+                    End="-57,114.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.93390625,54.3191489361702,126.8678125,11.43359375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6409,7 +6324,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6443,7 +6360,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6477,7 +6396,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6511,103 +6432,73 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Flat File Source Output]"
-          TopLeft="453,66">
+          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output6]"
+          TopLeft="190,405">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="176.5,47"
+              EndConnector="-32,201"
               Start="0,0"
-              End="176.5,39.5">
+              End="-32,193.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15" />
+                    End="0,96.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,15"
-                    Point2="0,19"
-                    Point3="4,19" />
+                    Point1="0,96.5"
+                    Point2="0,100.5"
+                    Point3="-4,100.5" />
                   <mssgle:LineSegment
-                    End="172.5,19" />
+                    End="-28,100.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="172.5,19"
-                    Point2="176.5,19"
-                    Point3="176.5,23" />
+                    Point1="-28,100.5"
+                    Point2="-32,100.5"
+                    Point3="-32,104.5" />
                   <mssgle:LineSegment
-                    End="176.5,39.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Flat File Source Error Output]"
-          TopLeft="381,66">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-194,234"
-              Start="0,0"
-              End="-194,226.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,90.5957446808511" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,90.5957446808511"
-                    Point2="0,94.5957446808511"
-                    Point3="-4,94.5957446808511" />
-                  <mssgle:LineSegment
-                    End="-190,94.5957446808511" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-190,94.5957446808511"
-                    Point2="-194,94.5957446808511"
-                    Point3="-194,98.5957446808511" />
-                  <mssgle:LineSegment
-                    End="-194,226.5" />
+                    End="-32,193.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-160.62638671875,99.5957446808511,127.2527734375,11.609375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output3]"
-          TopLeft="155.5,486">
+          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output5]"
+          TopLeft="1315.75,265">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,120"
+              EndConnector="0,56"
               Start="0,0"
-              End="0,112.5">
+              End="0,48.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,112.5" />
+                    End="0,48.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output]"
+          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output4]"
           TopLeft="608.5,347">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6637,11 +6528,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output1]"
+          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output3]"
           TopLeft="860,678">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6671,7 +6564,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6705,33 +6600,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output6]"
-          TopLeft="1315.75,265">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,56"
-              Start="0,0"
-              End="0,48.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output4]"
+          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output1]"
           TopLeft="997.333333333333,458">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6761,11 +6636,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output5]"
+          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Derived Column Output]"
           TopLeft="1401,501">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6783,7 +6660,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6841,7 +6720,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6875,7 +6756,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6909,7 +6792,45 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_VIA_CONTACTO.Paths[Union All Output 11]"
+          TopLeft="158,648">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="23.5,62"
+              Start="0,0"
+              End="23.5,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="4,31" />
+                  <mssgle:LineSegment
+                    End="19.5,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="19.5,31"
+                    Point2="23.5,31"
+                    Point3="23.5,35" />
+                  <mssgle:LineSegment
+                    End="23.5,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6951,6 +6872,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_STG_DIM_VIA_CONTACTO\PR_SRC_DIM_VIA_CONTACTO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
