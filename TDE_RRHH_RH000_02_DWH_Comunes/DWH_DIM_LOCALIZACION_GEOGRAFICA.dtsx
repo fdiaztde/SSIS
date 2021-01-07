@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="DWH_DIM_LOCALIZACION_GEOGRAFICA"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="375"
-  DTS:VersionGUID="{55E85C7F-57F6-4054-92DE-1285CCA536FD}">
+  DTS:VersionBuild="381"
+  DTS:VersionGUID="{65844B8B-08A9-4AD4-81DD-A9D3669C70D2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -42,7 +42,7 @@
       DTS:ObjectName="P_NOMBRE_ESQUEMA">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">rh01</DTS:Property>
+        DTS:Name="ParameterValue">RH00</DTS:Property>
     </DTS:PackageParameter>
     <DTS:PackageParameter
       DTS:CreationName=""
@@ -51,7 +51,7 @@
       DTS:ObjectName="P_NOMBRE_TABLA">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">DIM_BARRIO</DTS:Property>
+        DTS:Name="ParameterValue">DIM_LOCALIDACION_GEOGRAFICA</DTS:Property>
     </DTS:PackageParameter>
     <DTS:PackageParameter
       DTS:CreationName=""
@@ -2549,6 +2549,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedName="SRC_SK_DISTRITO_MUNICIPAL"
                       externalMetadataColumnId="Package\DF_DWH_DIM_LOC_GEO\PR_DTN_DIM_LOC_GEO.Inputs[OLE DB Destination Input].ExternalColumns[SK_DISTRITO_MUNICIPAL]"
                       lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_DISTRITO_MUNICIPAL]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_DTN_DIM_LOC_GEO.Inputs[OLE DB Destination Input].Columns[SRC_LATITUD]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_LATITUD"
+                      cachedPrecision="18"
+                      cachedScale="5"
+                      externalMetadataColumnId="Package\DF_DWH_DIM_LOC_GEO\PR_DTN_DIM_LOC_GEO.Inputs[OLE DB Destination Input].ExternalColumns[LATITUD]"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_LATITUD]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_DTN_DIM_LOC_GEO.Inputs[OLE DB Destination Input].Columns[SRC_LONGITUD]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_LONGITUD"
+                      cachedPrecision="18"
+                      cachedScale="5"
+                      externalMetadataColumnId="Package\DF_DWH_DIM_LOC_GEO\PR_DTN_DIM_LOC_GEO.Inputs[OLE DB Destination Input].ExternalColumns[LONGITUD]"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_LONGITUD]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2685,6 +2701,16 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\DF_DWH_DIM_LOC_GEO\PR_DTN_DIM_LOC_GEO.Inputs[OLE DB Destination Input].ExternalColumns[SK_DISTRITO_MUNICIPAL]"
                       dataType="numeric"
                       name="SK_DISTRITO_MUNICIPAL"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_DTN_DIM_LOC_GEO.Inputs[OLE DB Destination Input].ExternalColumns[LATITUD]"
+                      dataType="numeric"
+                      name="LATITUD"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_DTN_DIM_LOC_GEO.Inputs[OLE DB Destination Input].ExternalColumns[LONGITUD]"
+                      dataType="numeric"
+                      name="LONGITUD"
                       precision="18" />
                   </externalMetadataColumns>
                 </input>
@@ -4887,21 +4913,6 @@ BETWEEN [FC_INI_VAL] AND [FC_FIN_VAL]</property>
                           name="CopyFromReferenceColumn">SK_MUNICIPIO</property>
                       </properties>
                     </outputColumn>
-                    <outputColumn
-                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_MUNICIPIO.Outputs[Lookup Match Output].Columns[SRC_SK_PROVINCIA]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_MUNICIPIO.Outputs[Lookup Match Output].Columns[SRC_SK_PROVINCIA]"
-                      name="SRC_SK_PROVINCIA"
-                      precision="18"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">SK_PROVINCIA</property>
-                      </properties>
-                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -4930,6 +4941,214 @@ BETWEEN [FC_INI_VAL] AND [FC_FIN_VAL]</property>
                       refId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_MUNICIPIO.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_MUNICIPIO.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="PR_LKP_PROVINCIA"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [RH00].[DIM_PROVINCIA]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [RH00].[DIM_PROVINCIA]) [refTable]
+where [refTable].[CD_PROVINCIA] = ? and [refTable].[FC_INI_VAL] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="SK_PROVINCIA" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CD_PROVINCIA" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NM_PROVINCIA" dataType="DT_STR" length="150" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SIGLA_PROVINCIA" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SK_REGION" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CD_REGION" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FC_INI_VAL" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FC_FIN_VAL" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SK_EJECUCION_CREACION" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SK_EJECUCION_MODIFICACION" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LATITUD" dataType="DT_NUMERIC" length="0" precision="18" scale="5" codePage="0"/&gt;&lt;referenceColumn name="LONGITUD" dataType="DT_NUMERIC" length="0" precision="18" scale="5" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_PROVINCIA]};#{Package\DF_DWH_DIM_LOC_GEO\PR_DV_V_FC_ACTUAL_1.Outputs[Derived Column Output].Columns[V_FC_ACTUAL]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Connections[OleDbConnection]"
+                  connectionManagerID="{F7B18547-756B-4E39-B285-A6EB8B8C906F}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_DWH_RRHH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Inputs[Lookup Input].Columns[V_FC_ACTUAL]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="V_FC_ACTUAL"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_DV_V_FC_ACTUAL_1.Outputs[Derived Column Output].Columns[V_FC_ACTUAL]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">FC_INI_VAL</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Inputs[Lookup Input].Columns[CD_PROVINCIA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CD_PROVINCIA"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_PROVINCIA]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CD_PROVINCIA</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Outputs[Lookup Match Output].Columns[SRC_SK_PROVINCIA]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Outputs[Lookup Match Output].Columns[SRC_SK_PROVINCIA]"
+                      name="SRC_SK_PROVINCIA"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">SK_PROVINCIA</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Outputs[Lookup Match Output].Columns[LATITUD]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Outputs[Lookup Match Output].Columns[LATITUD]"
+                      name="LATITUD"
+                      precision="18"
+                      scale="5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">LATITUD</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Outputs[Lookup Match Output].Columns[LONGITUD]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Outputs[Lookup Match Output].Columns[LONGITUD]"
+                      name="LONGITUD"
+                      precision="18"
+                      scale="5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">LONGITUD</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -5262,7 +5481,7 @@ BETWEEN [FC_INI_VAL] AND [FC_FIN_VAL]</property>
                       cachedDataType="numeric"
                       cachedName="SRC_SK_PROVINCIA"
                       cachedPrecision="18"
-                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_MUNICIPIO.Outputs[Lookup Match Output].Columns[SRC_SK_PROVINCIA]" />
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Outputs[Lookup Match Output].Columns[SRC_SK_PROVINCIA]" />
                     <inputColumn
                       refId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[SRC_SK_REGION]"
                       cachedDataType="numeric"
@@ -5275,6 +5494,20 @@ BETWEEN [FC_INI_VAL] AND [FC_FIN_VAL]</property>
                       cachedName="SRC_SK_PAIS"
                       cachedPrecision="18"
                       lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_REGION.Outputs[Lookup Match Output].Columns[SRC_SK_PAIS]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[LATITUD]"
+                      cachedDataType="numeric"
+                      cachedName="LATITUD"
+                      cachedPrecision="18"
+                      cachedScale="5"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Outputs[Lookup Match Output].Columns[LATITUD]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[LONGITUD]"
+                      cachedDataType="numeric"
+                      cachedName="LONGITUD"
+                      cachedPrecision="18"
+                      cachedScale="5"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Outputs[Lookup Match Output].Columns[LONGITUD]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -6024,6 +6257,36 @@ BETWEEN [FC_INI_VAL] AND [FC_FIN_VAL]</property>
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[SRC_SK_PAIS]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_LATITUD]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_LATITUD]"
+                      name="SRC_LATITUD"
+                      precision="18"
+                      scale="5">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[LATITUD]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_LONGITUD]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_LONGITUD]"
+                      name="SRC_LONGITUD"
+                      precision="18"
+                      scale="5">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input].Columns[LONGITUD]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -7430,123 +7693,123 @@ WHERE
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].ExternalColumns[CD_LOCALIZACION_GEOGRAFICA]"
                       length="20"
                       lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_LOCALIZACION_GEOGRAFICA]"
                       name="CD_LOCALIZACION_GEOGRAFICA"
                       sortKeyPosition="1"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="RedirectRow" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_BARRIO]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].ExternalColumns[CD_BARRIO]"
                       length="20"
                       lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_BARRIO]"
                       name="CD_BARRIO"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="RedirectRow" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_SECTOR_GEOGRAFICO]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].ExternalColumns[CD_SECTOR_GEOGRAFICO]"
                       length="20"
                       lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_SECTOR_GEOGRAFICO]"
                       name="CD_SECTOR_GEOGRAFICO"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="RedirectRow" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_MUNICIPIO]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].ExternalColumns[CD_MUNICIPIO]"
                       length="20"
                       lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_MUNICIPIO]"
                       name="CD_MUNICIPIO"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="RedirectRow" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_PROVINCIA]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].ExternalColumns[CD_PROVINCIA]"
                       length="20"
                       lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_PROVINCIA]"
                       name="CD_PROVINCIA"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="RedirectRow" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_REGION]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].ExternalColumns[CD_REGION]"
                       length="20"
                       lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_REGION]"
                       name="CD_REGION"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="RedirectRow" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_PAIS]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].ExternalColumns[CD_PAIS]"
                       length="20"
                       lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_PAIS]"
                       name="CD_PAIS"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="RedirectRow" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].ExternalColumns[DESC_LOCALIZACION_GEOGRAFICA]"
                       length="150"
                       lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]"
                       name="DESC_LOCALIZACION_GEOGRAFICA"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="RedirectRow" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_SUB_BARRIO]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].ExternalColumns[CD_SUB_BARRIO]"
                       length="20"
                       lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_SUB_BARRIO]"
                       name="CD_SUB_BARRIO"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="RedirectRow" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_SECCION]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].ExternalColumns[CD_SECCION]"
                       length="20"
                       lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_SECCION]"
                       name="CD_SECCION"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="RedirectRow" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_DISTRITO_MUNICIPAL]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].ExternalColumns[CD_DISTRITO_MUNICIPAL]"
                       length="20"
                       lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_STG_DIM_LOC_GEO_1.Outputs[OLE DB Source Output].Columns[CD_DISTRITO_MUNICIPAL]"
                       name="CD_DISTRITO_MUNICIPAL"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="RedirectRow" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -7914,6 +8177,36 @@ WHERE
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_LOC_GEO\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_LOCALIZACION_GEOGRAFICA]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_DEL_UP_1.Inputs[Union All Input 1].Columns[SRC_CD_MUNICIPIO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="SRC_CD_MUNICIPIO"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_MUNICIPIO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_LOC_GEO\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_MUNICIPIO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_DEL_UP_1.Inputs[Union All Input 1].Columns[SRC_CD_PROVINCIA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="SRC_CD_PROVINCIA"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_PROVINCIA]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_LOC_GEO\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_PROVINCIA]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -8107,6 +8400,36 @@ WHERE
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_LOC_GEO\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_LOCALIZACION_GEOGRAFICA]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_DEL_UP_1.Inputs[Union All Input 2].Columns[SRC_CD_MUNICIPIO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="SRC_CD_MUNICIPIO"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_MUNICIPIO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_LOC_GEO\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_MUNICIPIO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_DEL_UP_1.Inputs[Union All Input 2].Columns[SRC_CD_PROVINCIA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="SRC_CD_PROVINCIA"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_CD_PROVINCIA]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_LOC_GEO\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_PROVINCIA]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -8203,6 +8526,20 @@ WHERE
                       length="20"
                       lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_LOCALIZACION_GEOGRAFICA]"
                       name="SRC_CD_LOCALIZACION_GEOGRAFICA" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_MUNICIPIO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_MUNICIPIO]"
+                      name="SRC_CD_MUNICIPIO" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_PROVINCIA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_DEL_UP_1.Outputs[Union All Output 1].Columns[SRC_CD_PROVINCIA]"
+                      name="SRC_CD_PROVINCIA" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -8895,6 +9232,36 @@ WHERE
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_DISTRITO_MUNICIPAL]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Inputs[Union All Input 1].Columns[SRC_LATITUD]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_LATITUD"
+                      cachedPrecision="18"
+                      cachedScale="5"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_LATITUD]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_LATITUD]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Inputs[Union All Input 1].Columns[SRC_LONGITUD]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_LONGITUD"
+                      cachedPrecision="18"
+                      cachedScale="5"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_LONGITUD]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_LONGITUD]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -9578,6 +9945,36 @@ WHERE
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_DISTRITO_MUNICIPAL]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Inputs[Union All Input 2].Columns[SRC_LATITUD]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_LATITUD"
+                      cachedPrecision="18"
+                      cachedScale="5"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_LATITUD]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_LATITUD]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Inputs[Union All Input 2].Columns[SRC_LONGITUD]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_LONGITUD"
+                      cachedPrecision="18"
+                      cachedScale="5"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output].Columns[SRC_LONGITUD]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_LONGITUD]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -9892,6 +10289,20 @@ WHERE
                       dataType="i4"
                       lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_SK_DISTRITO_MUNICIPAL]"
                       name="SRC_SK_DISTRITO_MUNICIPAL" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_LATITUD]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_LATITUD]"
+                      name="SRC_LATITUD"
+                      precision="18"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_LONGITUD]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Outputs[Union All Output 1].Columns[SRC_LONGITUD]"
+                      name="SRC_LONGITUD"
+                      precision="18"
+                      scale="5" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -12808,74 +13219,74 @@ WHERE
               startId="Package\DF_DWH_DIM_LOC_GEO\RA_AGG_STANDARD_2.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output13]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\RA_SRT_TABLA_1.Inputs[Sort Input]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_BARRIO.Inputs[Lookup Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_TABLA_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_LOC_GEO\PR_DV_V_FC_ACTUAL_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output12]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output11]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output10]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\CS_INS_UPD_DEL_1.Inputs[Conditional Split Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_LOC_GEO\PR_DV_FECHA_GENERICA_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output8]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output7]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\MC_DEL_UP_2.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output9]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_LOC_GEO\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output5]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\MC_VAL_CORRECTO_1.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output4]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\PR_DV_FECHA_GENERICA_1.Inputs[Derived Column Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_LOC_GEO\PR_DV_TRATA_NULOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output6]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output3]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output2]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\RA_SRT_TABLA_4.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output1]"
               endId="Package\DF_DWH_DIM_LOC_GEO\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_LOC_GEO\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_BARRIO.Inputs[Lookup Input]"
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output11]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\RA_SRT_TABLA_4.Inputs[Sort Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_LOC_GEO\PR_DV_V_FC_ACTUAL_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output10]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output9]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output8]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\PR_DV_FECHA_GENERICA_1.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_LOC_GEO\PR_DV_TRATA_NULOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output7]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\MC_VAL_CORRECTO_1.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output5]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\MC_DEL_UP_2.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output4]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output3]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\CS_INS_UPD_DEL_1.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_LOC_GEO\PR_DV_FECHA_GENERICA_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output2]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output1]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\RA_SRT_TABLA_1.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_TABLA_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output6]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_LOC_GEO\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_LOC_GEO.Paths[INSERT]"
               endId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Inputs[Union All Input 1]"
@@ -12887,20 +13298,25 @@ WHERE
               name="LOGICAL DELETE"
               startId="Package\DF_DWH_DIM_LOC_GEO\CS_INS_UPD_DEL_1.Outputs[LOGICAL DELETE]" />
             <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Lookup Match Output]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_MUNICIPIO.Inputs[Lookup Input]"
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Lookup Match Output2]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_BARRIO.Outputs[Lookup Match Output]" />
+              startId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_MUNICIPIO.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Lookup Match Output3]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_REGION.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA.Outputs[Lookup Match Output]" />
             <path
               refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Lookup Match Output1]"
               endId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Inputs[Merge Join Left Input]"
               name="Lookup Match Output"
               startId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_REGION.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Lookup Match Output2]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_REGION.Inputs[Lookup Input]"
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Lookup Match Output]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_MUNICIPIO.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_MUNICIPIO.Outputs[Lookup Match Output]" />
+              startId="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_BARRIO.Outputs[Lookup Match Output]" />
             <path
               refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Merge Join Output]"
               endId="Package\DF_DWH_DIM_LOC_GEO\RA_DV_UPDATE_CORRECTOS_1.Inputs[Derived Column Input]"
@@ -12918,74 +13334,74 @@ WHERE
               startId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Outputs[Merge Join Output]" />
             <path
               refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 16]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\RA_UN_DESTINO_1.Inputs[Union All Input 6]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\PR_DTN_DIM_LOC_GEO.Inputs[OLE DB Destination Input]"
               name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_LOC_GEO\MC_DEL_UP_2.Outputs[Multicast Output 1]" />
+              startId="Package\DF_DWH_DIM_LOC_GEO\MC_INS_ERROR_1.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 15]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Inputs[Merge Join Right Input]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_LOC_GEO\MC_SRC_DWH_1.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 11]"
               endId="Package\DF_DWH_DIM_LOC_GEO\PR_DV_V_FC_ACTUAL_1.Inputs[Derived Column Input]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_DIM_LOC_GEO\MC_STANDARD_1.Outputs[Multicast Output 1]" />
             <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 14]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\PR_SCT_UPDATE_CM_DIM_BARRIO_1.Inputs[OLE DB Command Input]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_LOC_GEO\MC_DEL_UP_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 1]"
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 13]"
               endId="Package\DF_DWH_DIM_LOC_GEO\RA_UN_DESTINO_1.Inputs[Union All Input 3]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_DIM_LOC_GEO\MC_VAL_CORRECTO_1.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 12]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\PR_SCT_UPDATE_CM_DIM_BARRIO_1.Inputs[OLE DB Command Input]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_DIM_LOC_GEO\MC_DEL_UP_1.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 14]"
               endId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_IN_UP_1.Inputs[Union All Input 2]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_DIM_LOC_GEO\MC_UPD_SCD2_1.Outputs[Multicast Output 1]" />
             <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 11]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\PR_MJ_SRC_DWH_1.Inputs[Merge Join Right Input]"
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 1]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\RA_UN_DESTINO_1.Inputs[Union All Input 6]"
               name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_LOC_GEO\MC_SRC_DWH_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 13]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\PR_DTN_DIM_LOC_GEO.Inputs[OLE DB Destination Input]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_DIM_LOC_GEO\MC_INS_ERROR_1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 2]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\RA_SRT_TABLA_2.Inputs[Sort Input]"
-              name="Multicast Output 2"
-              startId="Package\DF_DWH_DIM_LOC_GEO\MC_VAL_CORRECTO_1.Outputs[Multicast Output 2]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 21]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_DEL_UP_1.Inputs[Union All Input 2]"
-              name="Multicast Output 2"
-              startId="Package\DF_DWH_DIM_LOC_GEO\MC_UPD_SCD2_1.Outputs[Multicast Output 2]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 22]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\RA_AGG_STANDARD_2.Inputs[Aggregate Input 1]"
-              name="Multicast Output 2"
-              startId="Package\DF_DWH_DIM_LOC_GEO\MC_SRC_DWH_1.Outputs[Multicast Output 2]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 23]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\RA_SRT_TABLA_3.Inputs[Sort Input]"
-              name="Multicast Output 2"
-              startId="Package\DF_DWH_DIM_LOC_GEO\MC_DEL_UP_2.Outputs[Multicast Output 2]" />
-            <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 24]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\RA_AGG_REG_ACTULIZADOS.Inputs[Aggregate Input 1]"
-              name="Multicast Output 2"
-              startId="Package\DF_DWH_DIM_LOC_GEO\MC_DEL_UP_1.Outputs[Multicast Output 2]" />
+              startId="Package\DF_DWH_DIM_LOC_GEO\MC_DEL_UP_2.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 25]"
               endId="Package\DF_DWH_DIM_LOC_GEO\RA_AGG_REG_TOTAL_1.Inputs[Aggregate Input 1]"
               name="Multicast Output 2"
               startId="Package\DF_DWH_DIM_LOC_GEO\MC_INS_ERROR_1.Outputs[Multicast Output 2]" />
             <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 24]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\RA_AGG_REG_ACTULIZADOS.Inputs[Aggregate Input 1]"
+              name="Multicast Output 2"
+              startId="Package\DF_DWH_DIM_LOC_GEO\MC_DEL_UP_1.Outputs[Multicast Output 2]" />
+            <path
               refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 26]"
               endId="Package\DF_DWH_DIM_LOC_GEO\RA_AGG_STANDARD_1.Inputs[Aggregate Input 1]"
               name="Multicast Output 2"
               startId="Package\DF_DWH_DIM_LOC_GEO\MC_STANDARD_1.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 22]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\RA_AGG_STANDARD_2.Inputs[Aggregate Input 1]"
+              name="Multicast Output 2"
+              startId="Package\DF_DWH_DIM_LOC_GEO\MC_SRC_DWH_1.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 21]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\PR_UN_DEL_UP_1.Inputs[Union All Input 2]"
+              name="Multicast Output 2"
+              startId="Package\DF_DWH_DIM_LOC_GEO\MC_UPD_SCD2_1.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 2]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\RA_SRT_TABLA_2.Inputs[Sort Input]"
+              name="Multicast Output 2"
+              startId="Package\DF_DWH_DIM_LOC_GEO\MC_VAL_CORRECTO_1.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 23]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\RA_SRT_TABLA_3.Inputs[Sort Input]"
+              name="Multicast Output 2"
+              startId="Package\DF_DWH_DIM_LOC_GEO\MC_DEL_UP_2.Outputs[Multicast Output 2]" />
             <path
               refId="Package\DF_DWH_DIM_LOC_GEO.Paths[OLE DB Command Error Output]"
               endId="Package\DF_DWH_DIM_LOC_GEO\RA_AGG_UP_ERROR_1.Inputs[Aggregate Input 1]"
@@ -13012,20 +13428,15 @@ WHERE
               name="OLE DB Source Output"
               startId="Package\DF_DWH_DIM_LOC_GEO\PR_DWH_DIM_LOC_GEO_1.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Output 0]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\MC_INS_ERROR_1.Inputs[Multicast Input 1]"
-              name="Output 0"
-              startId="Package\DF_DWH_DIM_LOC_GEO\PR_SCT_SECUENCIAL_1.Outputs[Output 0]" />
-            <path
               refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Output 01]"
               endId="Package\DF_DWH_DIM_LOC_GEO\ER_DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input]"
               name="Output 0"
               startId="Package\DF_DWH_DIM_LOC_GEO\ER_SCT_GEN_DESCRIP_1.Outputs[Output 0]" />
             <path
-              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Sort Output]"
-              endId="Package\DF_DWH_DIM_LOC_GEO\RA_MJ_VAL_CORREC_1.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\DF_DWH_DIM_LOC_GEO\RA_SRT_TABLA_2.Outputs[Sort Output]" />
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Output 0]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\MC_INS_ERROR_1.Inputs[Multicast Input 1]"
+              name="Output 0"
+              startId="Package\DF_DWH_DIM_LOC_GEO\PR_SCT_SECUENCIAL_1.Outputs[Output 0]" />
             <path
               refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Sort Output1]"
               endId="Package\DF_DWH_DIM_LOC_GEO\RA_MJ_DEL_ERR_1.Inputs[Merge Join Left Input]"
@@ -13041,6 +13452,11 @@ WHERE
               endId="Package\DF_DWH_DIM_LOC_GEO\RA_MJ_DEL_ERR_1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\DF_DWH_DIM_LOC_GEO\RA_SRT_TABLA_4.Outputs[Sort Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Sort Output]"
+              endId="Package\DF_DWH_DIM_LOC_GEO\RA_MJ_VAL_CORREC_1.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\DF_DWH_DIM_LOC_GEO\RA_SRT_TABLA_2.Outputs[Sort Output]" />
             <path
               refId="Package\DF_DWH_DIM_LOC_GEO.Paths[Union All Output 1]"
               endId="Package\DF_DWH_DIM_LOC_GEO\PR_SCT_SECUENCIAL_1.Inputs[Input 0]"
@@ -13241,7 +13657,7 @@ WHERE
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_SK_DEFAUT"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13282,7 +13698,7 @@ WHERE
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_INI_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13353,7 +13769,7 @@ WHERE
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13376,7 +13792,7 @@ WHERE
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13399,7 +13815,7 @@ WHERE
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13422,7 +13838,7 @@ WHERE
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_2"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13445,7 +13861,7 @@ WHERE
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13468,7 +13884,7 @@ WHERE
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13491,7 +13907,7 @@ WHERE
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13520,7 +13936,7 @@ WHERE
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -14396,7 +14812,7 @@ WHERE
         <NodeLayout
           Size="195,42"
           Id="Package\DF_DWH_DIM_LOC_GEO\PR_DTN_DIM_LOC_GEO"
-          TopLeft="800.361111111116,886.444444444445" />
+          TopLeft="800.361111111116,887.444444444445" />
         <NodeLayout
           Size="191,42"
           Id="Package\DF_DWH_DIM_LOC_GEO\RA_MJ_VAL_CORREC_1"
@@ -14540,7 +14956,7 @@ WHERE
         <NodeLayout
           Size="175,42"
           Id="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_MUNICIPIO"
-          TopLeft="469,131" />
+          TopLeft="469,134" />
         <NodeLayout
           Size="176,42"
           Id="Package\DF_DWH_DIM_LOC_GEO\CS_INS_UPD_DEL_1"
@@ -14865,73 +15281,73 @@ WHERE
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_LOC_GEO.Paths[OLE DB Source Error Output]"
-          TopLeft="225.5,134">
+          TopLeft="192.666666666667,134">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-83.4629629629631,109.05555555556"
+              EndConnector="-50.6296296296298,109.05555555556"
               Start="0,0"
-              End="-83.4629629629631,101.55555555556">
+              End="-50.6296296296298,101.55555555556">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.52777777778" />
+                    End="0,40.1289663332276" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,50.52777777778"
-                    Point2="0,54.52777777778"
-                    Point3="-4,54.52777777778" />
+                    Point1="0,40.1289663332276"
+                    Point2="0,44.1289663332276"
+                    Point3="-4,44.1289663332276" />
                   <mssgle:LineSegment
-                    End="-79.4629629629631,54.52777777778" />
+                    End="-46.6296296296298,44.1289663332276" />
                   <mssgle:CubicBezierSegment
-                    Point1="-79.4629629629631,54.52777777778"
-                    Point2="-83.4629629629631,54.52777777778"
-                    Point3="-83.4629629629631,58.52777777778" />
+                    Point1="-46.6296296296298,44.1289663332276"
+                    Point2="-50.6296296296298,44.1289663332276"
+                    Point3="-50.6296296296298,48.1289663332276" />
                   <mssgle:LineSegment
-                    End="-83.4629629629631,101.55555555556" />
+                    End="-50.6296296296298,101.55555555556" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-105.165387731482,59.52777777778,126.8678125,11.43359375"
+              BoundingBox="-88.7487210648149,49.1289663332276,126.8678125,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_LOC_GEO.Paths[OLE DB Destination Error Output]"
-          TopLeft="866.694444444449,886.444444444445">
+          TopLeft="866.694444444449,887.444444444445">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-100.583333333333,-196.694444444444"
+              EndConnector="-100.583333333333,-197.694444444444"
               Start="0,0"
-              End="-100.583333333333,-189.194444444444">
+              End="-100.583333333333,-190.194444444444">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-75.6382389510567" />
+                    End="0,-76.0431219622469" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-75.6382389510567"
-                    Point2="0,-79.6382389510567"
-                    Point3="-4,-79.6382389510567" />
+                    Point1="0,-76.0431219622469"
+                    Point2="0,-80.0431219622469"
+                    Point3="-4,-80.0431219622469" />
                   <mssgle:LineSegment
-                    End="-96.5833333333334,-79.6382389510567" />
+                    End="-96.5833333333334,-80.0431219622469" />
                   <mssgle:CubicBezierSegment
-                    Point1="-96.5833333333334,-79.6382389510567"
-                    Point2="-100.583333333333,-79.6382389510567"
-                    Point3="-100.583333333333,-83.6382389510567" />
+                    Point1="-96.5833333333334,-80.0431219622469"
+                    Point2="-100.583333333333,-80.0431219622469"
+                    Point3="-100.583333333333,-84.0431219622469" />
                   <mssgle:LineSegment
-                    End="-100.583333333333,-189.194444444444" />
+                    End="-100.583333333333,-190.194444444444" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-123.500572916667,-74.6382389510567,146.4178125,11.43359375"
+              BoundingBox="-123.500572916667,-75.0431219622469,146.4178125,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15163,18 +15579,30 @@ WHERE
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 16]"
-          TopLeft="1262.91666666667,1026.90277777778">
+          TopLeft="938.111111111116,778.33333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-747.027777777779,0"
+              EndConnector="-9.08333333333337,109.111111111115"
               Start="0,0"
-              End="-739.527777777779,0">
+              End="-9.08333333333337,101.611111111115">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-739.527777777779,0" />
+                    End="0,50.6473309501657" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50.6473309501657"
+                    Point2="0,54.6473309501657"
+                    Point3="-4,54.6473309501657" />
+                  <mssgle:LineSegment
+                    End="-5.08333333333337,54.6473309501657" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.08333333333337,54.6473309501657"
+                    Point2="-9.08333333333337,54.6473309501657"
+                    Point3="-9.08333333333337,58.6473309501657" />
+                  <mssgle:LineSegment
+                    End="-9.08333333333337,101.611111111115" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15185,118 +15613,6 @@ WHERE
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 15]"
-          TopLeft="389.120370370373,158.111111111111">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="93.37962962963,-99"
-              Start="0,0"
-              End="93.37962962963,-91.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-36.1739130434783" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-36.1739130434783"
-                    Point2="0,-40.1739130434783"
-                    Point3="4,-40.1739130434783" />
-                  <mssgle:LineSegment
-                    End="89.37962962963,-40.1739130434783" />
-                  <mssgle:CubicBezierSegment
-                    Point1="89.37962962963,-40.1739130434783"
-                    Point2="93.37962962963,-40.1739130434783"
-                    Point3="93.37962962963,-44.1739130434783" />
-                  <mssgle:LineSegment
-                    End="93.37962962963,-91.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 14]"
-          TopLeft="1353.05555555556,672.277777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38.472222222223"
-              Start="0,0"
-              End="0,30.972222222223">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.972222222223" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 13]"
-          TopLeft="938.111111111116,778.33333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-9.08333333333337,108.111111111115"
-              Start="0,0"
-              End="-9.08333333333337,100.611111111115">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.1464898314778" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,50.1464898314778"
-                    Point2="0,54.1464898314778"
-                    Point3="-4,54.1464898314778" />
-                  <mssgle:LineSegment
-                    End="-5.08333333333337,54.1464898314778" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-5.08333333333337,54.1464898314778"
-                    Point2="-9.08333333333337,54.1464898314778"
-                    Point3="-9.08333333333337,58.1464898314778" />
-                  <mssgle:LineSegment
-                    End="-9.08333333333337,100.611111111115" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 12]"
-          TopLeft="1069.77777777778,574.305555555555">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-55.7777777777801,0"
-              Start="0,0"
-              End="-48.2777777777801,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-48.2777777777801,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 11]"
           TopLeft="894.111111111115,146.944444444444">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15330,7 +15646,29 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 1]"
+          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 14]"
+          TopLeft="1069.77777777778,574.305555555555">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-55.7777777777801,0"
+              Start="0,0"
+              End="-48.2777777777801,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-48.2777777777801,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 13]"
           TopLeft="589.222222222227,924.944444444445">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15355,6 +15693,84 @@ WHERE
                     Point3="-118.583333333336,55.0838483409105" />
                   <mssgle:LineSegment
                     End="-118.583333333336,82.8333333333351" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 12]"
+          TopLeft="1353.05555555556,672.277777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.472222222223"
+              Start="0,0"
+              End="0,30.972222222223">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.972222222223" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 11]"
+          TopLeft="389.120370370373,158.111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.37962962963,-99"
+              Start="0,0"
+              End="93.37962962963,-91.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-36.1739130434783" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-36.1739130434783"
+                    Point2="0,-40.1739130434783"
+                    Point3="4,-40.1739130434783" />
+                  <mssgle:LineSegment
+                    End="89.37962962963,-40.1739130434783" />
+                  <mssgle:CubicBezierSegment
+                    Point1="89.37962962963,-40.1739130434783"
+                    Point2="93.37962962963,-40.1739130434783"
+                    Point3="93.37962962963,-44.1739130434783" />
+                  <mssgle:LineSegment
+                    End="93.37962962963,-91.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Multicast Output 1]"
+          TopLeft="1262.91666666667,1026.90277777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-747.027777777779,0"
+              Start="0,0"
+              End="-739.527777777779,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-739.527777777779,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15394,9 +15810,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-32.870260416665,45.763888888889,30.9071875,9.568359375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15452,45 +15866,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-335.882250434025,18.7720943449867,30.2089453125,9.4462890625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Lookup Match Output2]"
-          TopLeft="556.5,173">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="105.833333333333,84"
-              Start="0,0"
-              End="105.833333333333,76.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.8978829389788" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,45.8978829389788"
-                    Point2="0,49.8978829389788"
-                    Point3="4,49.8978829389788" />
-                  <mssgle:LineSegment
-                    End="101.833333333333,49.8978829389788" />
-                  <mssgle:CubicBezierSegment
-                    Point1="101.833333333333,49.8978829389788"
-                    Point2="105.833333333333,49.8978829389788"
-                    Point3="105.833333333333,53.8978829389788" />
-                  <mssgle:LineSegment
-                    End="105.833333333333,76.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="4.72527994791668,54.8978829389788,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15525,7 +15901,7 @@ WHERE
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="171.475279947917,-6.51364556431912,96.3827734375,11.609375"
+              BoundingBox="171.475279947916,-6.5136455643191,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15535,33 +15911,33 @@ WHERE
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-124.787037037037,30.94444444444"
+              EndConnector="-124.787037037037,33.94444444444"
               Start="0,0"
-              End="-124.787037037037,23.44444444444">
+              End="-124.787037037037,26.44444444444">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.47222222222" />
+                    End="0,12.97222222222" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.47222222222"
-                    Point2="0,15.47222222222"
-                    Point3="-4,15.47222222222" />
+                    Point1="0,12.97222222222"
+                    Point2="0,16.97222222222"
+                    Point3="-4,16.97222222222" />
                   <mssgle:LineSegment
-                    End="-120.787037037037,15.47222222222" />
+                    End="-120.787037037037,16.97222222222" />
                   <mssgle:CubicBezierSegment
-                    Point1="-120.787037037037,15.47222222222"
-                    Point2="-124.787037037037,15.47222222222"
-                    Point3="-124.787037037037,19.47222222222" />
+                    Point1="-120.787037037037,16.97222222222"
+                    Point2="-124.787037037037,16.97222222222"
+                    Point3="-124.787037037037,20.97222222222" />
                   <mssgle:LineSegment
-                    End="-124.787037037037,23.44444444444" />
+                    End="-124.787037037037,26.44444444444" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-110.584905237268,20.47222222222,96.3827734375,11.609375"
+              BoundingBox="-110.584905237268,21.97222222222,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15639,18 +16015,24 @@ WHERE
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output13]"
-          TopLeft="1106.95833333334,929.944444444445">
+          TopLeft="584.000000000003,35.55555555556">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,49.638888888889"
+              EndConnector="97.287037037034,22.5"
               Start="0,0"
-              End="0,42.138888888889">
+              End="97.287037037034,15">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.138888888889" />
+                    End="93.287037037034,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="93.287037037034,0"
+                    Point2="97.287037037034,0"
+                    Point3="97.287037037034,4" />
+                  <mssgle:LineSegment
+                    End="97.287037037034,15" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15661,30 +16043,18 @@ WHERE
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output12]"
-          TopLeft="597.694444444449,469.75">
+          TopLeft="135.912037037037,533.527777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-168.305555555558,545.52777777778"
+              EndConnector="0,59.2222222222219"
               Start="0,0"
-              End="-168.305555555558,538.02777777778">
+              End="0,51.7222222222219">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,268.76388888889" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,268.76388888889"
-                    Point2="0,272.76388888889"
-                    Point3="-4,272.76388888889" />
-                  <mssgle:LineSegment
-                    End="-164.305555555558,272.76388888889" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-164.305555555558,272.76388888889"
-                    Point2="-168.305555555558,272.76388888889"
-                    Point3="-168.305555555558,276.76388888889" />
-                  <mssgle:LineSegment
-                    End="-168.305555555558,538.02777777778" />
+                    End="0,51.7222222222219" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15695,30 +16065,18 @@ WHERE
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output11]"
-          TopLeft="217.666666666668,1053.38888888889">
+          TopLeft="1587.25,825.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-35.3611111111111,71.30555555555"
+              EndConnector="0,105.000000000001"
               Start="0,0"
-              End="-35.3611111111111,63.80555555555">
+              End="0,97.500000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.652777777775" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.652777777775"
-                    Point2="0,35.652777777775"
-                    Point3="-4,35.652777777775" />
-                  <mssgle:LineSegment
-                    End="-31.3611111111111,35.652777777775" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-31.3611111111111,35.652777777775"
-                    Point2="-35.3611111111111,35.652777777775"
-                    Point3="-35.3611111111111,39.652777777775" />
-                  <mssgle:LineSegment
-                    End="-35.3611111111111,63.80555555555" />
+                    End="0,97.500000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15729,196 +16087,6 @@ WHERE
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output10]"
-          TopLeft="1141.97222222223,431.722222222223">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34.8888888888879"
-              Start="0,0"
-              End="0,27.3888888888879">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.3888888888879" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output9]"
-          TopLeft="142.037037037037,285.05555555556">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-11.25,111.361111111107"
-              Start="0,0"
-              End="-11.25,103.861111111107">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.6805555555535" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,51.6805555555535"
-                    Point2="0,55.6805555555535"
-                    Point3="-4,55.6805555555535" />
-                  <mssgle:LineSegment
-                    End="-7.25,55.6805555555535" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-7.25,55.6805555555535"
-                    Point2="-11.25,55.6805555555535"
-                    Point3="-11.25,59.6805555555535" />
-                  <mssgle:LineSegment
-                    End="-11.25,103.861111111107" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output8]"
-          TopLeft="870.11111111112,1141.05555555556">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-440.722222222229,-83.7777777777799"
-              Start="0,0"
-              End="-440.722222222229,-76.2777777777799">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-29.8539357772103" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-29.8539357772103"
-                    Point2="0,-33.8539357772103"
-                    Point3="-4,-33.8539357772103" />
-                  <mssgle:LineSegment
-                    End="-436.722222222229,-33.8539357772103" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-436.722222222229,-33.8539357772103"
-                    Point2="-440.722222222229,-33.8539357772103"
-                    Point3="-440.722222222229,-37.8539357772103" />
-                  <mssgle:LineSegment
-                    End="-440.722222222229,-76.2777777777799" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output7]"
-          TopLeft="1340.30555555556,968.750000000001">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33.444444444444"
-              Start="0,0"
-              End="0,25.944444444444">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.944444444444" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output6]"
-          TopLeft="384.879629629632,468.75">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,546.52777777778"
-              Start="0,0"
-              End="0,539.02777777778">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,539.02777777778" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output5]"
-          TopLeft="704.944444444449,597.750000000001">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-85.7222222222221,285.194444444444"
-              Start="0,0"
-              End="-85.7222222222221,277.694444444444">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9.06899055918643" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9.06899055918643"
-                    Point2="0,13.0689905591864"
-                    Point3="-4,13.0689905591864" />
-                  <mssgle:LineSegment
-                    End="-81.7222222222221,13.0689905591864" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-81.7222222222221,13.0689905591864"
-                    Point2="-85.7222222222221,13.0689905591864"
-                    Point3="-85.7222222222221,17.0689905591864" />
-                  <mssgle:LineSegment
-                    End="-85.7222222222221,277.694444444444" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output4]"
-          TopLeft="1142.05555555556,357.527777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32.194444444445"
-              Start="0,0"
-              End="0,24.694444444445">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.694444444445" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output3]"
           TopLeft="778.333333333338,1076.33333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15952,19 +16120,221 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output2]"
-          TopLeft="1587.25,825.5">
+          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output9]"
+          TopLeft="384.879629629632,468.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,105.000000000001"
+              EndConnector="0,546.52777777778"
               Start="0,0"
-              End="0,97.500000000001">
+              End="0,539.02777777778">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,97.500000000001" />
+                    End="0,539.02777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output8]"
+          TopLeft="1142.05555555556,357.527777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.194444444445"
+              Start="0,0"
+              End="0,24.694444444445">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.694444444445" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output7]"
+          TopLeft="704.944444444449,597.750000000001">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-85.7222222222221,285.194444444444"
+              Start="0,0"
+              End="-85.7222222222221,277.694444444444">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.06899055918643" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.06899055918643"
+                    Point2="0,13.0689905591864"
+                    Point3="-4,13.0689905591864" />
+                  <mssgle:LineSegment
+                    End="-81.7222222222221,13.0689905591864" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-81.7222222222221,13.0689905591864"
+                    Point2="-85.7222222222221,13.0689905591864"
+                    Point3="-85.7222222222221,17.0689905591864" />
+                  <mssgle:LineSegment
+                    End="-85.7222222222221,277.694444444444" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output6]"
+          TopLeft="142.037037037037,285.05555555556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11.25,111.361111111107"
+              Start="0,0"
+              End="-11.25,103.861111111107">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.6805555555535" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,51.6805555555535"
+                    Point2="0,55.6805555555535"
+                    Point3="-4,55.6805555555535" />
+                  <mssgle:LineSegment
+                    End="-7.25,55.6805555555535" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.25,55.6805555555535"
+                    Point2="-11.25,55.6805555555535"
+                    Point3="-11.25,59.6805555555535" />
+                  <mssgle:LineSegment
+                    End="-11.25,103.861111111107" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output5]"
+          TopLeft="1340.30555555556,968.750000000001">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.444444444444"
+              Start="0,0"
+              End="0,25.944444444444">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.944444444444" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output4]"
+          TopLeft="870.11111111112,1141.05555555556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-440.722222222229,-83.7777777777799"
+              Start="0,0"
+              End="-440.722222222229,-76.2777777777799">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-29.8539357772103" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-29.8539357772103"
+                    Point2="0,-33.8539357772103"
+                    Point3="-4,-33.8539357772103" />
+                  <mssgle:LineSegment
+                    End="-436.722222222229,-33.8539357772103" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-436.722222222229,-33.8539357772103"
+                    Point2="-440.722222222229,-33.8539357772103"
+                    Point3="-440.722222222229,-37.8539357772103" />
+                  <mssgle:LineSegment
+                    End="-440.722222222229,-76.2777777777799" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output3]"
+          TopLeft="1141.97222222223,431.722222222223">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.8888888888879"
+              Start="0,0"
+              End="0,27.3888888888879">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.3888888888879" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output2]"
+          TopLeft="217.666666666668,1053.38888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-35.3611111111111,71.30555555555"
+              Start="0,0"
+              End="-35.3611111111111,63.80555555555">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.652777777775" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.652777777775"
+                    Point2="0,35.652777777775"
+                    Point3="-4,35.652777777775" />
+                  <mssgle:LineSegment
+                    End="-31.3611111111111,35.652777777775" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-31.3611111111111,35.652777777775"
+                    Point2="-35.3611111111111,35.652777777775"
+                    Point3="-35.3611111111111,39.652777777775" />
+                  <mssgle:LineSegment
+                    End="-35.3611111111111,63.80555555555" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15975,18 +16345,30 @@ WHERE
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output1]"
-          TopLeft="135.912037037037,533.527777777778">
+          TopLeft="597.694444444449,469.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.2222222222219"
+              EndConnector="-168.305555555558,545.52777777778"
               Start="0,0"
-              End="0,51.7222222222219">
+              End="-168.305555555558,538.02777777778">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.7222222222219" />
+                    End="0,268.76388888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,268.76388888889"
+                    Point2="0,272.76388888889"
+                    Point3="-4,272.76388888889" />
+                  <mssgle:LineSegment
+                    End="-164.305555555558,272.76388888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-164.305555555558,272.76388888889"
+                    Point2="-168.305555555558,272.76388888889"
+                    Point3="-168.305555555558,276.76388888889" />
+                  <mssgle:LineSegment
+                    End="-168.305555555558,538.02777777778" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15997,24 +16379,18 @@ WHERE
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Derived Column Output]"
-          TopLeft="584.000000000003,35.55555555556">
+          TopLeft="1106.95833333334,929.944444444445">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="97.287037037034,22.5"
+              EndConnector="0,49.638888888889"
               Start="0,0"
-              End="97.287037037034,15">
+              End="0,42.138888888889">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="93.287037037034,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="93.287037037034,0"
-                    Point2="97.287037037034,0"
-                    Point3="97.287037037034,4" />
-                  <mssgle:LineSegment
-                    End="97.287037037034,15" />
+                    End="0,42.138888888889" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -16167,6 +16543,76 @@ WHERE
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="175,42"
+          Id="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA"
+          TopLeft="433,212" />
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Lookup Match Output2]"
+          TopLeft="556.5,176">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-36,36"
+              Start="0,0"
+              End="-36,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14"
+                    Point2="0,18"
+                    Point3="-4,18" />
+                  <mssgle:LineSegment
+                    End="-32,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-32,18"
+                    Point2="-36,18"
+                    Point3="-36,22" />
+                  <mssgle:LineSegment
+                    End="-36,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.19138671875,23,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_LOC_GEO.Paths[Lookup Match Output3]"
+          TopLeft="608,233">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54.3333333333334,24"
+              Start="0,0"
+              End="54.3333333333334,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="50.3333333333334,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.3333333333334,0"
+                    Point2="54.3333333333334,0"
+                    Point3="54.3333333333334,4" />
+                  <mssgle:LineSegment
+                    End="54.3333333333334,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="6.14194661458337,-17.609375,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -16207,7 +16653,7 @@ WHERE
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q3:string">0</Value>
+          type="q3:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -16282,7 +16728,7 @@ WHERE
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q3:string">0</Value>
+          type="q3:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -16291,6 +16737,29 @@ WHERE
         <Name>OverwriteParamsSQLProp</Name>
         <Value
           type="q4:string">true</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_DWH_DIM_LOC_GEO\PR_LKP_PROVINCIA">
+    <Properties>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q2:string">[RH00].[DIM_PROVINCIA]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q3:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q4:boolean">true</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

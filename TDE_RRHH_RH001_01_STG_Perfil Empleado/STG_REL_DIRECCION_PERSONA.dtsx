@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2019 1:55:00 PM"
@@ -12,8 +12,8 @@
   DTS:ObjectName="STG_REL_DIRECCION_PERSONA"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="245"
-  DTS:VersionGUID="{06ABE289-FAA7-46C7-9FBA-5766E6C5AC94}">
+  DTS:VersionBuild="246"
+  DTS:VersionGUID="{843A97D2-7BD8-4000-BA7E-F935E567CC7E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -4666,7 +4666,7 @@ UNION ALL
                 <connection
                   refId="Package\DF_STG_REL_DIRECCION_PERSONA_1\PR_SRC_REL_EMPLEADOS.Connections[OleDbConnection]"
                   connectionManagerID="{257F1096-3C1F-4B54-9256-F02D9CFFC700}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[CNX_SSISDB]"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_SRC_RRHH_01]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4990,7 +4990,7 @@ UNION ALL
                 <connection
                   refId="Package\DF_STG_REL_DIRECCION_PERSONA_1\PR_SRC_STG_PERSONA.Connections[OleDbConnection]"
                   connectionManagerID="{257F1096-3C1F-4B54-9256-F02D9CFFC700}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[CNX_SSISDB]"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_SRC_RRHH_01]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -6182,14 +6182,14 @@ UNION ALL
               startId="Package\DF_STG_REL_DIRECCION_PERSONA_1\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Multicast Output 21]"
-              endId="Package\DF_STG_REL_DIRECCION_PERSONA_1\RA_AGG_STANDARD_1.Inputs[Aggregate Input 1]"
-              name="Multicast Output 2"
-              startId="Package\DF_STG_REL_DIRECCION_PERSONA_1\RA_MC_STANDARD_1.Outputs[Multicast Output 2]" />
-            <path
-              refId="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Multicast Output 2]"
               endId="Package\DF_STG_REL_DIRECCION_PERSONA_1\AGG_STANDARD_2.Inputs[Aggregate Input 1]"
               name="Multicast Output 2"
               startId="Package\DF_STG_REL_DIRECCION_PERSONA_1\RA_MC_STANDARD_2.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Multicast Output 2]"
+              endId="Package\DF_STG_REL_DIRECCION_PERSONA_1\RA_AGG_STANDARD_1.Inputs[Aggregate Input 1]"
+              name="Multicast Output 2"
+              startId="Package\DF_STG_REL_DIRECCION_PERSONA_1\RA_MC_STANDARD_1.Outputs[Multicast Output 2]" />
             <path
               refId="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Multicast Output 3]"
               endId="Package\DF_STG_REL_DIRECCION_PERSONA_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Inputs[Derived Column Input]"
@@ -6237,19 +6237,19 @@ UNION ALL
               startId="Package\DF_STG_REL_DIRECCION_PERSONA_1\ER_SCT_DESCRIPTION_1 1.Outputs[Output 0]" />
             <path
               refId="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Union All Output 12]"
+              endId="Package\DF_STG_REL_DIRECCION_PERSONA_1\ER_DTN_ERROR_ROWS_LOG.Inputs[OLE DB Destination Input]"
+              name="Union All Output 1"
+              startId="Package\DF_STG_REL_DIRECCION_PERSONA_1\ER_UN_STANDARD_1.Outputs[Union All Output 1]" />
+            <path
+              refId="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Union All Output 1]"
               endId="Package\DF_STG_REL_DIRECCION_PERSONA_1\ER_SCT_DESCRIPTION_1.Inputs[Input 0]"
               name="Union All Output 1"
               startId="Package\DF_STG_REL_DIRECCION_PERSONA_1\UN_STANDARD_2.Outputs[Union All Output 1]" />
             <path
-              refId="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Union All Output 1]"
+              refId="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Union All Output 11]"
               endId="Package\DF_STG_REL_DIRECCION_PERSONA_1\DV_STANDARD_3.Inputs[Derived Column Input]"
               name="Union All Output 1"
               startId="Package\DF_STG_REL_DIRECCION_PERSONA_1\UN_STANDARD.Outputs[Union All Output 1]" />
-            <path
-              refId="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Union All Output 11]"
-              endId="Package\DF_STG_REL_DIRECCION_PERSONA_1\ER_DTN_ERROR_ROWS_LOG.Inputs[OLE DB Destination Input]"
-              name="Union All Output 1"
-              startId="Package\DF_STG_REL_DIRECCION_PERSONA_1\ER_UN_STANDARD_1.Outputs[Union All Output 1]" />
             <path
               refId="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Union All Output 13]"
               endId="Package\DF_STG_REL_DIRECCION_PERSONA_1\RA_MC_STANDARD_1.Inputs[Multicast Input 1]"
@@ -6426,7 +6426,7 @@ UNION ALL
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_INI_ESTATUS_RUNNING_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6498,7 +6498,7 @@ UNION ALL
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6522,7 +6522,7 @@ UNION ALL
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6618,7 +6618,7 @@ UNION ALL
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_2 1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6642,7 +6642,7 @@ UNION ALL
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE_STAGING_AREA"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6660,7 +6660,7 @@ UNION ALL
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE_STAGING_AREA_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7526,7 +7526,41 @@ UNION ALL
           Id="Package\DF_STG_REL_DIRECCION_PERSONA_1\ER_DTN_ERROR_ROWS_LOG"
           TopLeft="72,972" />
         <EdgeLayout
-          Id="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Union All Output 1]"
+          Id="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Union All Output 12]"
+          TopLeft="158,910">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="23.5,62"
+              Start="0,0"
+              End="23.5,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="4,31" />
+                  <mssgle:LineSegment
+                    End="19.5,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="19.5,31"
+                    Point2="23.5,31"
+                    Point3="23.5,35" />
+                  <mssgle:LineSegment
+                    End="23.5,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Union All Output 11]"
           TopLeft="1351,627">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7560,7 +7594,7 @@ UNION ALL
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Union All Output 12]"
+          Id="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Union All Output 1]"
           TopLeft="235,344">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7585,40 +7619,6 @@ UNION ALL
                     Point3="-48,113" />
                   <mssgle:LineSegment
                     End="-48,210.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Union All Output 11]"
-          TopLeft="158,910">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="23.5,62"
-              Start="0,0"
-              End="23.5,54.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27"
-                    Point2="0,31"
-                    Point3="4,31" />
-                  <mssgle:LineSegment
-                    End="19.5,31" />
-                  <mssgle:CubicBezierSegment
-                    Point1="19.5,31"
-                    Point2="23.5,31"
-                    Point3="23.5,35" />
-                  <mssgle:LineSegment
-                    End="23.5,54.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7940,7 +7940,7 @@ UNION ALL
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Multicast Output 2]"
+          Id="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Multicast Output 21]"
           TopLeft="871.666666666667,484">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7974,7 +7974,7 @@ UNION ALL
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Multicast Output 21]"
+          Id="Package\DF_STG_REL_DIRECCION_PERSONA_1.Paths[Multicast Output 2]"
           TopLeft="723,404.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve

@@ -12,8 +12,8 @@
   DTS:ObjectName="STG_DIM_LOCALIZACION_GEOGRAFICA"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="374"
-  DTS:VersionGUID="{CD5647E5-4FCD-4D68-8E96-AA555F3FD374}">
+  DTS:VersionBuild="376"
+  DTS:VersionGUID="{26EBA3B9-61B2-4051-881E-3B274FBC294A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -510,49 +510,49 @@
                       cachedDataType="str"
                       cachedLength="60"
                       cachedName="CD_LOCALIZACION_GEOGRAFICA"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_LOCALIZACION_GEOGRAFICA]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_LOCALIZACION_GEOGRAFICA]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[CD_BARRIO]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="5"
                       cachedName="CD_BARRIO"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_BARRIO]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_BARRIO]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[CD_SECTOR_GEOGRAFICO]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4"
                       cachedName="CD_SECTOR_GEOGRAFICO"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_SECTOR_GEOGRAFICO]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_SECTOR_GEOGRAFICO]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[CD_MUNICIPIO]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="3"
                       cachedName="CD_MUNICIPIO"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_MUNICIPIO]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_MUNICIPIO]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[CD_PROVINCIA]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="2"
                       cachedName="CD_PROVINCIA"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_PROVINCIA]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_PROVINCIA]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[CD_REGION]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="2"
                       cachedName="CD_REGION"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_REGION]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_REGION]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[CD_PAIS]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="2"
                       cachedName="CD_PAIS"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_PAIS]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_PAIS]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input].Columns[ErrorDescription]"
                       cachedDataType="wstr"
@@ -636,7 +636,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,8000,1252)((DT_WSTR,255)#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_LOCALIZACION_GEOGRAFICA]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_BARRIO]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_SECTOR_GEOGRAFICO]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_MUNICIPIO]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_PROVINCIA]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_REGION]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_PAIS]})</property>
+                          name="Expression">(DT_STR,8000,1252)((DT_WSTR,255)#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_LOCALIZACION_GEOGRAFICA]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_BARRIO]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_SECTOR_GEOGRAFICO]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_MUNICIPIO]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_PROVINCIA]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_REGION]} + "|" + (DT_WSTR,255)#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_PAIS]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -3560,12 +3560,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0].Columns[ErrorCode]"
                       cachedDataType="i4"
                       cachedName="ErrorCode"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[ErrorCode]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0].Columns[ErrorColumn]"
                       cachedDataType="i4"
                       cachedName="ErrorColumn"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -3609,7 +3609,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[ErrorCode]"
                       cachedDataType="i4"
                       cachedName="ErrorCode"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]">
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[ErrorCode]">
                       <properties>
                         <property
                           containsID="true"
@@ -3622,7 +3622,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[ErrorColumn]"
                       cachedDataType="i4"
                       cachedName="ErrorColumn"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]">
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]">
                       <properties>
                         <property
                           containsID="true"
@@ -4040,375 +4040,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="OLE DB Source"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select distinct
-lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
-    ,lg.maecalle as DESC_LOCALIZACION_GEOGRAFICA
-    ,'-2' as CD_SUB_BARRIO
-    ,lg.ba_codigo as CD_BARRIO
-    ,'-2' as CD_SECCION
-    ,'-2' as CD_DISTRITO_MUNICIPAL
-    ,sc.sc_codigo as CD_SECTOR_GEOGRAFICO
-    ,mn.mn_codigo as CD_MUNICIPIO
-    ,pv.pv_codigo as CD_PROVINCIA
-    ,ti.ti_codigo as CD_REGION
-    ,'RD' as CD_PAIS
-    from vfrhma010 lg
-    left join trhba000 ba on lg.Ba_codigo = ba.ba_codigo
-    left join trhsc000 sc on ba.sc_codigo = sc.sc_codigo
-    left join  trhmn000 mn on ba.mn_codigo = mn.mn_codigo
-    left join  trhpv000 pv on mn.pv_codigo = pv.pv_codigo
-    left join  trhti000 ti on pv.ti_codigo = ti.ti_codigo</property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">2</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{57FB4340-4941-440B-B875-D839A78DE2E7}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[CNX_SRC_RRHH_01]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_LOCALIZACION_GEOGRAFICA]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_LOCALIZACION_GEOGRAFICA]"
-                      length="60"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_LOCALIZACION_GEOGRAFICA]"
-                      name="CD_LOCALIZACION_GEOGRAFICA"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DESC_LOCALIZACION_GEOGRAFICA]"
-                      length="60"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]"
-                      name="DESC_LOCALIZACION_GEOGRAFICA"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SUB_BARRIO]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_SUB_BARRIO]"
-                      length="20"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SUB_BARRIO]"
-                      name="CD_SUB_BARRIO"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_BARRIO]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_BARRIO]"
-                      length="5"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_BARRIO]"
-                      name="CD_BARRIO"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SECCION]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_SECCION]"
-                      length="20"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SECCION]"
-                      name="CD_SECCION"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_DISTRITO_MUNICIPAL]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_DISTRITO_MUNICIPAL]"
-                      length="20"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_DISTRITO_MUNICIPAL]"
-                      name="CD_DISTRITO_MUNICIPAL"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SECTOR_GEOGRAFICO]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_SECTOR_GEOGRAFICO]"
-                      length="4"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SECTOR_GEOGRAFICO]"
-                      name="CD_SECTOR_GEOGRAFICO"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_MUNICIPIO]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_MUNICIPIO]"
-                      length="3"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_MUNICIPIO]"
-                      name="CD_MUNICIPIO"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_PROVINCIA]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_PROVINCIA]"
-                      length="2"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_PROVINCIA]"
-                      name="CD_PROVINCIA"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_REGION]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_REGION]"
-                      length="2"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_REGION]"
-                      name="CD_REGION"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_PAIS]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_PAIS]"
-                      length="2"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_PAIS]"
-                      name="CD_PAIS"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_LOCALIZACION_GEOGRAFICA]"
-                      codePage="1252"
-                      dataType="str"
-                      length="60"
-                      name="CD_LOCALIZACION_GEOGRAFICA" />
-                    <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DESC_LOCALIZACION_GEOGRAFICA]"
-                      codePage="1252"
-                      dataType="str"
-                      length="60"
-                      name="DESC_LOCALIZACION_GEOGRAFICA" />
-                    <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_SUB_BARRIO]"
-                      codePage="1252"
-                      dataType="str"
-                      length="2"
-                      name="CD_SUB_BARRIO" />
-                    <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_BARRIO]"
-                      codePage="1252"
-                      dataType="str"
-                      length="5"
-                      name="CD_BARRIO" />
-                    <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_SECCION]"
-                      codePage="1252"
-                      dataType="str"
-                      length="2"
-                      name="CD_SECCION" />
-                    <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_DISTRITO_MUNICIPAL]"
-                      codePage="1252"
-                      dataType="str"
-                      length="2"
-                      name="CD_DISTRITO_MUNICIPAL" />
-                    <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_SECTOR_GEOGRAFICO]"
-                      codePage="1252"
-                      dataType="str"
-                      length="4"
-                      name="CD_SECTOR_GEOGRAFICO" />
-                    <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_MUNICIPIO]"
-                      codePage="1252"
-                      dataType="str"
-                      length="3"
-                      name="CD_MUNICIPIO" />
-                    <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_PROVINCIA]"
-                      codePage="1252"
-                      dataType="str"
-                      length="2"
-                      name="CD_PROVINCIA" />
-                    <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_REGION]"
-                      codePage="1252"
-                      dataType="str"
-                      length="2"
-                      name="CD_REGION" />
-                    <externalMetadataColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CD_PAIS]"
-                      codePage="1252"
-                      dataType="str"
-                      length="2"
-                      name="CD_PAIS" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_LOCALIZACION_GEOGRAFICA]"
-                      codePage="1252"
-                      dataType="str"
-                      length="60"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_LOCALIZACION_GEOGRAFICA]"
-                      name="CD_LOCALIZACION_GEOGRAFICA" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]"
-                      codePage="1252"
-                      dataType="str"
-                      length="60"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]"
-                      name="DESC_LOCALIZACION_GEOGRAFICA" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_SUB_BARRIO]"
-                      codePage="1252"
-                      dataType="str"
-                      length="2"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_SUB_BARRIO]"
-                      name="CD_SUB_BARRIO" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_BARRIO]"
-                      codePage="1252"
-                      dataType="str"
-                      length="5"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_BARRIO]"
-                      name="CD_BARRIO" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_SECCION]"
-                      codePage="1252"
-                      dataType="str"
-                      length="2"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_SECCION]"
-                      name="CD_SECCION" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_DISTRITO_MUNICIPAL]"
-                      codePage="1252"
-                      dataType="str"
-                      length="2"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_DISTRITO_MUNICIPAL]"
-                      name="CD_DISTRITO_MUNICIPAL" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_SECTOR_GEOGRAFICO]"
-                      codePage="1252"
-                      dataType="str"
-                      length="4"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_SECTOR_GEOGRAFICO]"
-                      name="CD_SECTOR_GEOGRAFICO" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_MUNICIPIO]"
-                      codePage="1252"
-                      dataType="str"
-                      length="3"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_MUNICIPIO]"
-                      name="CD_MUNICIPIO" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_PROVINCIA]"
-                      codePage="1252"
-                      dataType="str"
-                      length="2"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_PROVINCIA]"
-                      name="CD_PROVINCIA" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_REGION]"
-                      codePage="1252"
-                      dataType="str"
-                      length="2"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_REGION]"
-                      name="CD_REGION" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_PAIS]"
-                      codePage="1252"
-                      dataType="str"
-                      length="2"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CD_PAIS]"
-                      name="CD_PAIS" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -4487,7 +4118,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedLength="5"
                       cachedName="CD_BARRIO"
                       externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].ExternalColumns[CD_BARRIO]"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_BARRIO]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_BARRIO]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].Columns[CD_SECTOR_GEOGRAFICO]"
                       cachedCodepage="1252"
@@ -4495,7 +4126,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedLength="4"
                       cachedName="CD_SECTOR_GEOGRAFICO"
                       externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].ExternalColumns[CD_SECTOR_GEOGRAFICO]"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SECTOR_GEOGRAFICO]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SECTOR_GEOGRAFICO]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].Columns[CD_MUNICIPIO]"
                       cachedCodepage="1252"
@@ -4503,7 +4134,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedLength="3"
                       cachedName="CD_MUNICIPIO"
                       externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].ExternalColumns[CD_MUNICIPIO]"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_MUNICIPIO]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_MUNICIPIO]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].Columns[CD_PROVINCIA]"
                       cachedCodepage="1252"
@@ -4511,7 +4142,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedLength="2"
                       cachedName="CD_PROVINCIA"
                       externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].ExternalColumns[CD_PROVINCIA]"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_PROVINCIA]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_PROVINCIA]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].Columns[CD_REGION]"
                       cachedCodepage="1252"
@@ -4519,7 +4150,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedLength="2"
                       cachedName="CD_REGION"
                       externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].ExternalColumns[CD_REGION]"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_REGION]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_REGION]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].Columns[CD_PAIS]"
                       cachedCodepage="1252"
@@ -4527,7 +4158,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedLength="2"
                       cachedName="CD_PAIS"
                       externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].ExternalColumns[CD_PAIS]"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_PAIS]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_PAIS]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].Columns[DESC_LOCALIZACION_GEOGRAFICA]"
                       cachedCodepage="1252"
@@ -4535,7 +4166,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedLength="60"
                       cachedName="DESC_LOCALIZACION_GEOGRAFICA"
                       externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].ExternalColumns[DESC_LOCALIZACION_GEOGRAFICA]"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].Columns[CD_SUB_BARRIO]"
                       cachedCodepage="1252"
@@ -4543,7 +4174,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedLength="20"
                       cachedName="CD_SUB_BARRIO"
                       externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].ExternalColumns[CD_SUB_BARRIO]"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SUB_BARRIO]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SUB_BARRIO]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].Columns[CD_SECCION]"
                       cachedCodepage="1252"
@@ -4551,7 +4182,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedLength="20"
                       cachedName="CD_SECCION"
                       externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].ExternalColumns[CD_SECCION]"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SECCION]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SECCION]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].Columns[CD_DISTRITO_MUNICIPAL]"
                       cachedCodepage="1252"
@@ -4559,7 +4190,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedLength="20"
                       cachedName="CD_DISTRITO_MUNICIPAL"
                       externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].ExternalColumns[CD_DISTRITO_MUNICIPAL]"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_DISTRITO_MUNICIPAL]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_DISTRITO_MUNICIPAL]" />
                     <inputColumn
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input].Columns[CD_LOCALIZADOR]"
                       cachedCodepage="1252"
@@ -4686,7 +4317,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedName="CD_BARRIO"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_BARRIO]"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_BARRIO]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4694,7 +4325,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_BARRIO]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_BARRIO]}</property>
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_BARRIO]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_BARRIO]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4711,7 +4342,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedName="CD_SECTOR_GEOGRAFICO"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SECTOR_GEOGRAFICO]"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SECTOR_GEOGRAFICO]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4719,7 +4350,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SECTOR_GEOGRAFICO]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SECTOR_GEOGRAFICO]}</property>
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SECTOR_GEOGRAFICO]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SECTOR_GEOGRAFICO]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4736,7 +4367,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedName="CD_MUNICIPIO"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_MUNICIPIO]"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_MUNICIPIO]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4744,7 +4375,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_MUNICIPIO]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_MUNICIPIO]}</property>
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_MUNICIPIO]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_MUNICIPIO]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4761,7 +4392,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedName="CD_PROVINCIA"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_PROVINCIA]"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_PROVINCIA]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4769,7 +4400,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_PROVINCIA]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_PROVINCIA]}</property>
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_PROVINCIA]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_PROVINCIA]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4786,7 +4417,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedName="CD_REGION"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_REGION]"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_REGION]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4794,7 +4425,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_REGION]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_REGION]}</property>
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_REGION]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_REGION]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4811,7 +4442,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedName="CD_PAIS"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_PAIS]"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_PAIS]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4819,7 +4450,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_PAIS]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_PAIS]}</property>
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_PAIS]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_PAIS]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4836,7 +4467,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedName="DESC_LOCALIZACION_GEOGRAFICA"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4844,7 +4475,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]}</property>
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4861,7 +4492,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedName="CD_SUB_BARRIO"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SUB_BARRIO]"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SUB_BARRIO]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4869,7 +4500,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SUB_BARRIO]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SUB_BARRIO]}</property>
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SUB_BARRIO]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SUB_BARRIO]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4886,7 +4517,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedName="CD_SECCION"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SECCION]"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SECCION]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4894,7 +4525,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SECCION]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_SECCION]}</property>
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SECCION]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SECCION]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4911,7 +4542,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedName="CD_DISTRITO_MUNICIPAL"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_DISTRITO_MUNICIPAL]"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_DISTRITO_MUNICIPAL]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4919,7 +4550,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_DISTRITO_MUNICIPAL]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_DISTRITO_MUNICIPAL]}</property>
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_DISTRITO_MUNICIPAL]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_DISTRITO_MUNICIPAL]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4936,7 +4567,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedName="CD_LOCALIZACION_GEOGRAFICA"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_LOCALIZACION_GEOGRAFICA]"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_LOCALIZACION_GEOGRAFICA]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4944,7 +4575,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_LOCALIZACION_GEOGRAFICA]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_LOCALIZACION_GEOGRAFICA]}</property>
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_LOCALIZACION_GEOGRAFICA]}) ? "-1" : #{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_LOCALIZACION_GEOGRAFICA]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -5010,7 +4641,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       cachedDataType="str"
                       cachedLength="60"
                       cachedName="CD_LOCALIZACION_GEOGRAFICA"
-                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_LOCALIZACION_GEOGRAFICA]" />
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_LOCALIZACION_GEOGRAFICA]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -5038,7 +4669,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,20,1252)[SUBSTRING](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CD_LOCALIZACION_GEOGRAFICA]},10,16)</property>
+                          name="Expression">(DT_STR,20,1252)[SUBSTRING](#{Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_LOCALIZACION_GEOGRAFICA]},10,16)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -5068,6 +4699,375 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
                       refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DV_TRATAMIENTO_DE_NULOS_1 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DV_TRATAMIENTO_DE_NULOS_1 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="PR_SRC_DIM_LOCALIDAD"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select distinct
+lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
+    ,lg.maecalle as DESC_LOCALIZACION_GEOGRAFICA
+    ,'-2' as CD_SUB_BARRIO
+    ,lg.ba_codigo as CD_BARRIO
+    ,'-2' as CD_SECCION
+    ,'-2' as CD_DISTRITO_MUNICIPAL
+    ,sc.sc_codigo as CD_SECTOR_GEOGRAFICO
+    ,mn.mn_codigo as CD_MUNICIPIO
+    ,pv.pv_codigo as CD_PROVINCIA
+    ,ti.ti_codigo as CD_REGION
+    ,'RD' as CD_PAIS
+    from vfrhma010 lg
+    left join trhba000 ba on lg.Ba_codigo = ba.ba_codigo
+    left join trhsc000 sc on ba.sc_codigo = sc.sc_codigo
+    left join  trhmn000 mn on ba.mn_codigo = mn.mn_codigo
+    left join  trhpv000 pv on mn.pv_codigo = pv.pv_codigo
+    left join  trhti000 ti on pv.ti_codigo = ti.ti_codigo</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Connections[OleDbConnection]"
+                  connectionManagerID="{57FB4340-4941-440B-B875-D839A78DE2E7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_SRC_RRHH_01]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_LOCALIZACION_GEOGRAFICA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_LOCALIZACION_GEOGRAFICA]"
+                      length="60"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_LOCALIZACION_GEOGRAFICA]"
+                      name="CD_LOCALIZACION_GEOGRAFICA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[DESC_LOCALIZACION_GEOGRAFICA]"
+                      length="60"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]"
+                      name="DESC_LOCALIZACION_GEOGRAFICA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SUB_BARRIO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_SUB_BARRIO]"
+                      length="20"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SUB_BARRIO]"
+                      name="CD_SUB_BARRIO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_BARRIO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_BARRIO]"
+                      length="5"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_BARRIO]"
+                      name="CD_BARRIO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SECCION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_SECCION]"
+                      length="20"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SECCION]"
+                      name="CD_SECCION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_DISTRITO_MUNICIPAL]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_DISTRITO_MUNICIPAL]"
+                      length="20"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_DISTRITO_MUNICIPAL]"
+                      name="CD_DISTRITO_MUNICIPAL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SECTOR_GEOGRAFICO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_SECTOR_GEOGRAFICO]"
+                      length="4"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_SECTOR_GEOGRAFICO]"
+                      name="CD_SECTOR_GEOGRAFICO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_MUNICIPIO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_MUNICIPIO]"
+                      length="3"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_MUNICIPIO]"
+                      name="CD_MUNICIPIO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_PROVINCIA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_PROVINCIA]"
+                      length="2"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_PROVINCIA]"
+                      name="CD_PROVINCIA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_REGION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_REGION]"
+                      length="2"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_REGION]"
+                      name="CD_REGION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_PAIS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_PAIS]"
+                      length="2"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].Columns[CD_PAIS]"
+                      name="CD_PAIS"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_LOCALIZACION_GEOGRAFICA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="CD_LOCALIZACION_GEOGRAFICA" />
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[DESC_LOCALIZACION_GEOGRAFICA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="DESC_LOCALIZACION_GEOGRAFICA" />
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_SUB_BARRIO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="CD_SUB_BARRIO" />
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_BARRIO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="CD_BARRIO" />
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_SECCION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="CD_SECCION" />
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_DISTRITO_MUNICIPAL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="CD_DISTRITO_MUNICIPAL" />
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_SECTOR_GEOGRAFICO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="CD_SECTOR_GEOGRAFICO" />
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_MUNICIPIO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="CD_MUNICIPIO" />
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_PROVINCIA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="CD_PROVINCIA" />
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_REGION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="CD_REGION" />
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output].ExternalColumns[CD_PAIS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="CD_PAIS" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_LOCALIZACION_GEOGRAFICA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_LOCALIZACION_GEOGRAFICA]"
+                      name="CD_LOCALIZACION_GEOGRAFICA" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[DESC_LOCALIZACION_GEOGRAFICA]"
+                      name="DESC_LOCALIZACION_GEOGRAFICA" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_SUB_BARRIO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_SUB_BARRIO]"
+                      name="CD_SUB_BARRIO" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_BARRIO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_BARRIO]"
+                      name="CD_BARRIO" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_SECCION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_SECCION]"
+                      name="CD_SECCION" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_DISTRITO_MUNICIPAL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_DISTRITO_MUNICIPAL]"
+                      name="CD_DISTRITO_MUNICIPAL" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_SECTOR_GEOGRAFICO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_SECTOR_GEOGRAFICO]"
+                      name="CD_SECTOR_GEOGRAFICO" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_MUNICIPIO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_MUNICIPIO]"
+                      name="CD_MUNICIPIO" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_PROVINCIA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_PROVINCIA]"
+                      name="CD_PROVINCIA" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_REGION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_REGION]"
+                      name="CD_REGION" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_PAIS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[CD_PAIS]"
+                      name="CD_PAIS" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -5449,44 +5449,44 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
               startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_STANDARD_2.Outputs[Derived Column Error Output]" />
             <path
               refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output6]"
-              endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_STANDARD_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output5]"
-              endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output4]"
-              endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\UN_STANDARD.Inputs[Union All Input 4]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output7]"
-              endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\RA_MC_STANDARD_1.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DV_TRATAMIENTO_DE_NULOS_1 1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output2]"
-              endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\ER_UN_STANDARD_1.Inputs[Union All Input 2]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_REGISTROS_INVALIDOS_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output1]"
-              endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\UN_STANDARD.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_STANDARD_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output]"
               endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\ER_UN_STANDARD_1.Inputs[Union All Input 1]"
               name="Derived Column Output"
               startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output3]"
+              refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output5]"
+              endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\UN_STANDARD.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_STANDARD_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output4]"
+              endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\ER_UN_STANDARD_1.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_REGISTROS_INVALIDOS_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output7]"
               endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\UN_STANDARD.Inputs[Union All Input 2]"
               name="Derived Column Output"
               startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_STANDARD_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output2]"
+              endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\UN_STANDARD.Inputs[Union All Input 4]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output1]"
+              endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DTN_DIM_LOCALIZACION_GEOGRAFICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output]"
+              endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_STANDARD_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output3]"
+              endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\RA_MC_STANDARD_1.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DV_TRATAMIENTO_DE_NULOS_1 1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Multicast Output 2]"
               endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\RA_AGG_STANDARD_1.Inputs[Aggregate Input 1]"
@@ -5516,12 +5516,12 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
               refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[OLE DB Source Error Output]"
               endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
               name="OLE DB Source Error Output"
-              startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Error Output]" />
+              startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Error Output]" />
             <path
               refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[OLE DB Source Output]"
               endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DV_TRATAMIENTO_DE_NULOS_1 1.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
-              startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source.Outputs[OLE DB Source Output]" />
+              startId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Output 0]"
               endId="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_REGISTROS_INVALIDOS_2.Inputs[Derived Column Input]"
@@ -5554,7 +5554,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_CREATE_DATE_1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5630,7 +5630,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_DATE_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5713,7 +5713,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_INI_ESTATUS_RUNNING_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5785,7 +5785,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5809,7 +5809,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5833,7 +5833,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5857,7 +5857,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5905,7 +5905,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5929,7 +5929,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE_STAGING_AREA"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5948,7 +5948,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE_STAGING_AREA_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6112,9 +6112,9 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
           Id="Package\DF_REPROCESAMIENTO_1"
           TopLeft="770,498" />
         <NodeLayout
-          Size="239,42"
+          Size="301,42"
           Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1"
-          TopLeft="221,502" />
+          TopLeft="221,503" />
         <NodeLayout
           Size="185,42"
           Id="Package\SQL_CREATE_DATE_1"
@@ -6545,26 +6545,26 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="33.5,39"
+              EndConnector="64.5,40"
               Start="0,0"
-              End="33.5,31.5">
+              End="64.5,32.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.5" />
+                    End="0,16" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,15.5"
-                    Point2="0,19.5"
-                    Point3="4,19.5" />
+                    Point1="0,16"
+                    Point2="0,20"
+                    Point3="4,20" />
                   <mssgle:LineSegment
-                    End="29.5,19.5" />
+                    End="60.5,20" />
                   <mssgle:CubicBezierSegment
-                    Point1="29.5,19.5"
-                    Point2="33.5,19.5"
-                    Point3="33.5,23.5" />
+                    Point1="60.5,20"
+                    Point2="64.5,20"
+                    Point3="64.5,24" />
                   <mssgle:LineSegment
-                    End="33.5,31.5" />
+                    End="64.5,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6575,66 +6575,66 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="379,544">
+          TopLeft="420.333333333333,545">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="85.888888888889,54.888888888889"
+              EndConnector="44.5555555555557,53.888888888889"
               Start="0,0"
-              End="85.888888888889,47.388888888889">
+              End="44.5555555555557,46.388888888889">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.1745635910225" />
+                    End="0,17.7265183226849" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,18.1745635910225"
-                    Point2="0,22.1745635910225"
-                    Point3="4,22.1745635910225" />
+                    Point1="0,17.7265183226849"
+                    Point2="0,21.7265183226849"
+                    Point3="4,21.7265183226849" />
                   <mssgle:LineSegment
-                    End="81.888888888889,22.1745635910225" />
+                    End="40.5555555555557,21.7265183226849" />
                   <mssgle:CubicBezierSegment
-                    Point1="81.888888888889,22.1745635910225"
-                    Point2="85.888888888889,22.1745635910225"
-                    Point3="85.888888888889,26.1745635910225" />
+                    Point1="40.5555555555557,21.7265183226849"
+                    Point2="44.5555555555557,21.7265183226849"
+                    Point3="44.5555555555557,25.7265183226849" />
                   <mssgle:LineSegment
-                    End="85.888888888889,47.388888888889" />
+                    End="44.5555555555557,46.388888888889" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="27.7030967881945,27.1745635910225,30.4826953125,9.7490234375"
+              BoundingBox="7.03643012152786,26.7265183226849,30.4826953125,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="302,544">
+          TopLeft="322.666666666667,545">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-88,58"
+              EndConnector="-108.666666666667,57"
               Start="0,0"
-              End="-88,50.5">
+              End="-108.666666666667,49.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.431421446384" />
+                    End="0,18.9808327825512" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.431421446384"
-                    Point2="0,23.431421446384"
-                    Point3="-4,23.431421446384" />
+                    Point1="0,18.9808327825512"
+                    Point2="0,22.9808327825512"
+                    Point3="-4,22.9808327825512" />
                   <mssgle:LineSegment
-                    End="-84,23.431421446384" />
+                    End="-104.666666666667,22.9808327825512" />
                   <mssgle:CubicBezierSegment
-                    Point1="-84,23.431421446384"
-                    Point2="-88,23.431421446384"
-                    Point3="-88,27.431421446384" />
+                    Point1="-104.666666666667,22.9808327825512"
+                    Point2="-108.666666666667,22.9808327825512"
+                    Point3="-108.666666666667,26.9808327825512" />
                   <mssgle:LineSegment
-                    End="-88,50.5" />
+                    End="-108.666666666667,49.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6750,8 +6750,8 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
           Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\DV_REGISTROS_INVALIDOS_2"
           TopLeft="35,424" />
         <NodeLayout
-          Size="150,42"
-          Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source"
+          Size="203,42"
+          Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD"
           TopLeft="161,40" />
         <NodeLayout
           Size="163,42"
@@ -6792,21 +6792,21 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
         <NodeLayout
           Size="266,42"
           Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_DV_TRATAMIENTO_DE_NULOS_1 1"
-          TopLeft="264,94" />
+          TopLeft="308,125" />
         <EdgeLayout
           Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output6]"
-          TopLeft="1313.5,577">
+          TopLeft="148,466">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,78"
+              EndConnector="0,75"
               Start="0,0"
-              End="0,70.5">
+              End="0,67.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,70.5" />
+                    End="0,67.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6817,18 +6817,18 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output5]"
-          TopLeft="593.75,319">
+          TopLeft="1316.25,246">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,49"
+              EndConnector="0,58"
               Start="0,0"
-              End="0,41.5">
+              End="0,50.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.5" />
+                    End="0,50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6839,74 +6839,6 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output4]"
-          TopLeft="697.666666666667,533">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="581.333333333333,-187"
-              Start="0,0"
-              End="581.333333333333,-179.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-101.311545431012" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-101.311545431012"
-                    Point2="0,-105.311545431012"
-                    Point3="4,-105.311545431012" />
-                  <mssgle:LineSegment
-                    End="577.333333333333,-105.311545431012" />
-                  <mssgle:CubicBezierSegment
-                    Point1="577.333333333333,-105.311545431012"
-                    Point2="581.333333333333,-105.311545431012"
-                    Point3="581.333333333333,-109.311545431012" />
-                  <mssgle:LineSegment
-                    End="581.333333333333,-179.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output3]"
-          TopLeft="1027.33333333333,428">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="287.666666666667,-82"
-              Start="0,0"
-              End="287.666666666667,-74.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-29.2782503037667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-29.2782503037667"
-                    Point2="0,-33.2782503037667"
-                    Point3="4,-33.2782503037667" />
-                  <mssgle:LineSegment
-                    End="283.666666666667,-33.2782503037667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="283.666666666667,-33.2782503037667"
-                    Point2="287.666666666667,-33.2782503037667"
-                    Point3="287.666666666667,-37.2782503037667" />
-                  <mssgle:LineSegment
-                    End="287.666666666667,-74.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output2]"
           TopLeft="936.666666666667,638">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6940,19 +6872,87 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output1]"
-          TopLeft="1316.25,246">
+          Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output3]"
+          TopLeft="484,125">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58"
+              EndConnector="87.75,-61"
               Start="0,0"
-              End="0,50.5">
+              End="87.75,-53.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.5" />
+                    End="0,-30.4401213513189" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-30.4401213513189"
+                    Point2="0,-34.4401213513189"
+                    Point3="4,-34.4401213513189" />
+                  <mssgle:LineSegment
+                    End="83.75,-34.4401213513189" />
+                  <mssgle:CubicBezierSegment
+                    Point1="83.75,-34.4401213513189"
+                    Point2="87.75,-34.4401213513189"
+                    Point3="87.75,-38.4401213513189" />
+                  <mssgle:LineSegment
+                    End="87.75,-53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output2]"
+          TopLeft="697.666666666667,533">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="581.333333333333,-187"
+              Start="0,0"
+              End="581.333333333333,-179.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-101.311545431012" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-101.311545431012"
+                    Point2="0,-105.311545431012"
+                    Point3="4,-105.311545431012" />
+                  <mssgle:LineSegment
+                    End="577.333333333333,-105.311545431012" />
+                  <mssgle:CubicBezierSegment
+                    Point1="577.333333333333,-105.311545431012"
+                    Point2="581.333333333333,-105.311545431012"
+                    Point3="581.333333333333,-109.311545431012" />
+                  <mssgle:LineSegment
+                    End="581.333333333333,-179.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output1]"
+          TopLeft="593.75,319">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6963,18 +6963,18 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output]"
-          TopLeft="148,466">
+          TopLeft="1313.5,577">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,75"
+              EndConnector="0,78"
               Start="0,0"
-              End="0,67.5">
+              End="0,70.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,67.5" />
+                    End="0,70.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7247,24 +7247,30 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[OLE DB Source Output]"
-          TopLeft="311,61">
+          TopLeft="295,82">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="43,33"
+              EndConnector="103,43"
               Start="0,0"
-              End="43,25.5">
+              End="103,35.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="39,0" />
+                    End="0,17.5493119266055" />
                   <mssgle:CubicBezierSegment
-                    Point1="39,0"
-                    Point2="43,0"
-                    Point3="43,4" />
+                    Point1="0,17.5493119266055"
+                    Point2="0,21.5493119266055"
+                    Point3="4,21.5493119266055" />
                   <mssgle:LineSegment
-                    End="43,25.5" />
+                    End="99,21.5493119266055" />
+                  <mssgle:CubicBezierSegment
+                    Point1="99,21.5493119266055"
+                    Point2="103,21.5493119266055"
+                    Point3="103,25.5493119266055" />
+                  <mssgle:LineSegment
+                    End="103,35.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7275,25 +7281,37 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[OLE DB Source Error Output]"
-          TopLeft="235.5,82">
+          TopLeft="262.5,82">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,172"
+              EndConnector="-27.5,172"
               Start="0,0"
-              End="0,164.5">
+              End="-27.5,164.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,164.5" />
+                    End="0,82" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,82"
+                    Point2="0,86"
+                    Point3="-4,86" />
+                  <mssgle:LineSegment
+                    End="-23.5,86" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-23.5,86"
+                    Point2="-27.5,86"
+                    Point3="-27.5,90" />
+                  <mssgle:LineSegment
+                    End="-27.5,164.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-63.43390625,76.533203125,126.8678125,11.43359375"
+              BoundingBox="-77.18390625,91,126.8678125,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7447,30 +7465,30 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1.Paths[Derived Column Output7]"
-          TopLeft="440,94">
+          TopLeft="1027.33333333333,428">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="131.75,-30"
+              EndConnector="287.666666666667,-82"
               Start="0,0"
-              End="131.75,-22.5">
+              End="287.666666666667,-74.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-12.9377645990093" />
+                    End="0,-29.2782503037667" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-12.9377645990093"
-                    Point2="0,-16.9377645990093"
-                    Point3="4,-16.9377645990093" />
+                    Point1="0,-29.2782503037667"
+                    Point2="0,-33.2782503037667"
+                    Point3="4,-33.2782503037667" />
                   <mssgle:LineSegment
-                    End="127.75,-16.9377645990093" />
+                    End="283.666666666667,-33.2782503037667" />
                   <mssgle:CubicBezierSegment
-                    Point1="127.75,-16.9377645990093"
-                    Point2="131.75,-16.9377645990093"
-                    Point3="131.75,-20.9377645990093" />
+                    Point1="283.666666666667,-33.2782503037667"
+                    Point2="287.666666666667,-33.2782503037667"
+                    Point3="287.666666666667,-37.2782503037667" />
                   <mssgle:LineSegment
-                    End="131.75,-22.5" />
+                    End="287.666666666667,-74.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7522,7 +7540,7 @@ lg.maecalle as CD_LOCALIZACION_GEOGRAFICA
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\OLE DB Source">
+    design-time-name="Package\DF_STG_DIM_LOCALIZACION_GEOGRAFICA_1\PR_SRC_DIM_LOCALIDAD">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
