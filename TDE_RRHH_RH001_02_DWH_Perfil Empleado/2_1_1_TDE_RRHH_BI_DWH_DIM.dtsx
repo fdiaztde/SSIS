@@ -12,8 +12,8 @@
   DTS:ObjectName="2_1_1_TDE_RRHH_BI_DWH_DIM"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="37"
-  DTS:VersionGUID="{B00B4CF9-DFFC-4285-A593-19B663CA46F5}">
+  DTS:VersionBuild="38"
+  DTS:VersionGUID="{FFE612B3-ECC3-402C-BDB6-1DECA5A55384}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -365,6 +365,23 @@
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
               <PackageName>DWH_DIM_IDIOMA.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_LUGAR_NACIMIENTO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{b39926da-5943-43d6-925c-97bd9635f42e}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DWH_DIM_LUGAR_NACIMIENTO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DWH_DIM_LUGAR_NACIMIENTO.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
@@ -765,11 +782,11 @@
         <DTS:PrecedenceConstraint
           DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 22]"
           DTS:CreationName=""
-          DTS:DTSID="{213CBC78-BBC4-4CBC-A3ED-62885C4C6D56}"
+          DTS:DTSID="{779835FC-6749-4378-B4F6-89E1A83B9B24}"
           DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_GENERO"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 22"
-          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PERSONA" />
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_LUGAR_NACIMIENTO" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 23]"
           DTS:CreationName=""
@@ -874,6 +891,14 @@
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 34"
           DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_EMPLEADO" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 35]"
+          DTS:CreationName=""
+          DTS:DTSID="{E5709E45-87D9-4E6E-983C-8C22B9F89B2C}"
+          DTS:From="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_LUGAR_NACIMIENTO"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 35"
+          DTS:To="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PERSONA" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 4]"
           DTS:CreationName=""
@@ -1036,7 +1061,7 @@
         <NodeLayout
           Size="176,43"
           Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PERSONA"
-          TopLeft="396,690" />
+          TopLeft="420,746" />
         <NodeLayout
           Size="190,42"
           Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_PROFESION"
@@ -1117,30 +1142,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 1]"
-          TopLeft="512,690">
+          TopLeft="536,746">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="380.333333333333,-628"
+              EndConnector="356.333333333333,-684"
               Start="0,0"
-              End="380.333333333333,-620.5">
+              End="356.333333333333,-676.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-309.833950290851" />
+                    End="0,-337.819143310418" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-309.833950290851"
-                    Point2="0,-313.833950290851"
-                    Point3="4,-313.833950290851" />
+                    Point1="0,-337.819143310418"
+                    Point2="0,-341.819143310418"
+                    Point3="4,-341.819143310418" />
                   <mssgle:LineSegment
-                    End="376.333333333333,-313.833950290851" />
+                    End="352.333333333333,-341.819143310418" />
                   <mssgle:CubicBezierSegment
-                    Point1="376.333333333333,-313.833950290851"
-                    Point2="380.333333333333,-313.833950290851"
-                    Point3="380.333333333333,-317.833950290851" />
+                    Point1="352.333333333333,-341.819143310418"
+                    Point2="356.333333333333,-341.819143310418"
+                    Point3="356.333333333333,-345.819143310418" />
                   <mssgle:LineSegment
-                    End="380.333333333333,-620.5" />
+                    End="356.333333333333,-676.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1535,40 +1560,6 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 22]"
-          TopLeft="530,647">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-74,43"
-              Start="0,0"
-              End="-74,35.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.5675675675676" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.5675675675676"
-                    Point2="0,25.5675675675676"
-                    Point3="-4,25.5675675675676" />
-                  <mssgle:LineSegment
-                    End="-70,25.5675675675676" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-70,25.5675675675676"
-                    Point2="-74,25.5675675675676"
-                    Point3="-74,29.5675675675676" />
-                  <mssgle:LineSegment
-                    End="-74,35.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2149,6 +2140,66 @@
                     Point3="18.5,64" />
                   <mssgle:LineSegment
                     End="-10.5,64" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="235,42"
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM\DWH_DIM_LUGAR_NACIMIENTO"
+          TopLeft="409,671" />
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 22]"
+          TopLeft="528.25,647">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24"
+              Start="0,0"
+              End="0,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2_1_1_TDE_RRHH_BI_DWH_DIM.PrecedenceConstraints[Constraint 35]"
+          TopLeft="526.5,713">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-46.5,33"
+              Start="0,0"
+              End="-46.5,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.6216216216216" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.6216216216216"
+                    Point2="0,19.6216216216216"
+                    Point3="-4,19.6216216216216" />
+                  <mssgle:LineSegment
+                    End="-42.5,19.6216216216216" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-42.5,19.6216216216216"
+                    Point2="-46.5,19.6216216216216"
+                    Point3="-46.5,23.6216216216216" />
+                  <mssgle:LineSegment
+                    End="-46.5,25.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

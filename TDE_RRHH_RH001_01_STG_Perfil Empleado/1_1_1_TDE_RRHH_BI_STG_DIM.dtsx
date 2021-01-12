@@ -12,8 +12,8 @@
   DTS:ObjectName="1_1_1_TDE_RRHH_BI_STG_DIM"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{90F5541A-ABBC-4239-B4A5-79A22D0467CF}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{B44727C7-B70F-42B4-9AD8-3FE91197B5DA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -365,6 +365,23 @@
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
               <PackageName>STG_DIM_IDIOMA.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_LUGAR_NACIMIENTO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{b1cb35ae-a1a7-4c97-a112-4d304f22ad68}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="STG_DIM_LUGAR_NACIMIENTO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>STG_DIM_LUGAR_NACIMIENTO.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
@@ -778,11 +795,15 @@
           Size="167,42"
           Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_TURNO_LABORAL"
           TopLeft="52,83" />
+        <NodeLayout
+          Size="231,42"
+          Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM\STG_DIM_LUGAR_NACIMIENTO"
+          TopLeft="312,810" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="1298,1022"
-          Size="1298,1065"
+          PanelSize="1298,1112"
+          Size="1298,1155"
           Id="Package\1_1_0_TDE_RRHH_BI_STG_DIM"
           TopLeft="184,37" />
       </GraphLayout>

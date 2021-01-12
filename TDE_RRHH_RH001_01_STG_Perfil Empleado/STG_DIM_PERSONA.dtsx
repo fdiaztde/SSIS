@@ -12,8 +12,8 @@
   DTS:ObjectName="STG_DIM_PERSONA"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="281"
-  DTS:VersionGUID="{066D48B1-4F19-4437-8868-70CA1BF7A2F8}">
+  DTS:VersionBuild="283"
+  DTS:VersionGUID="{D8DA0ED2-A87E-4A26-84F7-CCD024773269}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -4007,6 +4007,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           name="OutputColumnLineageID">#{Package\DF_STG_DIM_PERSONA_1\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[CODIGO_NACIONALIDAD]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_PERSONA_1\ER_UN_STANDARD_1.Inputs[Union All Input 1].Columns[CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="CD_LUGAR_NACIMIENTO"
+                      lineageId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_EMPLEADOS_1.Outputs[OLE DB Source Error Output].Columns[CD_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_PERSONA_1\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[CD_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4262,6 +4277,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           name="OutputColumnLineageID">#{Package\DF_STG_DIM_PERSONA_1\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[CODIGO_NACIONALIDAD]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_PERSONA_1\ER_UN_STANDARD_1.Inputs[Union All Input 2].Columns[CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="CD_LUGAR_NACIMIENTO"
+                      lineageId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_DIM_SOLICITUDES_2.Outputs[OLE DB Source Error Output].Columns[CD_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_PERSONA_1\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[CD_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4389,6 +4419,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       length="3"
                       lineageId="Package\DF_STG_DIM_PERSONA_1\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[CODIGO_NACIONALIDAD]"
                       name="CODIGO_NACIONALIDAD" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_PERSONA_1\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\DF_STG_DIM_PERSONA_1\ER_UN_STANDARD_1.Outputs[Union All Output 1].Columns[CD_LUGAR_NACIMIENTO]"
+                      name="CD_LUGAR_NACIMIENTO" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -5020,6 +5057,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedName="DESC_PERSONA"
                       externalMetadataColumnId="Package\DF_STG_DIM_PERSONA_1\PR_DTN_DIM_PERSONA.Inputs[OLE DB Destination Input].ExternalColumns[NM_PERSONA]"
                       lineageId="Package\DF_STG_DIM_PERSONA_1\DV_STANDARD_1.Outputs[Derived Column Output].Columns[DESC_PERSONA]" />
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_PERSONA_1\PR_DTN_DIM_PERSONA.Inputs[OLE DB Destination Input].Columns[CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="CD_LUGAR_NACIMIENTO"
+                      externalMetadataColumnId="Package\DF_STG_DIM_PERSONA_1\PR_DTN_DIM_PERSONA.Inputs[OLE DB Destination Input].ExternalColumns[CD_LUGAR_NACIMIENTO]"
+                      lineageId="Package\DF_STG_DIM_PERSONA_1\UN_STANDARD_1.Outputs[Union All Output 1].Columns[CD_LUGAR_NACIMIENTO]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5103,6 +5148,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       dataType="str"
                       length="150"
                       name="NM_PERSONA" />
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_PERSONA_1\PR_DTN_DIM_PERSONA.Inputs[OLE DB Destination Input].ExternalColumns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CD_LUGAR_NACIMIENTO" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -5466,6 +5517,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           name="FriendlyExpression">ISNULL(DOC_IDENTIFICACION) ? "-1" : (DT_WSTR,150)DOC_IDENTIFICACION</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_PERSONA_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Inputs[Derived Column Input].Columns[CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="CD_LUGAR_NACIMIENTO"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF_STG_DIM_PERSONA_1\UN_STANDARD_1.Outputs[Union All Output 1].Columns[CD_LUGAR_NACIMIENTO]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\DF_STG_DIM_PERSONA_1\UN_STANDARD_1.Outputs[Union All Output 1].Columns[CD_LUGAR_NACIMIENTO]}) ? "-1" : #{Package\DF_STG_DIM_PERSONA_1\UN_STANDARD_1.Outputs[Union All Output 1].Columns[CD_LUGAR_NACIMIENTO]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(CD_LUGAR_NACIMIENTO) ? "-1" : CD_LUGAR_NACIMIENTO</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -5544,7 +5620,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
   solvivi as CD_TIPO_RESIDENCIA,
   ci_codigo as CD_ESTADO_CIVIL,
   solsexo as CD_GENERO,
-  nc_codigo as CODIGO_NACIONALIDAD
+  nc_codigo as CODIGO_NACIONALIDAD,
+  lu_codigo as CD_LUGAR_NACIMIENTO
 From frhso000
 UNION ALL
 Select 
@@ -5562,7 +5639,8 @@ Select
   '-1' as CD_TIPO_RESIDENCIA,
   '-1'  as CD_ESTADO_CIVIL,
   '-1'  as CD_GENERO,
-  '-1' as CODIGO_NACIONALIDAD</property>
+  '-1' as CODIGO_NACIONALIDAD,
+  '-1'  as CD_LUGAR_NACIMIENTO</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -5759,6 +5837,17 @@ Select
                       lineageId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_DIM_SOLICITUDES_2.Outputs[OLE DB Source Output].Columns[CD_OCUPACION]"
                       name="CD_OCUPACION"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_DIM_SOLICITUDES_2.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_DIM_SOLICITUDES_2.Outputs[OLE DB Source Output].ExternalColumns[CD_LUGAR_NACIMIENTO]"
+                      length="3"
+                      lineageId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_DIM_SOLICITUDES_2.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      name="CD_LUGAR_NACIMIENTO"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5848,6 +5937,12 @@ Select
                       dataType="str"
                       length="2"
                       name="CD_OCUPACION" />
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_DIM_SOLICITUDES_2.Outputs[OLE DB Source Output].ExternalColumns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="CD_LUGAR_NACIMIENTO" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -5957,6 +6052,13 @@ Select
                       lineageId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_DIM_SOLICITUDES_2.Outputs[OLE DB Source Error Output].Columns[CODIGO_NACIONALIDAD]"
                       name="CODIGO_NACIONALIDAD" />
                     <outputColumn
+                      refId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_DIM_SOLICITUDES_2.Outputs[OLE DB Source Error Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_DIM_SOLICITUDES_2.Outputs[OLE DB Source Error Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      name="CD_LUGAR_NACIMIENTO" />
+                    <outputColumn
                       refId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_DIM_SOLICITUDES_2.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
                       lineageId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_DIM_SOLICITUDES_2.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
@@ -6013,7 +6115,8 @@ Select
   maevivi as CD_TIPO_RESIDENCIA,
   ci_codigo as CD_ESTADO_CIVIL,
   maesexo as CD_GENERO,
-  nc_codigo as CODIGO_NACIONALIDAD
+  nc_codigo as CODIGO_NACIONALIDAD,
+  lu_codigo as CD_LUGAR_NACIMIENTO
 From vfrhma010 ve
 Left Outer Join frhse010 ED1 on
          ed1.maenume = ve.Maenume and
@@ -6219,6 +6322,17 @@ Left Outer Join trhed000 ed on
                       lineageId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_EMPLEADOS_1.Outputs[OLE DB Source Output].Columns[CD_OCUPACION]"
                       name="CD_OCUPACION"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_EMPLEADOS_1.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_EMPLEADOS_1.Outputs[OLE DB Source Output].ExternalColumns[CD_LUGAR_NACIMIENTO]"
+                      length="3"
+                      lineageId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_EMPLEADOS_1.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      name="CD_LUGAR_NACIMIENTO"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -6308,6 +6422,12 @@ Left Outer Join trhed000 ed on
                       dataType="str"
                       length="3"
                       name="CD_OCUPACION" />
+                    <externalMetadataColumn
+                      refId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_EMPLEADOS_1.Outputs[OLE DB Source Output].ExternalColumns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="CD_LUGAR_NACIMIENTO" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -6416,6 +6536,13 @@ Left Outer Join trhed000 ed on
                       length="3"
                       lineageId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_EMPLEADOS_1.Outputs[OLE DB Source Error Output].Columns[CODIGO_NACIONALIDAD]"
                       name="CODIGO_NACIONALIDAD" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_EMPLEADOS_1.Outputs[OLE DB Source Error Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_EMPLEADOS_1.Outputs[OLE DB Source Error Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      name="CD_LUGAR_NACIMIENTO" />
                     <outputColumn
                       refId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_EMPLEADOS_1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -7154,6 +7281,21 @@ Left Outer Join trhed000 ed on
                           name="OutputColumnLineageID">#{Package\DF_STG_DIM_PERSONA_1\UN_STANDARD_1.Outputs[Union All Output 1].Columns[CD_OCUPACION]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_PERSONA_1\UN_STANDARD_1.Inputs[Union All Input 2].Columns[CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="CD_LUGAR_NACIMIENTO"
+                      lineageId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_EMPLEADOS_1.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_PERSONA_1\UN_STANDARD_1.Outputs[Union All Output 1].Columns[CD_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -7383,6 +7525,21 @@ Left Outer Join trhed000 ed on
                           name="OutputColumnLineageID">#{Package\DF_STG_DIM_PERSONA_1\UN_STANDARD_1.Outputs[Union All Output 1].Columns[CD_OCUPACION]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_STG_DIM_PERSONA_1\UN_STANDARD_1.Inputs[Union All Input 3].Columns[CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="CD_LUGAR_NACIMIENTO"
+                      lineageId="Package\DF_STG_DIM_PERSONA_1\PR_SRC_DIM_SOLICITUDES_2.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_STG_DIM_PERSONA_1\UN_STANDARD_1.Outputs[Union All Output 1].Columns[CD_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -7500,6 +7657,13 @@ Left Outer Join trhed000 ed on
                       length="35"
                       lineageId="Package\DF_STG_DIM_PERSONA_1\UN_STANDARD_1.Outputs[Union All Output 1].Columns[APELLIDO]"
                       name="APELLIDO" />
+                    <outputColumn
+                      refId="Package\DF_STG_DIM_PERSONA_1\UN_STANDARD_1.Outputs[Union All Output 1].Columns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\DF_STG_DIM_PERSONA_1\UN_STANDARD_1.Outputs[Union All Output 1].Columns[CD_LUGAR_NACIMIENTO]"
+                      name="CD_LUGAR_NACIMIENTO" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -7569,14 +7733,14 @@ Left Outer Join trhed000 ed on
               startId="Package\DF_STG_DIM_PERSONA_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_STG_DIM_PERSONA_1.Paths[Multicast Output 21]"
-              endId="Package\DF_STG_DIM_PERSONA_1\RA_AGG_STANDARD_1.Inputs[Aggregate Input 1]"
-              name="Multicast Output 2"
-              startId="Package\DF_STG_DIM_PERSONA_1\RA_MC_STANDARD_1.Outputs[Multicast Output 2]" />
-            <path
-              refId="Package\DF_STG_DIM_PERSONA_1.Paths[Multicast Output 2]"
               endId="Package\DF_STG_DIM_PERSONA_1\AGG_STANDARD_2.Inputs[Aggregate Input 1]"
               name="Multicast Output 2"
               startId="Package\DF_STG_DIM_PERSONA_1\RA_MC_STANDARD_2.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\DF_STG_DIM_PERSONA_1.Paths[Multicast Output 2]"
+              endId="Package\DF_STG_DIM_PERSONA_1\RA_AGG_STANDARD_1.Inputs[Aggregate Input 1]"
+              name="Multicast Output 2"
+              startId="Package\DF_STG_DIM_PERSONA_1\RA_MC_STANDARD_1.Outputs[Multicast Output 2]" />
             <path
               refId="Package\DF_STG_DIM_PERSONA_1.Paths[Multicast Output 3]"
               endId="Package\DF_STG_DIM_PERSONA_1\RA_MC_STANDARD_2.Inputs[Multicast Input 1]"
@@ -7624,19 +7788,19 @@ Left Outer Join trhed000 ed on
               startId="Package\DF_STG_DIM_PERSONA_1\ER_SCT_DESCRIPTION_2.Outputs[Output 0]" />
             <path
               refId="Package\DF_STG_DIM_PERSONA_1.Paths[Union All Output 12]"
+              endId="Package\DF_STG_DIM_PERSONA_1\ER_DTN_ERROR_ROWS_LOG.Inputs[OLE DB Destination Input]"
+              name="Union All Output 1"
+              startId="Package\DF_STG_DIM_PERSONA_1\ER_UN_STANDARD_2.Outputs[Union All Output 1]" />
+            <path
+              refId="Package\DF_STG_DIM_PERSONA_1.Paths[Union All Output 1]"
               endId="Package\DF_STG_DIM_PERSONA_1\DV_STANDARD_1.Inputs[Derived Column Input]"
               name="Union All Output 1"
               startId="Package\DF_STG_DIM_PERSONA_1\UN_STANDARD_1.Outputs[Union All Output 1]" />
             <path
-              refId="Package\DF_STG_DIM_PERSONA_1.Paths[Union All Output 1]"
+              refId="Package\DF_STG_DIM_PERSONA_1.Paths[Union All Output 11]"
               endId="Package\DF_STG_DIM_PERSONA_1\DV_STANDARD_3.Inputs[Derived Column Input]"
               name="Union All Output 1"
               startId="Package\DF_STG_DIM_PERSONA_1\UN_STANDARD.Outputs[Union All Output 1]" />
-            <path
-              refId="Package\DF_STG_DIM_PERSONA_1.Paths[Union All Output 11]"
-              endId="Package\DF_STG_DIM_PERSONA_1\ER_DTN_ERROR_ROWS_LOG.Inputs[OLE DB Destination Input]"
-              name="Union All Output 1"
-              startId="Package\DF_STG_DIM_PERSONA_1\ER_UN_STANDARD_2.Outputs[Union All Output 1]" />
             <path
               refId="Package\DF_STG_DIM_PERSONA_1.Paths[Union All Output 13]"
               endId="Package\DF_STG_DIM_PERSONA_1\ER_SCT_DESCRIPTION_1.Inputs[Input 0]"
@@ -7654,7 +7818,7 @@ Left Outer Join trhed000 ed on
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_CREATE_DATE_1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7730,7 +7894,7 @@ Left Outer Join trhed000 ed on
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_DATE_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7813,7 +7977,7 @@ Left Outer Join trhed000 ed on
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_INI_ESTATUS_RUNNING_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7885,7 +8049,7 @@ Left Outer Join trhed000 ed on
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7909,7 +8073,7 @@ Left Outer Join trhed000 ed on
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7933,7 +8097,7 @@ Left Outer Join trhed000 ed on
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7957,7 +8121,7 @@ Left Outer Join trhed000 ed on
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7981,7 +8145,7 @@ Left Outer Join trhed000 ed on
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -8005,7 +8169,7 @@ Left Outer Join trhed000 ed on
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_2 1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -8029,7 +8193,7 @@ Left Outer Join trhed000 ed on
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE_STAGING_AREA"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -8047,7 +8211,7 @@ Left Outer Join trhed000 ed on
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE_STAGING_AREA_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -8996,7 +9160,7 @@ Left Outer Join trhed000 ed on
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-84.6005729166667,104.44424520901,126.8678125,11.43359375"
+              BoundingBox="-84.6005729166666,104.44424520901,126.8678125,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -9067,9 +9231,7 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9103,37 +9265,11 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_PERSONA_1.Paths[Multicast Output 21]"
-          TopLeft="728,484.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="478,0"
-              Start="0,0"
-              End="470.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="470.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_PERSONA_1.Paths[Multicast Output 2]"
           TopLeft="823.5,586">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9163,9 +9299,29 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_PERSONA_1.Paths[Multicast Output 2]"
+          TopLeft="728,484.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="478,0"
+              Start="0,0"
+              End="470.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="470.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9199,9 +9355,7 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9223,9 +9377,7 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9247,9 +9399,7 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9283,9 +9433,7 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9319,9 +9467,7 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9355,9 +9501,7 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9391,9 +9535,7 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9415,9 +9557,7 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9475,9 +9615,7 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9511,9 +9649,7 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9547,9 +9683,7 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9583,49 +9717,11 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_STG_DIM_PERSONA_1.Paths[Union All Output 12]"
-          TopLeft="612,283">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-9.5,39"
-              Start="0,0"
-              End="-9.5,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.5"
-                    Point2="0,19.5"
-                    Point3="-4,19.5" />
-                  <mssgle:LineSegment
-                    End="-5.5,19.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-5.5,19.5"
-                    Point2="-9.5,19.5"
-                    Point3="-9.5,23.5" />
-                  <mssgle:LineSegment
-                    End="-9.5,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_STG_DIM_PERSONA_1.Paths[Union All Output 11]"
           TopLeft="158.25,990">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9643,13 +9739,11 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_STG_DIM_PERSONA_1.Paths[Union All Output 1]"
+          Id="Package\DF_STG_DIM_PERSONA_1.Paths[Union All Output 11]"
           TopLeft="1351,707">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9679,9 +9773,41 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_STG_DIM_PERSONA_1.Paths[Union All Output 1]"
+          TopLeft="612,283">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9.5,39"
+              Start="0,0"
+              End="-9.5,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.5"
+                    Point2="0,19.5"
+                    Point3="-4,19.5" />
+                  <mssgle:LineSegment
+                    End="-5.5,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.5,19.5"
+                    Point2="-9.5,19.5"
+                    Point3="-9.5,23.5" />
+                  <mssgle:LineSegment
+                    End="-9.5,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9715,9 +9841,7 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9751,9 +9875,7 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9787,9 +9909,7 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9823,9 +9943,7 @@ Left Outer Join trhed000 ed on
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

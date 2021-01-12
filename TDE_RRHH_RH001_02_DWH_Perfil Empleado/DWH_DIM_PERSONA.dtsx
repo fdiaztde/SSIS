@@ -12,8 +12,8 @@
   DTS:ObjectName="DWH_DIM_PERSONA"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="426"
-  DTS:VersionGUID="{7167C292-D7A4-4F7C-81DB-113C5955F82A}">
+  DTS:VersionBuild="433"
+  DTS:VersionGUID="{59C86507-E5A1-4448-9D36-66A5B28AF626}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -2213,6 +2213,183 @@ where [CD_GENERO] = ? and ? BETWEEN [FC_INI_VAL] AND [FC_FIN_VAL]</property>
                       refId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_GENERO.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_GENERO.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP_SK_LUGAR_NACIMIENTO 1"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [RH01].[DIM_LUGAR_NACIMIENTO]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [RH01].[DIM_LUGAR_NACIMIENTO]
+where [CD_LUGAR_NACIMIENTO] = ? AND  ? BETWEEN [FC_INI_VAL] AND [FC_FIN_VAL]</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="SK_LUGAR_NACIMIENTO" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CD_LUGAR_NACIMIENTO" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DESC_LUGAR_NACIMIENTO" dataType="DT_STR" length="150" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="FC_INI_VAL" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FC_FIN_VAL" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SK_EJECUCION_CREACION" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SK_EJECUCION_MODIFICACION" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DF_DWH_DIM_PERSONA_1\PR_SRC_DIM_PERSONA_1.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]};#{Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_9.Outputs[Derived Column Output].Columns[V_FC_ACTUAL]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Connections[OleDbConnection]"
+                  connectionManagerID="{F7B18547-756B-4E39-B285-A6EB8B8C906F}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_DWH_RRHH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Inputs[Lookup Input].Columns[V_FC_ACTUAL]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="V_FC_ACTUAL"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_9.Outputs[Derived Column Output].Columns[V_FC_ACTUAL]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">FC_INI_VAL</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Inputs[Lookup Input].Columns[CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CD_LUGAR_NACIMIENTO"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_SRC_DIM_PERSONA_1.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CD_LUGAR_NACIMIENTO</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="IgnoreFailure"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Outputs[Lookup Match Output].Columns[SK_LUGAR_NACIMIENTO_LKP]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Outputs[Lookup Match Output].Columns[SK_LUGAR_NACIMIENTO_LKP]"
+                      name="SK_LUGAR_NACIMIENTO_LKP"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">SK_LUGAR_NACIMIENTO</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -4442,6 +4619,21 @@ where [CD_TIPO_RESIDENCIA] = ? and ? BETWEEN [FC_INI_VAL] AND [FC_FIN_VAL]</prop
                       cachedName="SRC_NM_PERSONA"
                       externalMetadataColumnId="Package\DF_DWH_DIM_PERSONA_1\PR_DTN_DIM_PERSONA.Inputs[OLE DB Destination Input].ExternalColumns[NM_PERSONA]"
                       lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_NM_PERSONA]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_DTN_DIM_PERSONA.Inputs[OLE DB Destination Input].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_SK_LUGAR_NACIMIENTO_LKP"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\DF_DWH_DIM_PERSONA_1\PR_DTN_DIM_PERSONA.Inputs[OLE DB Destination Input].ExternalColumns[SK_LUGAR_NACIMIENTO]"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_DTN_DIM_PERSONA.Inputs[OLE DB Destination Input].Columns[SRC_CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="SRC_CD_LUGAR_NACIMIENTO"
+                      externalMetadataColumnId="Package\DF_DWH_DIM_PERSONA_1\PR_DTN_DIM_PERSONA.Inputs[OLE DB Destination Input].ExternalColumns[CD_LUGAR_NACIMIENTO]"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_CD_LUGAR_NACIMIENTO]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4598,6 +4790,17 @@ where [CD_TIPO_RESIDENCIA] = ? and ? BETWEEN [FC_INI_VAL] AND [FC_FIN_VAL]</prop
                       dataType="str"
                       length="150"
                       name="NM_PERSONA" />
+                    <externalMetadataColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_DTN_DIM_PERSONA.Inputs[OLE DB Destination Input].ExternalColumns[SK_LUGAR_NACIMIENTO]"
+                      dataType="numeric"
+                      name="SK_LUGAR_NACIMIENTO"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_DTN_DIM_PERSONA.Inputs[OLE DB Destination Input].ExternalColumns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CD_LUGAR_NACIMIENTO" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -6163,6 +6366,104 @@ WHERE
                           name="FriendlyExpression">ISNULL(DWH_NM_PERSONA) ? "-1" : DWH_NM_PERSONA</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_DV_TRATAMIENTO_DE_NULOS_2.Inputs[Derived Column Input].Columns[SRC_CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="SRC_CD_LUGAR_NACIMIENTO"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_CD_LUGAR_NACIMIENTO]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_CD_LUGAR_NACIMIENTO]}) ? "-1" : #{Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_CD_LUGAR_NACIMIENTO]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(SRC_CD_LUGAR_NACIMIENTO) ? "-1" : SRC_CD_LUGAR_NACIMIENTO</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_DV_TRATAMIENTO_DE_NULOS_2.Inputs[Derived Column Input].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_SK_LUGAR_NACIMIENTO_LKP"
+                      cachedPrecision="18"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]}) ? -1 : #{Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(SRC_SK_LUGAR_NACIMIENTO_LKP) ? -1 : SRC_SK_LUGAR_NACIMIENTO_LKP</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_DV_TRATAMIENTO_DE_NULOS_2.Inputs[Derived Column Input].Columns[DWH_SK_LUGAR_NACIMIENTO]"
+                      cachedDataType="numeric"
+                      cachedName="DWH_SK_LUGAR_NACIMIENTO"
+                      cachedPrecision="18"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_SK_LUGAR_NACIMIENTO]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_SK_LUGAR_NACIMIENTO]}) ? -1 : #{Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_SK_LUGAR_NACIMIENTO]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(DWH_SK_LUGAR_NACIMIENTO) ? -1 : DWH_SK_LUGAR_NACIMIENTO</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_DV_TRATAMIENTO_DE_NULOS_2.Inputs[Derived Column Input].Columns[DWH_CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="DWH_CD_LUGAR_NACIMIENTO"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_CD_LUGAR_NACIMIENTO]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_CD_LUGAR_NACIMIENTO]}) ? "-1" : #{Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_CD_LUGAR_NACIMIENTO]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(DWH_CD_LUGAR_NACIMIENTO) ? "-1" : DWH_CD_LUGAR_NACIMIENTO</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -6274,6 +6575,8 @@ WHERE
       ,[CD_ESTADO_CIVIL]
       ,[SK_GENERO]
       ,[CD_GENERO]
+      ,[SK_LUGAR_NACIMIENTO]
+      ,[CD_LUGAR_NACIMIENTO]
       ,[FC_INI_VAL]
       ,[FC_FIN_VAL]
       ,[SK_EJECUCION_CREACION]
@@ -6595,6 +6898,27 @@ WHERE
                       lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].Columns[NM_PERSONA]"
                       name="NM_PERSONA"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].Columns[SK_LUGAR_NACIMIENTO]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].ExternalColumns[SK_LUGAR_NACIMIENTO]"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].Columns[SK_LUGAR_NACIMIENTO]"
+                      name="SK_LUGAR_NACIMIENTO"
+                      precision="18"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].ExternalColumns[CD_LUGAR_NACIMIENTO]"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      name="CD_LUGAR_NACIMIENTO"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -6740,6 +7064,17 @@ WHERE
                       dataType="str"
                       length="150"
                       name="NM_PERSONA" />
+                    <externalMetadataColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].ExternalColumns[SK_LUGAR_NACIMIENTO]"
+                      dataType="numeric"
+                      name="SK_LUGAR_NACIMIENTO"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].ExternalColumns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CD_LUGAR_NACIMIENTO" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -6894,6 +7229,19 @@ WHERE
                       length="20"
                       lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Error Output].Columns[CD_GENERO]"
                       name="CD_GENERO" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Error Output].Columns[SK_LUGAR_NACIMIENTO]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Error Output].Columns[SK_LUGAR_NACIMIENTO]"
+                      name="SK_LUGAR_NACIMIENTO"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Error Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Error Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      name="CD_LUGAR_NACIMIENTO" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Error Output].Columns[FC_INI_VAL]"
                       dataType="dbTimeStamp"
@@ -7165,6 +7513,19 @@ WHERE
                       cachedLength="150"
                       cachedName="NM_PERSONA"
                       lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_SRT_STANDARD_8.Outputs[Sort Output].Columns[NM_PERSONA]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Inputs[Merge Join Left Input].Columns[CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CD_LUGAR_NACIMIENTO"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_SRT_STANDARD_8.Outputs[Sort Output].Columns[CD_LUGAR_NACIMIENTO]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Inputs[Merge Join Left Input].Columns[SK_LUGAR_NACIMIENTO_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SK_LUGAR_NACIMIENTO_LKP"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_SRT_STANDARD_8.Outputs[Sort Output].Columns[SK_LUGAR_NACIMIENTO_LKP]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -7343,6 +7704,19 @@ WHERE
                       cachedLength="150"
                       cachedName="NM_PERSONA"
                       lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].Columns[NM_PERSONA]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Inputs[Merge Join Right Input].Columns[SK_LUGAR_NACIMIENTO]"
+                      cachedDataType="numeric"
+                      cachedName="SK_LUGAR_NACIMIENTO"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].Columns[SK_LUGAR_NACIMIENTO]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Inputs[Merge Join Right Input].Columns[CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CD_LUGAR_NACIMIENTO"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -8098,6 +8472,64 @@ WHERE
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Inputs[Merge Join Right Input].Columns[NM_PERSONA]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_CD_LUGAR_NACIMIENTO]"
+                      name="SRC_CD_LUGAR_NACIMIENTO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Inputs[Merge Join Left Input].Columns[CD_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]"
+                      name="SRC_SK_LUGAR_NACIMIENTO_LKP"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Inputs[Merge Join Left Input].Columns[SK_LUGAR_NACIMIENTO_LKP]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_SK_LUGAR_NACIMIENTO]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_SK_LUGAR_NACIMIENTO]"
+                      name="DWH_SK_LUGAR_NACIMIENTO"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Inputs[Merge Join Right Input].Columns[SK_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_CD_LUGAR_NACIMIENTO]"
+                      name="DWH_CD_LUGAR_NACIMIENTO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Inputs[Merge Join Right Input].Columns[CD_LUGAR_NACIMIENTO]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -9111,6 +9543,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       ,[CD_ESTADO_CIVIL]
       ,[CD_GENERO]
       ,[CD_PAIS_NACIONALIDAD]
+      ,[CD_LUGAR_NACIMIENTO]
   FROM [RH01].[STG_DIM_PERSONA]
   ORDER BY [DOC_IDENTIFICACION] ASC</property>
                 <property
@@ -9289,6 +9722,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_SRC_DIM_PERSONA_1.Outputs[OLE DB Source Output].Columns[CD_PAIS_NACIONALIDAD]"
                       name="CD_PAIS_NACIONALIDAD"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_SRC_DIM_PERSONA_1.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_DWH_DIM_PERSONA_1\PR_SRC_DIM_PERSONA_1.Outputs[OLE DB Source Output].ExternalColumns[CD_LUGAR_NACIMIENTO]"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_SRC_DIM_PERSONA_1.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      name="CD_LUGAR_NACIMIENTO"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -9366,6 +9810,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       dataType="str"
                       length="20"
                       name="CD_PAIS_NACIONALIDAD" />
+                    <externalMetadataColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_SRC_DIM_PERSONA_1.Outputs[OLE DB Source Output].ExternalColumns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CD_LUGAR_NACIMIENTO" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -9460,6 +9910,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       length="20"
                       lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_SRC_DIM_PERSONA_1.Outputs[OLE DB Source Error Output].Columns[CD_PAIS_NACIONALIDAD]"
                       name="CD_PAIS_NACIONALIDAD" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_SRC_DIM_PERSONA_1.Outputs[OLE DB Source Error Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_SRC_DIM_PERSONA_1.Outputs[OLE DB Source Error Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      name="CD_LUGAR_NACIMIENTO" />
                     <outputColumn
                       refId="Package\DF_DWH_DIM_PERSONA_1\PR_SRC_DIM_PERSONA_1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -9971,6 +10428,41 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_SRT_STANDARD_8.Inputs[Sort Input].Columns[CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CD_LUGAR_NACIMIENTO"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_SRC_DIM_PERSONA_1.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_SRT_STANDARD_8.Inputs[Sort Input].Columns[SK_LUGAR_NACIMIENTO_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SK_LUGAR_NACIMIENTO_LKP"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Outputs[Lookup Match Output].Columns[SK_LUGAR_NACIMIENTO_LKP]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -10369,6 +10861,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\DF_DWH_DIM_PERSONA_1\PR_SRC_DIM_PERSONA_1.Outputs[OLE DB Source Output].Columns[NM_PERSONA]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_SRT_STANDARD_8.Outputs[Sort Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_SRT_STANDARD_8.Outputs[Sort Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      name="CD_LUGAR_NACIMIENTO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DF_DWH_DIM_PERSONA_1\PR_SRC_DIM_PERSONA_1.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_SRT_STANDARD_8.Outputs[Sort Output].Columns[SK_LUGAR_NACIMIENTO_LKP]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_SRT_STANDARD_8.Outputs[Sort Output].Columns[SK_LUGAR_NACIMIENTO_LKP]"
+                      name="SK_LUGAR_NACIMIENTO_LKP"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Outputs[Lookup Match Output].Columns[SK_LUGAR_NACIMIENTO_LKP]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -11188,6 +11709,64 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_NM_PERSONA]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Inputs[Union All Input 1].Columns[SRC_CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="SRC_CD_LUGAR_NACIMIENTO"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_CD_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_CD_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Inputs[Union All Input 1].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_SK_LUGAR_NACIMIENTO_LKP"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Inputs[Union All Input 1].Columns[DWH_SK_LUGAR_NACIMIENTO]"
+                      cachedDataType="numeric"
+                      cachedName="DWH_SK_LUGAR_NACIMIENTO"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_SK_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_SK_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Inputs[Union All Input 1].Columns[DWH_CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="DWH_CD_LUGAR_NACIMIENTO"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_CD_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_CD_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -11996,6 +12575,64 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_NM_PERSONA]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Inputs[Union All Input 2].Columns[SRC_CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="SRC_CD_LUGAR_NACIMIENTO"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_CD_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_CD_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Inputs[Union All Input 2].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_SK_LUGAR_NACIMIENTO_LKP"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Inputs[Union All Input 2].Columns[DWH_SK_LUGAR_NACIMIENTO]"
+                      cachedDataType="numeric"
+                      cachedName="DWH_SK_LUGAR_NACIMIENTO"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_SK_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_SK_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Inputs[Union All Input 2].Columns[DWH_CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="DWH_CD_LUGAR_NACIMIENTO"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_CD_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_CD_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -12363,6 +13000,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       length="150"
                       lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_NM_PERSONA]"
                       name="DWH_NM_PERSONA" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_CD_LUGAR_NACIMIENTO]"
+                      name="SRC_CD_LUGAR_NACIMIENTO" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]"
+                      name="SRC_SK_LUGAR_NACIMIENTO_LKP"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_SK_LUGAR_NACIMIENTO]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_SK_LUGAR_NACIMIENTO]"
+                      name="DWH_SK_LUGAR_NACIMIENTO"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1].Columns[DWH_CD_LUGAR_NACIMIENTO]"
+                      name="DWH_CD_LUGAR_NACIMIENTO" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -13180,6 +13843,64 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_NM_PERSONA]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Inputs[Union All Input 1].Columns[SRC_CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="SRC_CD_LUGAR_NACIMIENTO"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_CD_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_CD_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Inputs[Union All Input 1].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_SK_LUGAR_NACIMIENTO_LKP"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Inputs[Union All Input 1].Columns[DWH_SK_LUGAR_NACIMIENTO]"
+                      cachedDataType="numeric"
+                      cachedName="DWH_SK_LUGAR_NACIMIENTO"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_SK_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_SK_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Inputs[Union All Input 1].Columns[DWH_CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="DWH_CD_LUGAR_NACIMIENTO"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_CD_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_CD_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -13988,6 +14709,64 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_NM_PERSONA]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Inputs[Union All Input 2].Columns[SRC_CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="SRC_CD_LUGAR_NACIMIENTO"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_CD_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_CD_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Inputs[Union All Input 2].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]"
+                      cachedDataType="numeric"
+                      cachedName="SRC_SK_LUGAR_NACIMIENTO_LKP"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Inputs[Union All Input 2].Columns[DWH_SK_LUGAR_NACIMIENTO]"
+                      cachedDataType="numeric"
+                      cachedName="DWH_SK_LUGAR_NACIMIENTO"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_SK_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_SK_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Inputs[Union All Input 2].Columns[DWH_CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="DWH_CD_LUGAR_NACIMIENTO"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output].Columns[DWH_CD_LUGAR_NACIMIENTO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_CD_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -14355,6 +15134,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       length="150"
                       lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_NM_PERSONA]"
                       name="DWH_NM_PERSONA" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_CD_LUGAR_NACIMIENTO]"
+                      name="SRC_CD_LUGAR_NACIMIENTO" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[SRC_SK_LUGAR_NACIMIENTO_LKP]"
+                      name="SRC_SK_LUGAR_NACIMIENTO_LKP"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_SK_LUGAR_NACIMIENTO]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_SK_LUGAR_NACIMIENTO]"
+                      name="DWH_SK_LUGAR_NACIMIENTO"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1].Columns[DWH_CD_LUGAR_NACIMIENTO]"
+                      name="DWH_CD_LUGAR_NACIMIENTO" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -17375,74 +18180,74 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               startId="Package\DF_DWH_DIM_PERSONA_1\RA_AGG_STANDARD_2.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output13]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_PROFESION.Inputs[Lookup Input]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_9.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output12]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\MC_STANDARD_3.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output11]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output9]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output8]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output7]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\MC_STANDARD_1.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output10]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\PR_CS_SCD2_1.Inputs[Conditional Split Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\PR_DV_FECHAS_GENERICAS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output5]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output4]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\RA_SRT_STANDARD_2.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_6.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output3]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\RA_SRT_STANDARD_4.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output2]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\PR_DV_FECHAS_GENERICAS_1.Inputs[Derived Column Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\PR_DV_TRATAMIENTO_DE_NULOS_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output1]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output]"
               endId="Package\DF_DWH_DIM_PERSONA_1\ER_SCT_GEN_DESCRIP_1.Inputs[Input 0]"
               name="Derived Column Output"
               startId="Package\DF_DWH_DIM_PERSONA_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output6]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\RA_UN_DESTINO_1.Inputs[Union All Input 2]"
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output11]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\RA_UN_DESTINO_1.Inputs[Union All Input 1]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_UPDATE_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output10]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\PR_DV_FECHAS_GENERICAS_1.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\PR_DV_TRATAMIENTO_DE_NULOS_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output9]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\RA_SRT_STANDARD_4.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_7.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output8]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\RA_SRT_STANDARD_2.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_6.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output7]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\RA_UN_DESTINO_1.Inputs[Union All Input 4]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_8.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output5]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\MC_STANDARD_1.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_5.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output4]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output3]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\DTN_REGISTROS_INVALIDOS_3.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\ER_DV_REGISTROS_INVALIDOS_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output2]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\RA_UN_DESTINO_1.Inputs[Union All Input 5]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_REGISTROS_CORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output1]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\MC_STANDARD_3.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_PROFESION.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_9.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output6]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\PR_CS_SCD2_1.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\PR_DV_FECHAS_GENERICAS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_DIM_PERSONA_1.Paths[INSERT]"
               endId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Inputs[Union All Input 1]"
@@ -17454,67 +18259,72 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               name="LOGICAL DELETE"
               startId="Package\DF_DWH_DIM_PERSONA_1\PR_CS_SCD2_1.Outputs[LOGICAL DELETE]" />
             <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output8]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_OCUPACION.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_PROFESION.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output7]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_ESTADO_CIVIL.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_GENERO.Outputs[Lookup Match Output]" />
-            <path
               refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output6]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_NIVEL_EDUCATIVO.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_OCUPACION.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output5]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_PAIS_NACIONALIDAD.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_TIPO_IDENTIFICACION.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\PR_SRT_STANDARD_8.Inputs[Sort Input]"
-              name="Lookup Match Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_PAIS_NACIONALIDAD.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output3]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_TIPO_RELIGION.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_NIVEL_EDUCATIVO.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output2]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_GENERO.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_TIPO_RELIGION.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output1]"
               endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_TIPO_RESIDENCIA.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_ESTADO_CIVIL.Outputs[Lookup Match Output]" />
             <path
               refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output9]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_TIPO_IDENTIFICACION.Inputs[Lookup Input]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_RANGO_EDAD.Outputs[Lookup Match Output]" />
+              startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_PAIS_NACIONALIDAD.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output4]"
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output8]"
               endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_RANGO_EDAD.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_TIPO_RESIDENCIA.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Merge Join Output2]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_REGISTROS_CORRECTOS_1.Inputs[Derived Column Input]"
-              name="Merge Join Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\RA_MJ_STANDARD_2.Outputs[Merge Join Output]" />
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output7]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_TIPO_IDENTIFICACION.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_RANGO_EDAD.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Merge Join Output]"
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output5]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_GENERO.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_TIPO_RELIGION.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output10]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\PR_SRT_STANDARD_8.Inputs[Sort Input]"
+              name="Lookup Match Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output3]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_PAIS_NACIONALIDAD.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_TIPO_IDENTIFICACION.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output2]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_NIVEL_EDUCATIVO.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_OCUPACION.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output1]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_ESTADO_CIVIL.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_GENERO.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output4]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_TIPO_RELIGION.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_NIVEL_EDUCATIVO.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_OCUPACION.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_PROFESION.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Merge Join Output1]"
               endId="Package\DF_DWH_DIM_PERSONA_1\PR_DV_TRATAMIENTO_DE_NULOS_2.Inputs[Derived Column Input]"
               name="Merge Join Output"
               startId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Outputs[Merge Join Output]" />
             <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Merge Join Output1]"
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Merge Join Output]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_REGISTROS_CORRECTOS_1.Inputs[Derived Column Input]"
+              name="Merge Join Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\RA_MJ_STANDARD_2.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Merge Join Output2]"
               endId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_UPDATE_CORRECTOS_1.Inputs[Derived Column Input]"
               name="Merge Join Output"
               startId="Package\DF_DWH_DIM_PERSONA_1\RA_MJ_STANDARD_3.Outputs[Merge Join Output]" />
@@ -17604,15 +18414,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               name="OLE DB Source Error Output"
               startId="Package\DF_DWH_DIM_PERSONA_1\PR_SRC_DIM_PERSONA_1.Outputs[OLE DB Source Error Output]" />
             <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[OLE DB Source Output]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\MC_STANDARD_4.Inputs[Multicast Input 1]"
-              name="OLE DB Source Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output]" />
-            <path
               refId="Package\DF_DWH_DIM_PERSONA_1.Paths[OLE DB Source Output1]"
               endId="Package\DF_DWH_DIM_PERSONA_1\MC_STANDARD _1.Inputs[Multicast Input 1]"
               name="OLE DB Source Output"
               startId="Package\DF_DWH_DIM_PERSONA_1\PR_SRC_DIM_PERSONA_1.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[OLE DB Source Output]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\MC_STANDARD_4.Inputs[Multicast Input 1]"
+              name="OLE DB Source Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Output 0]"
               endId="Package\DF_DWH_DIM_PERSONA_1\MC_STANDARD_7.Inputs[Multicast Input 1]"
@@ -17634,11 +18444,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               name="Sort Output"
               startId="Package\DF_DWH_DIM_PERSONA_1\RA_SRT_STANDARD_1.Outputs[Sort Output]" />
             <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Sort Output2]"
-              endId="Package\DF_DWH_DIM_PERSONA_1\RA_MJ_STANDARD_3.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\DF_DWH_DIM_PERSONA_1\RA_SRT_STANDARD_3.Outputs[Sort Output]" />
-            <path
               refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Sort Output3]"
               endId="Package\DF_DWH_DIM_PERSONA_1\PR_MJ_STANDARD_1.Inputs[Merge Join Left Input]"
               name="Sort Output"
@@ -17649,17 +18454,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               name="Sort Output"
               startId="Package\DF_DWH_DIM_PERSONA_1\RA_SRT_STANDARD_4.Outputs[Sort Output]" />
             <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Union All Output 11]"
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Sort Output2]"
+              endId="Package\DF_DWH_DIM_PERSONA_1\RA_MJ_STANDARD_3.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\DF_DWH_DIM_PERSONA_1\RA_SRT_STANDARD_3.Outputs[Sort Output]" />
+            <path
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Union All Output 1]"
               endId="Package\DF_DWH_DIM_PERSONA_1\RA_DV_STANDARD_3.Inputs[Derived Column Input]"
               name="Union All Output 1"
               startId="Package\DF_DWH_DIM_PERSONA_1\RA_UN_DESTINO_1.Outputs[Union All Output 1]" />
             <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Union All Output 12]"
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Union All Output 11]"
               endId="Package\DF_DWH_DIM_PERSONA_1\PR_SCT_CONTROL_SK_1.Inputs[Input 0]"
               name="Union All Output 1"
               startId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_2.Outputs[Union All Output 1]" />
             <path
-              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Union All Output 1]"
+              refId="Package\DF_DWH_DIM_PERSONA_1.Paths[Union All Output 12]"
               endId="Package\DF_DWH_DIM_PERSONA_1\MC_STANDARD_2.Inputs[Multicast Input 1]"
               name="Union All Output 1"
               startId="Package\DF_DWH_DIM_PERSONA_1\PR_UN_STANDARD_1.Outputs[Union All Output 1]" />
@@ -17697,7 +18507,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_CREATE_MAX_ID_1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -17820,7 +18630,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_MAX_ID_1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -17858,7 +18668,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_SK_DEFAUT"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -17899,7 +18709,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_INI_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -17972,7 +18782,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -17997,7 +18807,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -18022,7 +18832,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -18047,7 +18857,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_2"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -18072,7 +18882,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -18097,7 +18907,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -18122,7 +18932,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -18153,7 +18963,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:LoggingOptions
         DTS:FilterKind="0" />
@@ -19242,6 +20052,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Union All Output 12]"
+          TopLeft="1955.72727272727,566.363636363636">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-17.4772727272727,45.3863636363636"
+              Start="0,0"
+              End="-17.4772727272727,37.8863636363636">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.6931818181818" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.6931818181818"
+                    Point2="0,22.6931818181818"
+                    Point3="-4,22.6931818181818" />
+                  <mssgle:LineSegment
+                    End="-13.4772727272727,22.6931818181818" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.4772727272727,22.6931818181818"
+                    Point2="-17.4772727272727,22.6931818181818"
+                    Point3="-17.4772727272727,26.6931818181818" />
+                  <mssgle:LineSegment
+                    End="-17.4772727272727,37.8863636363636" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Union All Output 11]"
           TopLeft="1469.36363636364,576.363636363636">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19275,7 +20119,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Union All Output 11]"
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Union All Output 1]"
           TopLeft="810.333333333333,1115">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19300,40 +20144,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     Point3="8.16666666666663,28.7172264355363" />
                   <mssgle:LineSegment
                     End="8.16666666666663,53.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Union All Output 1]"
-          TopLeft="1955.72727272727,566.363636363636">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-17.4772727272727,45.3863636363636"
-              Start="0,0"
-              End="-17.4772727272727,37.8863636363636">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.6931818181818" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.6931818181818"
-                    Point2="0,22.6931818181818"
-                    Point3="-4,22.6931818181818" />
-                  <mssgle:LineSegment
-                    End="-13.4772727272727,22.6931818181818" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-13.4772727272727,22.6931818181818"
-                    Point2="-17.4772727272727,22.6931818181818"
-                    Point3="-17.4772727272727,26.6931818181818" />
-                  <mssgle:LineSegment
-                    End="-17.4772727272727,37.8863636363636" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20216,28 +21026,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Merge Join Output2]"
-          TopLeft="1484.83333333333,1013">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,136"
-              Start="0,0"
-              End="0,128.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,128.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Merge Join Output1]"
           TopLeft="2231.5,1027">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -20271,7 +21059,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Merge Join Output]"
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Merge Join Output1]"
           TopLeft="1741.33333333333,238">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -20305,151 +21093,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output9]"
-          TopLeft="130,956">
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Merge Join Output]"
+          TopLeft="1484.83333333333,1013">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="35.5714285714286,54.7142857142899"
+              EndConnector="0,136"
               Start="0,0"
-              End="35.5714285714286,47.2142857142899">
+              End="0,128.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.3571428571449" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.3571428571449"
-                    Point2="0,27.3571428571449"
-                    Point3="4,27.3571428571449" />
-                  <mssgle:LineSegment
-                    End="31.5714285714286,27.3571428571449" />
-                  <mssgle:CubicBezierSegment
-                    Point1="31.5714285714286,27.3571428571449"
-                    Point2="35.5714285714286,27.3571428571449"
-                    Point3="35.5714285714286,31.3571428571449" />
-                  <mssgle:LineSegment
-                    End="35.5714285714286,47.2142857142899" />
+                    End="0,128.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-30.4056724330357,32.3571428571449,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output8]"
-          TopLeft="152,442">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,26"
-              Start="0,0"
-              End="0,18.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,3.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output7]"
-          TopLeft="126.75,732">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35"
-              Start="0,0"
-              End="0,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,7.9453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output6]"
-          TopLeft="148.5,510">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-17.5,29"
-              Start="0,0"
-              End="-17.5,21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.5"
-                    Point2="0,14.5"
-                    Point3="-4,14.5" />
-                  <mssgle:LineSegment
-                    End="-13.5,14.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-13.5,14.5"
-                    Point2="-17.5,14.5"
-                    Point3="-17.5,18.5" />
-                  <mssgle:LineSegment
-                    End="-17.5,21.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-56.94138671875,19.5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output5]"
-          TopLeft="161.619047619048,1052.71428571429">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,47.285714285714"
-              Start="0,0"
-              End="0,39.785714285714">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.785714285714" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,14.088169642857,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output4]"
           TopLeft="147.5,887">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -20485,67 +21151,43 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output3]"
-          TopLeft="133.25,581">
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output7]"
+          TopLeft="130,956">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,41"
+              EndConnector="35.5714285714286,54.7142857142899"
               Start="0,0"
-              End="0,33.5">
+              End="35.5714285714286,47.2142857142899">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.5" />
+                    End="0,23.3571428571449" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.3571428571449"
+                    Point2="0,27.3571428571449"
+                    Point3="4,27.3571428571449" />
+                  <mssgle:LineSegment
+                    End="31.5714285714286,27.3571428571449" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.5714285714286,27.3571428571449"
+                    Point2="35.5714285714286,27.3571428571449"
+                    Point3="35.5714285714286,31.3571428571449" />
+                  <mssgle:LineSegment
+                    End="35.5714285714286,47.2142857142899" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,10.9453125,96.3827734375,11.609375"
+              BoundingBox="-30.4056724330357,32.3571428571449,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output2]"
-          TopLeft="135.5,664">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-9,26"
-              Start="0,0"
-              End="-9,18.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9"
-                    Point2="0,13"
-                    Point3="-4,13" />
-                  <mssgle:LineSegment
-                    End="-5,13" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-5,13"
-                    Point2="-9,13"
-                    Point3="-9,17" />
-                  <mssgle:LineSegment
-                    End="-9,18.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-52.69138671875,18,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output1]"
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output6]"
           TopLeft="127,809">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -20581,38 +21223,170 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output]"
-          TopLeft="229.333333333333,1100">
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output5]"
+          TopLeft="135.5,664">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="1316.16666666667,-764"
+              EndConnector="-9,26"
               Start="0,0"
-              End="1316.16666666667,-756.5">
+              End="-9,18.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-304.86553873553" />
+                    End="0,9" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-304.86553873553"
-                    Point2="0,-308.86553873553"
-                    Point3="4,-308.86553873553" />
+                    Point1="0,9"
+                    Point2="0,13"
+                    Point3="-4,13" />
                   <mssgle:LineSegment
-                    End="1312.16666666667,-308.86553873553" />
+                    End="-5,13" />
                   <mssgle:CubicBezierSegment
-                    Point1="1312.16666666667,-308.86553873553"
-                    Point2="1316.16666666667,-308.86553873553"
-                    Point3="1316.16666666667,-312.86553873553" />
+                    Point1="-5,13"
+                    Point2="-9,13"
+                    Point3="-9,17" />
                   <mssgle:LineSegment
-                    End="1316.16666666667,-756.5" />
+                    End="-9,18.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="609.891946614585,-303.86553873553,96.3827734375,11.609375"
+              BoundingBox="-52.69138671875,18,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output4]"
+          TopLeft="133.25,581">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,10.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output3]"
+          TopLeft="161.619047619048,1052.71428571429">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.285714285714"
+              Start="0,0"
+              End="0,39.785714285714">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.785714285714" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,14.088169642857,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output2]"
+          TopLeft="148.5,510">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-17.5,29"
+              Start="0,0"
+              End="-17.5,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.5"
+                    Point2="0,14.5"
+                    Point3="-4,14.5" />
+                  <mssgle:LineSegment
+                    End="-13.5,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.5,14.5"
+                    Point2="-17.5,14.5"
+                    Point3="-17.5,18.5" />
+                  <mssgle:LineSegment
+                    End="-17.5,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-56.94138671875,19.5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output1]"
+          TopLeft="126.75,732">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,7.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output]"
+          TopLeft="152,442">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26"
+              Start="0,0"
+              End="0,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,3.4453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -20690,220 +21464,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output13]"
-          TopLeft="135,341">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="20.5,59"
-              Start="0,0"
-              End="20.5,51.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.5"
-                    Point2="0,29.5"
-                    Point3="4,29.5" />
-                  <mssgle:LineSegment
-                    End="16.5,29.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.5,29.5"
-                    Point2="20.5,29.5"
-                    Point3="20.5,33.5" />
-                  <mssgle:LineSegment
-                    End="20.5,51.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output12]"
-          TopLeft="1853.5,947">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41"
-              Start="0,0"
-              End="0,33.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output11]"
-          TopLeft="1406.66666666667,1149">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-538,-34"
-              Start="0,0"
-              End="-538,-26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-12.9511326583147" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-12.9511326583147"
-                    Point2="0,-16.9511326583147"
-                    Point3="-4,-16.9511326583147" />
-                  <mssgle:LineSegment
-                    End="-534,-16.9511326583147" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-534,-16.9511326583147"
-                    Point2="-538,-16.9511326583147"
-                    Point3="-538,-20.9511326583147" />
-                  <mssgle:LineSegment
-                    End="-538,-26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output10]"
-          TopLeft="1728,428">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,23"
-              Start="0,0"
-              End="0,15.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output9]"
-          TopLeft="403,633">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-11.5,50"
-              Start="0,0"
-              End="-11.5,42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21"
-                    Point2="0,25"
-                    Point3="-4,25" />
-                  <mssgle:LineSegment
-                    End="-7.5,25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-7.5,25"
-                    Point2="-11.5,25"
-                    Point3="-11.5,29" />
-                  <mssgle:LineSegment
-                    End="-11.5,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output8]"
-          TopLeft="818.5,1218">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="40,100"
-              Start="0,0"
-              End="40,92.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,46"
-                    Point2="0,50"
-                    Point3="4,50" />
-                  <mssgle:LineSegment
-                    End="36,50" />
-                  <mssgle:CubicBezierSegment
-                    Point1="36,50"
-                    Point2="40,50"
-                    Point3="40,54" />
-                  <mssgle:LineSegment
-                    End="40,92.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output7]"
-          TopLeft="1159.5,838">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="15.5,59"
-              Start="0,0"
-              End="15.5,51.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.5"
-                    Point2="0,29.5"
-                    Point3="4,29.5" />
-                  <mssgle:LineSegment
-                    End="11.5,29.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="11.5,29.5"
-                    Point2="15.5,29.5"
-                    Point3="15.5,33.5" />
-                  <mssgle:LineSegment
-                    End="15.5,51.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output6]"
           TopLeft="1088.5,382">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -20937,31 +21497,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output5]"
-          TopLeft="1350,316">
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output12]"
+          TopLeft="450,386">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-493,757"
+              EndConnector="-69.333333333333,111"
               Start="0,0"
-              End="-493,749.5">
+              End="-69.333333333333,103.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,414.522658610272" />
+                    End="0,51.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,414.522658610272"
-                    Point2="0,418.522658610272"
-                    Point3="-4,418.522658610272" />
+                    Point1="0,51.5"
+                    Point2="0,55.5"
+                    Point3="-4,55.5" />
                   <mssgle:LineSegment
-                    End="-489,418.522658610272" />
+                    End="-65.333333333333,55.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-489,418.522658610272"
-                    Point2="-493,418.522658610272"
-                    Point3="-493,422.522658610272" />
+                    Point1="-65.333333333333,55.5"
+                    Point2="-69.333333333333,55.5"
+                    Point3="-69.333333333333,59.5" />
                   <mssgle:LineSegment
-                    End="-493,749.5" />
+                    End="-69.333333333333,103.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20971,97 +21531,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output4]"
-          TopLeft="1650.75,888">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31"
-              Start="0,0"
-              End="0,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output3]"
-          TopLeft="2272,758">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="14.5,69"
-              Start="0,0"
-              End="14.5,61.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30.5"
-                    Point2="0,34.5"
-                    Point3="4,34.5" />
-                  <mssgle:LineSegment
-                    End="10.5,34.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="10.5,34.5"
-                    Point2="14.5,34.5"
-                    Point3="14.5,38.5" />
-                  <mssgle:LineSegment
-                    End="14.5,61.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output2]"
-          TopLeft="1899.5,338">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-173,48"
-              Start="0,0"
-              End="-173,40.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20"
-                    Point2="0,24"
-                    Point3="-4,24" />
-                  <mssgle:LineSegment
-                    End="-169,24" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-169,24"
-                    Point2="-173,24"
-                    Point3="-173,28" />
-                  <mssgle:LineSegment
-                    End="-173,40.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output1]"
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output11]"
           TopLeft="2127,1109">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -21095,31 +21565,335 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output]"
-          TopLeft="450,386">
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output10]"
+          TopLeft="1899.5,338">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-69.333333333333,111"
+              EndConnector="-173,48"
               Start="0,0"
-              End="-69.333333333333,103.5">
+              End="-173,40.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.5" />
+                    End="0,20" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,51.5"
-                    Point2="0,55.5"
-                    Point3="-4,55.5" />
+                    Point1="0,20"
+                    Point2="0,24"
+                    Point3="-4,24" />
                   <mssgle:LineSegment
-                    End="-65.333333333333,55.5" />
+                    End="-169,24" />
                   <mssgle:CubicBezierSegment
-                    Point1="-65.333333333333,55.5"
-                    Point2="-69.333333333333,55.5"
-                    Point3="-69.333333333333,59.5" />
+                    Point1="-169,24"
+                    Point2="-173,24"
+                    Point3="-173,28" />
                   <mssgle:LineSegment
-                    End="-69.333333333333,103.5" />
+                    End="-173,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output9]"
+          TopLeft="2272,758">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14.5,69"
+              Start="0,0"
+              End="14.5,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.5"
+                    Point2="0,34.5"
+                    Point3="4,34.5" />
+                  <mssgle:LineSegment
+                    End="10.5,34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.5,34.5"
+                    Point2="14.5,34.5"
+                    Point3="14.5,38.5" />
+                  <mssgle:LineSegment
+                    End="14.5,61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output8]"
+          TopLeft="1650.75,888">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31"
+              Start="0,0"
+              End="0,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output7]"
+          TopLeft="1350,316">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-493,757"
+              Start="0,0"
+              End="-493,749.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,414.522658610272" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,414.522658610272"
+                    Point2="0,418.522658610272"
+                    Point3="-4,418.522658610272" />
+                  <mssgle:LineSegment
+                    End="-489,418.522658610272" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-489,418.522658610272"
+                    Point2="-493,418.522658610272"
+                    Point3="-493,422.522658610272" />
+                  <mssgle:LineSegment
+                    End="-493,749.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output6]"
+          TopLeft="1728,428">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23"
+              Start="0,0"
+              End="0,15.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output5]"
+          TopLeft="1159.5,838">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15.5,59"
+              Start="0,0"
+              End="15.5,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.5"
+                    Point2="0,29.5"
+                    Point3="4,29.5" />
+                  <mssgle:LineSegment
+                    End="11.5,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.5,29.5"
+                    Point2="15.5,29.5"
+                    Point3="15.5,33.5" />
+                  <mssgle:LineSegment
+                    End="15.5,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output4]"
+          TopLeft="818.5,1218">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40,100"
+              Start="0,0"
+              End="40,92.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46"
+                    Point2="0,50"
+                    Point3="4,50" />
+                  <mssgle:LineSegment
+                    End="36,50" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36,50"
+                    Point2="40,50"
+                    Point3="40,54" />
+                  <mssgle:LineSegment
+                    End="40,92.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output3]"
+          TopLeft="403,633">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11.5,50"
+              Start="0,0"
+              End="-11.5,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21"
+                    Point2="0,25"
+                    Point3="-4,25" />
+                  <mssgle:LineSegment
+                    End="-7.5,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.5,25"
+                    Point2="-11.5,25"
+                    Point3="-11.5,29" />
+                  <mssgle:LineSegment
+                    End="-11.5,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output2]"
+          TopLeft="1406.66666666667,1149">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-538,-34"
+              Start="0,0"
+              End="-538,-26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-12.9511326583147" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-12.9511326583147"
+                    Point2="0,-16.9511326583147"
+                    Point3="-4,-16.9511326583147" />
+                  <mssgle:LineSegment
+                    End="-534,-16.9511326583147" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-534,-16.9511326583147"
+                    Point2="-538,-16.9511326583147"
+                    Point3="-538,-20.9511326583147" />
+                  <mssgle:LineSegment
+                    End="-538,-26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output1]"
+          TopLeft="1853.5,947">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Derived Column Output]"
+          TopLeft="135,341">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.5,59"
+              Start="0,0"
+              End="20.5,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.5"
+                    Point2="0,29.5"
+                    Point3="4,29.5" />
+                  <mssgle:LineSegment
+                    End="16.5,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.5,29.5"
+                    Point2="20.5,29.5"
+                    Point3="20.5,33.5" />
+                  <mssgle:LineSegment
+                    End="20.5,51.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21312,6 +22086,82 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="231,42"
+          Id="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1"
+          TopLeft="64,1186" />
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output9]"
+          TopLeft="193.5,1142">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-14,44"
+              Start="0,0"
+              End="-14,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18"
+                    Point2="0,22"
+                    Point3="-4,22" />
+                  <mssgle:LineSegment
+                    End="-10,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-10,22"
+                    Point2="-14,22"
+                    Point3="-14,26" />
+                  <mssgle:LineSegment
+                    End="-14,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.19138671875,27,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_DIM_PERSONA_1.Paths[Lookup Match Output10]"
+          TopLeft="216.666666666667,1186">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="1328.83333333333,-850"
+              Start="0,0"
+              End="1328.83333333333,-842.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-339.508168529665" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-339.508168529665"
+                    Point2="0,-343.508168529665"
+                    Point3="4,-343.508168529665" />
+                  <mssgle:LineSegment
+                    End="1324.83333333333,-343.508168529665" />
+                  <mssgle:CubicBezierSegment
+                    Point1="1324.83333333333,-343.508168529665"
+                    Point2="1328.83333333333,-343.508168529665"
+                    Point3="1328.83333333333,-347.508168529665" />
+                  <mssgle:LineSegment
+                    End="1328.83333333333,-842.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="616.225279947917,-338.508168529665,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -21609,6 +22459,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF_DWH_DIM_PERSONA_1\LKP_SK_LUGAR_NACIMIENTO 1">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">true</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[RH01].[DIM_LUGAR_NACIMIENTO]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

@@ -12,8 +12,8 @@
   DTS:ObjectName="DWH_FACT_PERFIL_EMPLEADO"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="399"
-  DTS:VersionGUID="{7FABC795-78D8-4EFA-B160-E0AC3CBFEB4E}">
+  DTS:VersionBuild="400"
+  DTS:VersionGUID="{499A284E-F264-4D4A-8705-10C8163682E0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -66,7 +66,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="FC_BORRADO">
       <DTS:VariableValue
-        DTS:DataType="7">1/7/2021</DTS:VariableValue>
+        DTS:DataType="7">1/11/2021</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -171,7 +171,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="DELETE OLD DATA"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -4620,6 +4620,21 @@ where [refTable].[SK_PERSONA] = ?</property>
                       cachedName="DIM_FECHA_SALIDA"
                       externalMetadataColumnId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DTN_FACT_PREFIL_EMPLEADO.Inputs[OLE DB Destination Input].ExternalColumns[FC_SALIDA]"
                       lineageId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_MJ_STANDARD.Outputs[Merge Join Output].Columns[DIM_FECHA_SALIDA]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DTN_FACT_PREFIL_EMPLEADO.Inputs[OLE DB Destination Input].Columns[SK_LUGAR_NACIMIENTO]"
+                      cachedDataType="numeric"
+                      cachedName="SK_LUGAR_NACIMIENTO"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DTN_FACT_PREFIL_EMPLEADO.Inputs[OLE DB Destination Input].ExternalColumns[SK_LUGAR_NACIMIENTO]"
+                      lineageId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_MJ_STANDARD.Outputs[Merge Join Output].Columns[SK_LUGAR_NACIMIENTO]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DTN_FACT_PREFIL_EMPLEADO.Inputs[OLE DB Destination Input].Columns[CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CD_LUGAR_NACIMIENTO"
+                      externalMetadataColumnId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DTN_FACT_PREFIL_EMPLEADO.Inputs[OLE DB Destination Input].ExternalColumns[CD_LUGAR_NACIMIENTO]"
+                      lineageId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_MJ_STANDARD.Outputs[Merge Join Output].Columns[CD_LUGAR_NACIMIENTO]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4990,6 +5005,17 @@ where [refTable].[SK_PERSONA] = ?</property>
                       dataType="numeric"
                       name="CANT_DEPENDIENTES"
                       precision="10" />
+                    <externalMetadataColumn
+                      refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DTN_FACT_PREFIL_EMPLEADO.Inputs[OLE DB Destination Input].ExternalColumns[SK_LUGAR_NACIMIENTO]"
+                      dataType="numeric"
+                      name="SK_LUGAR_NACIMIENTO"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DTN_FACT_PREFIL_EMPLEADO.Inputs[OLE DB Destination Input].ExternalColumns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CD_LUGAR_NACIMIENTO" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -7981,6 +8007,8 @@ where [refTable].[SK_PERSONA] = ?</property>
       ,[CD_GENERO]
       ,[SK_PAIS_NACIONALIDAD]
       ,[CD_PAIS_NACIONALIDAD]
+      ,[SK_LUGAR_NACIMIENTO]
+      ,[CD_LUGAR_NACIMIENTO]
       ,[FC_INI_VAL]
       ,[FC_FIN_VAL]
       ,[SK_EJECUCION_CREACION]
@@ -8322,6 +8350,27 @@ where [refTable].[SK_PERSONA] = ?</property>
                       lineageId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].Columns[NM_PERSONA]"
                       name="NM_PERSONA"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].Columns[SK_LUGAR_NACIMIENTO]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].ExternalColumns[SK_LUGAR_NACIMIENTO]"
+                      lineageId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].Columns[SK_LUGAR_NACIMIENTO]"
+                      name="SK_LUGAR_NACIMIENTO"
+                      precision="18"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].ExternalColumns[CD_LUGAR_NACIMIENTO]"
+                      length="20"
+                      lineageId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      name="CD_LUGAR_NACIMIENTO"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -8478,6 +8527,17 @@ where [refTable].[SK_PERSONA] = ?</property>
                       dataType="str"
                       length="150"
                       name="NM_PERSONA" />
+                    <externalMetadataColumn
+                      refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].ExternalColumns[SK_LUGAR_NACIMIENTO]"
+                      dataType="numeric"
+                      name="SK_LUGAR_NACIMIENTO"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].ExternalColumns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CD_LUGAR_NACIMIENTO" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -8645,6 +8705,19 @@ where [refTable].[SK_PERSONA] = ?</property>
                       length="20"
                       lineageId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Error Output].Columns[CD_PAIS_NACIONALIDAD]"
                       name="CD_PAIS_NACIONALIDAD" />
+                    <outputColumn
+                      refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Error Output].Columns[SK_LUGAR_NACIMIENTO]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Error Output].Columns[SK_LUGAR_NACIMIENTO]"
+                      name="SK_LUGAR_NACIMIENTO"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Error Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Error Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      name="CD_LUGAR_NACIMIENTO" />
                     <outputColumn
                       refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Error Output].Columns[FC_INI_VAL]"
                       dataType="dbTimeStamp"
@@ -8851,6 +8924,19 @@ where [refTable].[SK_PERSONA] = ?</property>
                       cachedName="SK_TIPO_RESIDENCIA"
                       cachedPrecision="18"
                       lineageId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].Columns[SK_TIPO_RESIDENCIA]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_MJ_STANDARD.Inputs[Merge Join Left Input].Columns[SK_LUGAR_NACIMIENTO]"
+                      cachedDataType="numeric"
+                      cachedName="SK_LUGAR_NACIMIENTO"
+                      cachedPrecision="18"
+                      lineageId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].Columns[SK_LUGAR_NACIMIENTO]" />
+                    <inputColumn
+                      refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_MJ_STANDARD.Inputs[Merge Join Left Input].Columns[CD_LUGAR_NACIMIENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CD_LUGAR_NACIMIENTO"
+                      lineageId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Output].Columns[CD_LUGAR_NACIMIENTO]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -10073,6 +10159,35 @@ where [refTable].[SK_PERSONA] = ?</property>
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_MJ_STANDARD.Inputs[Merge Join Right Input].Columns[CD_RANGO_ANTIGUEDAD_PUESTO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_MJ_STANDARD.Outputs[Merge Join Output].Columns[SK_LUGAR_NACIMIENTO]"
+                      dataType="numeric"
+                      lineageId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_MJ_STANDARD.Outputs[Merge Join Output].Columns[SK_LUGAR_NACIMIENTO]"
+                      name="SK_LUGAR_NACIMIENTO"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_MJ_STANDARD.Inputs[Merge Join Left Input].Columns[SK_LUGAR_NACIMIENTO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_MJ_STANDARD.Outputs[Merge Join Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_MJ_STANDARD.Outputs[Merge Join Output].Columns[CD_LUGAR_NACIMIENTO]"
+                      name="CD_LUGAR_NACIMIENTO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_MJ_STANDARD.Inputs[Merge Join Left Input].Columns[CD_LUGAR_NACIMIENTO]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -12501,54 +12616,54 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_AGG_STANDARD_1.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output9]"
-              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_SCT_CONTROL_SK_1.Inputs[Input 0]"
+              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DV_FECHAS_GENERICAS_1.Inputs[Derived Column Input]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DV_FECHAS_GENERICAS_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output8]"
-              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_UN_STANDARD_3.Inputs[Union All Input 8]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output7]"
-              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_SRT_STANDARD_2.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_7.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output6]"
-              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_UN_STANDARD_3.Inputs[Union All Input 3]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_DV_REGISTROS_CORRECTOS_2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output5]"
-              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_UN_STANDARD_1.Inputs[Union All Input 3]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_3.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output4]"
-              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_10.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output3]"
-              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_UN_STANDARD_3.Inputs[Union All Input 7]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_14.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output2]"
-              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\MC_STANDARD _7.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_DV_REGISTROS_INCORRECTOS_1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output1]"
               endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_UN_STANDARD_1.Inputs[Union All Input 1]"
               name="Derived Column Output"
               startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_13.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output]"
-              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DV_FECHAS_GENERICAS_1.Inputs[Derived Column Input]"
+              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output7]"
+              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\MC_STANDARD _7.Inputs[Multicast Input 1]"
               name="Derived Column Output"
-              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Outputs[Derived Column Output]" />
+              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_DV_REGISTROS_INCORRECTOS_1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output6]"
+              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_UN_STANDARD_3.Inputs[Union All Input 7]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_14.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output5]"
+              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_DTN_RECONCILIACION_AUTOMATICA.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_10.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output4]"
+              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_UN_STANDARD_1.Inputs[Union All Input 3]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output3]"
+              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_UN_STANDARD_3.Inputs[Union All Input 3]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_DV_REGISTROS_CORRECTOS_2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output2]"
+              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_SRT_STANDARD_2.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_7.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output1]"
+              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_UN_STANDARD_3.Inputs[Union All Input 8]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output]"
+              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_SCT_CONTROL_SK_1.Inputs[Input 0]"
+              name="Derived Column Output"
+              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DV_FECHAS_GENERICAS_1.Outputs[Derived Column Output]" />
             <path
               refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Lookup Match Output]"
               endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DV_TRATAMIENTO_DE_NULOS_1.Inputs[Derived Column Input]"
@@ -12566,14 +12681,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_MJ_STANDARD_4.Outputs[Merge Join Output]" />
             <path
               refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Multicast Output 11]"
-              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DTN_FACT_PREFIL_EMPLEADO.Inputs[OLE DB Destination Input]"
-              name="Multicast Output 1"
-              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\MC_STANDARD _5.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Multicast Output 1]"
               endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_UN_STANDARD_3.Inputs[Union All Input 5]"
               name="Multicast Output 1"
               startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\MC_STANDARD _7.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Multicast Output 1]"
+              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DTN_FACT_PREFIL_EMPLEADO.Inputs[OLE DB Destination Input]"
+              name="Multicast Output 1"
+              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\MC_STANDARD _5.Outputs[Multicast Output 1]" />
             <path
               refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Multicast Output 2]"
               endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\REGISTROS INSERTADOS.Inputs[Aggregate Input 1]"
@@ -12611,14 +12726,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DTN_FACT_PREFIL_EMPLEADO.Outputs[OLE DB Destination Error Output]" />
             <path
               refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[OLE DB Source Error Output1]"
-              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_SCT_DESCRIPTION_2.Inputs[Input 0]"
-              name="OLE DB Source Error Output"
-              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Error Output]" />
-            <path
-              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[OLE DB Source Error Output]"
               endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_SCT_DESCRIPTION_3.Inputs[Input 0]"
               name="OLE DB Source Error Output"
               startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_EMPLEADO.Outputs[OLE DB Source Error Output]" />
+            <path
+              refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[OLE DB Source Error Output]"
+              endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_SCT_DESCRIPTION_2.Inputs[Input 0]"
+              name="OLE DB Source Error Output"
+              startId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA.Outputs[OLE DB Source Error Output]" />
             <path
               refId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[OLE DB Source Output]"
               endId="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\MC_STANDARD _2.Inputs[Multicast Input 1]"
@@ -12842,7 +12957,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_GET_SK_DEFAUT"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -12883,7 +12998,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_INI_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -12954,7 +13069,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -12977,7 +13092,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_COMPLETED_2"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13000,7 +13115,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13023,7 +13138,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_FAIL_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13046,7 +13161,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13069,7 +13184,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_ESTATUS_RUNNING_2"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13092,7 +13207,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13121,7 +13236,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL_SET_MAX_ID_2"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13972,10 +14087,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <GraphLayout
         Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="189,42"
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_AGG_STANDARD_1"
-          TopLeft="1251,817" />
-        <NodeLayout
           Size="187,42"
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_14"
           TopLeft="36,378" />
@@ -13984,57 +14095,61 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_SCT_DESCRIPTION_2"
           TopLeft="781.333333333333,97.333333333334" />
         <NodeLayout
-          Size="187,42"
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_SRT_STANDARD_2"
-          TopLeft="888,1135.33333333333" />
-        <NodeLayout
-          Size="172,42"
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\REGISTROS ERROR"
-          TopLeft="561.25,1013.83333333333" />
+          Size="198,42"
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_SCT_CONTROL_SK_1"
+          TopLeft="791,754.333333333333" />
         <NodeLayout
           Size="250,42"
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\LKP_REL_DIRECCION_PERSONA"
           TopLeft="304,540" />
         <NodeLayout
-          Size="182,42"
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_7"
-          TopLeft="890.5,1035.33333333333" />
-        <NodeLayout
-          Size="198,42"
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_SCT_CONTROL_SK_1"
-          TopLeft="791,754.333333333333" />
-        <NodeLayout
           Size="261,42"
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_DV_REGISTROS_INCORRECTOS_1"
           TopLeft="515.5,1085.33333333333" />
         <NodeLayout
-          Size="187,42"
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_13"
-          TopLeft="783.5,188.833333333333" />
+          Size="182,42"
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_7"
+          TopLeft="890.5,1035.33333333333" />
         <NodeLayout
           Size="182,42"
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_4"
           TopLeft="1252,990.333333333334" />
         <NodeLayout
-          Size="187,42"
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_10"
-          TopLeft="545.25,1628.33333333333" />
-        <NodeLayout
           Size="250,42"
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_DV_REGISTROS_CORRECTOS_2"
           TopLeft="853,1338.33333333333" />
         <NodeLayout
+          Size="187,42"
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_13"
+          TopLeft="783.5,188.833333333333" />
+        <NodeLayout
           Size="181,42"
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_MJ_STANDARD_4"
           TopLeft="888.25,1249.25" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_MJ_STANDARD"
+          TopLeft="356,377" />
         <NodeLayout
           Size="205,42"
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_EMPLEADO"
           TopLeft="1168,9.33333333333337" />
         <NodeLayout
           Size="187,42"
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_SRT_STANDARD_3"
-          TopLeft="641.5,1251.08333333333" />
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DV_STANDARD_10"
+          TopLeft="545.25,1628.33333333333" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_UN_STANDARD_3"
+          TopLeft="546.75,1508.83333333333" />
+        <NodeLayout
+          Size="227,42"
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DV_FECHAS_GENERICAS_1"
+          TopLeft="773,672.333333333334" />
+        <NodeLayout
+          Size="280,42"
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_DTN_RECONCILIACION_AUTOMATICA"
+          TopLeft="499,1727.33333333333" />
         <NodeLayout
           Size="246,42"
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DTN_FACT_PREFIL_EMPLEADO"
@@ -14048,21 +14163,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_UN_STANDARD_1"
           TopLeft="788,283" />
         <NodeLayout
-          Size="280,42"
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_DTN_RECONCILIACION_AUTOMATICA"
-          TopLeft="499,1727.33333333333" />
-        <NodeLayout
-          Size="169,42"
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_MJ_STANDARD"
-          TopLeft="356,377" />
-        <NodeLayout
           Size="168,42"
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\MC_STANDARD _2"
-          TopLeft="1215,512" />
-        <NodeLayout
-          Size="168,42"
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\MC_STANDARD _1"
-          TopLeft="354,16" />
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\MC_STANDARD _5"
+          TopLeft="807,860.333333333333" />
         <NodeLayout
           Size="257,42"
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DV_TRATAMIENTO_DE_NULOS_1"
@@ -14071,6 +14174,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           Size="198,42"
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DWH_DIM_PERSONA"
           TopLeft="780.5,10.8333333333334" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\MC_STANDARD _2"
+          TopLeft="1215,512" />
+        <NodeLayout
+          Size="201,42"
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\REGISTROS INSERTADOS"
+          TopLeft="882,938.333333333333" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\MC_STANDARD _1"
+          TopLeft="354,16" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_SRT_STANDARD_3"
+          TopLeft="641.5,1251.08333333333" />
         <NodeLayout
           Size="200,42"
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_SCT_DESCRIPTION_3"
@@ -14081,28 +14200,24 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           TopLeft="1015,282" />
         <NodeLayout
           Size="189,42"
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_AGG_STANDARD_1"
+          TopLeft="1251,817" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_SRT_STANDARD_2"
+          TopLeft="888,1135.33333333333" />
+        <NodeLayout
+          Size="189,42"
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_AGG_STANDARD_3"
           TopLeft="28,128" />
-        <NodeLayout
-          Size="183,42"
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_UN_STANDARD_3"
-          TopLeft="546.75,1508.83333333333" />
-        <NodeLayout
-          Size="201,42"
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\REGISTROS INSERTADOS"
-          TopLeft="882,938.333333333333" />
-        <NodeLayout
-          Size="168,42"
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\MC_STANDARD _5"
-          TopLeft="807,860.333333333333" />
         <NodeLayout
           Size="219,42"
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\ER_DTN_ERROR_ROWS_LOG"
           TopLeft="766.833333333333,401.25" />
         <NodeLayout
-          Size="227,42"
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DV_FECHAS_GENERICAS_1"
-          TopLeft="773,672.333333333334" />
+          Size="172,42"
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\REGISTROS ERROR"
+          TopLeft="561.25,1013.83333333333" />
         <EdgeLayout
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Union All Output 11]"
           TopLeft="877.666666666667,325">
@@ -14327,30 +14442,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[OLE DB Source Error Output1]"
-          TopLeft="880.416666666667,52.8333333333334">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44.5000000000006"
-              Start="0,0"
-              End="0,37.0000000000006">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.0000000000006" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-63.43390625,12.7832031250003,126.8678125,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[OLE DB Source Error Output]"
           TopLeft="1237.66666666667,51.3333333333334">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14382,6 +14473,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-106.600572916668,40.2042594385288,126.8678125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[OLE DB Source Error Output]"
+          TopLeft="880.416666666667,52.8333333333334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.5000000000006"
+              Start="0,0"
+              End="0,37.0000000000006">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.0000000000006" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-63.43390625,12.7832031250003,126.8678125,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -14615,6 +14730,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Multicast Output 11]"
+          TopLeft="622.916666666667,1201.33333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,307.5"
+              Start="0,0"
+              End="0,300">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,300" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Multicast Output 1]"
           TopLeft="864.333333333333,902.333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14639,28 +14776,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     Point3="-212.833333333333,19.1108490566038" />
                   <mssgle:LineSegment
                     End="-212.833333333333,29.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Multicast Output 1]"
-          TopLeft="622.916666666667,1201.33333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,307.5"
-              Start="0,0"
-              End="0,300">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,300" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14751,18 +14866,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output9]"
-          TopLeft="888.25,714.333333333334">
+          TopLeft="555,693.333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39.9999999999991"
+              EndConnector="218,0"
               Start="0,0"
-              End="0,32.4999999999991">
+              End="210.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.4999999999991" />
+                    End="210.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14773,30 +14888,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output8]"
-          TopLeft="1343,1032.33333333333">
+          TopLeft="878,230.833333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-652.25,476.499999999996"
+              EndConnector="0,52.166666666667"
               Start="0,0"
-              End="-652.25,468.999999999996">
+              End="0,44.666666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,446.347701149423" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,446.347701149423"
-                    Point2="0,450.347701149423"
-                    Point3="-4,450.347701149423" />
-                  <mssgle:LineSegment
-                    End="-648.25,450.347701149423" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-648.25,450.347701149423"
-                    Point2="-652.25,450.347701149423"
-                    Point3="-652.25,454.347701149423" />
-                  <mssgle:LineSegment
-                    End="-652.25,468.999999999996" />
+                    End="0,44.666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14807,18 +14910,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output7]"
-          TopLeft="981.5,1077.33333333333">
+          TopLeft="648.875,1127.33333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58"
+              EndConnector="0,32"
               Start="0,0"
-              End="0,50.5">
+              End="0,24.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.5" />
+                    End="0,24.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14829,84 +14932,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output6]"
-          TopLeft="978,1380.33333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-322.25,128.5"
-              Start="0,0"
-              End="-322.25,121">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,67.0438066465257" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,67.0438066465257"
-                    Point2="0,71.0438066465257"
-                    Point3="-4,71.0438066465257" />
-                  <mssgle:LineSegment
-                    End="-318.25,71.0438066465257" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-318.25,71.0438066465257"
-                    Point2="-322.25,71.0438066465257"
-                    Point3="-322.25,75.0438066465257" />
-                  <mssgle:LineSegment
-                    End="-322.25,121" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output5]"
-          TopLeft="1015,303.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-45,0"
-              Start="0,0"
-              End="-37.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-37.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output4]"
-          TopLeft="638.875,1670.33333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57"
-              Start="0,0"
-              End="0,49.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output3]"
           TopLeft="129.5,420">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14940,19 +14965,97 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output2]"
-          TopLeft="648.875,1127.33333333333">
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output5]"
+          TopLeft="638.875,1670.33333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,32"
+              EndConnector="0,57"
               Start="0,0"
-              End="0,24.5">
+              End="0,49.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.5" />
+                    End="0,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output4]"
+          TopLeft="1015,303.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-45,0"
+              Start="0,0"
+              End="-37.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-37.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output3]"
+          TopLeft="978,1380.33333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-322.25,128.5"
+              Start="0,0"
+              End="-322.25,121">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.0438066465257" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,67.0438066465257"
+                    Point2="0,71.0438066465257"
+                    Point3="-4,71.0438066465257" />
+                  <mssgle:LineSegment
+                    End="-318.25,71.0438066465257" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-318.25,71.0438066465257"
+                    Point2="-322.25,71.0438066465257"
+                    Point3="-322.25,75.0438066465257" />
+                  <mssgle:LineSegment
+                    End="-322.25,121" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output2]"
+          TopLeft="981.5,1077.33333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14963,18 +15066,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output1]"
-          TopLeft="878,230.833333333333">
+          TopLeft="1343,1032.33333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.166666666667"
+              EndConnector="-652.25,476.499999999996"
               Start="0,0"
-              End="0,44.666666666667">
+              End="-652.25,468.999999999996">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.666666666667" />
+                    End="0,446.347701149423" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,446.347701149423"
+                    Point2="0,450.347701149423"
+                    Point3="-4,450.347701149423" />
+                  <mssgle:LineSegment
+                    End="-648.25,450.347701149423" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-648.25,450.347701149423"
+                    Point2="-652.25,450.347701149423"
+                    Point3="-652.25,454.347701149423" />
+                  <mssgle:LineSegment
+                    End="-652.25,468.999999999996" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14985,18 +15100,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1.Paths[Derived Column Output]"
-          TopLeft="555,693.333333333333">
+          TopLeft="888.25,714.333333333334">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="218,0"
+              EndConnector="0,39.9999999999991"
               Start="0,0"
-              End="210.5,0">
+              End="0,32.4999999999991">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="210.5,0" />
+                    End="0,32.4999999999991" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15133,7 +15248,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DTN_FACT_PREFIL_EMPLEADO">
+    design-time-name="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_DTN_RECONCILIACION_AUTOMATICA">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -15146,7 +15261,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\RA_DTN_RECONCILIACION_AUTOMATICA">
+    design-time-name="Package\DF_DWH_FACT_PERFIL_EMPLEADO_1\PR_DTN_FACT_PREFIL_EMPLEADO">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
