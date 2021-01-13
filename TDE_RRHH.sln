@@ -25,6 +25,10 @@ Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH007_02_DWH_Contr
 EndProject
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH007_01_STG_Control Asistencia", "TDE_RRHH_RH007_01_STG_Control Asistencia\TDE_RRHH_RH007_01_STG_Control Asistencia.dtproj", "{4ABD1CFF-51BA-4A70-8F52-BFBEE5FD7EC9}"
 EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH004_01_STG_Accion Personal", "TDE_RRHH_RH004_01_STG_Accion Personal\TDE_RRHH_RH004_01_STG_Accion Personal.dtproj", "{A464DEDD-5DAC-4207-B355-DF81E6E066A9}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH004_02_DWH_Accion Personal", "TDE_RRHH_RH004_02_DWH_Accion Personal\TDE_RRHH_RH004_02_DWH_Accion Personal.dtproj", "{0F45D159-9BF8-463B-BB6A-DE06CFF8122A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		demo_eikon|Default = demo_eikon|Default
@@ -144,6 +148,26 @@ Global
 		{4ABD1CFF-51BA-4A70-8F52-BFBEE5FD7EC9}.development_tde|Default.Build.0 = development_tde
 		{4ABD1CFF-51BA-4A70-8F52-BFBEE5FD7EC9}.development|Default.ActiveCfg = Development
 		{4ABD1CFF-51BA-4A70-8F52-BFBEE5FD7EC9}.development|Default.Build.0 = Development
+		{A464DEDD-5DAC-4207-B355-DF81E6E066A9}.demo_eikon|Default.ActiveCfg = demo_eikon
+		{A464DEDD-5DAC-4207-B355-DF81E6E066A9}.demo_eikon|Default.Build.0 = demo_eikon
+		{A464DEDD-5DAC-4207-B355-DF81E6E066A9}.demo_tde|Default.ActiveCfg = demo_tde
+		{A464DEDD-5DAC-4207-B355-DF81E6E066A9}.demo_tde|Default.Build.0 = demo_tde
+		{A464DEDD-5DAC-4207-B355-DF81E6E066A9}.development_eikon|Default.ActiveCfg = development_eikon
+		{A464DEDD-5DAC-4207-B355-DF81E6E066A9}.development_eikon|Default.Build.0 = development_eikon
+		{A464DEDD-5DAC-4207-B355-DF81E6E066A9}.development_tde|Default.ActiveCfg = development_tde
+		{A464DEDD-5DAC-4207-B355-DF81E6E066A9}.development_tde|Default.Build.0 = development_tde
+		{A464DEDD-5DAC-4207-B355-DF81E6E066A9}.development|Default.ActiveCfg = Development
+		{A464DEDD-5DAC-4207-B355-DF81E6E066A9}.development|Default.Build.0 = Development
+		{0F45D159-9BF8-463B-BB6A-DE06CFF8122A}.demo_eikon|Default.ActiveCfg = demo_eikon
+		{0F45D159-9BF8-463B-BB6A-DE06CFF8122A}.demo_eikon|Default.Build.0 = demo_eikon
+		{0F45D159-9BF8-463B-BB6A-DE06CFF8122A}.demo_tde|Default.ActiveCfg = demo_tde
+		{0F45D159-9BF8-463B-BB6A-DE06CFF8122A}.demo_tde|Default.Build.0 = demo_tde
+		{0F45D159-9BF8-463B-BB6A-DE06CFF8122A}.development_eikon|Default.ActiveCfg = development_eikon
+		{0F45D159-9BF8-463B-BB6A-DE06CFF8122A}.development_eikon|Default.Build.0 = development_eikon
+		{0F45D159-9BF8-463B-BB6A-DE06CFF8122A}.development_tde|Default.ActiveCfg = development_tde
+		{0F45D159-9BF8-463B-BB6A-DE06CFF8122A}.development_tde|Default.Build.0 = development_tde
+		{0F45D159-9BF8-463B-BB6A-DE06CFF8122A}.development|Default.ActiveCfg = Development
+		{0F45D159-9BF8-463B-BB6A-DE06CFF8122A}.development|Default.Build.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

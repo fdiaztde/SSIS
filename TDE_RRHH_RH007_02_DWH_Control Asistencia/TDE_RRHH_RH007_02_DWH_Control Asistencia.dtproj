@@ -29,14 +29,14 @@
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
-          <SSIS:Package SSIS:Name="2_1_0_TDE_RRHH_BI_DWH.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="2_1_1_TDE_RRHH_BI_DWH_DIM.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="2_1_2_TDE_RRHH_BI_DWH_REL.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="2_1_3_TDE_RRHH_BI_DWH_FAC.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH_DIM_EQUIPO_CONTROL_ASISTENCIA.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH_DIM_TIPO_CONTROL_ASISTENCIA.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH_DIM_TIPO_ASISTENCIA.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH_FACT_CONTROL_ASISTENCIA.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="2_7_0_TDE_RRHH_BI_DWH.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="2_7_1_TDE_RRHH_BI_DWH_DIM.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="2_7_2_TDE_RRHH_BI_DWH_REL.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="2_7_3_TDE_RRHH_BI_DWH_FAC.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="CNX_DWH_RRHH.conmgr" />
@@ -359,84 +359,16 @@
             </SSIS:Parameter>
           </SSIS:ProjectConnectionParameters>
           <SSIS:PackageInfo>
-            <SSIS:PackageMetaData SSIS:Name="2_1_0_TDE_RRHH_BI_DWH.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{045B27CA-C484-484A-B379-E35B112EDED5}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">2_1_0_TDE_RRHH_BI_DWH</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">21</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{FB811F56-EF1D-4153-93D1-8ABC686299AC}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="2_1_1_TDE_RRHH_BI_DWH_DIM.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{09E35C5D-0B42-4F72-860E-6DE04AA494F3}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">2_1_1_TDE_RRHH_BI_DWH_DIM</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">37</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{B00B4CF9-DFFC-4285-A593-19B663CA46F5}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="2_1_2_TDE_RRHH_BI_DWH_REL.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{95A66123-7E60-4CE2-AC2C-3628BADA75AE}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">2_2_2_TDE_RRHH_BI_DWH_REL</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">13</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{A1047571-FE7B-44EA-89F5-9BF7969E4014}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="2_1_3_TDE_RRHH_BI_DWH_FAC.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{68455028-760C-448D-882C-37899D7FB29B}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">2_2_3_TDE_RRHH_BI_DWH_FAC</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">12</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{ECEE584E-FA13-4ABF-8BBB-8E7AEB4D298C}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
             <SSIS:PackageMetaData SSIS:Name="DWH_DIM_EQUIPO_CONTROL_ASISTENCIA.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{CB2BBE3D-D429-41D1-B9DD-40C70A6CDBC9}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">DWH_DIM_EQUIPO_CONTROL_ASISTENCIA</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">381</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">382</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{997F006C-CF6B-44D8-80C3-9FB0631B7F41}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{08FFCBD3-F7ED-428B-9742-9CBBC758FD14}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -587,8 +519,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -602,8 +532,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -663,8 +591,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -678,8 +604,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -691,10 +615,10 @@
                 <SSIS:Property SSIS:Name="Name">DWH_FACT_CONTROL_ASISTENCIA</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">399</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">400</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{D7E65563-E4AC-4065-82ED-6160115CD5E4}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{790609A3-08E6-47FB-B22A-078981B7BEEA}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -760,6 +684,74 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="2_7_0_TDE_RRHH_BI_DWH.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{6BCD5439-E4D2-4519-8B42-74197EA78793}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">2_7_0_TDE_RRHH_BI_DWH</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">22</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{256CAC20-D68B-409D-89A8-8C4A784D321E}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="2_7_1_TDE_RRHH_BI_DWH_DIM.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{9D413F7C-43FA-4762-B157-0267E22C1185}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">2_7_1_TDE_RRHH_BI_DWH_DIM</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">38</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{36A1E3F8-9715-4512-B8A5-A6E27E734E2A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="2_7_2_TDE_RRHH_BI_DWH_REL.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{F96FE27A-06F1-40D6-ADDF-E7D563601EB3}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">2_7_2_TDE_RRHH_BI_DWH_REL</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">14</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{BA4BD2DC-F123-4245-A593-9EC7DDA7EAD0}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="2_7_3_TDE_RRHH_BI_DWH_FAC.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{4378E7C1-C3D9-4F74-99FE-BAEEC94FBADD}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">2_7_3_TDE_RRHH_BI_DWH_FAC</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">13</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{6583892A-7863-4034-A47C-94079B526145}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
