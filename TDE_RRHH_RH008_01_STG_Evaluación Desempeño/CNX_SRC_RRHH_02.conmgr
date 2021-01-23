@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="CNX_SRC_RRHH_02"
+  DTS:DTSID="{641873F6-0A17-4B7E-9D5C-4F0C3D641DC6}"
+  DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">"Data Source=" + @[$Project::Par_Srv_SRC_02]  +
+";User ID=" + @[$Project::Par_Usr_SRC_02]  +
+";Password=" + @[$Project::Par_Pwd_SRC_02]  +
+";Initial Catalog="+ @[$Project::Par_Catalog_SRC_02] +";Provider=SQLOLEDB.1;Persist Security Info=True;"</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=TDE-LAP-OP-12;User ID=tdeuser;Initial Catalog=TDE_RRHH_WEB_DES;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-{641873F6-0A17-4B7E-9D5C-4F0C3D641DC6}CNX_SRC_RRHH_02;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1"></DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

@@ -29,6 +29,27 @@ Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH004_01_STG_Accio
 EndProject
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH004_02_DWH_Accion Personal", "TDE_RRHH_RH004_02_DWH_Accion Personal\TDE_RRHH_RH004_02_DWH_Accion Personal.dtproj", "{0F45D159-9BF8-463B-BB6A-DE06CFF8122A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E10B2750-57E1-4C9F-B871-F1772130899A}"
+	ProjectSection(SolutionItems) = preProject
+		TDE_RRHH_RH009_01_STG_Costo RRHH\TDE_RRHH_RH009_01_STG_Costo RRHH.dtproj.user = TDE_RRHH_RH009_01_STG_Costo RRHH\TDE_RRHH_RH009_01_STG_Costo RRHH.dtproj.user
+	EndProjectSection
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH005_01_STG_Capacitación", "TDE_RRHH_RH005_01_STG_Capacitación\TDE_RRHH_RH005_01_STG_Capacitación.dtproj", "{689DB77A-BFA2-4D00-9498-7514F549F855}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH005_02_DWH_Capacitación", "TDE_RRHH_RH005_02_DWH_Capacitación\TDE_RRHH_RH005_02_DWH_Capacitación.dtproj", "{9D44DDED-77A2-4917-84B3-CAE5252A4DAD}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH006_01_STG_Salud Ocupacional", "TDE_RRHH_RH006_01_STG_Salud Ocupacional\TDE_RRHH_RH006_01_STG_Salud Ocupacional.dtproj", "{731E8157-7E09-46D8-903F-32B64A807060}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH006_02_DWH_Salud Ocupacional", "TDE_RRHH_RH006_02_DWH_Salud Ocupacional\TDE_RRHH_RH006_02_DWH_Salud Ocupacional.dtproj", "{8B33A343-3748-4434-8F9F-D10638530EBB}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH008_01_STG_Evaluación Desempeño", "TDE_RRHH_RH008_01_STG_Evaluación Desempeño\TDE_RRHH_RH008_01_STG_Evaluación Desempeño.dtproj", "{FFA10DD7-14BD-4DCD-98C5-F8FA17C96E78}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH008_02_DWH_Evaluación Desempeño", "TDE_RRHH_RH008_02_DWH_Evaluación Desempeño\TDE_RRHH_RH008_02_DWH_Evaluación Desempeño.dtproj", "{97722B46-C23F-4B1F-B285-0D926F80E147}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH009_01_STG_Costo RRHH", "TDE_RRHH_RH009_01_STG_Costo RRHH\TDE_RRHH_RH009_01_STG_Costo RRHH.dtproj", "{EA00F881-642C-4E95-AFFF-F8A11F4CCD0C}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TDE_RRHH_RH009_02_DWH_Costo RRHH", "TDE_RRHH_RH009_02_DWH_Costo RRHH\TDE_RRHH_RH009_02_DWH_Costo RRHH.dtproj", "{75708E76-0F69-4776-BB23-0F575E9470E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		demo_eikon|Default = demo_eikon|Default
@@ -168,6 +189,86 @@ Global
 		{0F45D159-9BF8-463B-BB6A-DE06CFF8122A}.development_tde|Default.Build.0 = development_tde
 		{0F45D159-9BF8-463B-BB6A-DE06CFF8122A}.development|Default.ActiveCfg = Development
 		{0F45D159-9BF8-463B-BB6A-DE06CFF8122A}.development|Default.Build.0 = Development
+		{689DB77A-BFA2-4D00-9498-7514F549F855}.demo_eikon|Default.ActiveCfg = demo_eikon
+		{689DB77A-BFA2-4D00-9498-7514F549F855}.demo_eikon|Default.Build.0 = demo_eikon
+		{689DB77A-BFA2-4D00-9498-7514F549F855}.demo_tde|Default.ActiveCfg = demo_tde
+		{689DB77A-BFA2-4D00-9498-7514F549F855}.demo_tde|Default.Build.0 = demo_tde
+		{689DB77A-BFA2-4D00-9498-7514F549F855}.development_eikon|Default.ActiveCfg = development_eikon
+		{689DB77A-BFA2-4D00-9498-7514F549F855}.development_eikon|Default.Build.0 = development_eikon
+		{689DB77A-BFA2-4D00-9498-7514F549F855}.development_tde|Default.ActiveCfg = development_tde
+		{689DB77A-BFA2-4D00-9498-7514F549F855}.development_tde|Default.Build.0 = development_tde
+		{689DB77A-BFA2-4D00-9498-7514F549F855}.development|Default.ActiveCfg = Development
+		{689DB77A-BFA2-4D00-9498-7514F549F855}.development|Default.Build.0 = Development
+		{9D44DDED-77A2-4917-84B3-CAE5252A4DAD}.demo_eikon|Default.ActiveCfg = demo_eikon
+		{9D44DDED-77A2-4917-84B3-CAE5252A4DAD}.demo_eikon|Default.Build.0 = demo_eikon
+		{9D44DDED-77A2-4917-84B3-CAE5252A4DAD}.demo_tde|Default.ActiveCfg = demo_tde
+		{9D44DDED-77A2-4917-84B3-CAE5252A4DAD}.demo_tde|Default.Build.0 = demo_tde
+		{9D44DDED-77A2-4917-84B3-CAE5252A4DAD}.development_eikon|Default.ActiveCfg = development_eikon
+		{9D44DDED-77A2-4917-84B3-CAE5252A4DAD}.development_eikon|Default.Build.0 = development_eikon
+		{9D44DDED-77A2-4917-84B3-CAE5252A4DAD}.development_tde|Default.ActiveCfg = development_tde
+		{9D44DDED-77A2-4917-84B3-CAE5252A4DAD}.development_tde|Default.Build.0 = development_tde
+		{9D44DDED-77A2-4917-84B3-CAE5252A4DAD}.development|Default.ActiveCfg = Development
+		{9D44DDED-77A2-4917-84B3-CAE5252A4DAD}.development|Default.Build.0 = Development
+		{731E8157-7E09-46D8-903F-32B64A807060}.demo_eikon|Default.ActiveCfg = demo_eikon
+		{731E8157-7E09-46D8-903F-32B64A807060}.demo_eikon|Default.Build.0 = demo_eikon
+		{731E8157-7E09-46D8-903F-32B64A807060}.demo_tde|Default.ActiveCfg = demo_tde
+		{731E8157-7E09-46D8-903F-32B64A807060}.demo_tde|Default.Build.0 = demo_tde
+		{731E8157-7E09-46D8-903F-32B64A807060}.development_eikon|Default.ActiveCfg = development_eikon
+		{731E8157-7E09-46D8-903F-32B64A807060}.development_eikon|Default.Build.0 = development_eikon
+		{731E8157-7E09-46D8-903F-32B64A807060}.development_tde|Default.ActiveCfg = development_tde
+		{731E8157-7E09-46D8-903F-32B64A807060}.development_tde|Default.Build.0 = development_tde
+		{731E8157-7E09-46D8-903F-32B64A807060}.development|Default.ActiveCfg = Development
+		{731E8157-7E09-46D8-903F-32B64A807060}.development|Default.Build.0 = Development
+		{8B33A343-3748-4434-8F9F-D10638530EBB}.demo_eikon|Default.ActiveCfg = demo_eikon
+		{8B33A343-3748-4434-8F9F-D10638530EBB}.demo_eikon|Default.Build.0 = demo_eikon
+		{8B33A343-3748-4434-8F9F-D10638530EBB}.demo_tde|Default.ActiveCfg = demo_tde
+		{8B33A343-3748-4434-8F9F-D10638530EBB}.demo_tde|Default.Build.0 = demo_tde
+		{8B33A343-3748-4434-8F9F-D10638530EBB}.development_eikon|Default.ActiveCfg = development_eikon
+		{8B33A343-3748-4434-8F9F-D10638530EBB}.development_eikon|Default.Build.0 = development_eikon
+		{8B33A343-3748-4434-8F9F-D10638530EBB}.development_tde|Default.ActiveCfg = development_tde
+		{8B33A343-3748-4434-8F9F-D10638530EBB}.development_tde|Default.Build.0 = development_tde
+		{8B33A343-3748-4434-8F9F-D10638530EBB}.development|Default.ActiveCfg = Development
+		{8B33A343-3748-4434-8F9F-D10638530EBB}.development|Default.Build.0 = Development
+		{FFA10DD7-14BD-4DCD-98C5-F8FA17C96E78}.demo_eikon|Default.ActiveCfg = demo_eikon
+		{FFA10DD7-14BD-4DCD-98C5-F8FA17C96E78}.demo_eikon|Default.Build.0 = demo_eikon
+		{FFA10DD7-14BD-4DCD-98C5-F8FA17C96E78}.demo_tde|Default.ActiveCfg = demo_tde
+		{FFA10DD7-14BD-4DCD-98C5-F8FA17C96E78}.demo_tde|Default.Build.0 = demo_tde
+		{FFA10DD7-14BD-4DCD-98C5-F8FA17C96E78}.development_eikon|Default.ActiveCfg = development_eikon
+		{FFA10DD7-14BD-4DCD-98C5-F8FA17C96E78}.development_eikon|Default.Build.0 = development_eikon
+		{FFA10DD7-14BD-4DCD-98C5-F8FA17C96E78}.development_tde|Default.ActiveCfg = development_tde
+		{FFA10DD7-14BD-4DCD-98C5-F8FA17C96E78}.development_tde|Default.Build.0 = development_tde
+		{FFA10DD7-14BD-4DCD-98C5-F8FA17C96E78}.development|Default.ActiveCfg = Development
+		{FFA10DD7-14BD-4DCD-98C5-F8FA17C96E78}.development|Default.Build.0 = Development
+		{97722B46-C23F-4B1F-B285-0D926F80E147}.demo_eikon|Default.ActiveCfg = demo_eikon
+		{97722B46-C23F-4B1F-B285-0D926F80E147}.demo_eikon|Default.Build.0 = demo_eikon
+		{97722B46-C23F-4B1F-B285-0D926F80E147}.demo_tde|Default.ActiveCfg = demo_tde
+		{97722B46-C23F-4B1F-B285-0D926F80E147}.demo_tde|Default.Build.0 = demo_tde
+		{97722B46-C23F-4B1F-B285-0D926F80E147}.development_eikon|Default.ActiveCfg = development_eikon
+		{97722B46-C23F-4B1F-B285-0D926F80E147}.development_eikon|Default.Build.0 = development_eikon
+		{97722B46-C23F-4B1F-B285-0D926F80E147}.development_tde|Default.ActiveCfg = development_tde
+		{97722B46-C23F-4B1F-B285-0D926F80E147}.development_tde|Default.Build.0 = development_tde
+		{97722B46-C23F-4B1F-B285-0D926F80E147}.development|Default.ActiveCfg = Development
+		{97722B46-C23F-4B1F-B285-0D926F80E147}.development|Default.Build.0 = Development
+		{EA00F881-642C-4E95-AFFF-F8A11F4CCD0C}.demo_eikon|Default.ActiveCfg = demo_eikon
+		{EA00F881-642C-4E95-AFFF-F8A11F4CCD0C}.demo_eikon|Default.Build.0 = demo_eikon
+		{EA00F881-642C-4E95-AFFF-F8A11F4CCD0C}.demo_tde|Default.ActiveCfg = demo_tde
+		{EA00F881-642C-4E95-AFFF-F8A11F4CCD0C}.demo_tde|Default.Build.0 = demo_tde
+		{EA00F881-642C-4E95-AFFF-F8A11F4CCD0C}.development_eikon|Default.ActiveCfg = development_eikon
+		{EA00F881-642C-4E95-AFFF-F8A11F4CCD0C}.development_eikon|Default.Build.0 = development_eikon
+		{EA00F881-642C-4E95-AFFF-F8A11F4CCD0C}.development_tde|Default.ActiveCfg = development_tde
+		{EA00F881-642C-4E95-AFFF-F8A11F4CCD0C}.development_tde|Default.Build.0 = development_tde
+		{EA00F881-642C-4E95-AFFF-F8A11F4CCD0C}.development|Default.ActiveCfg = Development
+		{EA00F881-642C-4E95-AFFF-F8A11F4CCD0C}.development|Default.Build.0 = Development
+		{75708E76-0F69-4776-BB23-0F575E9470E5}.demo_eikon|Default.ActiveCfg = demo_eikon
+		{75708E76-0F69-4776-BB23-0F575E9470E5}.demo_eikon|Default.Build.0 = demo_eikon
+		{75708E76-0F69-4776-BB23-0F575E9470E5}.demo_tde|Default.ActiveCfg = demo_tde
+		{75708E76-0F69-4776-BB23-0F575E9470E5}.demo_tde|Default.Build.0 = demo_tde
+		{75708E76-0F69-4776-BB23-0F575E9470E5}.development_eikon|Default.ActiveCfg = development_eikon
+		{75708E76-0F69-4776-BB23-0F575E9470E5}.development_eikon|Default.Build.0 = development_eikon
+		{75708E76-0F69-4776-BB23-0F575E9470E5}.development_tde|Default.ActiveCfg = development_tde
+		{75708E76-0F69-4776-BB23-0F575E9470E5}.development_tde|Default.Build.0 = development_tde
+		{75708E76-0F69-4776-BB23-0F575E9470E5}.development|Default.ActiveCfg = Development
+		{75708E76-0F69-4776-BB23-0F575E9470E5}.development|Default.Build.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

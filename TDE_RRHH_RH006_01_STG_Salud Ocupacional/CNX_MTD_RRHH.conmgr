@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="CNX_MTD_RRHH"
+  DTS:DTSID="{F4972268-1C98-4CE0-BDA4-22CE4814EA04}"
+  DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">"Data Source=" + @[$Project::Par_Srv_MTD]  +
+";User ID=" + @[$Project::Par_Usr_MTD]  +
+";Password=" + @[$Project::Par_Pwd_MTD]  +
+";Initial Catalog="+ @[$Project::Par_Catalog_MTD] +";Provider=SQLNCLI11.1;Persist Security Info=True;"</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=tdedatabase03\sql2016;User ID=tdeuser;Initial Catalog=TDE_EikonBI_METADATA;Provider=SQLNCLI11.1;Persist Security Info=True;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1"></DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
